@@ -1,15 +1,9 @@
-750976ca0afdb2ced379b8e0e2160fcd23cd46fc7454a41c6f25090398f13aa5  /home/santo/dev/mw4-loadouts/tests/test_refresh.py
-a8aeedf9ca1bc86e4124d44d223c61f299bc248b5912138753c2f6c94c87dfb4  /home/santo/dev/mw4-loadouts/tests/engine.test.mjs
-ERROR: test_f1_valid_page_without_early_build_is_fine_and_clears_it (test_refresh.ReviewFindings.test_f1_valid_page_without_early_build_is_fine_and_clears_it)
-FAIL: test_f1_challenge_page_is_a_failure_not_a_removed_early_build (test_refresh.ReviewFindings.test_f1_challenge_page_is_a_failure_not_a_removed_early_build)
-FAIL: test_f1_infil_slug_for_striga (test_refresh.ReviewFindings.test_f1_infil_slug_for_striga)
-FAIL: test_f1_unreadable_infil_is_a_failure_and_keeps_old_early_build (test_refresh.ReviewFindings.test_f1_unreadable_infil_is_a_failure_and_keeps_old_early_build)
-FAIL: test_f2_duplicate_slots_in_a_build_are_a_failure (test_refresh.ReviewFindings.test_f2_duplicate_slots_in_a_build_are_a_failure)
-FAIL: test_f2_empty_close_build_is_a_failure (test_refresh.ReviewFindings.test_f2_empty_close_build_is_a_failure)
-Ran 37 tests in 0.543s
-FAILED (failures=5, errors=1)
-✖ review F3: an unpublished donor level never opens a part, even for a donor typed at 0 (0.687945ms)
-ℹ pass 27
-ℹ fail 1
+fe2a87ea349919439dabb81c499f6fbd82ae9149942587e09ad9acf66d6ab2b7  site/engine.js
+4acde5e1c00592bd31c2b6c0690a104ac1fbdc84ea78bc6aa78430e4c3296221  site/app.js
+✖ review r1 F1: an own part with no published level never hides an open part of that slot (0.836541ms)
+✖ review r1 F2: an unreadable live heartbeat is red even when the shipped record looks healthy (0.550694ms)
+ℹ pass 20
+ℹ fail 2
 ✖ failing tests:
-✖ review F3: an unpublished donor level never opens a part, even for a donor typed at 0 (0.687945ms)
+✖ review r1 F1: an own part with no published level never hides an open part of that slot (0.836541ms)
+✖ review r1 F2: an unreadable live heartbeat is red even when the shipped record looks healthy (0.550694ms)

@@ -1,0 +1,46 @@
+{
+ "base": "http://127.0.0.1:8777/",
+ "width": 390,
+ "checks": [
+  {
+   "name": "KG-7 has one 'Best for' button per variant",
+   "ok": true,
+   "detail": "Best for: TDM, Frontline, Inflation +4 / Best for: TDM, Frontline, Inflation +4 / Best for: Hardpoint, Hijack, Kill Confirmed +5 / Best for: TDM, Frontline, Inflation +1"
+  },
+  {
+   "name": "exactly one variant is pressed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "the data banner is calm",
+   "ok": true,
+   "detail": "Data checked under 1 h ago (Nov 17, 2026)"
+  },
+  {
+   "name": "Lv 54 shows a next-upgrade line",
+   "ok": true,
+   "detail": "Next upgrade at Lv 61: swap Schlager 7x -> Corvus Avis-0"
+  },
+  {
+   "name": "the full ladder lists level steps",
+   "ok": true,
+   "detail": "13 steps"
+  },
+  {
+   "name": "Hardpoint and S&D open different variants",
+   "ok": true,
+   "detail": "Hardpoint: Best for: Hardpoint, Hijack, Kill Confirmed +5 | Close Range · CODMunity · Nov 7, 2026 || S&D: Best for: TDM, Frontline, Inflation +4 | Sniper · 2 sites agree · Nov 14, 2026"
+  },
+  {
+   "name": "page is not wider than 390 px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "no console errors",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

@@ -268,10 +268,14 @@ export function dateText(iso) {
 
 // The data banner (Q7): red when the last refresh failed, when the check record cannot be read, or when the last
 // successful check is more than 24 hours old. status: {checked_at | checked, failed}; nowIso: a full timestamp.
-export function freshness(status, nowIso) {
+export function freshness(status, nowIso, { heartbeatUnreadable = false } = {}) {
   const now = Date.parse(nowIso);
   const stamp = status?.checked_at ?? (status?.checked ? `${status.checked}T00:00:00Z` : null);
   const t = stamp ? Date.parse(stamp) : NaN;
+  if (heartbeatUnreadable) {   // the live record on the status branch could not be read: red, the shipped date stays as context
+    const when = Number.isNaN(t) ? "" : ` The copy shipped with this page says ${dateText(stamp.slice(0, 10))}.`;
+    return { text: `The live check record could not be read, so the data may be out of date.${when}`, bad: true, hours: null };
+  }
   if (!status || Number.isNaN(t) || Number.isNaN(now)) {
     return { text: "Data freshness unknown: the check record could not be read. Builds may be out of date", bad: true, hours: null };
   }
@@ -397,8 +401,8 @@ export function slotPick(gun, variant, own, L, profile, data, mode) {
   if (openAt(gun, slot, own.name, own.level, L, profile, data)) {
     return mk(0, "ready", "✅", own.name, own.name, shared && (own.level === null || L < own.level) ? `Open from your ${shared}` : "", { sharedFrom: shared });
   }
-  if (own.level === null) return mk(0, "unknown", "❓", own.name, own.name, "Level not published");
-  const opens = `${own.name} opens at ${lvTxt(own.level)}`;
+  // an own part with no published level stays null (never guessed) but does not stop the search for an open part of the slot
+  const opens = own.level === null ? `${own.name} (level not published)` : `${own.name} opens at ${lvTxt(own.level)}`;
   const use = (name) => `Use ${name} for now`;
   const open = (c) => c.level !== null && c.level !== undefined && c.name !== own.name && scopeOk(gun, slot, c.name, data) &&
     openAt(gun, slot, c.name, c.level, L, profile, data);
@@ -437,6 +441,7 @@ export function slotPick(gun, variant, own, L, profile, data, mode) {
   if (filler.length) {
     return mk("4b", "standin", "🔁", filler[0].name, use(filler[0].name), `Filler: no meta part open yet · ${opens}`, { level: filler[0].level });
   }
+  if (own.level === null) return mk(0, "unknown", "❓", own.name, own.name, "Level not published");
   return mk("locked", "locked", "🔒", own.name, own.name, `Opens at ${lvTxt(own.level)}`);
 }
 

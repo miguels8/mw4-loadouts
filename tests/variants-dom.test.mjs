@@ -153,7 +153,7 @@ test("variant buttons, level setup, next upgrade, ladder, how to use (real Chrom
 
       await t.test("no sideways scroll and no console errors", async () => {
         assert.ok((await J(`document.documentElement.scrollWidth`)) <= 390);
-        assert.deepEqual(b.errors.filter((e) => !/favicon/.test(e)), []);
+        assert.deepEqual(b.errors.filter((e) => !/favicon|Receiving end does not exist/.test(e)), []);   // the second is Chromium extension-messaging noise on some machines
       });
     } finally {
       await b.close();

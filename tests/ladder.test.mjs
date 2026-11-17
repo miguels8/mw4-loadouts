@@ -79,6 +79,23 @@ test("never empty: every slot at every ladder step has a usable part when the ta
   }
 });
 
+test("review r1 F1: an own part with no published level never hides an open part of that slot", () => {
+  const f = fixture();
+  f.variant.parts[0] = { slot: "Barrel", name: "Mystery Barrel", level: null };
+  const own = f.variant.parts[0];
+  // an open candidate exists: it is offered, the unknown level stays null and is named in the note
+  const p = slotPick(f.gun, f.variant, own, 10, at(10), f.data, "range");
+  assert.equal(p.name, "Early Barrel");
+  assert.equal(p.step, 1);
+  assert.match(p.note, /Mystery Barrel \(level not published\)/);
+  // nothing open in the slot at all: the honest unknown row, never a guess
+  const q = slotPick(f.gun, f.variant, own, 5, at(5), f.data, "range");
+  assert.deepEqual([q.state, q.name, q.note], ["unknown", "Mystery Barrel", "Level not published"]);
+  // the ladder still moves on a level that opens a substitute
+  const lad = ladder(f.gun, f.variant, at(1), f.data, "range");
+  assert.ok(lad.some((s) => s.changes.some((c) => c.slot === "Barrel" && c.to === "Early Barrel")));
+});
+
 test("a locked slot says when its part opens; nothing is invented", () => {
   const f = fixture();
   const p = nameAt(f, 2, "Barrel");

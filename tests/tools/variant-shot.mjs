@@ -56,7 +56,7 @@ try {
   await b.shot(join(out, "c2-kg7-snd.png"));
   check("Hardpoint and S&D open different variants", !!hp && !!sd && hp !== sd, `Hardpoint: ${hpText} || S&D: ${sdText}`);
   check("page is not wider than 390 px", (await J(`document.documentElement.scrollWidth`)) <= 390);
-  check("no console errors", b.errors.filter((e) => !/favicon/.test(e)).length === 0, b.errors.join("; "));
+  check("no console errors", b.errors.filter((e) => !/favicon|Receiving end does not exist/.test(e)).length === 0, b.errors.join("; "));
   writeFileSync(join(out, "variant-checks.json"), JSON.stringify({ base, width: 390, checks }, null, 1));
   if (checks.some((c) => !c.ok)) process.exitCode = 1;
 } finally {

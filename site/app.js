@@ -406,8 +406,8 @@ function bind() {
 
 // The data banner. Red = failed refresh, unreadable record or last check over 24 h ago (Q7). The record on the status
 // branch is the live heartbeat (it moves every 3 h even when nothing changed); the copy shipped with the page is the fallback.
-function showFresh(st) {
-  const f = freshness(st, new Date().toISOString());
+function showFresh(st, opts) {
+  const f = freshness(st, new Date().toISOString(), opts);
   const el = $("#fresh");
   el.textContent = f.text;
   el.className = "fresh" + (f.bad ? " bad" : "");
@@ -424,8 +424,8 @@ async function upgradeStatus() {
     const r = await fetch(`${STATUS_RAW}?t=${Date.now()}`, { cache: "no-store", signal: ctl.signal });
     clearTimeout(t);
     if (r.ok) { status = await r.json(); showFresh(status); return; }
-  } catch { /* fall through to the record shipped with the page */ }
-  showFresh(status);
+  } catch { /* the live record could not be read: say so in red, keeping the shipped date as context */ }
+  showFresh(status, { heartbeatUnreadable: true });
 }
 
 async function main() {

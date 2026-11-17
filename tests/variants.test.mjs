@@ -112,6 +112,17 @@ test("staleness banner: 23 h ok, 25 h bad, a failed list bad, nothing bad", () =
   assert.equal(freshness({ checked_at: "2026-11-17T11:30:00Z", failed: [] }, "garbage").bad, true);
 });
 
+test("review r1 F2: an unreadable live heartbeat is red even when the shipped record looks healthy", () => {
+  const now = "2026-11-17T12:00:00Z";
+  const shipped = { checked_at: "2026-11-17T11:00:00Z", failed: [] };
+  assert.equal(freshness(shipped, now).bad, false);
+  const f = freshness(shipped, now, { heartbeatUnreadable: true });
+  assert.equal(f.bad, true);
+  assert.match(f.text, /live check record could not be read/);
+  assert.match(f.text, /Nov 17, 2026/);                         // the shipped date stays as context
+  assert.equal(freshness(null, now, { heartbeatUnreadable: true }).bad, true);
+});
+
 test("a gun with no variants ranks after every gun that has one; legacy data is not penalised", () => {
   const withV = gun("aa", "AR", [V("aa-v", "Versatile", ["TDM"])], { tier: "D" });
   const none = gun("zz", "AR", [], { tier: "S" });
