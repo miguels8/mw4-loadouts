@@ -52,3 +52,17 @@ Targets: GitHub (repo, Pages site, `status` branch) and MiguelPC user-level syst
 | Live checks | `tests/tools/variant-shot.mjs` against https://miguels8.github.io/mw4-loadouts/ at 390 px: all PASS (`proof/live-variants/variant-checks.json`, 4 screenshots); forced alarm test `proof/pc/alarm-test.txt`; strategy run (20 Go calls, 20 ledger lines); see `reports/build-variants-report.md` |
 | UNDO | `UNDO-build-variants.sh` (removes the timers and restores earlier units, opens a revert PR of 9fdead9, deletes the `status` branch); previous state = tag `pre-build-variants`; not run |
 
+
+## Install: refresh fix (job mw4-refresh-fix-20261117, 2026-11-17 CT)
+
+Target: GitHub (workflow, Pages) and one new MiguelPC user timer (`mw4-kick`, no root, no new credential: the existing `gh` login).
+
+| Step | Result |
+| --- | --- |
+| Backup before change | git tag `pre-refresh-fix` = 98b4cb2 (main before the job), pushed; `pc/install.sh` copied the earlier unit files to `~/.local/state/mw4-loadouts/backup-20261117T172320Z` (the first install backup, 20261117T085954Z, is kept) |
+| Reviewed PR | https://github.com/miguels8/mw4-loadouts/pull/11 squash-merged as e7f0fca after 2 Codex review rounds (reviewer-crossvendor, tier risky): r1 NO-GO-pending (4 findings: kick timestamp validation, UNDO clone reset x2, full undo missed the kick timer), all folded test-first (proof/refresh-fix/RED-review-r1.txt, GREEN-review-r1.txt); r2 GO at 35356ec, no findings, score 9.5/10 |
+| Side fix | PR 12 (https://github.com/miguels8/mw4-loadouts/pull/12, merged 225d458): published the 66 strategy notes the strategy timer could not push (branch protection, GH006, runs 03:47/06:48/09:47 CST); clone realigned with main, original commits kept on clone branch `backup-unpublished-strategy-20261117` |
+| Install | `pc/install.sh` from clone commit 225d458 at 11:23 CST: `mw4-kick.timer` enabled, first tick 11:30:56 CST; the other three timers unchanged |
+| Test of the install | the kick fired on its own at 11:30:56 CST ("kick: last check is 9 h old", `kicked refresh-and-deploy`), starting run 44137830095 (attempt 1 failed in a flaky Chromium test before any refresh, attempt 2 passed): refresh success, heartbeat step success (the step that failed in run 44126897076), Pages deployed with the 7 h threshold; `status.json` on the status branch checked_at 2026-11-17T17:52:10Z, second commit on top of the old history. Evidence: `proof/refresh-fix/live/` |
+| Live check | https://miguels8.github.io/mw4-loadouts/engine.js serves `hours > 7`; kick dry run "no kick: data is fresh"; alarm dry run "no post (bad=False)" |
+| UNDO | `UNDO-refresh-fix.sh` (removes the kick timer, opens a revert PR of e7f0fca; never resets or deletes the clone); `UNDO-build-variants.sh` now also removes the kick timer and works on a squash commit. Not run |
