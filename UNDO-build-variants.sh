@@ -11,9 +11,12 @@ FEATURE_MERGE_SHA="9fdead9"
 UNITS="$HOME/.config/systemd/user"
 STATE="$HOME/.local/state/mw4-loadouts"
 
-systemctl --user disable --now mw4-stale-alarm.timer mw4-strategy.timer mw4-review.timer || true
-BK="$(cat "$STATE/last-backup" 2>/dev/null || true)"
-for u in mw4-stale-alarm mw4-strategy mw4-review; do
+# mw4-kick (job mw4-refresh-fix) is part of the feature set now: without it, deleting the status branch below would leave
+# a kick timer that sees no heartbeat and dispatches a refresh every hour.
+systemctl --user disable --now mw4-stale-alarm.timer mw4-strategy.timer mw4-review.timer mw4-kick.timer || true
+# The OLDEST install backup holds the units from before this feature; later installs (e.g. mw4-refresh-fix) add newer ones.
+BK="$(ls -d "$STATE"/backup-* 2>/dev/null | sort | head -1 || true)"
+for u in mw4-stale-alarm mw4-strategy mw4-review mw4-kick; do
   rm -f "$UNITS/$u.timer" "$UNITS/$u.service"
   if [ -n "$BK" ]; then
     for ext in service timer; do

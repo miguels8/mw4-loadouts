@@ -134,6 +134,59 @@ class Main(unittest.TestCase):
         self.assertIn("--json", lst)
 
 
+class BadInput(unittest.TestCase):
+    """Review r1 F1: a timestamp that is naive (no zone), not a string, or garbage must read as unreadable, never raise,
+    so the timer still decides (a stale or broken record kicks) instead of dying on every tick until the record changes."""
+
+    def test_parse_ts_and_hours_between_never_raise(self):
+        import mw4_common as C
+        for bad in ("2026-11-17T16:00:00", 123, 1.5, [], {}, "garbage", "", None, True):
+            self.assertIsNone(C.parse_ts(bad), repr(bad))
+            self.assertIsNone(C.hours_between(bad, NOW), repr(bad))
+            self.assertIsNone(C.hours_between(NOW, bad), repr(bad))
+        self.assertIsNotNone(C.parse_ts("2026-11-17"))                 # a bare date still counts (00:00Z)
+        self.assertIsNotNone(C.parse_ts("2026-11-17T16:00:00+00:00"))
+        self.assertIsNotNone(C.parse_ts("2026-11-17T16:00:00Z"))
+
+    def test_decide_treats_naive_or_non_string_checked_at_as_unreadable_and_kicks(self):
+        for stamp in ("2026-11-17T16:00:00", 123, ["x"], {"a": 1}):
+            action, why = K.decide({"checked_at": stamp, "failed": []}, [], {}, NOW)
+            self.assertEqual(action, "kick", repr(stamp))
+            self.assertIn("no readable time", why)
+
+    def test_a_status_that_is_not_an_object_is_unreadable(self):
+        for status in ([], "text", 5, [1, 2]):
+            self.assertEqual(K.decide(status, [], {}, NOW)[0], "kick", repr(status))
+
+    def test_bad_run_and_state_entries_are_ignored(self):
+        runs = [{"event": "schedule", "status": "queued", "createdAt": 123},
+                {"event": "schedule", "status": "queued", "createdAt": "2026-11-17T19:55:00"},
+                "not a dict", None, {"event": "schedule", "status": "completed"}]
+        self.assertEqual(K.decide(st(9), runs, {}, NOW)[0], "kick")
+        self.assertEqual(K.decide(st(9), [], {"last_kick": "garbage"}, NOW)[0], "kick")
+        self.assertEqual(K.decide(st(9), [], {"last_kick": 7}, NOW)[0], "kick")
+
+    def test_main_survives_a_corrupt_state_file_and_bad_record_and_still_kicks(self):
+        with tempfile.TemporaryDirectory() as d:
+            state = os.path.join(d, "kick.json")
+            with open(state, "w", encoding="utf-8") as f:
+                f.write("[1, 2]")                                       # valid JSON, not an object
+            calls = []
+
+            def gh(cmd):
+                calls.append(cmd)
+                return (0, []) if cmd[1:3] == ["run", "list"] else (0, None)
+            code = K.main(["--state", state], now=NOW, fetch=lambda url: {"checked_at": "2026-11-17T16:00:00"}, gh=gh)
+            self.assertEqual(code, 0)
+            self.assertEqual(len([c for c in calls if c[1:3] == ["workflow", "run"]]), 1)
+
+    def test_the_alarm_reads_bad_input_as_an_alarm_not_a_crash(self):
+        import mw4_alarm as A
+        for st_ in ({"checked_at": "2026-11-17T16:00:00", "failed": []}, {"checked_at": 123}, [], "x"):
+            bad, why = A.assess(st_, NOW)
+            self.assertTrue(bad, repr(st_))
+
+
 class Units(unittest.TestCase):
     def read(self, *p):
         with open(os.path.join(ROOT, *p), encoding="utf-8") as f:
@@ -161,6 +214,22 @@ class Units(unittest.TestCase):
         self.assertIn("mw4-kick", u)
         self.assertIn("git revert", u)
         self.assertIn("disable --now", u)
+
+    def test_undo_never_resets_or_deletes_the_timer_clone(self):
+        """Review r1 F2/F3: the strategy timer commits in that clone and pulls main every run, so a reset --hard can lose
+        unpublished notes and is undone by the next pull anyway. The revert PR is the rollback; the clone follows main."""
+        u = self.read("UNDO-refresh-fix.sh")
+        self.assertNotIn("reset --hard", u)
+        self.assertNotRegex(u, r"rm -rf [^\n]*CLONE")
+        self.assertNotIn("PRE_SHA", u, "no clone reset, so no pre-merge sha is needed")
+        self.assertRegex(u, r"(?i)clone[^\n]*(follows|pulls)[^\n]*main")
+
+    def test_full_feature_undo_also_removes_the_kick_timer_and_service(self):
+        """Review r1 F4: UNDO-build-variants.sh deletes the status branch; a surviving kick timer would then see a missing
+        heartbeat and dispatch a refresh every hour."""
+        u = self.read("UNDO-build-variants.sh")
+        self.assertRegex(u, r"disable --now [^\n]*mw4-kick\.timer")
+        self.assertRegex(u, r"for u in [^\n]*mw4-kick")
 
 
 class Threshold(unittest.TestCase):

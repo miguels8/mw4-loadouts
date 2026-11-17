@@ -38,19 +38,27 @@ def _minutes_since(ts, now):
     return None if h is None else h * 60
 
 
+def _age_hours(status, now):
+    """Hours since the record's last check, or None when it has no readable time."""
+    if not isinstance(status, dict):
+        return None
+    return C.hours_between(status.get("checked_at") or status.get("checked"), now)
+
+
 def decide(status, runs, state, now):
     """('kick' | 'skip', reason). runs: list of workflow runs, or None when they could not be listed."""
-    stamp = (status or {}).get("checked_at") or (status or {}).get("checked")
-    hours = C.hours_between(stamp, now)
+    status = status if isinstance(status, dict) else None   # anything else is an unreadable record
+    state = state if isinstance(state, dict) else {}
+    hours = _age_hours(status, now)
     if hours is not None and hours <= KICK_AFTER_HOURS:
         return "skip", f"data is fresh ({hours:.1f} h old)"
     why = "the check record is unreadable" if status is None else (
         "the check record has no readable time" if hours is None else f"last check is {round(hours)} h old")
-    since_kick = _minutes_since((state or {}).get("last_kick"), now)
+    since_kick = _minutes_since(state.get("last_kick"), now)
     if since_kick is not None and since_kick < KICK_EVERY_MINUTES:
         return "skip", f"{why}, but a kick went out {round(since_kick)} min ago"
     for r in runs or []:
-        if r.get("event") not in REFRESH_EVENTS:
+        if not isinstance(r, dict) or r.get("event") not in REFRESH_EVENTS:
             continue
         age = _minutes_since(r.get("createdAt"), now)
         if age is None:
@@ -83,8 +91,8 @@ def main(argv=None, now=None, fetch=None, gh=None):
     gh = gh or _run_gh
     status = (fetch or C.fetch_status)(C.STATUS_URL)
     state = C.read_json(a.state, {})
-    stamp = (status or {}).get("checked_at") or (status or {}).get("checked")
-    hours = C.hours_between(stamp, now)
+    state = state if isinstance(state, dict) else {}
+    hours = _age_hours(status, now)
     if hours is not None and hours <= KICK_AFTER_HOURS:
         print(f"no kick: data is fresh ({hours:.1f} h old)")
         return 0

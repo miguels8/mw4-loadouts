@@ -22,7 +22,7 @@ STALE_HOURS = 7   # two missed 3-hour cycles; the mw4-kick timer restarts a skip
 
 def assess(status, now):
     """(bad, reason). Bad: unreadable record, failed sources, or the last check over 7 h ago."""
-    if not status:
+    if not status or not isinstance(status, dict):
         return True, "the site's check record could not be read"
     stamp = status.get("checked_at") or status.get("checked")
     h = C.hours_between(stamp, now)
@@ -69,6 +69,7 @@ def main(argv=None, now=None, fetch=None, run=None):
         status = C.read_json(a.status_file, None)
     else:
         status = (fetch or C.fetch_status)(C.STATUS_URL)
+    status = status if isinstance(status, dict) else None
     bad, reason = assess(status, now)
     last = (status or {}).get("checked_at") or (status or {}).get("checked") or "unknown"
     if a.force:
