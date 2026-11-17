@@ -1,0 +1,8 @@
+NEXT                            LEFT LAST                              PASSED UNIT                  ACTIVATES
+Tue 2026-11-17 12:00:25 CST 3min 53s Tue 2026-11-17 11:30:56 CST    25min ago mw4-kick.timer        mw4-kick.service
+Tue 2026-11-17 12:01:02 CST 4min 31s Tue 2026-11-17 11:00:16 CST    56min ago mw4-stale-alarm.timer mw4-stale-alarm.service
+Tue 2026-11-17 12:47:00 CST    50min Tue 2026-11-17 09:47:00 CST  2h 9min ago mw4-strategy.timer    mw4-strategy.service
+Wed 2026-11-18 10:05:00 CST      22h Tue 2026-11-17 10:05:00 CST 1h 51min ago mw4-review.timer      mw4-review.service
+
+4 timers listed.
+Pass --all to see loaded but inactive timers, too.

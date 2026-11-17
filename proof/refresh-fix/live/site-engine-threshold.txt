@@ -1,0 +1,2 @@
+290:  if (hours > 7) {
+291:    text += `. That is over 7 h: builds may be out of date`;

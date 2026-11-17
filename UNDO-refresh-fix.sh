@@ -10,7 +10,7 @@
 # Backup tag of the state before this job: pre-refresh-fix.
 set -euo pipefail
 REPO=miguels8/mw4-loadouts
-MERGE_SHA="__MERGE_SHA__"        # filled in at install time (the job's merge commit on main)
+MERGE_SHA="e7f0fcacb8e88a3261b460264e699bc03b6a7e65"   # the job's squash-merge commit on main (PR 11)
 UNITS="$HOME/.config/systemd/user"
 STATE="$HOME/.local/state/mw4-loadouts"
 
