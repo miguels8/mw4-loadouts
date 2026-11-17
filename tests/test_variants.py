@@ -186,6 +186,27 @@ class StandingRules(unittest.TestCase):
         self.assertFalse([p for p in out["parts"] if p[0] == "Ammunition"])
 
 
+class SiteNames(unittest.TestCase):
+    TABLE = {'TT Baem 12"': ["Barrel", 5], "SA Laz-500": ["Laser", 22], "KG-7 Drillcharge": ["Apex", 75]}
+
+    def test_canon_uses_the_table_spelling_and_level(self):
+        self.assertEqual(V.canon(self.TABLE, "Barrel", "TT Baem 12"), ('TT Baem 12"', 5))
+        self.assertEqual(V.canon(self.TABLE, "Laser", "SA LAZ-500"), ("SA Laz-500", 22))
+        self.assertEqual(V.canon(self.TABLE, "Laser", "Unknown Laser"), ("Unknown Laser", None))     # never a guess
+        self.assertEqual(V.canon(self.TABLE, "Muzzle", "SA Laz-500"), ("SA Laz-500", None))          # wrong slot: no match
+
+    def test_site_apex_row_becomes_the_apex_not_a_sixth_part(self):
+        ld = {"slug": "x-kg7", "name": "KG-7 Class", "mode": None, "primary": "KG-7 Vulcan", "updated": "2026-11-16", "notes": None,
+              "perks": [], "tactical": None, "lethal": None, "field": None,
+              "parts": [["Barrel", "TT Baem 12"], ["Laser", "SA LAZ-500"], ["Stock", "S"], ["Comb", "C"], ["Optic", "O"], ["Apex", "KG-7 Drillcharge"]]}
+        page = {"codmunity": None, "infil": None, "mw4intel": [ld], "mw4intel_weapon": None, "dexerto": None}
+        raw = V.collect(REG["kg-7-vulcan"], page, self.TABLE, BF, MODES)
+        self.assertEqual(len(raw), 1)
+        self.assertEqual(len(raw[0]["parts"]), 5)
+        self.assertEqual(raw[0]["apex"], ["KG-7 Drillcharge", 75])
+        self.assertEqual(raw[0]["parts"][0], ["Barrel", 'TT Baem 12"', 5])
+
+
 class RealM4(unittest.TestCase):
     """The 2026-11-17 live pages for the M4, cut into fixtures."""
 

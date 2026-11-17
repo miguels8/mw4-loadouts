@@ -210,16 +210,28 @@ def merge(slug, builds):
 
 
 # ------------------------------------------------------------------ collect
-def _level_from(table, slot, name):
-    """Unlock level from the CODMunity table by case-insensitive name and the same slot; no match = None."""
+def _key(name):
+    return re.sub(r"[^a-z0-9]+", "", (name or "").lower())
+
+
+def canon(table, slot, name):
+    """(name, unlock level) with the name spelled as the CODMunity attachment table spells it. MW4 Intel, Dexerto and Infil
+    differ in case and punctuation (SA LAZ-500 / SA Laz-500, 12" / 12), so the same part must not look like two parts.
+    No match in the same slot: the site's own name and level None (never a guess)."""
     e = table.get(name)
     if e and e[0] == slot:
-        return e[1]
-    nl = name.lower()
+        return name, e[1]
+    k = _key(name)
     for n, e in table.items():
-        if n.lower() == nl and e[0] == slot:
-            return e[1]
-    return None
+        if e[0] == slot and _key(n) == k:
+            return n, e[1]
+    return name, None
+
+
+def _split_apex(parts):
+    """A site that lists the Apex as a sixth part: it is the build's Apex, not one of the five slots."""
+    apex = next(([p[1], p[2]] for p in parts if p[0] == "Apex"), None)
+    return [p for p in parts if p[0] != "Apex"], apex
 
 
 def _build_ok(parts):
@@ -248,11 +260,13 @@ def collect(reg, page, table, bf, modes):
             b.get("text"), None)
     inf = page.get("infil")
     if inf and inf.get("endgame"):
+        parts = [[sl, *canon(table, sl, n)[:1], lv if lv is not None else canon(table, sl, n)[1]]
+                 for sl, n, lv in inf["endgame"]["parts"]]
         add("Infil", "Endgame", None, None, inf.get("checked"), INFIL.format(slug=reg.get("infil_slug", slug)),
-            inf["endgame"]["parts"], None, inf.get("blurb"), None)
+            parts, None, inf.get("blurb"), None)
     howto = ((page.get("mw4intel_weapon") or {}).get("howto")) or []
     for ld in page.get("mw4intel") or []:
-        parts = [[s, n, _level_from(table, s, n)] for s, n in ld["parts"]]
+        parts, apex = _split_apex([[s, *canon(table, s, n)] for s, n in ld["parts"]])
         kind = "pro" if ld["slug"].startswith("pro-") else None
         text = " ".join(x for x in [ld.get("notes")] + howto if x) or None
         kit = None
@@ -264,13 +278,13 @@ def collect(reg, page, table, bf, modes):
                 if ld.get(k):
                     kit[k] = ld[k]
         add("MW4 Intel", ld["name"], ld.get("mode"), kind, ld.get("updated"), MW4INTEL.format(slug=ld["slug"]),
-            parts, None, text, kit)
+            parts, apex, text, kit)
     dx = page.get("dexerto")
     if dx and reg.get("dexerto_path"):
-        parts = [[s, n, _level_from(table, s, n)] for s, n in dx["parts"]]
+        parts, apex = _split_apex([[s, *canon(table, s, n)] for s, n in dx["parts"]])
         kit = {f"perk{i + 1}": k for i, k in enumerate(dx.get("perks") or [])} or None
         add("Dexerto", "Dexerto build", None, None, dx.get("date"), DEXERTO.format(path=reg["dexerto_path"]),
-            parts, None, None, kit)
+            parts, apex, None, kit)
     return raw
 
 

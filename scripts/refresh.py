@@ -102,7 +102,11 @@ def _convert(reg, b, kind, url, cand_all, prev, table, optics, use, trust_old=Fa
 
 def _early(reg, infil, table, optics, use, url):
     e = infil["early"]
-    parts, notes = _apply_scope_rule(reg, e["parts"], table, optics, use)
+    named = []
+    for sl, n, lv in e["parts"]:
+        cn, tl = V.canon(table, sl, n)
+        named.append([sl, cn, lv])
+    parts, notes = _apply_scope_rule(reg, named, table, optics, use)
     return {"label": "Early game", "date": infil["checked"], "url": url, "complete_level": e["complete_level"],
             "parts": [part(*p) for p in parts], "apex_on": False, "notes": notes}
 
@@ -250,7 +254,7 @@ def build_data(registry, pages, old, today, ctx=None):
             builds["early"] = (prev or {}).get("builds", {}).get("early")
         elif pi.get("early"):
             builds["early"] = _early(reg, pi, table, optics, use, INFIL.format(slug=reg.get("infil_slug", slug)))
-        gun = {k: reg[k] for k in ("slug", "name", "type", "tier", "unlock", "line") if k in reg}
+        gun = {k: reg[k] for k in ("slug", "name", "type", "tier", "unlock", "line", "iron_sights") if k in reg}
         if reg.get("note"):
             gun["note"] = reg["note"]
         apex_name = apex[0] if apex else (prev or {}).get("apex", {}).get("name")
@@ -370,6 +374,16 @@ def fetch(url, tries=3, wait=3.0):
     return fetch_status(url, tries, wait)[1]
 
 
+SAVE_DIR = None   # --save-pages DIR: keep every fetched page under the names --offline reads (replays, weight tuning)
+
+
+def _save(name, text):
+    if SAVE_DIR and text:
+        os.makedirs(SAVE_DIR, exist_ok=True)
+        with open(os.path.join(SAVE_DIR, name), "w", encoding="utf-8") as f:
+            f.write(text)
+
+
 def load_pages(registry, offline=None, pause=1.5):
     pages = {}
     for reg in registry:
@@ -389,6 +403,8 @@ def load_pages(registry, offline=None, pause=1.5):
             if not parsed or not parsed["builds"]:
                 cm = fetch(MIRROR.format(slug=slug))
             inf_status, inf = fetch_status(INFIL.format(slug=reg.get("infil_slug", slug)))
+            _save(f"codmunity-{slug}.html", cm)
+            _save(f"infil-{slug}.html", inf)
             time.sleep(pause)
         if inf_status == "ok":
             infil = P.parse_infil(P.html_lines(inf))
@@ -435,6 +451,7 @@ def load_extras(registry, pages, offline=None, old=None, pause=0.6):
                     return "ok", f.read()
             return "absent", None
         st = fetch_status(url)
+        _save(name, st[1])
         time.sleep(pause)
         return st
 
@@ -541,7 +558,10 @@ def main(argv=None):
     ap.add_argument("--today", default=dt.date.today().isoformat())
     ap.add_argument("--now", default=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
     ap.add_argument("--only", nargs="*")
+    ap.add_argument("--save-pages")
     a = ap.parse_args(argv)
+    global SAVE_DIR
+    SAVE_DIR = a.save_pages
     d = a.data_dir
     registry = read_json(os.path.join(d, "registry.json"), {"guns": []})["guns"]
     if a.only:

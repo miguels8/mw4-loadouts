@@ -1,0 +1,8 @@
+152b5b4ef2763305ca8e6c3eaa21f658945cf0fc563e3349615ffee84ea1be79  site/engine.js
+c719e55fc7d03aa31ad584fb253386a846d1c8f197b049c6dca578b9a95a52a5  tests/ladder.test.mjs
+f363761473d85cbf379d6eb2f1567aee99a588780b74d130f769cc005d64f2ed  tests/variants.test.mjs
+SyntaxError: The requested module '../site/engine.js' does not provide an export named 'ladder'
+SyntaxError: The requested module '../site/engine.js' does not provide an export named 'defaultVariant'
+ℹ tests 2
+ℹ pass 0
+ℹ fail 2
