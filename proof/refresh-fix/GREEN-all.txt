@@ -1,0 +1,17 @@
+# GREEN 2026-11-17T16:53:58Z head 98b4cb2 plus working tree
+----------------------------------------------------------------------
+Ran 16 tests in 16.007s
+
+OK
+kick: last check is 9 h old
+kicked refresh-and-deploy at 2026-11-17T20:00:00Z
+kick: last check is 9 h old
+kicked refresh-and-deploy at 2026-11-17T20:00:00Z
+/home/santo/.hermes/bin/job-dispatch mw4-review-20261117 --card /home/miguel/.cache/agent-tmp/tmpmym5d_l3/cards/CARD-mw4-review-20261117.md -> exit 3 (new balance patch 2026-11-16 (x))
+/home/santo/.hermes/bin/job-dispatch mw4-review-20261117 --card /home/miguel/.cache/agent-tmp/tmp8niblroo/cards/CARD-mw4-review-20261117.md --dry-run -> exit 0 (new balance patch 2026-11-16 (x))
+baseline recorded (patch 2026-11-13)
+/home/santo/.hermes/bin/job-dispatch mw4-review-20261117 --card /home/miguel/.cache/agent-tmp/tmp3iw_rcgi/cards/CARD-mw4-review-20261117.md -> exit 0 (new balance patch 2026-11-16 (Nov 16 update))
+# tests 39
+# pass 39
+# fail 0
+exit=0

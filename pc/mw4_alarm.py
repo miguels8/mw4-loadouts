@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Hourly stale alarm (Q7): read the site's heartbeat (status.json on the status branch) and, when it is unreadable, lists
-failed sources, or the last check is more than 24 h old, post to #alerts through the existing tg_route.py.
+failed sources, or the last check is more than 7 h old, post to #alerts through the existing tg_route.py.
 
   mw4_alarm.py [--status-file PATH] [--state PATH] [--force] [--dry-run]
 
@@ -17,12 +17,12 @@ import mw4_common as C  # noqa: E402
 
 TG_ROUTE = "/home/santo/.hermes/scripts/tg_route.py"
 REPEAT_HOURS = 12
-STALE_HOURS = 24
+STALE_HOURS = 7   # two missed 3-hour cycles; the mw4-kick timer restarts a skipped run within ~4.5 h, so 7 h means that failed too
 
 
 def assess(status, now):
-    """(bad, reason). Bad: unreadable record, failed sources, or the last check over 24 h ago."""
-    if not status:
+    """(bad, reason). Bad: unreadable record, failed sources, or the last check over 7 h ago."""
+    if not status or not isinstance(status, dict):
         return True, "the site's check record could not be read"
     stamp = status.get("checked_at") or status.get("checked")
     h = C.hours_between(stamp, now)
@@ -69,6 +69,7 @@ def main(argv=None, now=None, fetch=None, run=None):
         status = C.read_json(a.status_file, None)
     else:
         status = (fetch or C.fetch_status)(C.STATUS_URL)
+    status = status if isinstance(status, dict) else None
     bad, reason = assess(status, now)
     last = (status or {}).get("checked_at") or (status or {}).get("checked") or "unknown"
     if a.force:

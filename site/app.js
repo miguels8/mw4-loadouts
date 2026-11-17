@@ -404,7 +404,7 @@ function bind() {
   });
 }
 
-// The data banner. Red = failed refresh, unreadable record or last check over 24 h ago (Q7). The record on the status
+// The data banner. Red = failed refresh, unreadable record or last check over 7 h ago (Q7 said 24 h; job mw4-refresh-fix matched it to the 3 h cadence). The record on the status
 // branch is the live heartbeat (it moves every 3 h even when nothing changed); the copy shipped with the page is the fallback.
 function showFresh(st, opts) {
   const f = freshness(st, new Date().toISOString(), opts);

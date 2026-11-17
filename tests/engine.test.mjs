@@ -328,13 +328,13 @@ test("every mode has a kit and head guns that exist", () => {
 test("freshness: shows the check date, loud when stale or when the last run failed", async () => {
   const { freshness, dateText } = await import("../site/engine.js");
   assert.equal(dateText("2026-11-16"), "Nov 16, 2026");
-  // Q7 (Miguel 2026-11-17) replaced the old 3-day rule: red when the last check is more than 24 h old
+  // Q7 replaced the old 3-day rule with 24 h; job mw4-refresh-fix (Miguel 2026-11-17) matched it to the 3 h cadence: red when the last check is more than 7 h old
   const ok = freshness({ checked_at: "2026-11-16T20:00:00Z", failed: [] }, "2026-11-17T01:00:00Z");
   assert.equal(ok.bad, false);
   assert.match(ok.text, /Data checked 5 h ago \(Nov 16, 2026\)/);
   const stale = freshness({ checked: "2026-11-10", failed: [] }, "2026-11-17T01:00:00Z");
   assert.equal(stale.bad, true);
-  assert.match(stale.text, /over 24 h/);
+  assert.match(stale.text, /over 7 h/);
   const failed = freshness({ checked_at: "2026-11-16T23:00:00Z", failed: ["mar-9"] }, "2026-11-17T00:00:00Z");
   assert.equal(failed.bad, true);
   assert.match(failed.text, /mar-9/);

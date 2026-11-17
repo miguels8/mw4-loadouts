@@ -14,15 +14,17 @@ REPO = os.path.expanduser("~/.local/share/mw4-loadouts/repo")
 
 
 def parse_ts(s):
-    """ISO timestamp (Z or offset) or a bare date (00:00Z) -> aware datetime, else None."""
-    if not s:
+    """ISO timestamp with a zone (Z or offset) or a bare date (00:00Z) -> aware datetime. Anything else (not a string,
+    garbage, or a time with no zone, which cannot be compared with an aware one) -> None, meaning unreadable."""
+    if not isinstance(s, str) or not s:
         return None
     try:
         if len(s) == 10:
             s += "T00:00:00Z"
-        return dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
+        t = dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
     except ValueError:
         return None
+    return t if t.tzinfo is not None else None
 
 
 def hours_between(then, now):

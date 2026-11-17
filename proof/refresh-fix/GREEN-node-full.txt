@@ -1,0 +1,583 @@
+TAP version 13
+# Subtest: card level and prestige controls (real Chromium, 390 px)
+    # Subtest: every card has the control row; targets are thumb sized; fits 390 px
+    ok 1 - every card has the control row; targets are thumb sized; fits 390 px
+      ---
+      duration_ms: 7.307587
+      type: 'test'
+      ...
+    # Subtest: empty is 'Set level' and 'Lv ?', never 0
+    ok 2 - empty is 'Set level' and 'Lv ?', never 0
+      ---
+      duration_ms: 6.703793
+      type: 'test'
+      ...
+    # Subtest: typing 63 saves, updates the header and shows 'add Visiv-5 for now'
+    ok 3 - typing 63 saves, updates the header and shows 'add Visiv-5 for now'
+      ---
+      duration_ms: 69.151738
+      type: 'test'
+      ...
+    # Subtest: tapping + (63 -> 64) flips the muzzle to ready and raises the ready count
+    ok 4 - tapping + (63 -> 64) flips the muzzle to ready and raises the ready count
+      ---
+      duration_ms: 47.06437
+      type: 'test'
+      ...
+    # Subtest: the card and the engine agree on the ready count after the edit
+    ok 5 - the card and the engine agree on the ready count after the edit
+      ---
+      duration_ms: 7.489575
+      type: 'test'
+      ...
+    # Subtest: My levels shows the same level, and edits flow both ways
+    ok 6 - My levels shows the same level, and edits flow both ways
+      ---
+      duration_ms: 1081.635022
+      type: 'test'
+      ...
+    # Subtest: prestige dropdown saves, shows the badge, and the parts follow the engine
+    ok 7 - prestige dropdown saves, shows the badge, and the parts follow the engine
+      ---
+      duration_ms: 142.072839
+      type: 'test'
+      ...
+    # Subtest: an edit re-ranks the whole list the same way the engine does
+    ok 8 - an edit re-ranks the whole list the same way the engine does
+      ---
+      duration_ms: 117.438755
+      type: 'test'
+      ...
+    # Subtest: the early build appears at a low level and goes away at a high level
+    ok 9 - the early build appears at a low level and goes away at a high level
+      ---
+      duration_ms: 75.685923
+      type: 'test'
+      ...
+    # Subtest: holding + repeats and stops on release
+    ok 10 - holding + repeats and stops on release
+      ---
+      duration_ms: 6766.634506
+      type: 'test'
+      ...
+    # Subtest: typing in the focused box then pressing + uses the typed number (review r1 F1 A)
+    ok 11 - typing in the focused box then pressing + uses the typed number (review r1 F1 A)
+      ---
+      duration_ms: 251.257248
+      type: 'test'
+      ...
+    # Subtest: the number box always shows the saved level, even while focused (review r1 F1 B)
+    ok 12 - the number box always shows the saved level, even while focused (review r1 F1 B)
+      ---
+      duration_ms: 204.731043
+      type: 'test'
+      ...
+    # Subtest: out-of-range typing is normalised in the box, the profile and the header (review r1 F1 C)
+    ok 13 - out-of-range typing is normalised in the box, the profile and the header (review r1 F1 C)
+      ---
+      duration_ms: 674.362118
+      type: 'test'
+      ...
+    # Subtest: typed text is saved even when the step itself cannot move (review r2 F1)
+    ok 14 - typed text is saved even when the step itself cannot move (review r2 F1)
+      ---
+      duration_ms: 877.137161
+      type: 'test'
+      ...
+    # Subtest: clearing the box goes back to not entered
+    ok 15 - clearing the box goes back to not entered
+      ---
+      duration_ms: 63.625463
+      type: 'test'
+      ...
+    # Subtest: no sideways scroll and no console errors after all edits
+    ok 16 - no sideways scroll and no console errors after all edits
+      ---
+      duration_ms: 4.007
+      type: 'test'
+      ...
+    1..16
+ok 1 - card level and prestige controls (real Chromium, 390 px)
+  ---
+  duration_ms: 13633.66512
+  type: 'test'
+  ...
+# Subtest: empty level is not entered, never level 0
+ok 2 - empty level is not entered, never level 0
+  ---
+  duration_ms: 1.333216
+  type: 'test'
+  ...
+# Subtest: not entered shows the plain part with its level, no lock
+ok 3 - not entered shows the plain part with its level, no lock
+  ---
+  duration_ms: 0.404236
+  type: 'test'
+  ...
+# Subtest: ready, stand-in, locked and unknown
+ok 4 - ready, stand-in, locked and unknown
+  ---
+  duration_ms: 0.573564
+  type: 'test'
+  ...
+# Subtest: level 0 typed is a real level, not 'not entered'
+ok 5 - level 0 typed is a real level, not 'not entered'
+  ---
+  duration_ms: 0.271818
+  type: 'test'
+  ...
+# Subtest: shared attachments: a part open on another gun is open here
+ok 6 - shared attachments: a part open on another gun is open here
+  ---
+  duration_ms: 0.215268
+  type: 'test'
+  ...
+# Subtest: review F3: an unpublished donor level never opens a part, even for a donor typed at 0
+ok 7 - review F3: an unpublished donor level never opens a part, even for a donor typed at 0
+  ---
+  duration_ms: 0.226487
+  type: 'test'
+  ...
+# Subtest: sharing only covers shareable slots
+ok 8 - sharing only covers shareable slots
+  ---
+  duration_ms: 0.191318
+  type: 'test'
+  ...
+# Subtest: weapon prestige relocks that gun's own sharing; Apex stays
+ok 9 - weapon prestige relocks that gun's own sharing; Apex stays
+  ---
+  duration_ms: 0.175738
+  type: 'test'
+  ...
+# Subtest: apex: only when the build uses it; opens at max level
+ok 10 - apex: only when the build uses it; opens at max level
+  ---
+  duration_ms: 0.263768
+  type: 'test'
+  ...
+# Subtest: gun opens by player level; empty player level never locks
+ok 11 - gun opens by player level; empty player level never locks
+  ---
+  duration_ms: 3.487435
+  type: 'test'
+  ...
+# Subtest: prestige: Classic resets (token can keep a gun), Regular keeps everything
+ok 12 - prestige: Classic resets (token can keep a gun), Regular keeps everything
+  ---
+  duration_ms: 0.220097
+  type: 'test'
+  ...
+# Subtest: Battle Pass gun: owned tick, empty tier = not locked, tier gates
+ok 13 - Battle Pass gun: owned tick, empty tier = not locked, tier gates
+  ---
+  duration_ms: 0.197788
+  type: 'test'
+  ...
+# Subtest: early build shows only below the level where the main build is ready
+ok 14 - early build shows only below the level where the main build is ready
+  ---
+  duration_ms: 3.088658
+  type: 'test'
+  ...
+# Subtest: buildView counts ready parts
+ok 15 - buildView counts ready parts
+  ---
+  duration_ms: 0.506115
+  type: 'test'
+  ...
+# Subtest: close modes use the close build when one is published
+ok 16 - close modes use the close build when one is published
+  ---
+  duration_ms: 0.114989
+  type: 'test'
+  ...
+# Subtest: kit item locked at player level gets the first open stand-in from the slot list
+ok 17 - kit item locked at player level gets the first open stand-in from the slot list
+  ---
+  duration_ms: 0.475065
+  type: 'test'
+  ...
+# Subtest: permanent unlock token opens a kit item on a Classic prestige
+ok 18 - permanent unlock token opens a kit item on a Classic prestige
+  ---
+  duration_ms: 2.516024
+  type: 'test'
+  ...
+# Subtest: kit with no level typed shows the plain kit
+ok 19 - kit with no level typed shows the plain kit
+  ---
+  duration_ms: 0.127869
+  type: 'test'
+  ...
+# Subtest: Hardcore never swaps in Quick Fix
+ok 20 - Hardcore never swaps in Quick Fix
+  ---
+  duration_ms: 0.151538
+  type: 'test'
+  ...
+# Subtest: SMG gets Ninja instead of Blood Rush; sniper keeps the stealth perks
+ok 21 - SMG gets Ninja instead of Blood Rush; sniper keeps the stealth perks
+  ---
+  duration_ms: 0.510275
+  type: 'test'
+  ...
+# Subtest: ranking: every gun appears once, best first, locked guns last
+ok 22 - ranking: every gun appears once, best first, locked guns last
+  ---
+  duration_ms: 18.822072
+  type: 'test'
+  ...
+# Subtest: ranking is by mode fit: close modes put an SMG above an LMG
+ok 23 - ranking is by mode fit: close modes put an SMG above an LMG
+  ---
+  duration_ms: 0.454555
+  type: 'test'
+  ...
+# Subtest: Miguel's one-time import fills only what he gave
+ok 24 - Miguel's one-time import fills only what he gave
+  ---
+  duration_ms: 0.303117
+  type: 'test'
+  ...
+# Subtest: card acceptance: KG-7 Vulcan at Lv 54 in TDM (pinned to the card's data of 2026-11-16)
+ok 25 - card acceptance: KG-7 Vulcan at Lv 54 in TDM (pinned to the card's data of 2026-11-16)
+  ---
+  duration_ms: 0.324696
+  type: 'test'
+  ...
+# Subtest: shipped data: no big scope, no invented levels, sources dated
+ok 26 - shipped data: no big scope, no invented levels, sources dated
+  ---
+  duration_ms: 1.264337
+  type: 'test'
+  ...
+# Subtest: every mode has a kit and head guns that exist
+ok 27 - every mode has a kit and head guns that exist
+  ---
+  duration_ms: 0.252317
+  type: 'test'
+  ...
+# Subtest: freshness: shows the check date, loud when stale or when the last run failed
+ok 28 - freshness: shows the check date, loud when stale or when the last run failed
+  ---
+  duration_ms: 0.394476
+  type: 'test'
+  ...
+# Subtest: Hyeon Burst keeps Miguel's IOTA-D pick
+ok 29 - Hyeon Burst keeps Miguel's IOTA-D pick
+  ---
+  duration_ms: 0.090089
+  type: 'test'
+  ...
+# Subtest: setGun stores the level, never mutates the old profile, and keeps empty as not entered
+ok 30 - setGun stores the level, never mutates the old profile, and keeps empty as not entered
+  ---
+  duration_ms: 3.092429
+  type: 'test'
+  ...
+# Subtest: setGun keeps the other fields and accepts prestige values from the dropdown
+ok 31 - setGun keeps the other fields and accepts prestige values from the dropdown
+  ---
+  duration_ms: 3.071159
+  type: 'test'
+  ...
+# Subtest: stepLevel: empty + goes to 1, empty - stays empty, bounded at 1 and the max
+ok 32 - stepLevel: empty + goes to 1, empty - stays empty, bounded at 1 and the max
+  ---
+  duration_ms: 0.196818
+  type: 'test'
+  ...
+# Subtest: gunBadges: header text is Lv N or Lv ?, plus the prestige badge
+ok 33 - gunBadges: header text is Lv N or Lv ?, plus the prestige badge
+  ---
+  duration_ms: 0.308547
+  type: 'test'
+  ...
+# Subtest: KG-7 Vulcan 63 -> 64 flips the muzzle from 'add Visiv-5 for now' to ready Ivanov QR600
+ok 34 - KG-7 Vulcan 63 -> 64 flips the muzzle from 'add Visiv-5 for now' to ready Ivanov QR600
+  ---
+  duration_ms: 0.96107
+  type: 'test'
+  ...
+# Subtest: the early build appears below the threshold and disappears above it
+ok 35 - the early build appears below the threshold and disappears above it
+  ---
+  duration_ms: 8.576364
+  type: 'test'
+  ...
+# Subtest: weapon prestige relocks parts that were open only through another gun
+ok 36 - weapon prestige relocks parts that were open only through another gun
+  ---
+  duration_ms: 7.271647
+  type: 'test'
+  ...
+# Subtest: an edit re-ranks: a gun's ready count feeds the mode ranking
+ok 37 - an edit re-ranks: a gun's ready count feeds the mode ranking
+  ---
+  duration_ms: 20.897121
+  type: 'test'
+  ...
+# Subtest: ladder order 1 then 2 then 3, and the variant's own part at its unlock level
+ok 38 - ladder order 1 then 2 then 3, and the variant's own part at its unlock level
+  ---
+  duration_ms: 6.199488
+  type: 'test'
+  ...
+# Subtest: Q4 gate respected: a gun that failed the gate never gets a calculated pick
+ok 39 - Q4 gate respected: a gun that failed the gate never gets a calculated pick
+  ---
+  duration_ms: 1.749992
+  type: 'test'
+  ...
+# Subtest: never empty: every slot at every ladder step has a usable part when the table has any open part for it
+ok 40 - never empty: every slot at every ladder step has a usable part when the table has any open part for it
+  ---
+  duration_ms: 1.821242
+  type: 'test'
+  ...
+# Subtest: review r1 F1: an own part with no published level never hides an open part of that slot
+ok 41 - review r1 F1: an own part with no published level never hides an open part of that slot
+  ---
+  duration_ms: 1.303687
+  type: 'test'
+  ...
+# Subtest: a locked slot says when its part opens; nothing is invented
+ok 42 - a locked slot says when its part opens; nothing is invented
+  ---
+  duration_ms: 0.207968
+  type: 'test'
+  ...
+# Subtest: ladder lists each change once, in level order, with from and to
+ok 43 - ladder lists each change once, in level order, with from and to
+  ---
+  duration_ms: 0.490185
+  type: 'test'
+  ...
+# Subtest: next upgrade line: swap, several changes at one level, final build
+ok 44 - next upgrade line: swap, several changes at one level, final build
+  ---
+  duration_ms: 0.546115
+  type: 'test'
+  ...
+# Subtest: next upgrade joins several changes at the same level with ;
+ok 45 - next upgrade joins several changes at the same level with ;
+  ---
+  duration_ms: 0.570985
+  type: 'test'
+  ...
+# Subtest: apex at max level when the final step is the Apex
+ok 46 - apex at max level when the final step is the Apex
+  ---
+  duration_ms: 0.823702
+  type: 'test'
+  ...
+# Subtest: KG-7 Vulcan golden: the build and next upgrade at Lv 54 from the live data snapshot
+ok 47 - KG-7 Vulcan golden: the build and next upgrade at Lv 54 from the live data snapshot
+  ---
+  duration_ms: 2.295977
+  type: 'test'
+  ...
+# Subtest: slotPick for an own open part is step 0 and ready
+ok 48 - slotPick for an own open part is step 0 and ready
+  ---
+  duration_ms: 0.151068
+  type: 'test'
+  ...
+# Subtest: game mode dropdown (real Chromium, 390 px)
+    # Subtest: one dropdown replaces the chips and lists every mode in the current order, no-class modes included
+    ok 1 - one dropdown replaces the chips and lists every mode in the current order, no-class modes included
+      ---
+      duration_ms: 8.835741
+      type: 'test'
+      ...
+    # Subtest: thumb sized, full width, dark, fits 390 px
+    ok 2 - thumb sized, full width, dark, fits 390 px
+      ---
+      duration_ms: 3.737873
+      type: 'test'
+      ...
+    # Subtest: switching the dropdown re-ranks the list and updates the description
+    ok 3 - switching the dropdown re-ranks the list and updates the description
+      ---
+      duration_ms: 247.088758
+      type: 'test'
+      ...
+    # Subtest: a no-class mode shows its description and no gun list
+    ok 4 - a no-class mode shows its description and no gun list
+      ---
+      duration_ms: 157.844001
+      type: 'test'
+      ...
+    # Subtest: the chosen mode is remembered and survives a reload
+    ok 5 - the chosen mode is remembered and survives a reload
+      ---
+      duration_ms: 3295.333004
+      type: 'test'
+      ...
+    # Subtest: the gun-type filter still works and keeps working after a mode switch
+    ok 6 - the gun-type filter still works and keeps working after a mode switch
+      ---
+      duration_ms: 438.93572
+      type: 'test'
+      ...
+    # Subtest: no sideways scroll and no console errors
+    ok 7 - no sideways scroll and no console errors
+      ---
+      duration_ms: 2.416596
+      type: 'test'
+      ...
+    1..7
+ok 49 - game mode dropdown (real Chromium, 390 px)
+  ---
+  duration_ms: 7379.64276
+  type: 'test'
+  ...
+# Subtest: variant buttons, level setup, next upgrade, ladder, how to use (real Chromium, 390 px)
+    # Subtest: KG-7 shows one 'Best for' button per variant, exactly one pressed, the mode's default first
+    ok 1 - KG-7 shows one 'Best for' button per variant, exactly one pressed, the mode's default first
+      ---
+      duration_ms: 6.481995
+      type: 'test'
+      ...
+    # Subtest: every variant shows its date and a source link
+    ok 2 - every variant shows its date and a source link
+      ---
+      duration_ms: 349.317456
+      type: 'test'
+      ...
+    # Subtest: pressing another variant redraws the card and the choice survives a reload
+    ok 3 - pressing another variant redraws the card and the choice survives a reload
+      ---
+      duration_ms: 1812.380693
+      type: 'test'
+      ...
+    # Subtest: changing the mode re-picks the default: KG-7 differs between Hardpoint and S&D
+    ok 4 - changing the mode re-picks the default: KG-7 differs between Hardpoint and S&D
+      ---
+      duration_ms: 1059.90413
+      type: 'test'
+      ...
+    # Subtest: Lv 63 shows the next upgrade, one + press moves it, and the full ladder lists the steps
+    ok 5 - Lv 63 shows the next upgrade, one + press moves it, and the full ladder lists the steps
+      ---
+      duration_ms: 1794.05729
+      type: 'test'
+      ...
+    # Subtest: 'How to use it' shows a standard note with its credit when no summary exists yet
+    ok 6 - 'How to use it' shows a standard note with its credit when no summary exists yet
+      ---
+      duration_ms: 170.388246
+      type: 'test'
+      ...
+    # Subtest: a gun with no re-checked build says so and lists the dropped builds
+    ok 7 - a gun with no re-checked build says so and lists the dropped builds
+      ---
+      duration_ms: 122.523405
+      type: 'test'
+      ...
+    # Subtest: kit shows 'Site uses' when the variant's site picked a different perk
+    ok 8 - kit shows 'Site uses' when the variant's site picked a different perk
+      ---
+      duration_ms: 246.191018
+      type: 'test'
+      ...
+    # Subtest: the data banner is calm when fresh and red when the last check is over 7 h old
+    ok 9 - the data banner is calm when fresh and red when the last check is over 7 h old
+      ---
+      duration_ms: 111.440246
+      type: 'test'
+      ...
+    # Subtest: no sideways scroll and no console errors
+    ok 10 - no sideways scroll and no console errors
+      ---
+      duration_ms: 37.918931
+      type: 'test'
+      ...
+    1..10
+ok 50 - variant buttons, level setup, next upgrade, ladder, how to use (real Chromium, 390 px)
+  ---
+  duration_ms: 8994.65834
+  type: 'test'
+  ...
+# Subtest: the red banner shows on a stale record, a failed refresh and a missing record (real Chromium)
+ok 51 - the red banner shows on a stale record, a failed refresh and a missing record (real Chromium)
+  ---
+  duration_ms: 5015.529026
+  type: 'test'
+  ...
+# Subtest: the default variant differs between Hardpoint and S&D on an M4
+ok 52 - the default variant differs between Hardpoint and S&D on an M4
+  ---
+  duration_ms: 1.133158
+  type: 'test'
+  ...
+# Subtest: default variant: ties prefer the type for the mode, then more sites, then newest; no match falls back by mode kind
+ok 53 - default variant: ties prefer the type for the mode, then more sites, then newest; no match falls back by mode kind
+  ---
+  duration_ms: 0.385747
+  type: 'test'
+  ...
+# Subtest: a page the site wrote for exactly this mode opens first
+ok 54 - a page the site wrote for exactly this mode opens first
+  ---
+  duration_ms: 0.323877
+  type: 'test'
+  ...
+# Subtest: variantsFor reads gun.variants and is empty for a legacy gun
+ok 55 - variantsFor reads gun.variants and is empty for a legacy gun
+  ---
+  duration_ms: 0.518625
+  type: 'test'
+  ...
+# Subtest: perk override: a sniper variant gets Ghost, Ninja, Cold-Blooded and 'Site uses' on the differing perk
+ok 56 - perk override: a sniper variant gets Ghost, Ninja, Cold-Blooded and 'Site uses' on the differing perk
+  ---
+  duration_ms: 0.766393
+  type: 'test'
+  ...
+# Subtest: rush variant: Ninja replaces Blood Rush, but not in Hijack
+ok 57 - rush variant: Ninja replaces Blood Rush, but not in Hijack
+  ---
+  duration_ms: 0.376926
+  type: 'test'
+  ...
+# Subtest: kitFor without a variant behaves as before
+ok 58 - kitFor without a variant behaves as before
+  ---
+  duration_ms: 0.172568
+  type: 'test'
+  ...
+# Subtest: staleness banner: 6 h ok, 8 h bad, a failed list bad, nothing bad
+ok 59 - staleness banner: 6 h ok, 8 h bad, a failed list bad, nothing bad
+  ---
+  duration_ms: 0.385626
+  type: 'test'
+  ...
+# Subtest: review r1 F2: an unreadable live heartbeat is red even when the shipped record looks healthy
+ok 60 - review r1 F2: an unreadable live heartbeat is red even when the shipped record looks healthy
+  ---
+  duration_ms: 0.591314
+  type: 'test'
+  ...
+# Subtest: a gun with no variants ranks after every gun that has one; legacy data is not penalised
+ok 61 - a gun with no variants ranks after every gun that has one; legacy data is not penalised
+  ---
+  duration_ms: 1.282777
+  type: 'test'
+  ...
+# Subtest: variantView shows the variant's setup at the typed level with ready counts
+ok 62 - variantView shows the variant's setup at the typed level with ready counts
+  ---
+  duration_ms: 1.9603
+  type: 'test'
+  ...
+1..62
+# tests 95
+# suites 0
+# pass 95
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 104118.030762

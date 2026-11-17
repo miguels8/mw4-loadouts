@@ -1,0 +1,10 @@
+[Unit]
+Description=Every 30 minutes: is the MW4 Loadouts data over 3.5 h old? If so, start the refresh
+
+[Timer]
+OnCalendar=*:0/30
+Persistent=true
+RandomizedDelaySec=60
+
+[Install]
+WantedBy=timers.target

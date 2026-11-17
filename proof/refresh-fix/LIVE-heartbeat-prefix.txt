@@ -1,0 +1,6 @@
+Pre-merge live proof of scripts/heartbeat.py on real GitHub, run https://github.com/miguels8/mw4-loadouts/actions/runs/44131934785 (throwaway branch diag2-mw4-heartbeat, real actions/checkout header present, token from GITHUB_TOKEN), 2026-11-17 16:59 UTC:
+2026-11-17T16:59:20.6082853Z ^[[36;1mpython3 -I -c "import sys; sys.path.insert(0,'scripts'); import heartbeat as H; pri
+2026-11-17T16:59:21.9868205Z heartbeat created
+2026-11-17T16:59:23.4092091Z heartbeat updated
+2026-11-17T16:59:23.5988575Z probe status -> exists
+(created = branch status-diag was missing; updated = second run on the existing branch; probe status = exists on the REAL status branch. The failed run 44126897076 died on exactly this step.)

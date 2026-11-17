@@ -1,5 +1,5 @@
 name: refresh-and-deploy
-# Every 3 hours: read CODMunity, Infil, MW4 Intel and Dexerto (no AI, no secrets), commit changed data to main and
+# Every 3 hours (GitHub schedule; the MiguelPC mw4-kick timer starts this workflow when the scheduler skips a slot): read CODMunity, Infil, MW4 Intel and Dexerto (no AI, no secrets), commit changed data to main and
 # deploy the site to GitHub Pages ONLY when a source changed. Every run, changed or not, writes the heartbeat
 # (status.json) to the `status` branch, which the app and the MiguelPC alarm read; that branch has no Pages deploy.
 # A source that cannot be read keeps its old build, marks the app's data line red, and fails this run (loud).
@@ -52,27 +52,11 @@ jobs:
         if: always() && github.event_name != 'push'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # scripts/heartbeat.py runs every git call in a fresh empty directory: this repo's checkout already holds an
+        # auth header, and a second one makes GitHub answer 400 "Duplicate header: Authorization". Fails loudly.
         run: |
-          set -e
-          dir="$RUNNER_TEMP/statusrepo"
-          rm -rf "$dir"
-          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
-          url="https://github.com/${GITHUB_REPOSITORY}.git"
-          if git -c "http.https://github.com/.extraheader=$auth" ls-remote --exit-code --heads "$url" status >/dev/null 2>&1; then
-            git -c "http.https://github.com/.extraheader=$auth" clone --depth 1 --branch status "$url" "$dir"
-          else
-            git init -q "$dir"
-            git -C "$dir" switch -q --orphan status
-            git -C "$dir" remote add origin "$url"
-          fi
-          cp site/data/status.json "$dir/status.json"
-          git -C "$dir" config user.name "mw4-loadouts-bot"
-          git -C "$dir" config user.email "mw4-loadouts-bot@users.noreply.github.com"
-          git -C "$dir" add status.json
-          if git -C "$dir" diff --cached --quiet; then echo "heartbeat unchanged"; else
-            git -C "$dir" commit -q -m "status: $(date -u +%FT%TZ)"
-            git -C "$dir" -c "http.https://github.com/.extraheader=$auth" push origin status
-          fi
+          export MW4_GIT_EXTRAHEADER="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          python3 -I scripts/heartbeat.py --remote "https://github.com/${GITHUB_REPOSITORY}.git" --file site/data/status.json
       - uses: actions/configure-pages@v5
         if: github.event_name != 'schedule' || steps.refresh.outputs.changed == 'true'
       - uses: actions/upload-pages-artifact@v3

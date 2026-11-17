@@ -1,0 +1,7 @@
+[Unit]
+Description=MW4 Loadouts refresh fallback (starts the refresh-and-deploy workflow when GitHub's scheduler skipped a slot and the last check is over 3.5 h old)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I %h/.local/share/mw4-loadouts/repo/pc/mw4_kick.py
+TimeoutStartSec=300

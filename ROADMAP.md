@@ -5,3 +5,5 @@
 4. Later, Miguel's decision: retire the Google Sheet builder.
 5. (mw4-build-variants, DONE 2026-11-17) Every real published meta build per gun as a button with "Best for" modes, a setup for every level (ladder), next-upgrade line, strategy notes, 3-hourly no-AI refresh with a red 24 h banner and a #alerts alarm, patch-triggered Opus review. Next: Opus reviews after every balance patch and monthly (timer files the card); Miguel checks the fixes before they go live.
 [by:claude-sonnet-5-5/mw4-webapp-r3]
+6. (mw4-refresh-fix, DONE 2026-11-17) The 3-hour refresh runs and reports: heartbeat push fixed (duplicate auth header root cause), `mw4-kick` MiguelPC timer restarts a skipped GitHub slot when the last check is over 3.5 h old, red banner and #alerts alarm at 7 h instead of 24 h. Next: none; watch `systemctl --user list-timers mw4-*`.
+[by:claude-sonnet-5-5/mw4-refresh-fix-20261117]

@@ -1,0 +1,19 @@
+# RED 2026-11-17T16:52:39Z base 98b4cb2 plus new tests only, no production change
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+/home/santo/.hermes/bin/job-dispatch mw4-review-20261117 --card /home/miguel/.cache/agent-tmp/tmplgp1w7np/cards/CARD-mw4-review-20261117.md -> exit 3 (new balance patch 2026-11-16 (x))
+/home/santo/.hermes/bin/job-dispatch mw4-review-20261117 --card /home/miguel/.cache/agent-tmp/tmpnkfghf4s/cards/CARD-mw4-review-20261117.md --dry-run -> exit 0 (new balance patch 2026-11-16 (x))
+baseline recorded (patch 2026-11-13)
+/home/santo/.hermes/bin/job-dispatch mw4-review-20261117 --card /home/miguel/.cache/agent-tmp/tmpjajnkl_n/cards/CARD-mw4-review-20261117.md -> exit 0 (new balance patch 2026-11-16 (Nov 16 update))
+not ok 27 - freshness: shows the check date, loud when stale or when the last run failed
+not ok 36 - staleness banner: 6 h ok, 8 h bad, a failed list bad, nothing bad
+# tests 39
+# pass 37
+# fail 2
+exit=1

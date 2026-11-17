@@ -146,7 +146,7 @@ test("variant buttons, level setup, next upgrade, ladder, how to use (real Chrom
         if (differs) assert.match(txt, /Site uses: /);
       });
 
-      await t.test("the data banner is calm when fresh and red when the last check is over 24 h old", async () => {
+      await t.test("the data banner is calm when fresh and red when the last check is over 7 h old", async () => {
         assert.equal(await J(`document.querySelector("#fresh").classList.contains("bad")`), false);
         assert.match(await J(`document.querySelector("#fresh").textContent`), /Data checked/);
       });
