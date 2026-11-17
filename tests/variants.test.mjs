@@ -1,4 +1,4 @@
-// Variant buttons: default variant per mode, perk override and "Site uses", 24 h staleness, ranking. Run: node --test tests/
+// Variant buttons: default variant per mode, perk override and "Site uses", 7 h staleness, ranking. Run: node --test tests/
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -95,18 +95,21 @@ test("kitFor without a variant behaves as before", () => {
   assert.deepEqual(names(a).slice(0, 3), [statics.kits.TDM.perk1, statics.kits.TDM.perk2, statics.kits.TDM.perk3]);
 });
 
-test("staleness banner: 23 h ok, 25 h bad, a failed list bad, nothing bad", () => {
+test("staleness banner: 6 h ok, 8 h bad, a failed list bad, nothing bad", () => {
   const now = "2026-11-17T12:00:00Z";
-  assert.equal(freshness({ checked_at: "2026-11-16T13:00:00Z", failed: [] }, now).bad, false);
-  const old = freshness({ checked_at: "2026-11-16T11:00:00Z", failed: [] }, now);
+  assert.equal(freshness({ checked_at: "2026-11-17T06:00:00Z", failed: [] }, now).bad, false);
+  assert.equal(freshness({ checked_at: "2026-11-17T05:30:00Z", failed: [] }, now).bad, false);   // 6.5 h: still inside two missed cycles
+  const old = freshness({ checked_at: "2026-11-17T04:00:00Z", failed: [] }, now);
   assert.equal(old.bad, true);
-  assert.match(old.text, /25 h/);
+  assert.match(old.text, /8 h/);
+  assert.match(old.text, /over 7 h/);
   const failed = freshness({ checked_at: "2026-11-17T11:00:00Z", failed: ["mar-9"] }, now);
   assert.equal(failed.bad, true);
   assert.match(failed.text, /mar-9/);
   assert.equal(freshness(null, now).bad, true);
   assert.equal(freshness({ failed: [] }, now).bad, true);
-  assert.equal(freshness({ checked: "2026-11-17", failed: [] }, now).bad, false);        // date only: counts from 00:00Z, 12 h old
+  assert.equal(freshness({ checked: "2026-11-17", failed: [] }, "2026-11-17T05:00:00Z").bad, false);   // date only: counts from 00:00Z, 5 h old
+  assert.equal(freshness({ checked: "2026-11-17", failed: [] }, now).bad, true);                       // 12 h old
   assert.equal(freshness({ checked: "2026-11-16", failed: [] }, now).bad, true);         // 36 h
   assert.equal(freshness({ checked_at: "2026-11-17T11:30:00Z", failed: [] }, now).bad, false);
   assert.equal(freshness({ checked_at: "2026-11-17T11:30:00Z", failed: [] }, "garbage").bad, true);

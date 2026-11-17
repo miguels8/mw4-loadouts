@@ -267,7 +267,7 @@ export function dateText(iso) {
 }
 
 // The data banner (Q7): red when the last refresh failed, when the check record cannot be read, or when the last
-// successful check is more than 24 hours old. status: {checked_at | checked, failed}; nowIso: a full timestamp.
+// successful check is more than 7 hours old (two missed 3-hour cycles). status: {checked_at | checked, failed}; nowIso: a full timestamp.
 export function freshness(status, nowIso, { heartbeatUnreadable = false } = {}) {
   const now = Date.parse(nowIso);
   const stamp = status?.checked_at ?? (status?.checked ? `${status.checked}T00:00:00Z` : null);
@@ -287,8 +287,8 @@ export function freshness(status, nowIso, { heartbeatUnreadable = false } = {}) 
     text += `. The last refresh could not read: ${status.failed.join(", ")}`;
     bad = true;
   }
-  if (hours > 24) {
-    text += `. That is over 24 h: builds may be out of date`;
+  if (hours > 7) {
+    text += `. That is over 7 h: builds may be out of date`;
     bad = true;
   }
   return { text, bad, hours };

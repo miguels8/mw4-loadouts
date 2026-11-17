@@ -1,0 +1,9 @@
+Diagnostic run https://github.com/miguels8/mw4-loadouts/actions/runs/44129693185 (throwaway branch diag-mw4-heartbeat, deleted after) 2026-11-17
+Failed run for comparison: https://github.com/miguels8/mw4-loadouts/actions/runs/44126897076 (heartbeat step: ! [rejected] status -> status (fetch first))
+2026-11-17T16:47:14.4052698Z RESULT local extraheader entries: 1
+2026-11-17T16:47:14.4991603Z RESULT A checked-out repo plus -c header rc=128 :: remote: Duplicate header: "Authorization"
+2026-11-17T16:47:14.7160236Z RESULT B empty dir plus -c header rc=0 :: 5d0d8cee8aae166efd90c7ffc048eb2543641611	refs/heads/status
+2026-11-17T16:47:14.9416428Z RESULT C missing branch via checkout header rc=2 :: 
+2026-11-17T16:47:15.1524434Z RESULT D missing branch empty dir rc=2 :: 
+
+Failed run 44126897076 raw header evidence: the heartbeat step ran git ls-remote with stderr to /dev/null inside the checked-out repo; checkout persists http.https://github.com/.extraheader, the step added a second -c header -> HTTP 400 Duplicate header: Authorization (exit 128); the if-test read any non-zero exit as 'branch missing' and fell to git init/orphan, whose push is rejected because status already has history.

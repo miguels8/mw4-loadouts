@@ -32,7 +32,7 @@ class Alarm(unittest.TestCase):
         self.assertIn("mar-9", why)
         self.assertTrue(A.assess(None, NOW)[0])
         self.assertTrue(A.assess({"failed": []}, NOW)[0])                       # no timestamp: unreadable
-        self.assertFalse(A.assess({"checked_at": hrs(23.5), "failed": []}, NOW)[0])
+        self.assertFalse(A.assess({"checked_at": hrs(6.5), "failed": []}, NOW)[0])   # 7 h threshold (mw4-refresh-fix)
 
     def test_fresh_posts_nothing(self):
         post, text, st = A.decide({}, False, None, NOW, "x")
