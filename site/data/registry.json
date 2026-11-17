@@ -13,7 +13,9 @@
     "note": "Battle Pass Tier 16 (free base weapon)"
    },
    "infil_slug": "cronen-osprey",
-   "line": "New #1 rifle. Free on the Battle Pass (tier 16)."
+   "line": "New #1 rifle. Free on the Battle Pass (tier 16).",
+   "mw4intel_slug": "cronen-osprey",
+   "dexerto_path": "assault-rifles/cronen-osprey"
   },
   {
    "slug": "m4",
@@ -27,7 +29,9 @@
     "note": null
    },
    "infil_slug": "m4",
-   "line": "Easiest rifle. Good at every range."
+   "line": "Easiest rifle. Good at every range.",
+   "mw4intel_slug": "m4",
+   "dexerto_path": "assault-rifles/m4"
   },
   {
    "slug": "han-86",
@@ -41,7 +45,9 @@
     "note": null
    },
    "infil_slug": "han-86",
-   "line": "Very easy recoil. Weaker since the Oct 28 nerf."
+   "line": "Very easy recoil. Weaker since the Oct 28 nerf.",
+   "mw4intel_slug": "han-86",
+   "dexerto_path": "assault-rifles/han-86"
   },
   {
    "slug": "hyeon-burst",
@@ -60,7 +66,9 @@
     "slot": "Optic",
     "name": "IOTA-D",
     "replaces": "Ammunition"
-   }
+   },
+   "mw4intel_slug": "hyeon-burst",
+   "dexerto_path": "assault-rifles/hyeon-burst"
   },
   {
    "slug": "patriot-xmr",
@@ -74,7 +82,9 @@
     "note": null
    },
    "infil_slug": "patriot-xmr",
-   "line": "Hits hard at mid-long range. Heavy recoil."
+   "line": "Hits hard at mid-long range. Heavy recoil.",
+   "mw4intel_slug": "patriot-xmr",
+   "dexerto_path": "assault-rifles/patriot-xmr"
   },
   {
    "slug": "kastov-762",
@@ -88,7 +98,9 @@
     "note": null
    },
    "infil_slug": "kastov-762",
-   "line": "Big damage per bullet. Harsh recoil."
+   "line": "Big damage per bullet. Harsh recoil.",
+   "mw4intel_slug": "kastov-762",
+   "dexerto_path": "assault-rifles/kastov-762"
   },
   {
    "slug": "axion",
@@ -102,7 +114,9 @@
     "note": null
    },
    "infil_slug": "axion",
-   "line": "Handles like the M4, hits harder."
+   "line": "Handles like the M4, hits harder.",
+   "mw4intel_slug": "axion",
+   "dexerto_path": "assault-rifles/axion"
   },
   {
    "slug": "oden",
@@ -116,7 +130,9 @@
     "note": null
    },
    "infil_slug": "oden",
-   "line": "Hardest-hitting rifle, but slow and kicks."
+   "line": "Hardest-hitting rifle, but slow and kicks.",
+   "mw4intel_slug": "oden",
+   "dexerto_path": "assault-rifles/oden"
   },
   {
    "slug": "cronen-squall",
@@ -130,7 +146,9 @@
     "note": null
    },
    "infil_slug": "cronen-squall",
-   "line": "Accurate at range. Small mag, slow fire."
+   "line": "Accurate at range. Small mag, slow fire.",
+   "mw4intel_slug": "cronen-squall",
+   "dexerto_path": "assault-rifles/cronen-squall"
   },
   {
    "slug": "vel-46",
@@ -144,7 +162,9 @@
     "note": null
    },
    "infil_slug": "vel-46",
-   "line": "Best SMG. Holds up even at mid range."
+   "line": "Best SMG. Holds up even at mid range.",
+   "mw4intel_slug": "vel-46",
+   "dexerto_path": "submachine-guns/vel-46"
   },
   {
    "slug": "iso-nightshade",
@@ -158,7 +178,9 @@
     "note": null
    },
    "infil_slug": "iso-nightshade",
-   "line": "Most consistent gun in the game."
+   "line": "Most consistent gun in the game.",
+   "mw4intel_slug": "iso-nightshade",
+   "dexerto_path": "submachine-guns/iso-nightshade"
   },
   {
    "slug": "ppsh-41",
@@ -172,7 +194,9 @@
     "note": null
    },
    "infil_slug": "ppsh-41",
-   "line": "Huge drum, very fast fire, easy to use."
+   "line": "Huge drum, very fast fire, easy to use.",
+   "mw4intel_slug": "ppsh-41",
+   "dexerto_path": "submachine-guns/pp-41"
   },
   {
    "slug": "wz-55-striga",
@@ -186,7 +210,9 @@
     "note": null
    },
    "infil_slug": "wz55-striga",
-   "line": "High damage, slow fire rate."
+   "line": "High damage, slow fire rate.",
+   "mw4intel_slug": "wz55-striga",
+   "dexerto_path": "submachine-guns/wz55-striga"
   },
   {
    "slug": "x-58-nyx",
@@ -200,7 +226,9 @@
     "note": null
    },
    "infil_slug": "x-58-nyx",
-   "line": "Built-in silencer. Stealth pick."
+   "line": "Built-in silencer. Stealth pick.",
+   "mw4intel_slug": "x-58-nyx",
+   "dexerto_path": "submachine-guns/x-58-nyx"
   },
   {
    "slug": "csg-35",
@@ -214,7 +242,9 @@
     "note": "Battle Pass Tier 36 (free base weapon)"
    },
    "infil_slug": "csg-35",
-   "line": "Fastest SMG. Battle Pass tier 36."
+   "line": "Fastest SMG. Battle Pass tier 36.",
+   "mw4intel_slug": "csg-35",
+   "dexerto_path": "submachine-guns/csg-35"
   },
   {
    "slug": "rezi-12",
@@ -228,7 +258,9 @@
     "note": null
    },
    "infil_slug": "rezi-12",
-   "line": "Best shotgun. Only for tight rooms."
+   "line": "Best shotgun. Only for tight rooms.",
+   "mw4intel_slug": "rezi-12",
+   "dexerto_path": "shotguns/rezi-12"
   },
   {
    "slug": "warlord",
@@ -242,7 +274,9 @@
     "note": null
    },
    "infil_slug": "warlord",
-   "line": "Hits hard, slow pump."
+   "line": "Hits hard, slow pump.",
+   "mw4intel_slug": "warlord",
+   "dexerto_path": "shotguns/warlord"
   },
   {
    "slug": "finn-lmg",
@@ -256,7 +290,9 @@
     "note": null
    },
    "infil_slug": "finn-lmg",
-   "line": "Most mobile LMG. LMGs trail rifles right now."
+   "line": "Most mobile LMG. LMGs trail rifles right now.",
+   "mw4intel_slug": "finn-lmg",
+   "dexerto_path": "light-machine-guns/finn-lmg"
   },
   {
    "slug": "type-73",
@@ -270,7 +306,9 @@
     "note": null
    },
    "infil_slug": "type-73",
-   "line": "Easy recoil, slow to handle."
+   "line": "Easy recoil, slow to handle.",
+   "mw4intel_slug": "type-73",
+   "dexerto_path": "light-machine-guns/type-73"
   },
   {
    "slug": "apoc-338",
@@ -284,7 +322,9 @@
     "note": null
    },
    "infil_slug": "apoc-338",
-   "line": "Huge damage, very slow."
+   "line": "Huge damage, very slow.",
+   "mw4intel_slug": "apoc-338",
+   "dexerto_path": "light-machine-guns/apoc-338"
   },
   {
    "slug": "oris-8-6",
@@ -298,7 +338,9 @@
     "note": null
    },
    "infil_slug": "oris-8-6",
-   "line": "Quickscope build, no big scope."
+   "line": "Quickscope build, no big scope.",
+   "mw4intel_slug": "oris-86",
+   "dexerto_path": "marksman-rifles/oris-86"
   },
   {
    "slug": "mosin-nagant",
@@ -314,7 +356,9 @@
    "infil_slug": "mosin-nagant",
    "line": "Bolt-action, 5-round mag. Nov 13 patch: full damage only to 15 m (was 40 m); CODMunity's Nov 14 builds are tagged Nerf (after it).",
    "iron_sights": true,
-   "note": "⚠ Nov 13 patch: full damage only to 15 m · iron sights, no scope"
+   "note": "⚠ Nov 13 patch: full damage only to 15 m · iron sights, no scope",
+   "mw4intel_slug": "mosin-nagant",
+   "dexerto_path": "marksman-rifles/mosin-nagant"
   },
   {
    "slug": "mar-9",
@@ -328,7 +372,9 @@
     "note": null
    },
    "infil_slug": "mar-9",
-   "line": "Semi-auto, two-shot kills. Outclassed."
+   "line": "Semi-auto, two-shot kills. Outclassed.",
+   "mw4intel_slug": "mar-9",
+   "dexerto_path": "marksman-rifles/mar-9"
   },
   {
    "slug": "kg-7-vulcan",
@@ -342,7 +388,9 @@
     "note": null
    },
    "infil_slug": "kg-7-vulcan",
-   "line": "Best sniper by far. One chest shot kills."
+   "line": "Best sniper by far. One chest shot kills.",
+   "mw4intel_slug": "kg-7-vulcan",
+   "dexerto_path": "sniper-rifles/kg-7-vulcan"
   },
   {
    "slug": "signal-50",
@@ -356,7 +404,9 @@
     "note": null
    },
    "infil_slug": "signal-50",
-   "line": "Semi-auto .50 cal. Better on big maps."
+   "line": "Semi-auto .50 cal. Better on big maps.",
+   "mw4intel_slug": "signal-50",
+   "dexerto_path": "sniper-rifles/signal-50"
   },
   {
    "slug": "astaroth-57",
@@ -370,7 +420,9 @@
     "note": null
    },
    "infil_slug": "astaroth-57",
-   "line": "Hardest hit, 3-round mag, slow."
+   "line": "Hardest hit, 3-round mag, slow.",
+   "mw4intel_slug": "astaroth-57",
+   "dexerto_path": "sniper-rifles/astaroth-57"
   },
   {
    "slug": "sang-9mm",
@@ -384,7 +436,9 @@
     "note": null
    },
    "infil_slug": "sang-9mm",
-   "line": "Default pistol. Good backup in close fights."
+   "line": "Default pistol. Good backup in close fights.",
+   "mw4intel_slug": "sang-9mm",
+   "dexerto_path": "pistols/sang-9mm"
   },
   {
    "slug": "krait-p68",
@@ -398,7 +452,9 @@
     "note": null
    },
    "infil_slug": "krait-p68",
-   "line": "Best-ranked pistol. Fast and accurate."
+   "line": "Best-ranked pistol. Fast and accurate.",
+   "mw4intel_slug": "krait-p68",
+   "dexerto_path": "pistols/krait-p68"
   },
   {
    "slug": "50-gs",
@@ -412,7 +468,9 @@
     "note": null
    },
    "infil_slug": "50-gs",
-   "line": "Hand cannon: big hits, slow, small mag."
+   "line": "Hand cannon: big hits, slow, small mag.",
+   "mw4intel_slug": "50-gs",
+   "dexerto_path": "pistols/50-gs"
   },
   {
    "slug": "mojave-357",
@@ -426,7 +484,9 @@
     "note": null
    },
    "infil_slug": "mojave-357",
-   "line": "Revolver: hard-hitting, slow to reload."
+   "line": "Revolver: hard-hitting, slow to reload.",
+   "mw4intel_slug": "mojave-357",
+   "dexerto_path": "pistols/mojave-357"
   }
  ]
 }

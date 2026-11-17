@@ -1,0 +1,5 @@
+6cf91d172349633c310708503a69f05ca7fe0addb8778695eed4ab3366cfb1c2  scripts/refresh.py
+5fc28f116fa331995cf369e873d3d20eae1c032cff55676b69ca8a06ca99de52  tests/test_refresh_variants.py
+Ran 98 tests in 0.578s
+
+OK
