@@ -1,1 +1,122 @@
-{}
+{
+ "cronen-osprey-apex-attachment-2277ca": {
+  "text": "Use the suppressed 60-round build with Ghost to stay off the radar and have plenty of ammo. Tap or short-burst past 30 metres, and only go full-auto up close. Fit a larger magazine since 30 rounds go fast, and grind the Battle Pass early to unlock the rifle at tier 16.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "m4-versatile-1439ac": {
+  "text": "Use this M4 build as your all-round first class on Shipment. The suppressor keeps you off the minimap, while the laser and Fireline grip keep it snappy around containers, and Quick Fix heals you on kills so you can chain fights. Build for recoil and range, swap Scavenger for Battle Hardened if flashes and stuns are a problem, and try the Hurricane Apex on SMG-heavy maps.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "m4-pro-ranked-40eea0": {
+  "text": "This build focuses on recoil and range, and it already handles well. Use it as your first class while you level everything else. On SMG-heavy maps, try the Hurricane Apex instead of switching guns.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "m4-versatile-5cb987": {
+  "text": "Level up the M4 first, since the Hurricane Apex gives it a second life at max level. Build it for recoil and range, because it already handles well. Use it as your first class while leveling everything else, and on SMG-heavy maps try the Hurricane Apex instead of switching guns.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "m4-close-range-a332c8": {
+  "text": "Use the Suppressor to stay off the minimap, the Frag to deny the plant, and the Concussion to win the opening trade. Build for recoil and range since it already handles well. Use it as your first class while leveling everything else, and on SMG-heavy maps try the Hurricane Apex instead of switching guns.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "m4-versatile-8737d7": {
+  "text": "It fires faster than the HAN 86 and suits aggressive play. Use it to push like an SMG player while keeping some range.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "han-86-versatile-d18051": {
+  "text": "Use the Han 86 with the folding stock, Hanbit grip, Fireline grip, and Visiv-5 laser to stay light and win close fights. Aim for the head since headshots are worth more now. It's great for learning recoil and range, and works well in DMZ.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "han-86-pro-ranked-119958": {
+  "text": "Aim for the head since Season 1 made headshots worth more. Use it to learn recoil and range before moving to harder rifles. It's a strong DMZ choice where control beats raw speed.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "han-86-pro-ranked-0520b2": {
+  "text": "Aim for the head since Season 1 made headshots worth more. Use it to learn recoil and range before moving to harder rifles. It's a strong DMZ choice where control beats raw speed.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "han-86-pro-ranked-177c01": {
+  "text": "Aim for the head since Season 1 made headshots worth more. Use it to learn recoil and range before moving to harder rifles. It's a strong DMZ choice where control beats raw speed.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "han-86-pro-ranked-35f8e2": {
+  "text": "Aim for the head since Season 1 made headshots worth more. Use it to learn recoil and range before moving to harder rifles. It's a strong DMZ choice where control beats raw speed.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "han-86-pro-ranked-83361b": {
+  "text": "Aim for the head since Season 1 made headshots worth more. Use it to learn recoil and range before moving to harder rifles. It's a strong DMZ choice where control beats raw speed.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "han-86-versatile-0e89c7": {
+  "text": "Level this rifle early along with the ISO Nightshade. It fires at 740 RPM and is accurate. The Oct 28 update reduced its neck and upper-chest damage but increased its range.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "hyeon-burst-versatile-afada2": {
+  "text": "Use this build at mid-range and hold lanes instead of pushing, letting enemies walk into your first burst. Fire your second burst as the first one's recoil settles, not as fast as you can press. Bring a fast sidearm or Overkill SMG for doorways where the burst delay can get you killed.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "hyeon-burst-versatile-9ba8b8": {
+  "text": "This is a burst-fire rifle for careful aimers who pace their shots. At Lvl 68, Hyperburst Apex adds full-auto fire after the opening burst. That means you can keep shooting without re-pulling the trigger.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "patriot-xmr-versatile-f6a516": {
+  "text": "Use this Patriot XMR build to hold a lane instead of sprinting through the middle. It fires slower but hits harder, so it's forgiving when several enemies come around a corner at once. Use the IOTA-D mini reflex and Fireline grip, fit a larger magazine, and prioritize vertical recoil and aim stability.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "patriot-xmr-versatile-e14b68": {
+  "text": "Use this rifle for mid-to-long range, and switch to your pistol for SMG and shotgun range. Fit a larger magazine since 25 rounds run out fast in Hardpoint. Play the long lane instead of the doorway, and build for vertical recoil and aim stability.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "patriot-xmr-versatile-52265b": {
+  "text": "Use this build as a predictable mid-range rifle. Run the top build with the 35-round magazine. Load Overpressured rounds.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "kastov-762-long-range-8aeca7": {
+  "text": "Hold angles at distance, since this build is made to tame the gun's kick. Put attachment slots into vertical recoil first. Burst at long range instead of holding the trigger, and avoid mobile close fights.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ },
+ "kastov-762-versatile-43b265": {
+  "text": "It fires slowly at 600 RPM but hits harder than any other AR. Use it to hold a lane. It's best for winning long-range fights.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:08:21Z",
+  "attempts": 1
+ }
+}
