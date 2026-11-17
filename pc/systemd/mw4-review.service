@@ -1,0 +1,6 @@
+[Unit]
+Description=MW4 Loadouts Opus review trigger (job-dispatch: planner role reviews, build role fixes; no model named here)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I %h/.local/share/mw4-loadouts/repo/pc/mw4_review.py

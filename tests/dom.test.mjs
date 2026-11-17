@@ -13,7 +13,11 @@ const read = (p) => JSON.parse(readFileSync(new URL(p, import.meta.url), "utf8")
 const weapons = read("../site/data/weapons.json");
 const statics = read("../site/data/static.json");
 const kg = read("./fixtures/kg7-card-gun.json");
-const data = { ...weapons, guns: weapons.guns.map((g) => (g.slug === kg.slug ? kg : g)) };
+// A gun without a "variants" list is drawn the old way (main build + "While you level up"): KG-7 and the first gun with an
+// early build are pinned to that shape here, so these tests never drift with the daily refresh.
+const legacy = ({ variants, published, cands, dropped, calc_gate, patch_date, ...rest }) => rest;
+const earlyGun = weapons.guns.find((g) => g.builds.early && g.slug !== kg.slug);
+const data = { ...weapons, guns: weapons.guns.map((g) => (g.slug === kg.slug ? kg : g.slug === earlyGun.slug ? legacy(g) : g)) };
 const chrome = findChrome();
 const KG = "kg-7-vulcan";
 const card = (slug) => `details[data-slug="${slug}"]`;

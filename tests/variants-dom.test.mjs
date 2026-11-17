@@ -131,7 +131,7 @@ test("variant buttons, level setup, next upgrade, ladder, how to use (real Chrom
         await sleep(100);
         assert.match(await body("oden"), /before the 2026-11-13 patch/);
         const order = await J(`[...document.querySelectorAll("details.gun")].map((d) => d.dataset.slug)`);
-        assert.equal(order.at(-1) !== "oden" && order.indexOf("oden") > order.length - 3, true, "ranks after guns with builds");
+        assert.equal(order.at(-1), "oden", "a gun with no re-checked build ranks after every gun that has one");
       });
 
       await t.test("kit shows 'Site uses' when the variant's site picked a different perk", async () => {

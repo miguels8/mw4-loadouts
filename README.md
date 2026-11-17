@@ -4,8 +4,25 @@ Phone web app: pick a game mode, see the best gun and exactly which parts to put
 
 - **Site:** https://miguels8.github.io/mw4-loadouts/ (GitHub Pages)
 - **Repo:** https://github.com/miguels8/mw4-loadouts
-- **Data:** CODMunity Season 1 Multiplayer builds (main + "Close Range") and Infil "Early game" builds, refreshed daily. No AI is involved.
+- **Data:** every real published meta build per gun: CODMunity (all public Multiplayer builds), Infil (early and endgame), MW4 Intel (mode classes, per-gun classes, curated and pro builds) and Dexerto. Refreshed every 3 hours by a script with no AI.
 - **Game mode** is one dropdown at the top of the Loadouts tab (every mode, no-class modes included); the choice is remembered. **Your levels** are set right on each gun card (Loadouts tab: − / + around the level, tap the number to type, hold − or + to repeat, plus a Prestige dropdown None / 1..10 / Master) or on the "My levels" page; both write the same profile, saved in your browser only (localStorage). A card edit instantly re-draws that card and the mode's ranked list (parts flip ✅ / 🔁 / 🔒, the x/5 ready count, the early build, the rank). The collapsed card header shows "Lv N" (or "Lv ?") and a prestige badge. An empty box means "not entered", never level 0. "Load Miguel's levels" is an opt-in one-time import (`site/miguel-levels.json`).
+
+## Build variants, the level ladder and strategy (Miguel's Q1-Q13, 2026-11-17)
+
+- **One button per real build.** A gun card shows one button per published meta build, labelled `Best for: <modes>`; the build best for the mode in the dropdown is pressed when the card opens (a page a site wrote for exactly that mode first, then the type for the mode: close modes prefer Close Range, others Versatile then Long; then more sites agreeing; then newest). Your choice per mode is remembered. Nothing is invented (Q5): a variant is a build a site published.
+- **Merged near-duplicates (Q13).** Builds sharing 4 of 5 slot+part pairs from different sites become one button: the newest site's version leads, "N sites agree: ..." lists them with dates and source links, and the one differing part shows as "Alternative: ...".
+- **Stale builds are dropped (Q6).** A build dated before the gun's latest balance patch (CODMunity "Nerfs & Buffs" dates, Infil Buffed/Nerfed history) is dropped unless its site re-checked it since (same day counts). A gun left with nothing says "No build re-checked since the <date> patch" and lists the dropped builds; it ranks after every gun that has a build.
+- **Best for (Q10)** comes from one fixed table, `site/data/bestfor.json`, applied to the site's own build name/type or MW4 Intel's page mode. Opus checks it at every review.
+- **Setup for your level (Q1-Q3).** Per slot, in this order: the variant's own part when open; (1) a published early build while it applies; (2) the best open part of that slot that published builds use (close modes favour parts of close-typed builds); (3) a calculated pick, only on a gun whose calculation reproduced the CODMunity build in at least 4 of 5 slots at max level (Q4, `site/data/calc_gate.json`, global weights in `stat_weights.json`); (4) the old stand-in, then the lowest-level open part of the slot ("Filler"). A slot only shows 🔒 when no part of it is open at all. The card shows one line, `Next upgrade at Lv N: swap X -> Y`, and the full ladder (every level step of that variant) behind a tap (Q2).
+- **Perks and gear (Q11/Q12).** The mode's kit, adjusted for the variant's role (Long/Sniper: Ghost, Ninja, Cold-Blooded; Close Range: Ninja instead of Blood Rush, not in Hijack). When the source site published perks that differ, the kit line shows `Site uses: <perk>`; ours wins.
+- **How to use it (Q8).** A 3-sentence summary of the source site's own text, written on MiguelPC by the cheap OpenCode Go pool only when a variant is new (every call is in the Go usage ledger and `~/.local/state/mw4-loadouts/strategy-calls.jsonl`); when the site has no text, a fixed template per build type (`strategy_templates.json`). Claude never writes these.
+
+## Freshness (Q7) and the Opus review (Q9)
+
+- GitHub Actions runs `scripts/refresh.py` every 3 hours (`17 */3 * * *`). It rebuilds and deploys only when a source changed (`DATA_CHANGED=1`, step output `changed`). Every run, changed or not, pushes the heartbeat `status.json` to the orphan branch `status` (no Pages deploy). The app reads `https://raw.githubusercontent.com/miguels8/mw4-loadouts/status/status.json`, falling back to the copy shipped with the page.
+- A **red banner** shows when the last refresh failed, the record cannot be read, or the last successful check is over 24 h old. `mw4-stale-alarm.timer` (hourly, MiguelPC user timer) reads the same record and posts to #alerts through the existing `tg_route.py` (no new credential): once when the state turns bad, at most every 12 h while bad, once when back to normal.
+- `status.json` also records the newest balance patch (`patch`). `mw4-review.timer` (daily 10:05) files a review card for `job-dispatch` when that patch changes or a month passed: the planner role writes a findings report, the build role applies fixes in a PR, and Eva verifies before it goes live. No model name is hard-coded.
+- The three timers and their scripts live in `pc/` (scripts, `systemd/` units, `review-card.md`); they run from a dedicated clone at `~/.local/share/mw4-loadouts/repo`, state in `~/.local/state/mw4-loadouts/`. Install receipt: `proof/INSTALL-RECEIPT.md`; undo: `UNDO-build-variants.sh`.
 
 ## What each part shows
 
@@ -23,7 +40,9 @@ Phone web app: pick a game mode, see the best gun and exactly which parts to put
 | `site/data/weapons.json` | Every gun's builds, unlock levels, stand-ins, sharing table. Written by the refresher |
 | `site/data/registry.json` | Hand-kept gun facts (type, tier, player unlock, picks). `static.json`: modes, kits, perk unlock levels |
 | `site/data/changes.json` | "What changed" history. `status.json`: last check date and any guns that could not be read |
-| `scripts/refresh.py` | The no-AI refresher (stdlib Python). `mw4_parse.py` reads saved/live pages as text |
+| `scripts/refresh.py` | The no-AI refresher (stdlib Python). `mw4_parse.py` reads saved/live pages as text; `variants.py` (collect, standing rules, patch-date drop, best-for, merge); `calc.py` (calculated picks and the Q4 gate) |
+| `site/data/bestfor.json`, `stat_weights.json`, `calc_gate.json`, `strategy.json`, `strategy_templates.json` | The best-for table, the one global weight table, the per-gun Q4 result, the strategy notes and the fixed templates |
+| `pc/` | MiguelPC user-timer scripts: stale alarm, strategy notes, Opus review trigger (+ systemd units) |
 | `scripts/seed_from_builder.py` | One-time seed from the old Sheet builder's data (read-only on the builder) |
 | `tests/` | Python (`unittest`) and Node (`node --test`) tests, saved page fixtures, a real-Chromium DOM test of the card controls (`dom.test.mjs`, skipped loudly if no Chromium/Chrome), a 390 px Chromium check |
 | `proof/` | Test receipts and phone screenshots of the live site |
@@ -33,9 +52,7 @@ Refresh by hand: `python3 -I scripts/refresh.py` (writes `site/data/`, exit code
 
 ## Schedule (which one is live)
 
-**GitHub Actions** (`.github/workflows/pages.yml`) runs daily at 09:17 UTC: tests, refresh, commit changed data to `main`, deploy Pages. **This is the live schedule**: the first run read all 30 guns from GitHub's runners, so the sources are not blocked and no MiguelPC timer is installed. If GitHub is ever blocked, the fallback is a user-level systemd timer on MiguelPC running the same script and pushing (no root). Install receipt: `proof/INSTALL-RECEIPT.md`; undo: `UNDO.sh`.
-
-A gun whose page cannot be read keeps its previous build, appears in `status.json`, turns the app's "Data last checked" line red, and makes the run fail. Data older than 3 days also turns it red.
+**GitHub Actions** (`.github/workflows/pages.yml`) runs every 3 hours (`17 */3 * * *`): tests, refresh, commit changed data to `main`, deploy Pages only when something changed, heartbeat to the `status` branch every time. **This is the live schedule** (the sources are not blocked from GitHub's runners). A gun whose page cannot be read keeps its previous build, appears in `status.json`, turns the app's data line red and makes the run fail. The MiguelPC timers (`mw4-stale-alarm`, `mw4-strategy`, `mw4-review`) are user-level systemd timers, no root. Install receipt: `proof/INSTALL-RECEIPT.md`; undo: `UNDO-build-variants.sh`.
 
 ## Prior art
 

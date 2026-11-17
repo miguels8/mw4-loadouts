@@ -1,0 +1,6 @@
+[Unit]
+Description=MW4 Loadouts stale-data alarm (reads the status branch heartbeat, posts to #alerts through tg_route.py)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I %h/.local/share/mw4-loadouts/repo/pc/mw4_alarm.py

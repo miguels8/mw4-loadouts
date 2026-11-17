@@ -1,0 +1,7 @@
+[Unit]
+Description=MW4 Loadouts strategy notes (cheap OpenCode Go summary of a new variant's own site text, only when one is new)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I %h/.local/share/mw4-loadouts/repo/pc/mw4_strategy.py
+TimeoutStartSec=1800
