@@ -25,3 +25,15 @@ Target: GitHub only (repo + Pages site); no `~/.hermes` or other local live targ
 | Deploy | `refresh-and-deploy` run 44026187652 (push to main): tests pass, Pages deployed |
 | Live check | https://miguels8.github.io/mw4-loadouts/app.js serves the new code; `tests/tools/card-shot.mjs` against the live site at 390 px: all checks PASS (KG-7 Vulcan 63 -> 64 flips the muzzle from "Add Schlager Visiv-5 for now" to ready Ivanov QR600, ready count 4 -> 5, header Lv 64 + P3, no sideways scroll, no console errors). Evidence: `proof/live-inline/` |
 | UNDO | `UNDO-inline-levels.sh` (opens a revert PR of ca16169; previous state = tag `pre-inline-levels`); not run |
+
+## Install: game modes as one dropdown (job mw4-app-inline-levels, Amendment A, 2026-11-17 CT)
+
+Target: GitHub only (repo + Pages site); no `~/.hermes` or other local live target.
+
+| Step | Result |
+| --- | --- |
+| Backup before change | git tag `pre-mode-dropdown` = 43ec44d (the live site before this change), pushed to origin |
+| Reviewed PR | https://github.com/miguels8/mw4-loadouts/pull/5 squash-merged as da488d8 after 1 Codex review round (gpt-6.1-sol): GO at 1e5d4f0, no findings |
+| Deploy | `refresh-and-deploy` run 44031409690 (push to main): tests pass, Pages deployed |
+| Live check | `app.js` on https://miguels8.github.io/mw4-loadouts/ contains the dropdown; `tests/tools/card-shot.mjs` against the live site at 390 px: all checks PASS (one dropdown and no chips, Hardpoint re-ranks the list, TDM order returns, KG-7 63 -> 64 still flips the muzzle). Evidence: `proof/live-mode/` |
+| UNDO | `UNDO-mode-dropdown.sh` (opens a revert PR of da488d8; previous state = tag `pre-mode-dropdown`); not run |
