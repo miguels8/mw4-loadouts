@@ -1121,36 +1121,6 @@
   "profile": "range",
   "reason": "1 of 5 slots match the CODMunity build"
  },
- "mar-9": {
-  "pass": false,
-  "matched": 0,
-  "of": 5,
-  "calc": [],
-  "pro": [
-   [
-    "Muzzle",
-    "Meiko 30CAL-SP"
-   ],
-   [
-    "Barrel",
-    "Bruen Ironhide 76"
-   ],
-   [
-    "Laser",
-    "SZ Gen.6 PEQ"
-   ],
-   [
-    "Rear Grip",
-    "Schlager PLM-S9"
-   ],
-   [
-    "Magazine",
-    "30 Round Mag"
-   ]
-  ],
-  "profile": "close",
-  "reason": "no stats published"
- },
  "kg-7-vulcan": {
   "pass": false,
   "matched": 2,
