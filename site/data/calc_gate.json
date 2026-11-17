@@ -1,0 +1,1511 @@
+{
+ "cronen-osprey": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "IO-556 Tac 18\""
+   ],
+   [
+    "Muzzle",
+    "FSS IS300"
+   ],
+   [
+    "Stock",
+    "FT Stalwart MK2"
+   ],
+   [
+    "Rear Grip",
+    "Cronen 56"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "XRK Mil-Tac Suppressor"
+   ],
+   [
+    "Rear Grip",
+    "Cronen 56"
+   ],
+   [
+    "Ammunition",
+    "5.56 NATO Overpressured"
+   ],
+   [
+    "Magazine",
+    "60 Round Mag"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ },
+ "m4": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "18 LE Crosswind"
+   ],
+   [
+    "Rear Grip",
+    "Schlager STB Grip"
+   ],
+   [
+    "Muzzle",
+    "FSS IS300"
+   ],
+   [
+    "Stock",
+    "Demo HVR2 Stock"
+   ],
+   [
+    "Ammunition",
+    "5.56 NATO High Velocity"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "FSS IS300"
+   ],
+   [
+    "Barrel",
+    "FT Cannonade 7\""
+   ],
+   [
+    "Rear Grip",
+    "Schlager STB Grip"
+   ],
+   [
+    "Ammunition",
+    "5.56 NATO Overpressured"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ },
+ "han-86": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "Hanbit Lightning-7 465mm"
+   ],
+   [
+    "Muzzle",
+    "FSS IS300"
+   ],
+   [
+    "Stock",
+    "XRK Firewrath Stock"
+   ],
+   [
+    "Rear Grip",
+    "FTAC Griplord 80"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Barrel",
+    "HAN 86 Silenced 413mm"
+   ],
+   [
+    "Optic",
+    "ZLR Type C"
+   ],
+   [
+    "Rear Grip",
+    "FTAC Griplord 80"
+   ],
+   [
+    "Ammunition",
+    "5.56 NATO Overpressured"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ },
+ "hyeon-burst": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "Mugi Seungri-0P 609mm"
+   ],
+   [
+    "Muzzle",
+    "FSS IS300"
+   ],
+   [
+    "Stock",
+    "HVY-80 Stockpad"
+   ],
+   [
+    "Rear Grip",
+    "HYN-Meipeul"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "FSS IS40"
+   ],
+   [
+    "Barrel",
+    "Mugi Hwando-Z3 521mm"
+   ],
+   [
+    "Rear Grip",
+    "HYN-Meipeul"
+   ],
+   [
+    "Ammunition",
+    "6.8x43mm Overpressured"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ },
+ "patriot-xmr": {
+  "pass": false,
+  "matched": 3,
+  "of": 5,
+  "calc": [
+   [
+    "Muzzle",
+    "EXP Undertow Gen. 2"
+   ],
+   [
+    "Stock",
+    "Hanbit B56T-L9"
+   ],
+   [
+    "Rear Grip",
+    "EXP TR-Wrap"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ],
+   [
+    "Ammunition",
+    "7.62 NATO High Velocity"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "EXP Undertow Gen. 2"
+   ],
+   [
+    "Rear Grip",
+    "EXP TR-Wrap"
+   ],
+   [
+    "Ammunition",
+    "7.62 NATO Overpressured"
+   ],
+   [
+    "Magazine",
+    "35 Round Mag"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "3 of 5 slots match the CODMunity build"
+ },
+ "kastov-762": {
+  "pass": false,
+  "matched": 0,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "Haebang MT-414mm"
+   ],
+   [
+    "Muzzle",
+    "Gauge-12 Mono"
+   ],
+   [
+    "Stock",
+    "Spetsnaz S10 Stock"
+   ],
+   [
+    "Rear Grip",
+    "FJX Kastov Grip"
+   ],
+   [
+    "Ammunition",
+    "7.62 Soviet High Velocity"
+   ]
+  ],
+  "pro": [
+   [
+    "Barrel",
+    "FJX Ghostfire 16.3\""
+   ],
+   [
+    "Rear Grip",
+    "Hanbit TechGrip"
+   ],
+   [
+    "Ammunition",
+    "7.62 Soviet Overpressured"
+   ],
+   [
+    "Magazine",
+    "45 Round Mag 7.62"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "0 of 5 slots match the CODMunity build"
+ },
+ "axion": {
+  "pass": false,
+  "matched": 3,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "Matuzek S5-Brace"
+   ],
+   [
+    "Rear Grip",
+    "Matuzek Lockgrip"
+   ],
+   [
+    "Muzzle",
+    "FSS IS300"
+   ],
+   [
+    "Stock",
+    "TA Harrow Stock"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Barrel",
+    "Matuzek S5-Brace"
+   ],
+   [
+    "Rear Grip",
+    "Matuzek Lockgrip"
+   ],
+   [
+    "Ammunition",
+    ".300 BLK Overpressured"
+   ],
+   [
+    "Magazine",
+    "40 Round Mag"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "3 of 5 slots match the CODMunity build"
+ },
+ "oden": {
+  "pass": false,
+  "matched": 1,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "Rockfall-900 Barrel"
+   ],
+   [
+    "Muzzle",
+    "Oden Thunder-S"
+   ],
+   [
+    "Stock",
+    "Haebang Stal-W5"
+   ],
+   [
+    "Ammunition",
+    "12.7x55mm High Velocity"
+   ],
+   [
+    "Comb",
+    "NXK-9F Comb"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "TV Multical-77"
+   ],
+   [
+    "Comb",
+    "NXK-9F Comb"
+   ],
+   [
+    "Ammunition",
+    "12.7x55mm Overpressured"
+   ],
+   [
+    "Magazine",
+    "30 Round Mag"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "1 of 5 slots match the CODMunity build"
+ },
+ "cronen-squall": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "calc": [
+   [
+    "Muzzle",
+    "Cronen Viel-68 Suppressor"
+   ],
+   [
+    "Ammunition",
+    "6.8 Wrath High Velocity"
+   ],
+   [
+    "Rear Grip",
+    "FSS SQ-XT2"
+   ],
+   [
+    "Comb",
+    "Bryson N40 Comb"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "ZLR Cold Echo"
+   ],
+   [
+    "Optic",
+    "ZLR Type C"
+   ],
+   [
+    "Comb",
+    "Bryson N40 Comb"
+   ],
+   [
+    "Magazine",
+    "30 Round Mag"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ },
+ "vel-46": {
+  "pass": true,
+  "matched": 4,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "VB-46 Series 11"
+   ],
+   [
+    "Muzzle",
+    "FSS Crackdown"
+   ],
+   [
+    "Stock",
+    "EXP Defiant Stock"
+   ],
+   [
+    "Rear Grip",
+    "Sakin Rubber Grip"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "FSS Crackdown"
+   ],
+   [
+    "Barrel",
+    "VB-46 Series 11"
+   ],
+   [
+    "Rear Grip",
+    "Sakin Rubber Grip"
+   ],
+   [
+    "Ammunition",
+    "4.6x30mm Overpressured"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": null
+ },
+ "iso-nightshade": {
+  "pass": false,
+  "matched": 3,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "ZLR Carbon-900"
+   ],
+   [
+    "Muzzle",
+    "FSS Crackdown"
+   ],
+   [
+    "Stock",
+    "Demo Kilo90 Stock"
+   ],
+   [
+    "Rear Grip",
+    "ZLR Veloci Gen.2"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "XRK Herder 40"
+   ],
+   [
+    "Stock",
+    "Demo Kilo90 Stock"
+   ],
+   [
+    "Rear Grip",
+    "ZLR Veloci Gen.2"
+   ],
+   [
+    "Magazine",
+    "40 Round Mag"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "3 of 5 slots match the CODMunity build"
+ },
+ "ppsh-41": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "Hanbit Chimmuk-INTR"
+   ],
+   [
+    "Muzzle",
+    "FTAC Silent Recon"
+   ],
+   [
+    "Ammunition",
+    "7.62 Tokarev High Velocity"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ],
+   [
+    "Stock",
+    "Hanbit Janggun-H9"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "Haebang BAM70"
+   ],
+   [
+    "Barrel",
+    "Hanbit RDR-Tiger 50"
+   ],
+   [
+    "Stock",
+    "Hanbit Janggun-H9"
+   ],
+   [
+    "Ammunition",
+    "7.62 Tokarev Overpressured"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ },
+ "wz-55-striga": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "calc": [
+   [
+    "Stock",
+    "EXP Calvary II Stock"
+   ],
+   [
+    "Barrel",
+    "GW Sender 500"
+   ],
+   [
+    "Muzzle",
+    "FTAC Silent Recon"
+   ],
+   [
+    "Rear Grip",
+    "Striga Wood Grip"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "FTAC Silent Recon"
+   ],
+   [
+    "Optic",
+    "ZLR Type C"
+   ],
+   [
+    "Rear Grip",
+    "Striga Wood Grip"
+   ],
+   [
+    "Ammunition",
+    "9mm Makarov Overpressured"
+   ],
+   [
+    "Magazine",
+    "35 Round Mag"
+   ]
+  ],
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ },
+ "x-58-nyx": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "LX3-V 409mm"
+   ],
+   [
+    "Stock",
+    "MC1 Hardtail"
+   ],
+   [
+    "Rear Grip",
+    "Mugi-X Wrap"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ],
+   [
+    "Laser",
+    "FJX EVR7"
+   ]
+  ],
+  "pro": [
+   [
+    "Barrel",
+    "Mugi HYU-90 228mm"
+   ],
+   [
+    "Stock",
+    "No Stock"
+   ],
+   [
+    "Rear Grip",
+    "Mugi-X Wrap"
+   ],
+   [
+    "Ammunition",
+    "5.8x21mm Overpressured"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ },
+ "csg-35": {
+  "pass": false,
+  "matched": 1,
+  "of": 5,
+  "calc": [
+   [
+    "Laser",
+    "SZ Gen.6 PEQ"
+   ],
+   [
+    "Underbarrel",
+    "Grip Strap"
+   ],
+   [
+    "Guard",
+    "TA Ration-424"
+   ],
+   [
+    "Stock",
+    "XRK Slight Stock"
+   ],
+   [
+    "Rear Grip",
+    "XRK TAC Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "EXP Forage-Hvy"
+   ],
+   [
+    "Stock",
+    "XRK Slight Stock"
+   ],
+   [
+    "Rear Grip",
+    "Matuzek Fire-Pro"
+   ],
+   [
+    "Ammunition",
+    "9mm Parabellum Overpressured"
+   ],
+   [
+    "Magazine",
+    "40 Round Mag"
+   ]
+  ],
+  "profile": "close",
+  "reason": "1 of 5 slots match the CODMunity build"
+ },
+ "rezi-12": {
+  "pass": false,
+  "matched": 0,
+  "of": 5,
+  "calc": [
+   [
+    "Ammunition",
+    "12 Gauge Slug"
+   ],
+   [
+    "Optic",
+    "ZLR Swordfish"
+   ],
+   [
+    "Rear Grip",
+    "POM12-F Grip"
+   ],
+   [
+    "Comb",
+    "LM Stock Sleeve"
+   ],
+   [
+    "Muzzle",
+    "GW Slashtop V1"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "FTAC LTS-707"
+   ],
+   [
+    "Bolt",
+    "XRK Quad-80"
+   ],
+   [
+    "Stock",
+    "ZLR Tac12 Pro"
+   ],
+   [
+    "Rear Grip",
+    "XRK Bygone-39"
+   ],
+   [
+    "Guard",
+    "Demo Service-12G"
+   ]
+  ],
+  "profile": "range",
+  "reason": "0 of 5 slots match the CODMunity build"
+ },
+ "warlord": {
+  "pass": false,
+  "matched": 0,
+  "of": 5,
+  "calc": [
+   [
+    "Ammunition",
+    "12 Gauge Slug"
+   ],
+   [
+    "Optic",
+    "ZLR Swordfish"
+   ],
+   [
+    "Barrel",
+    "NK Retribution-X Barrel"
+   ],
+   [
+    "Muzzle",
+    "Mugi Kalnal-H 12G"
+   ],
+   [
+    "Rear Grip",
+    "Simpan-7 grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "Mugi Kalnal-T 12G"
+   ],
+   [
+    "Barrel",
+    "NK Gangta-12G"
+   ],
+   [
+    "Bolt",
+    "L-Strike Bolt"
+   ],
+   [
+    "Stock",
+    "Mugi Tac-717 Stock"
+   ],
+   [
+    "Rear Grip",
+    "DV3-Sinsok Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "0 of 5 slots match the CODMunity build"
+ },
+ "finn-lmg": {
+  "pass": true,
+  "matched": 4,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "TT Seongun 508mm"
+   ],
+   [
+    "Muzzle",
+    "EXP V-TAC Suppressor"
+   ],
+   [
+    "Rear Grip",
+    "FTAC R7 Wrap"
+   ],
+   [
+    "Stock",
+    "EXP Bulldog-9"
+   ],
+   [
+    "Underbarrel",
+    "Bruen Renegade Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "EXP V-TAC Suppressor"
+   ],
+   [
+    "Laser",
+    "SZ Gen.6 PEQ"
+   ],
+   [
+    "Stock",
+    "EXP Bulldog-9"
+   ],
+   [
+    "Rear Grip",
+    "FTAC R7 Wrap"
+   ],
+   [
+    "Underbarrel",
+    "Bruen Renegade Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": null
+ },
+ "type-73": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "Haebang ET-9D 772mm"
+   ],
+   [
+    "Muzzle",
+    "Gauge-12 Mono"
+   ],
+   [
+    "Stock",
+    "ST v.1 Woodgrain"
+   ],
+   [
+    "Rear Grip",
+    "Assault-L9 Wood Grip"
+   ],
+   [
+    "Underbarrel",
+    "Bruen Renegade Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "Ivanov QR600"
+   ],
+   [
+    "Laser",
+    "Schlager Visiv-5"
+   ],
+   [
+    "Optic",
+    "ZLR Type C"
+   ],
+   [
+    "Rear Grip",
+    "Assault-L9 Wood Grip"
+   ],
+   [
+    "Underbarrel",
+    "Bruen Renegade Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ },
+ "apoc-338": {
+  "pass": false,
+  "matched": 3,
+  "of": 5,
+  "calc": [
+   [
+    "Rear Grip",
+    "EXP Dyna-3 Grip"
+   ],
+   [
+    "Muzzle",
+    "TV Multical-77"
+   ],
+   [
+    "Stock",
+    "EXP Exodus-338 Stock"
+   ],
+   [
+    "Ammunition",
+    ".338 Magnum High Velocity"
+   ],
+   [
+    "Underbarrel",
+    "Bruen Renegade Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "TV Multical-77"
+   ],
+   [
+    "Barrel",
+    "SA Trident 24.5\""
+   ],
+   [
+    "Optic",
+    "ZLR Type C"
+   ],
+   [
+    "Rear Grip",
+    "EXP Dyna-3 Grip"
+   ],
+   [
+    "Underbarrel",
+    "Bruen Renegade Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "3 of 5 slots match the CODMunity build"
+ },
+ "oris-8-6": {
+  "pass": true,
+  "matched": 4,
+  "of": 5,
+  "calc": [
+   [
+    "Muzzle",
+    "EXP Undertow Gen. 2"
+   ],
+   [
+    "Rear Grip",
+    "Bruen R7-TC Grip"
+   ],
+   [
+    "Stock",
+    "SA Dynamo-90 Stock"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ],
+   [
+    "Laser",
+    "FJX EVR7"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "EXP Undertow Gen. 2"
+   ],
+   [
+    "Optic",
+    "Cronen R808"
+   ],
+   [
+    "Stock",
+    "SA Dynamo-90 Stock"
+   ],
+   [
+    "Rear Grip",
+    "Bruen R7-TC Grip"
+   ],
+   [
+    "Underbarrel",
+    "FSS Tac90 Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": null
+ },
+ "mosin-nagant": {
+  "pass": false,
+  "matched": 1,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "SA LYR-762 Barrel"
+   ],
+   [
+    "Stock",
+    "Lockwood Eagle Stock"
+   ],
+   [
+    "Muzzle",
+    "FTAC Silent Recon"
+   ],
+   [
+    "Ammunition",
+    "7.62x54mmR High Velocity"
+   ],
+   [
+    "Underbarrel",
+    "FSS Fireline Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "330TC2 Gridlock"
+   ],
+   [
+    "Barrel",
+    "Mosin S762 Barrel"
+   ],
+   [
+    "Bolt",
+    "TV-Light 7-Bolt"
+   ],
+   [
+    "Optic",
+    "Cronen R808"
+   ],
+   [
+    "Stock",
+    "Lockwood Eagle Stock"
+   ]
+  ],
+  "profile": "range",
+  "reason": "1 of 5 slots match the CODMunity build"
+ },
+ "mar-9": {
+  "pass": false,
+  "matched": 0,
+  "of": 5,
+  "calc": [],
+  "pro": [
+   [
+    "Muzzle",
+    "Meiko 30CAL-SP"
+   ],
+   [
+    "Barrel",
+    "Bruen Ironhide 76"
+   ],
+   [
+    "Laser",
+    "SZ Gen.6 PEQ"
+   ],
+   [
+    "Rear Grip",
+    "Schlager PLM-S9"
+   ],
+   [
+    "Magazine",
+    "30 Round Mag"
+   ]
+  ],
+  "profile": "close",
+  "reason": "no stats published"
+ },
+ "kg-7-vulcan": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "calc": [
+   [
+    "Optic",
+    "FJX 708 PRO"
+   ],
+   [
+    "Muzzle",
+    "Gauge-12 Mono"
+   ],
+   [
+    "Comb",
+    "TT Type 40 Comb"
+   ],
+   [
+    "Stock",
+    "Bruen KG-7 Mk. IV"
+   ],
+   [
+    "Laser",
+    "FJX EVR7"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "Ivanov QR600"
+   ],
+   [
+    "Barrel",
+    "TT Baem 12\""
+   ],
+   [
+    "Optic",
+    "Schlager 7x"
+   ],
+   [
+    "Stock",
+    "Bruen KG-7 Mk. IV"
+   ],
+   [
+    "Comb",
+    "TT Type 40 Comb"
+   ]
+  ],
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ },
+ "signal-50": {
+  "pass": false,
+  "matched": 1,
+  "of": 5,
+  "calc": [
+   [
+    "Optic",
+    "FJX 708 PRO"
+   ],
+   [
+    "Barrel",
+    "TV Guarddog 50CAL 27\""
+   ],
+   [
+    "Muzzle",
+    "FSS HOC-30"
+   ],
+   [
+    "Rear Grip",
+    "GL Zero Drop 6"
+   ],
+   [
+    "Ammunition",
+    ".50 Cal High Velocity"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "FSS DES-Tac70"
+   ],
+   [
+    "Barrel",
+    "S50-SB Gen.2 22\""
+   ],
+   [
+    "Optic",
+    "Schlager 7x"
+   ],
+   [
+    "Stock",
+    "EXP T50-S Heavy"
+   ],
+   [
+    "Rear Grip",
+    "GL Zero Drop 6"
+   ]
+  ],
+  "profile": "range",
+  "reason": "1 of 5 slots match the CODMunity build"
+ },
+ "astaroth-57": {
+  "pass": false,
+  "matched": 1,
+  "of": 5,
+  "calc": [
+   [
+    "Muzzle",
+    "Usenko 900 BL-X"
+   ],
+   [
+    "Rear Grip",
+    "FJX S-TAC Grip"
+   ],
+   [
+    "Ammunition",
+    ".57 Cal Armor Piercing"
+   ],
+   [
+    "Stock",
+    "Demo Ire-350"
+   ],
+   [
+    "Laser",
+    "FJX EVR7"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "FSS Moodkiller"
+   ],
+   [
+    "Barrel",
+    "FTAC Crosswind 30\""
+   ],
+   [
+    "Optic",
+    "Schlager 7x"
+   ],
+   [
+    "Stock",
+    "Cronen Strand-BG Stock"
+   ],
+   [
+    "Rear Grip",
+    "FJX S-TAC Grip"
+   ]
+  ],
+  "profile": "range",
+  "reason": "1 of 5 slots match the CODMunity build"
+ },
+ "sang-9mm": {
+  "pass": false,
+  "matched": 1,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "TT CP-9mm Barrel"
+   ],
+   [
+    "Muzzle",
+    "SFO Proto-33"
+   ],
+   [
+    "Rear Grip",
+    "SANG Wood Grip"
+   ],
+   [
+    "Ammunition",
+    "9mm Parabellum High Velocity"
+   ],
+   [
+    "Laser",
+    "Hanbit 2BA-00"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "Expedite Drill L4"
+   ],
+   [
+    "Optic",
+    "Z-Dot 9"
+   ],
+   [
+    "Rear Grip",
+    "SANG Wood Grip"
+   ],
+   [
+    "Magazine",
+    "17 Round Mag"
+   ],
+   [
+    "Trigger Action",
+    "SANG Insta-F Trigger"
+   ]
+  ],
+  "profile": "range",
+  "reason": "1 of 5 slots match the CODMunity build"
+ },
+ "krait-p68": {
+  "pass": false,
+  "matched": 1,
+  "of": 5,
+  "calc": [
+   [
+    "Muzzle",
+    "SFO Proto-33"
+   ],
+   [
+    "Rear Grip",
+    "FTAC Gridlock 45"
+   ],
+   [
+    "Laser",
+    "XT-100"
+   ],
+   [
+    "Ammunition",
+    ".45 Auto Armor Piercing"
+   ],
+   [
+    "Trigger Action",
+    "P68 Tapper 9"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "Expedite Drill L4"
+   ],
+   [
+    "Barrel",
+    "SA Omni 5.5\""
+   ],
+   [
+    "Rear Grip",
+    "MAGTAC .45"
+   ],
+   [
+    "Ammunition",
+    ".45 Auto Frangible"
+   ],
+   [
+    "Trigger Action",
+    "P68 Tapper 9"
+   ]
+  ],
+  "profile": "range",
+  "reason": "1 of 5 slots match the CODMunity build"
+ },
+ "50-gs": {
+  "pass": false,
+  "matched": 1,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "Matuzek Monarch"
+   ],
+   [
+    "Optic",
+    "GL K230"
+   ],
+   [
+    "Muzzle",
+    "FTAC HVY-S50"
+   ],
+   [
+    "Ammunition",
+    ".50 Pistol High Velocity"
+   ],
+   [
+    "Rear Grip",
+    "ZLR Tact-99 Grip"
+   ]
+  ],
+  "pro": [
+   [
+    "Muzzle",
+    "FTAC HVY-S50"
+   ],
+   [
+    "Laser",
+    "XT-100"
+   ],
+   [
+    "Optic",
+    "FJX 708 PRO"
+   ],
+   [
+    "Rear Grip",
+    "TT Iron Guard Kit"
+   ],
+   [
+    "Trigger Action",
+    "Corio Lightning N6"
+   ]
+  ],
+  "profile": "range",
+  "reason": "1 of 5 slots match the CODMunity build"
+ },
+ "mojave-357": {
+  "pass": false,
+  "matched": 1,
+  "of": 5,
+  "calc": [
+   [
+    "Barrel",
+    "XRK Greywolf 7.5\""
+   ],
+   [
+    "Optic",
+    "Bruen Field-Op"
+   ],
+   [
+    "Rear Grip",
+    "SA Tyrant Grip"
+   ],
+   [
+    "Muzzle",
+    "XRK .357 Comp"
+   ],
+   [
+    "Laser",
+    "XT-100"
+   ]
+  ],
+  "pro": [
+   [
+    "Barrel",
+    "Bryson Snub 2\""
+   ],
+   [
+    "Cylinder",
+    "Mojave Speed Cylinder"
+   ],
+   [
+    "Rear Grip",
+    "SA Tyrant Grip"
+   ],
+   [
+    "Ammunition",
+    ".357 Magnum Overpressured"
+   ],
+   [
+    "Trigger Action",
+    "M357 Light"
+   ]
+  ],
+  "profile": "range",
+  "reason": "1 of 5 slots match the CODMunity build"
+ }
+}
