@@ -197,7 +197,7 @@ function updateCards(editedSlug) {
     const st = gunSt(row.gun.slug);
     const inp = n.querySelector("[data-cl=level]");
     const want = String(st.level ?? "");
-    if (document.activeElement !== inp && inp.value !== want) inp.value = want;
+    if (inp.value !== want) inp.value = want; // always show the saved level, focused or not
     const sel = n.querySelector("[data-cl=prestige]");
     if (sel.value !== (st.prestige ?? "")) sel.value = st.prestige ?? "";
     n.querySelector("[data-step='-1']").classList.toggle("dim", st.level == null || st.level <= 1);
@@ -225,6 +225,9 @@ function stopHold() {
   hold = null;
 }
 function stepCard(slug, delta) {
+  // text typed in the box but not yet committed (the press keeps focus, so no change event yet) counts first
+  const box = document.querySelector(`[data-ctl="${CSS.escape(slug)}"] input[data-cl=level]`);
+  if (box && box.value !== String(gunSt(slug).level ?? "")) profile = setGun(profile, slug, { level: box.value });
   const cur = gunSt(slug).level ?? null;
   const next = stepLevel(cur, delta);
   if (next === cur) return false;
@@ -284,7 +287,9 @@ function bind() {
       if (el.checked) profile.tokens[el.dataset.t] = true; else delete profile.tokens[el.dataset.t];
     } else if (el.dataset.f) {
       const f = el.dataset.f;
-      profile = setGun(profile, el.closest("[data-gun]").dataset.gun, { [f]: el.type === "checkbox" ? el.checked : el.value });
+      const slug = el.closest("[data-gun]").dataset.gun;
+      profile = setGun(profile, slug, { [f]: el.type === "checkbox" ? el.checked : el.value });
+      if (f === "level") el.value = profile.guns[slug].level ?? ""; // show the clamped value
     } else if (el.dataset.cl) {
       profile = setGun(profile, el.closest("[data-ctl]").dataset.ctl, { [el.dataset.cl]: el.value });
       save();

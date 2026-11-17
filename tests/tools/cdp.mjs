@@ -1,6 +1,6 @@
 // Tiny Chromium driver over the DevTools protocol (no dependencies), shared by the DOM test and the proof screenshots.
 import { spawn, spawnSync } from "node:child_process";
-import { mkdtempSync, writeFileSync, readFileSync, existsSync } from "node:fs";
+import { mkdtempSync, writeFileSync, readFileSync, existsSync, rmSync } from "node:fs";
 import { createServer } from "node:http";
 import { tmpdir } from "node:os";
 import { join, extname, normalize } from "node:path";
@@ -35,8 +35,9 @@ export function serve(root, overrides = {}) {
 
 export async function launch(chrome, { width = 390, height = 844 } = {}) {
   const port = 9300 + Math.floor(Math.random() * 500);
+  const profile = mkdtempSync(join(tmpdir(), "mw4cdp-"));
   const proc = spawn(chrome, ["--headless=new", "--no-sandbox", "--disable-gpu", `--remote-debugging-port=${port}`,
-    `--user-data-dir=${mkdtempSync(join(tmpdir(), "mw4cdp-"))}`, "about:blank"], { stdio: "ignore" });
+    `--user-data-dir=${profile}`, "about:blank"], { stdio: "ignore" });
   let wsUrl = null;
   for (let i = 0; i < 80 && !wsUrl; i++) {
     try {
@@ -87,6 +88,6 @@ export async function launch(chrome, { width = 390, height = 844 } = {}) {
     const r = await send("Page.captureScreenshot", { format: "png", fromSurface: true, captureBeyondViewport: false });
     writeFileSync(file, Buffer.from(r.data, "base64"));
   };
-  const close = () => { try { ws.close(); } catch { /* closing anyway */ } proc.kill("SIGKILL"); };
+  const close = () => { try { ws.close(); } catch { /* closing anyway */ } proc.kill("SIGKILL"); setTimeout(() => rmSync(profile, { recursive: true, force: true }), 500); };
   return { send, evalJs, goto, press, release, tap, tapFast, shot, close, errors };
 }

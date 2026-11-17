@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 import { findChrome, serve, launch, sleep } from "./tools/cdp.mjs";
 import { normalizeProfile, buildView, earlyView, rankGuns } from "../site/engine.js";
 
-const site = fileURLToPath(new URL("../site/", import.meta.url));
+const site = process.env.SITE_DIR ?? fileURLToPath(new URL("../site/", import.meta.url)); // SITE_DIR lets a RED run point at an older copy of the site
 const read = (p) => JSON.parse(readFileSync(new URL(p, import.meta.url), "utf8"));
 const weapons = read("../site/data/weapons.json");
 const statics = read("../site/data/static.json");
@@ -141,6 +141,38 @@ test("card level and prestige controls (real Chromium, 390 px)", { skip: chrome 
       assert.ok(held >= 14, `hold raised 10 to ${held}`);
       await sleep(500);
       assert.equal((await stored()).guns[KG].level, held, "stops after release");
+    });
+
+    await t.test("typing in the focused box then pressing + uses the typed number (review r1 F1 A)", async () => {
+      await typeLevel(KG, "");
+      await J(`(() => { const i = document.querySelector('${card(KG)} input[data-cl="level"]'); i.focus(); i.value = "63"; i.dispatchEvent(new Event("input", { bubbles: true })); })()`);
+      await b.tapFast(`${card(KG)} [data-step="1"]`);
+      assert.equal((await stored()).guns[KG].level, 64, "typed 63 then + saves 64, not 1");
+      assert.equal(await J(`document.querySelector('${card(KG)} input[data-cl="level"]').value`), "64");
+      assert.match(await head(KG), /Lv 64/);
+    });
+
+    await t.test("the number box always shows the saved level, even while focused (review r1 F1 B)", async () => {
+      await J(`(() => { const i = document.querySelector('${card(KG)} input[data-cl="level"]'); i.focus(); i.value = "63"; i.dispatchEvent(new Event("change", { bubbles: true })); })()`);
+      await b.tapFast(`${card(KG)} [data-step="1"]`);
+      await b.tapFast(`${card(KG)} [data-step="1"]`);
+      assert.equal((await stored()).guns[KG].level, 65);
+      assert.equal(await J(`document.querySelector('${card(KG)} input[data-cl="level"]').value`), "65");
+      assert.match(await head(KG), /Lv 65/);
+    });
+
+    await t.test("out-of-range typing is normalised in the box, the profile and the header (review r1 F1 C)", async () => {
+      await J(`(() => { const i = document.querySelector('${card(KG)} input[data-cl="level"]'); i.focus(); i.value = "999"; i.dispatchEvent(new Event("change", { bubbles: true })); i.blur(); })()`);
+      assert.equal((await stored()).guns[KG].level, 200);
+      assert.equal(await J(`document.querySelector('${card(KG)} input[data-cl="level"]').value`), "200");
+      assert.match(await head(KG), /Lv 200/);
+      await J(`(() => { const i = document.querySelector('${card(KG)} input[data-cl="level"]'); i.value = "-5"; i.dispatchEvent(new Event("change", { bubbles: true })); })()`);
+      assert.equal(await J(`document.querySelector('${card(KG)} input[data-cl="level"]').value`), "0");
+      await tab("levels");
+      await J(`(() => { const i = document.querySelector('[data-gun="${KG}"] [data-f=level]'); i.value = "999"; i.dispatchEvent(new Event("change", { bubbles: true })); })()`);
+      assert.equal(await J(`document.querySelector('[data-gun="${KG}"] [data-f=level]').value`), "200", "My levels shows the clamped value too");
+      await tab("loadouts");
+      await reopen(KG);
     });
 
     await t.test("clearing the box goes back to not entered", async () => {
