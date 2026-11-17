@@ -5,3 +5,5 @@
 [by:claude-sonnet-5-5/mw4-webapp-r3]
 - Done: mw4-refresh-fix-20261117 (heartbeat push fixed, mw4-kick fallback timer, 7 h stale threshold). Watch: a red banner or an #alerts post now means the data is over 7 h old (was 24 h); `journalctl --user -u mw4-kick` shows each kick decision. Nothing waiting on Miguel.
 [by:claude-sonnet-5-5/mw4-refresh-fix-20261117]
+- Follow-up (found by mw4-refresh-fix 2026-11-17): `mw4-strategy.timer` commits notes in its clone and pushes straight to `main`, which branch protection rejects (GH006, runs at 03:47, 06:48, 09:47 CST failed; its `git pull --ff-only` then also fails on the diverged clone). The 66 notes made so far were published by hand in a data PR and the clone was realigned (unpublished commits kept on branch `backup-unpublished-strategy-20261117` in the clone). Fix still needed: pc/mw4_strategy.py should push a branch and open/merge a data PR instead of pushing main.
+[by:claude-sonnet-5-5/mw4-refresh-fix-20261117]

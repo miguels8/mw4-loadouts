@@ -118,5 +118,281 @@
   "model": "opencode-go pool (ask_opencode_go.py default)",
   "at": "2026-11-17T09:08:21Z",
   "attempts": 1
+ },
+ "axion-versatile-9d9b88": {
+  "text": "Use this as a safe mid-range build. Pair Scavenger with the 100-round drum on the Apex variant, and lean on its close-range speed rather than treating it like a long-range rifle. A velocity-focused barrel keeps it competitive at 40 metres and beyond, and it's a good second rifle to level once the M4 is done.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "axion-versatile-4d7105": {
+  "text": "Use this rifle for slower, long-range fights. It unlocks late, so expect to get it later on. At Lvl 69, most players switch to a different build because its Apex changes the attachments.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "oden-versatile-1311f5": {
+  "text": "Use this slow, heavy rifle for lanes, and let Fast Hands cover its sluggish reloads. Aim before you peek, since its aim speed can't win reaction fights. Count your shots because 20 rounds is only a few kills, and avoid tight maps where SMGs reach you before you can aim.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "oden-versatile-a2fc2b": {
+  "text": "Use the Oden as a slower-firing rifle. At Lvl 65 its Apex makes it a semi-automatic sniper rifle. Expect very different play once you unlock that.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "cronen-squall-versatile-8b24e8": {
+  "text": "Use the 30-round mag, and upgrade the magazine first since 20 rounds is its biggest weakness. The Munitions Box is mainly for ammo-hungry modes. Play long lanes where its consistency pays off, and don't challenge SMGs around corners—reposition instead.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "cronen-squall-versatile-d9ab89": {
+  "text": "It's the last assault rifle you unlock. It kills fast up close, so use a big magazine with it. Its Apex fires a guided missile you steer with the laser.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "vel-46-close-range-d14eee": {
+  "text": "The VEL 46 is the fastest-killing SMG up close, so play aggressively around the middle containers. Use the meta build (Herder 40 suppressor, VB-46 barrel, Clutch-LS laser, VEL 46 Snap apex) to get your sights up first and chain fights with the 40 rounds. Avoid long lanes past 20 metres, and swap in Battle Hardened if the lobby spams tacticals.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "vel-46-pro-ranked-bd4c84": {
+  "text": "Build for range first, since the stock gun is already easy to control. Use the 40-round mag to chain fights instead of reloading after every kill. Avoid long lanes, because it loses to rifles past 20 metres.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "vel-46-close-range-799a75": {
+  "text": "It's the fastest-firing gun on this list. Use it to flank around the edges of the map. It's great for picking up multi-kills.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "iso-nightshade-versatile-c173f2": {
+  "text": "Use this fast, quiet SMG build to flank around the edges and rotate behind containers while the suppressor keeps you hidden. Keep moving, take fights on your terms, and let Scavenger keep your ammo topped up. Level it first since it's free and meta, and reload behind cover between fights.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "iso-nightshade-pro-ranked-32fdd6": {
+  "text": "Level it up first since it's free, meta, and carries you to later unlocks. Pick your 30-round fights carefully and reload behind cover between engagements. Pair it with a rifle using Overkill on maps with long lanes.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "iso-nightshade-close-range-da68ba": {
+  "text": "Level Quick Fix first since it's free, meta, and carries you to later unlocks. Use Blood Rush to reach rotations first, and reload behind cover between fights. Pair it with a rifle via Overkill on maps with long lanes.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "iso-nightshade-pro-ranked-d424a8": {
+  "text": "Level it up first since it's free, meta, and carries you to later unlocks. Pick your 30-round fights carefully and reload behind cover between engagements. Pair it with a rifle using Overkill on maps with long lanes.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "iso-nightshade-pro-ranked-eeff18": {
+  "text": "Level it up first since it's free, meta, and carries you to later unlocks. Pick your 30-round fights carefully and reload behind cover between engagements. Pair it with a rifle using Overkill on maps with long lanes.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "iso-nightshade-versatile-58eb1e": {
+  "text": "Use this as one of your two starting guns. Level it up early. Its attachment unlocks then carry over to compatible guns.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "ppsh-41-versatile-cd68ad": {
+  "text": "Use it up close to shred enemies, and the 53-round mag makes up for the fast fire rate. Build for recoil control and don't worry much about range. Pre-aim before contact, stay in close range, and switch to a sidearm or Overkill rifle for long lanes.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "ppsh-41-versatile-83ba9b": {
+  "text": "It fires very fast at 1,110 RPM and is made for fighting inside rooms. The top build adds a stock and an underbarrel grip. Those parts keep it steadier a little further out.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "wz-55-striga-close-range-6174ac": {
+  "text": "Use Blood Rush and Stim to keep moving and healing while you run the Data Spike to the Comm Station. Add a 35 or 50-round magazine as soon as possible. Stay mobile in fights, and save the Rampage akimbo build for small maps like Shipment.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "wz-55-striga-versatile-0716c7": {
+  "text": "This SMG fires slowly at 651 RPM but is easy to control and handles quickly. It's best for players who like accurate shots instead of spraying. Use it for precise, controlled firing rather than holding down the trigger.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "x-58-nyx-versatile-e5812c": {
+  "text": "This build is a quiet flanker with low recoil but short range. Flank enemies and avoid fair head-on fights. Use Ghost to get the most from the built-in suppressor, and level it for the Void Apex.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T09:47:00Z",
+  "attempts": 1
+ },
+ "x-58-nyx-versatile-bdff14": {
+  "text": "Use it at a steady 800 RPM; recoil is very low. Skip the muzzle—top builds don't use one. That frees all five slots for handling attachments.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "csg-35-versatile-93245e": {
+  "text": "Use the 40-round magazine first. Stay within 10 metres, where it matches the VEL. Try it in Warzone, where it performs better.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "rezi-12-close-range-949503": {
+  "text": "Use Ghost and Ninja to sneak into close range. Pick slugs or the Enforcer Apex on mid-size maps. Avoid long lanes and flank instead.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "rezi-12-versatile-ecc60c": {
+  "text": "Use this shotgun from your first few levels. At the end of the weapon ladder, its Apex makes it a pump-action that fires explosive slugs. Those slugs reach well past normal shotgun range.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "warlord-versatile-cc7b33": {
+  "text": "Use this shotgun build to clear rooms, and use Ninja and Radar to get to corners before enemies hear you. Top up shells between fights instead of reloading the full tube. Stay in tight interiors where one shot is enough, and pick the Rezi 12 if you want a shotgun that wins games.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "finn-lmg-long-range-3218a0": {
+  "text": "Use the big belt and a mine on the flank route to lock down a held flag. Pre-aim before contact to hide the slow aim time, and use the 100 rounds to hold objectives without reloading. Fire in bursts with the Apex to avoid overheating.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "finn-lmg-versatile-77d041": {
+  "text": "Use this LMG build for most fights since it's quiet and easy to handle. It unlocks at player level 4. Its Apex boosts fire rate but risks overheating.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "type-73-long-range-0f960d": {
+  "text": "Use Bomb Squad and Trophy to stay alive on a contested hill. Pre-aim the routes into the objective, and use the Assault Apex for mid-range fights instead of holding points. Carry a fast secondary for close threats.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "type-73-apex-attachment-3a4758": {
+  "text": "Use the Apex attachment to swap in a small top-mounted magazine of explosive rounds. It keeps a high fire rate, but expect much heavier recoil. Fire in short bursts to manage the kick.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "apoc-338-versatile-076c80": {
+  "text": "Use the Heavy LMG to hold a point, with Bomb Squad and Trophy soaking up objective spam. Only fire it from fixed positions with long sightlines, and try the Praetor Apex for a marksman-style setup. Reload behind cover because the reload is very slow.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "apoc-338-versatile-317afd": {
+  "text": "This is the last LMG you unlock. Its Apex makes it semi-auto with a ten-round belt of heavier rounds. So treat it like a heavy rifle, not a spray-and-pray LMG.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "oris-8-6-versatile-ff3e27": {
+  "text": "Use the revolver as your sidearm on marksman classes, and take Fast Hands to cover its slow reload. Stay within about 22 metres, where one shot kills. Pre-aim at chest height around corners, fire as soon as you aim, and practise in private matches because precision is everything.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "oris-8-6-versatile-d11d48": {
+  "text": "Use this marksman rifle for careful shots at mid range. Its Apex adds three throwing knives on the receiver. Use those knives for quiet kills up close.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "mosin-nagant-versatile-3f3ef6": {
+  "text": "Use this Mosin-Nagant build as a bolt-action marksman, with the Harpoon Apex giving you a retrievable bayonet shot. Stay within about 40 metres to keep one-shot kills, and pre-aim common routes instead of reacting. Carry a fast sidearm for anyone who closes the distance.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "mosin-nagant-versatile-b06282": {
+  "text": "Use this old bolt-action for hard hits at long range. It's the last marksman rifle you unlock. Its Apex adds a bayonet you can fire at people and pick back up.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "mar-9-versatile-761f18": {
+  "text": "Use the MAR-9 Versatile as a marksman at mid-to-long range, leveling toward the MAR-9 Auto Apex. Aim for headshots since the headshot multiplier doubles damage, and tap at a steady rhythm instead of as fast as possible. Hold mid-to-long lanes and avoid tight interiors.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "mar-9-versatile-293c14": {
+  "text": "Pick up this marksman rifle right away. Climb to the Apex at the top of the ladder to switch it to full auto for a faster fire rate. Just expect rougher recoil once you do.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "kg-7-vulcan-long-range-3faf1d": {
+  "text": "Use this sniper build to pre-aim at chest height on common peeks and fire as the scope settles. Keep a fast secondary ready for when an SMG gets close. After two or three kills, reposition since snipers are easy to trace.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "kg-7-vulcan-sniper-025f0c": {
+  "text": "Use the starting sniper rifle, since it's rated highest and holds ten rounds. Expect a long grind, though: 75 levels to reach the Apex.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "signal-50-long-range-cc5d94": {
+  "text": "Use this build for long-lane picks on large combined-arms maps, with PILA and SAM turret for vehicles and air. Take the fast follow-up shot instead of waiting for a perfect first one. Lead moving targets more than with the KG-7, and hold a lane rather than quickscoping around corners.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T12:47:00Z",
+  "attempts": 1
+ },
+ "signal-50-sniper-952902": {
+  "text": "Use the .50 cal anti-materiel rifle with the recoil-damping barrel to stay on target between shots. It's the last sniper you unlock. It's also the fastest-firing of the three snipers.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T15:47:00Z",
+  "attempts": 1
+ },
+ "astaroth-57-sniper-7dbf8a": {
+  "text": "Use this build as a heavy anchor sniper and hold the longest lanes, since it can't quickscope. Let the Claymore watch your flank while you reposition between shots because the reload is slow. Use the KG-7 Vulcan for more consistent results.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T15:47:00Z",
+  "attempts": 1
+ },
+ "sang-9mm-versatile-090ae7": {
+  "text": "Use this pistol as soon as you unlock it at player level 4. Its Apex gives it a one-shot underbarrel shotgun for extra punch. It maxes out at level 38, so it's cheap to prestige for Pyroclast.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T15:47:00Z",
+  "attempts": 1
+ },
+ "krait-p68-versatile-c9f125": {
+  "text": "The P68 Tapper 9 trigger boosts fire rate by 39%, making it a usable backup weapon. It maxes out at level 38. That makes it one of the quickest guns to take into Weapon Prestige for Pyroclast.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T15:47:00Z",
+  "attempts": 1
+ },
+ "50-gs-versatile-2564af": {
+  "text": "It's a slow, hard-hitting pistol you unlock late at player Lvl 41. Its Apex makes it fully automatic. Most of the build is about reaching Lvl 50.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T15:47:00Z",
+  "attempts": 1
+ },
+ "mojave-357-versatile-4a950b": {
+  "text": "It's a slow revolver you unlock at player level 48. Use the Lawless Apex to more than double its fire rate. That faster fire rate is what makes it playable.",
+  "model": "opencode-go pool (ask_opencode_go.py default)",
+  "at": "2026-11-17T15:47:00Z",
+  "attempts": 1
  }
 }
