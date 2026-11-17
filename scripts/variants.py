@@ -189,6 +189,10 @@ def merge(slug, builds):
                 if (p[0], p[1]) not in rp and (p[0], p[1], m["site"]) not in ak:
                     ak.add((p[0], p[1], m["site"]))
                     alts.append({"slot": p[0], "name": p[1], "level": p[2], "site": m["site"]})
+        # the type is the most certain label in the cluster: a site's own type name beats a mode page, a keyword, a default
+        src_rank = {"type": 0, "mode": 1, "keyword": 2, "default": 3}
+        lead = min(c, key=lambda m: src_rank.get(m.get("best_for_source"), 3))
+        typ, label_note = lead["type"], lead.get("label_note")
         kit = next((m["site_kit"] for m in c if m.get("site_kit")), None)
         text = next((m["text"] for m in c if m.get("text")), None)
         notes = []
@@ -197,9 +201,9 @@ def merge(slug, builds):
                 if n not in notes:
                     notes.append(n)
         out.append({
-            "id": variant_id(slug, rep["type"], rep["parts"]), "type": rep["type"], "label": rep["type"],
-            "best_for": best, "best_for_source": rep.get("best_for_source", "type"),
-            "label_note": rep.get("label_note"),
+            "id": variant_id(slug, typ, rep["parts"]), "type": typ, "label": typ,
+            "best_for": best, "best_for_source": lead.get("best_for_source", "type"),
+            "label_note": label_note,
             "date": rep.get("date"), "url": rep["url"], "agree": len({m["site"] for m in c}),
             "sources": [{"site": m["site"], "name": m["name"], "date": m.get("date"), "url": m["url"]} for m in c],
             "parts": [{"slot": p[0], "name": p[1], "level": p[2]} for p in rep["parts"]],

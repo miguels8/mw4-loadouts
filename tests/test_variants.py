@@ -57,6 +57,16 @@ class Merge(unittest.TestCase):
         self.assertEqual(solo["type"], "Close Range")
         self.assertEqual(solo["alternatives"], [])
 
+    def test_type_of_a_merged_variant_is_the_most_certain_label(self):
+        sniper = b("CODMunity", "Sniper", "2026-11-11", P5, type="Sniper", best_for=["S&D"])
+        endgame = b("Infil", "Endgame", "2026-11-14", P5, type="Versatile", best_for=["TDM"])
+        endgame["best_for_source"] = "keyword"
+        v = V.merge("kg-7", [sniper, endgame])[0]
+        self.assertEqual(v["type"], "Sniper")                        # the site's own type name beats Infil's keyword match
+        self.assertEqual(v["date"], "2026-11-14")                    # but the newest site's version still leads
+        self.assertEqual(v["sources"][0]["site"], "Infil")
+        self.assertEqual(v["best_for"], ["TDM", "S&D"])
+
     def test_three_of_five_do_not_merge(self):
         three = [("Muzzle", "A", 1), ("Barrel", "B", 2), ("Rear Grip", "C", 3), ("Ammunition", "X", 4), ("Underbarrel", "Y", 5)]
         out = V.merge("m4", [b("CODMunity", "Versatile", "2026-11-13", P5), b("Infil", "Endgame", "2026-11-14", three)])

@@ -1,0 +1,7 @@
+b800e057ca9b5002f69cab1616100a12b5df4057780a41ab717e08b93caebdf7  site/engine.js
+0731c72ec77d874da8ec7652abf3f872aa5c3ba53b8094ccb82beaf1a62d3aa5  tests/ladder.test.mjs
+f363761473d85cbf379d6eb2f1567aee99a588780b74d130f769cc005d64f2ed  tests/variants.test.mjs
+9d600af2bda4f84bdcce6ec69119f469c4aa910a45c718912a460a2993b19778  tests/fixtures/kg7-variants-gun.json
+ℹ tests 55
+ℹ pass 55
+ℹ fail 0

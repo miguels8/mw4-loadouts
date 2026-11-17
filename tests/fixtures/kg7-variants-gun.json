@@ -1,0 +1,1082 @@
+{
+ "about": "kg-7-vulcan from the 2026-11-17 live refresh (offline replay), frozen for the Lv 54 golden test",
+ "gun": {
+  "slug": "kg-7-vulcan",
+  "name": "KG-7 Vulcan",
+  "type": "Sniper",
+  "tier": "S",
+  "unlock": {
+   "level": 4,
+   "bp_tier": null,
+   "note": null
+  },
+  "line": "Best sniper by far. One chest shot kills.",
+  "max_level": 75,
+  "apex": {
+   "name": "KG-7 Drillcharge",
+   "level": 75
+  },
+  "builds": {
+   "main": {
+    "label": "Sniper",
+    "date": "2026-11-11",
+    "url": "https://codmunity.gg/weapon/mw4/kg-7-vulcan",
+    "parts": [
+     {
+      "slot": "Muzzle",
+      "name": "Ivanov QR600",
+      "level": 64,
+      "stand_in": {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 7
+      }
+     },
+     {
+      "slot": "Barrel",
+      "name": "TT Baem 12\"",
+      "level": 5,
+      "stand_in": null
+     },
+     {
+      "slot": "Optic",
+      "name": "Schlager 7x",
+      "level": 19,
+      "stand_in": null
+     },
+     {
+      "slot": "Stock",
+      "name": "Bruen KG-7 Mk. IV",
+      "level": 28,
+      "stand_in": null
+     },
+     {
+      "slot": "Comb",
+      "name": "TT Type 40 Comb",
+      "level": 6,
+      "stand_in": null
+     }
+    ],
+    "apex_on": true,
+    "notes": []
+   },
+   "close": {
+    "label": "Close Range",
+    "date": "2026-11-07",
+    "url": "https://codmunity.gg/weapon/mw4/kg-7-vulcan",
+    "parts": [
+     {
+      "slot": "Muzzle",
+      "name": "Ivanov QR600",
+      "level": 64,
+      "stand_in": {
+       "slot": "Comb",
+       "name": "TT Type 40 Comb",
+       "level": 6
+      }
+     },
+     {
+      "slot": "Barrel",
+      "name": "TT Baem 12\"",
+      "level": 5,
+      "stand_in": null
+     },
+     {
+      "slot": "Bolt",
+      "name": "KT76 Light Bolt",
+      "level": 63,
+      "stand_in": null
+     },
+     {
+      "slot": "Optic",
+      "name": "Schlager 7x",
+      "level": 19,
+      "stand_in": null
+     },
+     {
+      "slot": "Stock",
+      "name": "TT G76-RP Stock",
+      "level": 47,
+      "stand_in": {
+       "slot": "Stock",
+       "name": "Bruen KG-7 Mk. IV",
+       "level": 28
+      }
+     }
+    ],
+    "apex_on": true,
+    "notes": []
+   },
+   "early": {
+    "label": "Early game",
+    "date": "2026-11-14",
+    "url": "https://infil.app/loadouts/kg-7-vulcan/",
+    "complete_level": 14,
+    "parts": [
+     {
+      "slot": "Optic",
+      "name": "Hanbit 3080 Fireline",
+      "level": 14,
+      "stand_in": null
+     },
+     {
+      "slot": "Muzzle",
+      "name": "DS RKT-90",
+      "level": 4,
+      "stand_in": null
+     },
+     {
+      "slot": "Barrel",
+      "name": "TT Baem 12\"",
+      "level": 5,
+      "stand_in": null
+     },
+     {
+      "slot": "Comb",
+      "name": "TT Type 40 Comb",
+      "level": 6,
+      "stand_in": null
+     },
+     {
+      "slot": "Laser",
+      "name": "Schlager Visiv-5",
+      "level": 7,
+      "stand_in": null
+     }
+    ],
+    "apex_on": false,
+    "notes": []
+   }
+  },
+  "table": {
+   "770 Underbite": [
+    "Muzzle",
+    18
+   ],
+   "Astaroth .57 11.2x Scope": [
+    "Optic",
+    21
+   ],
+   "Bruen Maestro": [
+    "Optic",
+    73
+   ],
+   "Bruen THRM-60 Optic": [
+    "Optic",
+    67
+   ],
+   "Corio Bisect": [
+    "Optic",
+    15
+   ],
+   "Corio D51 Scope": [
+    "Optic",
+    25
+   ],
+   "Corvus Avis-0": [
+    "Optic",
+    61
+   ],
+   "Cronen R808": [
+    "Optic",
+    3
+   ],
+   "Custom Ironsights": [
+    "Optic",
+    17
+   ],
+   "DS RKT-90": [
+    "Muzzle",
+    4
+   ],
+   "EXP R3000-V": [
+    "Muzzle",
+    48
+   ],
+   "Expedite 21 CFR": [
+    "Laser",
+    55
+   ],
+   "Expedite 308 DR2": [
+    "Optic",
+    36
+   ],
+   "Field Tac 1.4 Comp": [
+    "Muzzle",
+    20
+   ],
+   "FJX 708 PRO": [
+    "Optic",
+    70
+   ],
+   "FJX EVR7": [
+    "Laser",
+    65
+   ],
+   "FT Hyperport 408": [
+    "Muzzle",
+    30
+   ],
+   "Gauge-12 Mono": [
+    "Muzzle",
+    32
+   ],
+   "GL K230": [
+    "Optic",
+    33
+   ],
+   "GW Löwe-55": [
+    "Optic",
+    12
+   ],
+   "Hanbit 3080 Fireline": [
+    "Optic",
+    14
+   ],
+   "IOTA-D": [
+    "Optic",
+    42
+   ],
+   "Ivanov QR600": [
+    "Muzzle",
+    64
+   ],
+   "KG-7 Bipod": [
+    "Underbarrel",
+    8
+   ],
+   "KV Corsac Holo": [
+    "Optic",
+    56
+   ],
+   "Locus PX3 Canted": [
+    "Optic",
+    49
+   ],
+   "Luca Stormwatch": [
+    "Optic",
+    46
+   ],
+   "RVX9 Thermo": [
+    "Optic",
+    35
+   ],
+   "Schlager 7x": [
+    "Optic",
+    19
+   ],
+   "Schlager Bigsky": [
+    "Optic",
+    57
+   ],
+   "Schlager Dogfight GI": [
+    "Optic",
+    62
+   ],
+   "Schlager Indigo-RF": [
+    "Optic",
+    74
+   ],
+   "Schlager Night View Pro": [
+    "Optic",
+    60
+   ],
+   "Schlager Visiv-5": [
+    "Laser",
+    7
+   ],
+   "Signal 50 11.2x Scope": [
+    "Optic",
+    24
+   ],
+   "Slimline Elite": [
+    "Optic",
+    31
+   ],
+   "SZ Castaway": [
+    "Optic",
+    45
+   ],
+   "SZ Echelon Holo": [
+    "Optic",
+    29
+   ],
+   "SZ Helios Holo": [
+    "Optic",
+    41
+   ],
+   "SZ Lonewolf Flip": [
+    "Optic",
+    44
+   ],
+   "SZ Lonewolf Holo": [
+    "Optic",
+    16
+   ],
+   "SZ Micro D-3": [
+    "Optic",
+    26
+   ],
+   "SZ Prima-4 Dot": [
+    "Optic",
+    66
+   ],
+   "SZ SRE-7": [
+    "Optic",
+    50
+   ],
+   "TT Solgae F7": [
+    "Muzzle",
+    38
+   ],
+   "Usenko 308-1L": [
+    "Muzzle",
+    72
+   ],
+   "VLK Rize-40": [
+    "Optic",
+    40
+   ],
+   "VLK Trimmer": [
+    "Optic",
+    39
+   ],
+   "XRK Clutch-LS": [
+    "Laser",
+    59
+   ],
+   "ZLR Type C": [
+    "Optic",
+    52
+   ]
+  },
+  "patch_date": null,
+  "variants": [
+   {
+    "id": "kg-7-vulcan-long-range-3faf1d",
+    "type": "Long Range",
+    "label": "Long Range",
+    "best_for": [
+     "TDM",
+     "Frontline",
+     "Inflation",
+     "Hardcore",
+     "S&D",
+     "Ground War",
+     "Domination"
+    ],
+    "best_for_source": "mode",
+    "label_note": null,
+    "date": "2026-11-16",
+    "url": "https://mw4intel.app/loadouts/50-gs-class",
+    "agree": 1,
+    "sources": [
+     {
+      "site": "MW4 Intel",
+      "name": ".50 GS class",
+      "date": "2026-11-16",
+      "url": "https://mw4intel.app/loadouts/50-gs-class"
+     },
+     {
+      "site": "MW4 Intel",
+      "name": "KG-7 + ISO Overkill",
+      "date": "2026-11-16",
+      "url": "https://mw4intel.app/loadouts/search-and-destroy-kg-7-iso-overkill"
+     },
+     {
+      "site": "MW4 Intel",
+      "name": "KG-7 Vulcan + ISO (Overkill)",
+      "date": "2026-11-16",
+      "url": "https://mw4intel.app/loadouts/kg-7-vulcan-iso-overkill"
+     },
+     {
+      "site": "MW4 Intel",
+      "name": "KG-7 Vulcan class",
+      "date": "2026-11-16",
+      "url": "https://mw4intel.app/loadouts/kg-7-vulcan-class"
+     }
+    ],
+    "parts": [
+     {
+      "slot": "Barrel",
+      "name": "Haebang Naseon v.5 26\"",
+      "level": 22
+     },
+     {
+      "slot": "Bolt",
+      "name": "KT76 Light Bolt",
+      "level": 63
+     },
+     {
+      "slot": "Optic",
+      "name": "Corvus Avis-0",
+      "level": 61
+     },
+     {
+      "slot": "Stock",
+      "name": "TT G76-RP Stock",
+      "level": 47
+     },
+     {
+      "slot": "Comb",
+      "name": "Haebang YNC-45",
+      "level": 34
+     }
+    ],
+    "alternatives": [],
+    "apex_on": true,
+    "site_kit": {
+     "perk1": "High Alert",
+     "perk2": "Hardline",
+     "perk3": "Scavenger",
+     "tactical": "Snapshot Grenade",
+     "lethal": "Proximity Mine",
+     "field": "Portable Radar"
+    },
+    "notes": [],
+    "source_text": "Hand-cannon backup for a sniper who gets rushed. Pre-aim chest height at common peeks and fire as the scope settles. Carry a fast secondary for when an SMG reaches you. Reposition after two or three kills; snipers are easy to trace."
+   },
+   {
+    "id": "kg-7-vulcan-sniper-025f0c",
+    "type": "Sniper",
+    "label": "Sniper",
+    "best_for": [
+     "TDM",
+     "Frontline",
+     "Inflation",
+     "Hardcore",
+     "S&D",
+     "Ground War",
+     "Domination"
+    ],
+    "best_for_source": "type",
+    "label_note": null,
+    "date": "2026-11-14",
+    "url": "https://infil.app/loadouts/kg-7-vulcan/",
+    "agree": 2,
+    "sources": [
+     {
+      "site": "Infil",
+      "name": "Endgame",
+      "date": "2026-11-14",
+      "url": "https://infil.app/loadouts/kg-7-vulcan/"
+     },
+     {
+      "site": "CODMunity",
+      "name": "Sniper",
+      "date": "2026-11-11",
+      "url": "https://codmunity.gg/weapon/mw4/kg-7-vulcan"
+     }
+    ],
+    "parts": [
+     {
+      "slot": "Muzzle",
+      "name": "Ivanov QR600",
+      "level": 64
+     },
+     {
+      "slot": "Barrel",
+      "name": "TT Baem 12\"",
+      "level": 5
+     },
+     {
+      "slot": "Optic",
+      "name": "Schlager 7x",
+      "level": 19
+     },
+     {
+      "slot": "Stock",
+      "name": "Bruen KG-7 Mk. IV",
+      "level": 28
+     },
+     {
+      "slot": "Comb",
+      "name": "TT Type 40 Comb",
+      "level": 6
+     }
+    ],
+    "alternatives": [],
+    "apex_on": false,
+    "site_kit": null,
+    "notes": [],
+    "source_text": "The sniper rifle you start with, and the one both stat trackers rate highest at launch. It holds ten rounds, more than the other two snipers. Its ladder is long, though: 75 levels to the Apex."
+   },
+   {
+    "id": "kg-7-vulcan-close-range-d328b4",
+    "type": "Close Range",
+    "label": "Close Range",
+    "best_for": [
+     "Hardpoint",
+     "Hijack",
+     "Kill Confirmed",
+     "Drop Zone",
+     "Free-for-All",
+     "Grind",
+     "Possession",
+     "Infected"
+    ],
+    "best_for_source": "type",
+    "label_note": null,
+    "date": "2026-11-07",
+    "url": "https://codmunity.gg/weapon/mw4/kg-7-vulcan",
+    "agree": 1,
+    "sources": [
+     {
+      "site": "CODMunity",
+      "name": "Close Range",
+      "date": "2026-11-07",
+      "url": "https://codmunity.gg/weapon/mw4/kg-7-vulcan"
+     }
+    ],
+    "parts": [
+     {
+      "slot": "Muzzle",
+      "name": "Ivanov QR600",
+      "level": 64
+     },
+     {
+      "slot": "Barrel",
+      "name": "TT Baem 12\"",
+      "level": 5
+     },
+     {
+      "slot": "Bolt",
+      "name": "KT76 Light Bolt",
+      "level": 63
+     },
+     {
+      "slot": "Optic",
+      "name": "Schlager 7x",
+      "level": 19
+     },
+     {
+      "slot": "Stock",
+      "name": "TT G76-RP Stock",
+      "level": 47
+     }
+    ],
+    "alternatives": [],
+    "apex_on": true,
+    "site_kit": null,
+    "notes": [],
+    "source_text": null
+   },
+   {
+    "id": "kg-7-vulcan-versatile-005ccc",
+    "type": "Versatile",
+    "label": "Versatile",
+    "best_for": [
+     "TDM",
+     "Frontline",
+     "Inflation",
+     "Hardcore"
+    ],
+    "best_for_source": "default",
+    "label_note": null,
+    "date": "2026-08-21",
+    "url": "https://www.dexerto.com/wikis/modern-warfare-4/weapons/sniper-rifles/kg-7-vulcan/",
+    "agree": 1,
+    "sources": [
+     {
+      "site": "Dexerto",
+      "name": "Dexerto build",
+      "date": "2026-08-21",
+      "url": "https://www.dexerto.com/wikis/modern-warfare-4/weapons/sniper-rifles/kg-7-vulcan/"
+     }
+    ],
+    "parts": [
+     {
+      "slot": "Barrel",
+      "name": "TT Baem 12\"",
+      "level": 5
+     },
+     {
+      "slot": "Laser",
+      "name": "Schlager Visiv-5",
+      "level": 7
+     },
+     {
+      "slot": "Stock",
+      "name": "TT G76-RP Stock",
+      "level": 47
+     },
+     {
+      "slot": "Comb",
+      "name": "TT Type 40 Comb",
+      "level": 6
+     },
+     {
+      "slot": "Magazine",
+      "name": "6 Round Mag",
+      "level": 11
+     }
+    ],
+    "alternatives": [],
+    "apex_on": false,
+    "site_kit": {
+     "perk1": "Quick Fix",
+     "perk2": "Ninja",
+     "perk3": "Battle Hardened"
+    },
+    "notes": [],
+    "source_text": null
+   }
+  ],
+  "published": [
+   {
+    "site": "Infil",
+    "label": "Early game",
+    "complete_level": 14,
+    "date": "2026-11-14",
+    "url": "https://infil.app/loadouts/kg-7-vulcan/",
+    "parts": [
+     {
+      "slot": "Optic",
+      "name": "Hanbit 3080 Fireline",
+      "level": 14
+     },
+     {
+      "slot": "Muzzle",
+      "name": "DS RKT-90",
+      "level": 4
+     },
+     {
+      "slot": "Barrel",
+      "name": "TT Baem 12\"",
+      "level": 5
+     },
+     {
+      "slot": "Comb",
+      "name": "TT Type 40 Comb",
+      "level": 6
+     },
+     {
+      "slot": "Laser",
+      "name": "Schlager Visiv-5",
+      "level": 7
+     }
+    ]
+   }
+  ],
+  "cands": {
+   "Ammunition": [
+    {
+     "name": "7.62x54mmR Overpressured",
+     "level": 9
+    },
+    {
+     "name": "7.62x54mmR Hollow Point",
+     "level": 27
+    },
+    {
+     "name": "7.62x54mmR Armor Piercing",
+     "level": 37
+    },
+    {
+     "name": "7.62x54mmR Frangible",
+     "level": 53
+    },
+    {
+     "name": "7.62x54mmR High Velocity",
+     "level": 71
+    }
+   ],
+   "Barrel": [
+    {
+     "name": "TT Baem 12\"",
+     "level": 5,
+     "used": 5,
+     "types": [
+      "Sniper",
+      "Close Range",
+      "Versatile",
+      "Early game"
+     ]
+    },
+    {
+     "name": "Haebang Naseon v.5 26\"",
+     "level": 22,
+     "used": 4,
+     "types": [
+      "Long Range",
+      "Versatile"
+     ]
+    },
+    {
+     "name": "Haebang RMT762 29\"",
+     "level": 43
+    },
+    {
+     "name": "TT X541-2 26\"",
+     "level": 58
+    }
+   ],
+   "Bolt": [
+    {
+     "name": "Twist76 Heavy Bolt",
+     "level": 10
+    },
+    {
+     "name": "KT76 Light Bolt",
+     "level": 63,
+     "used": 5,
+     "types": [
+      "Close Range",
+      "Long Range",
+      "Versatile"
+     ]
+    }
+   ],
+   "Comb": [
+    {
+     "name": "TT Type 40 Comb",
+     "level": 6,
+     "used": 4,
+     "types": [
+      "Sniper",
+      "Versatile",
+      "Early game"
+     ]
+    },
+    {
+     "name": "Haebang YNC-45",
+     "level": 34,
+     "used": 4,
+     "types": [
+      "Long Range",
+      "Versatile"
+     ]
+    },
+    {
+     "name": "Hanbit CHK-1",
+     "level": 51
+    }
+   ],
+   "Laser": [
+    {
+     "name": "Schlager Visiv-5",
+     "level": 7,
+     "used": 2,
+     "types": [
+      "Versatile",
+      "Early game"
+     ]
+    },
+    {
+     "name": "Expedite 21 CFR",
+     "level": 55
+    },
+    {
+     "name": "XRK Clutch-LS",
+     "level": 59
+    },
+    {
+     "name": "FJX EVR7",
+     "level": 65
+    }
+   ],
+   "Magazine": [
+    {
+     "name": "6 Round Mag",
+     "level": 11,
+     "used": 1,
+     "types": [
+      "Versatile"
+     ]
+    },
+    {
+     "name": "15 Round Mag",
+     "level": 68
+    }
+   ],
+   "Muzzle": [
+    {
+     "name": "DS RKT-90",
+     "level": 4,
+     "used": 1,
+     "types": [
+      "Early game"
+     ]
+    },
+    {
+     "name": "770 Underbite",
+     "level": 18
+    },
+    {
+     "name": "Field Tac 1.4 Comp",
+     "level": 20
+    },
+    {
+     "name": "FT Hyperport 408",
+     "level": 30
+    },
+    {
+     "name": "Gauge-12 Mono",
+     "level": 32
+    },
+    {
+     "name": "TT Solgae F7",
+     "level": 38
+    },
+    {
+     "name": "EXP R3000-V",
+     "level": 48
+    },
+    {
+     "name": "Ivanov QR600",
+     "level": 64,
+     "used": 3,
+     "types": [
+      "Sniper",
+      "Close Range",
+      "Versatile"
+     ]
+    },
+    {
+     "name": "Usenko 308-1L",
+     "level": 72
+    }
+   ],
+   "Optic": [
+    {
+     "name": "Cronen R808",
+     "level": 3
+    },
+    {
+     "name": "GW Löwe-55",
+     "level": 12
+    },
+    {
+     "name": "Hanbit 3080 Fireline",
+     "level": 14,
+     "used": 1,
+     "types": [
+      "Early game"
+     ]
+    },
+    {
+     "name": "Corio Bisect",
+     "level": 15
+    },
+    {
+     "name": "SZ Lonewolf Holo",
+     "level": 16
+    },
+    {
+     "name": "Custom Ironsights",
+     "level": 17
+    },
+    {
+     "name": "Schlager 7x",
+     "level": 19,
+     "used": 3,
+     "types": [
+      "Sniper",
+      "Close Range",
+      "Versatile"
+     ]
+    },
+    {
+     "name": "Astaroth .57 11.2x Scope",
+     "level": 21
+    },
+    {
+     "name": "Signal 50 11.2x Scope",
+     "level": 24
+    },
+    {
+     "name": "Corio D51 Scope",
+     "level": 25
+    },
+    {
+     "name": "SZ Micro D-3",
+     "level": 26
+    },
+    {
+     "name": "SZ Echelon Holo",
+     "level": 29
+    },
+    {
+     "name": "Slimline Elite",
+     "level": 31
+    },
+    {
+     "name": "GL K230",
+     "level": 33
+    },
+    {
+     "name": "RVX9 Thermo",
+     "level": 35
+    },
+    {
+     "name": "Expedite 308 DR2",
+     "level": 36
+    },
+    {
+     "name": "VLK Trimmer",
+     "level": 39
+    },
+    {
+     "name": "VLK Rize-40",
+     "level": 40
+    },
+    {
+     "name": "SZ Helios Holo",
+     "level": 41
+    },
+    {
+     "name": "IOTA-D",
+     "level": 42
+    },
+    {
+     "name": "SZ Lonewolf Flip",
+     "level": 44
+    },
+    {
+     "name": "SZ Castaway",
+     "level": 45
+    },
+    {
+     "name": "Luca Stormwatch",
+     "level": 46
+    },
+    {
+     "name": "Locus PX3 Canted",
+     "level": 49
+    },
+    {
+     "name": "SZ SRE-7",
+     "level": 50
+    },
+    {
+     "name": "ZLR Type C",
+     "level": 52
+    },
+    {
+     "name": "KV Corsac Holo",
+     "level": 56
+    },
+    {
+     "name": "Schlager Bigsky",
+     "level": 57
+    },
+    {
+     "name": "Schlager Night View Pro",
+     "level": 60
+    },
+    {
+     "name": "Corvus Avis-0",
+     "level": 61,
+     "used": 4,
+     "types": [
+      "Long Range",
+      "Versatile"
+     ]
+    },
+    {
+     "name": "Schlager Dogfight GI",
+     "level": 62
+    },
+    {
+     "name": "SZ Prima-4 Dot",
+     "level": 66
+    },
+    {
+     "name": "Bruen THRM-60 Optic",
+     "level": 67
+    },
+    {
+     "name": "FJX 708 PRO",
+     "level": 70
+    },
+    {
+     "name": "Bruen Maestro",
+     "level": 73
+    },
+    {
+     "name": "Schlager Indigo-RF",
+     "level": 74
+    }
+   ],
+   "Stock": [
+    {
+     "name": "Hanbit RTR Mk. I",
+     "level": 2
+    },
+    {
+     "name": "Bruen KG-7 Mk. IV",
+     "level": 28,
+     "used": 2,
+     "types": [
+      "Sniper",
+      "Versatile"
+     ]
+    },
+    {
+     "name": "TT G76-RP Stock",
+     "level": 47,
+     "used": 6,
+     "types": [
+      "Close Range",
+      "Long Range",
+      "Versatile"
+     ]
+    }
+   ],
+   "Underbarrel": [
+    {
+     "name": "KG-7 Bipod",
+     "level": 8
+    }
+   ]
+  },
+  "dropped": [],
+  "calc_gate": {
+   "pass": false,
+   "matched": 2,
+   "of": 5,
+   "profile": "range",
+   "reason": "2 of 5 slots match the CODMunity build"
+  }
+ },
+ "optics": {
+  "Astaroth .57 11.2x Scope": "scope",
+  "Bruen Maestro": "scope",
+  "Bruen THRM-60 Optic": "dot",
+  "Corio Bisect": "scope",
+  "Corio D51 Scope": "scope",
+  "Corvus Avis-0": "scope",
+  "Cronen R808": "scope",
+  "Custom Ironsights": "iron",
+  "Expedite 308 DR2": "scope",
+  "FJX 708 PRO": "dot",
+  "GL K230": "scope",
+  "GW Löwe-55": "scope",
+  "Hanbit 3080 Fireline": "scope",
+  "IOTA-D": "dot",
+  "KV Corsac Holo": "dot",
+  "Locus PX3 Canted": "scope",
+  "Luca Stormwatch": "scope",
+  "RVX9 Thermo": "scope",
+  "SZ Castaway": "scope",
+  "SZ Echelon Holo": "dot",
+  "SZ Helios Holo": "dot",
+  "SZ Lonewolf Flip": "scope",
+  "SZ Lonewolf Holo": "dot",
+  "SZ Micro D-3": "dot",
+  "SZ Prima-4 Dot": "dot",
+  "SZ SRE-7": "dot",
+  "Schlager 7x": "scope",
+  "Schlager Bigsky": "scope",
+  "Schlager Dogfight GI": "scope",
+  "Schlager Indigo-RF": "scope",
+  "Schlager Night View Pro": "scope",
+  "Signal 50 11.2x Scope": "scope",
+  "Slimline Elite": "dot",
+  "VLK Rize-40": "scope",
+  "VLK Trimmer": "dot",
+  "ZLR Type C": "dot"
+ },
+ "variant_id": "kg-7-vulcan-sniper-025f0c",
+ "next_upgrade_at_54": "Next upgrade at Lv 64: swap DS RKT-90 -> Ivanov QR600"
+}
