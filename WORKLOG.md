@@ -6,3 +6,5 @@
 [by:claude-sonnet-5-5/mw4-webapp-r3]
 - 2026-11-16 22:4x Review round 2 (gpt-6.1-sol) on 0d323e4: F1, F2, F3 fixed; GO-WITH-CONDITIONS with one condition (R2-F1: an Infil page whose Early game heading is present but whose parts no longer parse must count as unreadable). Folded test-first (proof/tdd/*review-r2*); live refresh still 30 guns, 0 failed.
 [by:claude-sonnet-5-5/mw4-webapp-r3]
+- 2026-11-16 22:3x PR #1 squash-merged (4bc8a37) after review round 2 GO-WITH-CONDITIONS, condition folded. Pages enabled. First Actions run (workflow_dispatch): tests pass, refresh read 30/30 guns from GitHub runners, data commit aca5836, site deployed. Live: GitHub Actions cron 17 9 * * * UTC; no MiguelPC timer needed. Site 200, 390 px proof in proof/live.
+[by:claude-sonnet-5-5/mw4-webapp-r3]
