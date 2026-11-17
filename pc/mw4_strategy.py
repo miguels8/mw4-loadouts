@@ -67,8 +67,21 @@ def run(weapons, strat, runner, now, model, max_calls=MAX_CALLS, log=None):
     return {"strategy": new, "changed": new != strat, "calls": calls}
 
 
+HERMES_PYTHON = "/home/santo/.hermes/venv/bin/python3"
+HERMES_SRC = "/home/santo/dev/.worktrees/hermes-agent/update-20260917"   # the source tree report.py and email-watch also use
+
+
+def ask_command(environ):
+    """(argv, env) for the helper. It resolves the Go key through hermes_cli, which the system python cannot import
+    (found live 2026-11-17: 20 calls failed at once), so it runs under the Hermes venv python with its source tree."""
+    env = dict(environ)
+    env["PYTHONPATH"] = HERMES_SRC + (":" + env["PYTHONPATH"] if env.get("PYTHONPATH") else "")
+    return [HERMES_PYTHON, ASK], env
+
+
 def _runner(prompt):
-    p = subprocess.run(["python3", ASK], input=prompt, capture_output=True, text=True, timeout=240, check=False)
+    cmd, env = ask_command(os.environ)
+    p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=240, check=False, env=env)
     return p.returncode, p.stdout.strip()
 
 

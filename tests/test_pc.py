@@ -155,6 +155,13 @@ class Strategy(unittest.TestCase):
         out, calls = self.run_it(w, maxcalls=20)
         self.assertEqual(len(calls), 20)
 
+    def test_the_helper_runs_under_the_hermes_python_with_its_source_tree(self):
+        # found live 2026-11-17: ask_opencode_go.py cannot import hermes_cli/dotenv under the system python (20 calls failed at once)
+        cmd, env = S.ask_command({"PATH": "/usr/bin"})
+        self.assertEqual(cmd, ["/home/santo/.hermes/venv/bin/python3", "/home/santo/.hermes/scripts/ask_opencode_go.py"])
+        self.assertIn("hermes-agent", env["PYTHONPATH"])
+        self.assertEqual(env["PATH"], "/usr/bin")
+
     def test_variant_that_left_the_data_keeps_its_note_unused(self):
         out, calls = self.run_it(weapons(("a", "Versatile", "text")), {"gone": {"text": "old", "model": "m", "at": NOW, "attempts": 1}})
         self.assertIn("gone", out["strategy"])
