@@ -7,51 +7,51 @@
   "https://infil.app/loadouts/<gun>/"
  ],
  "optics": {
+  "Astaroth .57 11.2x Scope": "scope",
   "Bruen Clash-40": "dot",
   "Bruen Field-Op": "scope",
-  "Bruen THRM-60 Optic": "dot",
-  "Cronen R808": "scope",
-  "Cronen Zero-K": "dot",
-  "FJX 708 PRO": "dot",
-  "GL K230": "scope",
-  "KV Corsac Holo": "dot",
-  "Schlager Night View Pro": "scope",
-  "SZ Echelon Holo": "dot",
-  "SZ Helios Holo": "dot",
-  "SZ Lonewolf Holo": "dot",
-  "SZ Micro D-3": "dot",
-  "SZ SRE-7": "dot",
-  "VLK Trimmer": "dot",
-  "Z-Dot 9": "dot",
-  "Corio Bisect": "scope",
-  "IOTA-D": "dot",
-  "Locus PX3 Canted": "scope",
-  "RVX9 Thermo": "scope",
-  "Schlager 7x": "scope",
-  "Schlager Dogfight GI": "scope",
-  "Slimline Elite": "dot",
-  "SZ Lonewolf Flip": "scope",
-  "SZ Prima-4 Dot": "dot",
-  "VLK Rize-40": "scope",
-  "ZLR Type C": "dot",
   "Bruen Maestro": "scope",
+  "Bruen THRM-60 Optic": "dot",
+  "Corio Bisect": "scope",
   "Corio D51 Scope": "scope",
   "Corvus Avis-0": "scope",
+  "Cronen R808": "scope",
+  "Cronen Zero-K": "dot",
+  "Custom Ironsights": "iron",
   "Expedite 308 DR2": "scope",
+  "FJX 708 PRO": "dot",
+  "GL K230": "scope",
   "GW Löwe-55": "scope",
   "Hanbit 3080 Fireline": "scope",
+  "IOTA-D": "dot",
   "KG-7 Vulcan 11.2x Scope": "scope",
+  "KV Corsac Holo": "dot",
+  "Locus PX3 Canted": "scope",
   "Luca Stormwatch": "scope",
-  "Schlager Bigsky": "scope",
-  "Schlager Indigo-RF": "scope",
-  "Signal 50 11.2x Scope": "scope",
-  "SZ Castaway": "scope",
-  "Astaroth .57 11.2x Scope": "scope",
-  "Custom Ironsights": "iron",
-  "SZ MN-Scout 9x": "scope",
-  "VLK 1940-R 9x": "scope",
+  "RVX9 Thermo": "scope",
   "SZ CNT-R6 Optic": "scope",
-  "ZLR Swordfish": "scope"
+  "SZ Castaway": "scope",
+  "SZ Echelon Holo": "dot",
+  "SZ Helios Holo": "dot",
+  "SZ Lonewolf Flip": "scope",
+  "SZ Lonewolf Holo": "dot",
+  "SZ MN-Scout 9x": "scope",
+  "SZ Micro D-3": "dot",
+  "SZ Prima-4 Dot": "dot",
+  "SZ SRE-7": "dot",
+  "Schlager 7x": "scope",
+  "Schlager Bigsky": "scope",
+  "Schlager Dogfight GI": "scope",
+  "Schlager Indigo-RF": "scope",
+  "Schlager Night View Pro": "scope",
+  "Signal 50 11.2x Scope": "scope",
+  "Slimline Elite": "dot",
+  "VLK 1940-R 9x": "scope",
+  "VLK Rize-40": "scope",
+  "VLK Trimmer": "dot",
+  "Z-Dot 9": "dot",
+  "ZLR Swordfish": "scope",
+  "ZLR Type C": "dot"
  },
  "guns": [
   {
@@ -59,13 +59,13 @@
    "name": "Cronen Osprey",
    "type": "AR",
    "tier": "S",
-   "max_level": 70,
    "unlock": {
     "level": null,
     "bp_tier": 16,
     "note": "Battle Pass Tier 16 (free base weapon)"
    },
    "line": "New #1 rifle. Free on the Battle Pass (tier 16).",
+   "max_level": 70,
    "apex": {
     "name": "Cronen Helix Mk.II",
     "level": 70
@@ -351,13 +351,13 @@
    "name": "M4",
    "type": "AR",
    "tier": "S",
-   "max_level": 72,
    "unlock": {
     "level": 14,
     "bp_tier": null,
     "note": null
    },
    "line": "Easiest rifle. Good at every range.",
+   "max_level": 72,
    "apex": {
     "name": "M4 Hurricane",
     "level": 72
@@ -457,7 +457,46 @@
      "apex_on": true,
      "notes": []
     },
-    "early": null
+    "early": {
+     "label": "Early game",
+     "date": "2026-11-14",
+     "url": "https://infil.app/loadouts/m4/",
+     "complete_level": 14,
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS IS300",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "Slimline Elite",
+       "level": 13,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "PF1 Fixed Stock",
+       "level": 14,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "5.56 NATO Overpressured",
+       "level": 3,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "SZ Gen.6 PEQ",
+       "level": 2,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    }
    },
    "table": {
     "AA54 V.3 Bipod": [
@@ -667,13 +706,13 @@
    "name": "Han 86",
    "type": "AR",
    "tier": "B",
-   "max_level": 72,
    "unlock": {
     "level": 4,
     "bp_tier": null,
     "note": null
    },
    "line": "Very easy recoil. Weaker since the Oct 28 nerf.",
+   "max_level": 72,
    "apex": {
     "name": "Han X20 Skybreaker",
     "level": 72
@@ -769,7 +808,46 @@
      "apex_on": false,
      "notes": []
     },
-    "early": null
+    "early": {
+     "label": "Early game",
+     "date": "2026-11-14",
+     "url": "https://infil.app/loadouts/han-86/",
+     "complete_level": 7,
+     "parts": [
+      {
+       "slot": "Optic",
+       "name": "SZ Micro D-3",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "Hanbit RK8 406mm",
+       "level": 7,
+       "stand_in": null
+      },
+      {
+       "slot": "Muzzle",
+       "name": "FSS IS300",
+       "level": 6,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "FR4 Retractable Stock",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "XRK Clutch-LS",
+       "level": 3,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    }
    },
    "table": {
     "AA54 V.3 Bipod": [
@@ -975,13 +1053,13 @@
    "name": "Hyeon Burst",
    "type": "AR",
    "tier": "S",
-   "max_level": 68,
    "unlock": {
     "level": 21,
     "bp_tier": null,
     "note": null
    },
    "line": "Season 1 build; the IOTA-D dot sight replaces the Overpressured ammo (you asked for an optic).",
+   "max_level": 68,
    "apex": {
     "name": "Hyeon Hyperburst",
     "level": 68
@@ -1033,7 +1111,7 @@
      ],
      "apex_on": true,
      "notes": [
-      "IOTA-D in place of its 6.8x43mm Overpressured ammo is Miguel's pick (IOTA-D unlock Lv 35 from CODMunity's attachment table)"
+      "IOTA-D in place of its ammunition part is Miguel's own pick"
      ]
     },
     "close": {
@@ -1277,13 +1355,13 @@
    "name": "Patriot XMR",
    "type": "AR",
    "tier": "A",
-   "max_level": 72,
    "unlock": {
     "level": 27,
     "bp_tier": null,
     "note": null
    },
    "line": "Hits hard at mid-long range. Heavy recoil.",
+   "max_level": 72,
    "apex": {
     "name": "Patriot XMR Volt",
     "level": 72
@@ -1577,13 +1655,13 @@
    "name": "Kastov 762",
    "type": "AR",
    "tier": "A",
-   "max_level": 71,
    "unlock": {
     "level": 34,
     "bp_tier": null,
     "note": null
    },
    "line": "Big damage per bullet. Harsh recoil.",
+   "max_level": 71,
    "apex": {
     "name": "Kastov Arc",
     "level": 71
@@ -1881,13 +1959,13 @@
    "name": "Axion",
    "type": "AR",
    "tier": "A",
-   "max_level": 69,
    "unlock": {
     "level": 52,
     "bp_tier": null,
     "note": null
    },
    "line": "Handles like the M4, hits harder.",
+   "max_level": 69,
    "apex": {
     "name": "Axion Reaver",
     "level": 69
@@ -2193,13 +2271,13 @@
    "name": "Oden",
    "type": "AR",
    "tier": "A",
-   "max_level": 65,
    "unlock": {
     "level": 39,
     "bp_tier": null,
     "note": null
    },
    "line": "Hardest-hitting rifle, but slow and kicks.",
+   "max_level": 65,
    "apex": {
     "name": "Oden Sentinel",
     "level": 65
@@ -2481,13 +2559,13 @@
    "name": "Cronen Squall",
    "type": "AR",
    "tier": "A",
-   "max_level": 67,
    "unlock": {
     "level": 55,
     "bp_tier": null,
     "note": null
    },
    "line": "Accurate at range. Small mag, slow fire.",
+   "max_level": 67,
    "apex": {
     "name": "Cronen Maelstrom",
     "level": 67
@@ -2793,13 +2871,13 @@
    "name": "VEL 46",
    "type": "SMG",
    "tier": "S",
-   "max_level": 60,
    "unlock": {
     "level": 5,
     "bp_tier": null,
     "note": null
    },
    "line": "Best SMG. Holds up even at mid range.",
+   "max_level": 60,
    "apex": {
     "name": "VEL 46 Snap",
     "level": 60
@@ -3061,13 +3139,13 @@
    "name": "ISO Nightshade",
    "type": "SMG",
    "tier": "A",
-   "max_level": 64,
    "unlock": {
     "level": 4,
     "bp_tier": null,
     "note": null
    },
    "line": "Most consistent gun in the game.",
+   "max_level": 64,
    "apex": {
     "name": "ISO Trace",
     "level": 64
@@ -3167,7 +3245,46 @@
      "apex_on": false,
      "notes": []
     },
-    "early": null
+    "early": {
+     "label": "Early game",
+     "date": "2026-11-14",
+     "url": "https://infil.app/loadouts/iso-nightshade/",
+     "complete_level": 16,
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS Crackdown",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "ZLR MAG-Z 9\"",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "GI-80 MilSpec Stock",
+       "level": 16,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Demo STP-1",
+       "level": 6,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "9mm Parabellum Frangible",
+       "level": 8,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    }
    },
    "table": {
     "212 LC40 Comp": [
@@ -3337,13 +3454,13 @@
    "name": "PPSh-41",
    "type": "SMG",
    "tier": "A",
-   "max_level": 62,
    "unlock": {
     "level": 30,
     "bp_tier": null,
     "note": null
    },
    "line": "Huge drum, very fast fire, easy to use.",
+   "max_level": 62,
    "apex": {
     "name": "PPSh-41 Ember",
     "level": 62
@@ -3593,13 +3710,13 @@
    "name": "Wz.55 Striga",
    "type": "SMG",
    "tier": "A",
-   "max_level": 60,
    "unlock": {
     "level": 18,
     "bp_tier": null,
     "note": null
    },
    "line": "High damage, slow fire rate.",
+   "max_level": 60,
    "apex": {
     "name": "Wz.55 Striga Rampage",
     "level": 60
@@ -3857,13 +3974,13 @@
    "name": "X-58 Nyx",
    "type": "SMG",
    "tier": "C",
-   "max_level": 53,
    "unlock": {
     "level": 46,
     "bp_tier": null,
     "note": null
    },
    "line": "Built-in silencer. Stealth pick.",
+   "max_level": 53,
    "apex": {
     "name": "X-58 Void",
     "level": 53
@@ -4101,13 +4218,13 @@
    "name": "CSG-35",
    "type": "SMG",
    "tier": "C",
-   "max_level": 42,
    "unlock": {
     "level": null,
     "bp_tier": 36,
     "note": "Battle Pass Tier 36 (free base weapon)"
    },
    "line": "Fastest SMG. Battle Pass tier 36.",
+   "max_level": 42,
    "apex": {
     "name": "CSG Crossfire",
     "level": 42
@@ -4329,13 +4446,13 @@
    "name": "Rezi 12",
    "type": "Shotgun",
    "tier": "C",
-   "max_level": 60,
    "unlock": {
     "level": 4,
     "bp_tier": null,
     "note": null
    },
    "line": "Best shotgun. Only for tight rooms.",
+   "max_level": 60,
    "apex": {
     "name": "Rezi 12 Enforcer",
     "level": 60
@@ -4435,7 +4552,40 @@
      "apex_on": true,
      "notes": []
     },
-    "early": null
+    "early": {
+     "label": "Early game",
+     "date": "2026-11-14",
+     "url": "https://infil.app/loadouts/rezi-12/",
+     "complete_level": 14,
+     "parts": [
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 14,
+       "stand_in": null
+      },
+      {
+       "slot": "Muzzle",
+       "name": "Sakin Omega 13",
+       "level": 13,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Bolt",
+       "name": "U12G Match 9",
+       "level": 8,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    }
    },
    "table": {
     "Bruen R12-SH": [
@@ -4617,13 +4767,13 @@
    "name": "Warlord",
    "type": "Shotgun",
    "tier": "C",
-   "max_level": 59,
    "unlock": {
     "level": 32,
     "bp_tier": null,
     "note": null
    },
    "line": "Hits hard, slow pump.",
+   "max_level": 59,
    "apex": {
     "name": "Warlord Lumen",
     "level": 59
@@ -4881,13 +5031,13 @@
    "name": "FiNN LMG",
    "type": "LMG",
    "tier": "C",
-   "max_level": 59,
    "unlock": {
     "level": 4,
     "bp_tier": null,
     "note": null
    },
    "line": "Most mobile LMG. LMGs trail rifles right now.",
+   "max_level": 59,
    "apex": {
     "name": "FiNN Adverse",
     "level": 59
@@ -5143,13 +5293,13 @@
    "name": "Type 73",
    "type": "LMG",
    "tier": "D",
-   "max_level": 64,
    "unlock": {
     "level": 9,
     "bp_tier": null,
     "note": null
    },
    "line": "Easy recoil, slow to handle.",
+   "max_level": 64,
    "apex": {
     "name": "Type 73 Assault",
     "level": 64
@@ -5249,7 +5399,46 @@
      "apex_on": false,
      "notes": []
     },
-    "early": null
+    "early": {
+     "label": "Early game",
+     "date": "2026-11-14",
+     "url": "https://infil.app/loadouts/type-73/",
+     "complete_level": 12,
+     "parts": [
+      {
+       "slot": "Optic",
+       "name": "FJX 708 PRO",
+       "level": 8,
+       "stand_in": null
+      },
+      {
+       "slot": "Muzzle",
+       "name": "Ivanov QR600",
+       "level": 12,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "RSS-40F 12",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "EXP ZBR-904",
+       "level": 9,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "QFL-S4.5",
+       "level": 6,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    }
    },
    "table": {
     "770 Underbite": [
@@ -5427,13 +5616,13 @@
    "name": "APOC-338",
    "type": "LMG",
    "tier": "D",
-   "max_level": 56,
    "unlock": {
     "level": 44,
     "bp_tier": null,
     "note": null
    },
    "line": "Huge damage, very slow.",
+   "max_level": 56,
    "apex": {
     "name": "APOC 338 Praetor",
     "level": 56
@@ -5695,13 +5884,13 @@
    "name": "Oris 8.6",
    "type": "Marksman",
    "tier": "B",
-   "max_level": 70,
    "unlock": {
     "level": 11,
     "bp_tier": null,
     "note": null
    },
    "line": "Quickscope build, no big scope.",
+   "max_level": 70,
    "apex": {
     "name": "Oris 8.6 Razor",
     "level": 70
@@ -5757,7 +5946,7 @@
      ],
      "apex_on": false,
      "notes": [
-      "Cronen R808 (a scope above 1x) swapped for ZLR Type C (1x dot, Lv 40, the dot CODMunity builds use most) under Miguel's no-big-scope rule"
+      "Cronen R808 (a scope above 1x) swapped for ZLR Type C (1x dot, Lv 40): no big scope rule"
      ]
     },
     "close": {
@@ -5802,10 +5991,51 @@
      ],
      "apex_on": false,
      "notes": [
-      "Cronen R808 (a scope above 1x) swapped for ZLR Type C (1x dot, Lv 40, the dot CODMunity builds use most) under Miguel's no-big-scope rule"
+      "Cronen R808 (a scope above 1x) swapped for ZLR Type C (1x dot, Lv 40): no big scope rule"
      ]
     },
-    "early": null
+    "early": {
+     "label": "Early game",
+     "date": "2026-11-14",
+     "url": "https://infil.app/loadouts/oris-8-6/",
+     "complete_level": 14,
+     "parts": [
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 40,
+       "stand_in": null
+      },
+      {
+       "slot": "Muzzle",
+       "name": "Matuzek Blackveil",
+       "level": 14,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "6 Round Mag",
+       "level": 11,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "No Stock",
+       "level": 3,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 8,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": [
+      "Cronen R808 (a scope above 1x) swapped for ZLR Type C (1x dot, Lv 40): no big scope rule"
+     ]
+    }
    },
    "table": {
     "AA54 V.3 Bipod": [
@@ -6019,7 +6249,6 @@
    "name": "Mosin-Nagant",
    "type": "Marksman",
    "tier": "A",
-   "max_level": 69,
    "unlock": {
     "level": 36,
     "bp_tier": null,
@@ -6027,6 +6256,7 @@
    },
    "line": "Bolt-action, 5-round mag. Nov 13 patch: full damage only to 15 m (was 40 m); CODMunity's Nov 14 builds are tagged Nerf (after it).",
    "note": "⚠ Nov 13 patch: full damage only to 15 m · iron sights, no scope",
+   "max_level": 69,
    "apex": {
     "name": "Mosin Harpoon",
     "level": 69
@@ -6076,7 +6306,7 @@
      ],
      "apex_on": false,
      "notes": [
-      "Cronen R808 dropped: iron sights only (Miguel's rule, no scope on the Mosin-Nagant)"
+      "Cronen R808 dropped: iron sights only (no big scope rule)"
      ]
     },
     "close": {
@@ -6119,7 +6349,7 @@
      ],
      "apex_on": false,
      "notes": [
-      "Cronen R808 dropped: iron sights only (Miguel's rule, no scope on the Mosin-Nagant)"
+      "Cronen R808 dropped: iron sights only (no big scope rule)"
      ]
     },
     "early": null
@@ -6316,13 +6546,13 @@
    "name": "MAR-9",
    "type": "Marksman",
    "tier": "B",
-   "max_level": 73,
    "unlock": {
     "level": 4,
     "bp_tier": null,
     "note": null
    },
    "line": "Semi-auto, two-shot kills. Outclassed.",
+   "max_level": 73,
    "apex": {
     "name": "MAR-9 Auto",
     "level": 73
@@ -6373,7 +6603,9 @@
       }
      ],
      "apex_on": true,
-     "notes": []
+     "notes": [
+      "The source page shows no unlock levels today: levels come from its attachment table or the last check; a part with no known level says so"
+     ]
     },
     "close": {
      "label": "Close Range",
@@ -6420,7 +6652,9 @@
       }
      ],
      "apex_on": true,
-     "notes": []
+     "notes": [
+      "The source page shows no unlock levels today: levels come from its attachment table or the last check; a part with no known level says so"
+     ]
     },
     "early": null
    },
@@ -6431,13 +6665,13 @@
    "name": "KG-7 Vulcan",
    "type": "Sniper",
    "tier": "S",
-   "max_level": 75,
    "unlock": {
     "level": 4,
     "bp_tier": null,
     "note": null
    },
    "line": "Best sniper by far. One chest shot kills.",
+   "max_level": 75,
    "apex": {
     "name": "KG-7 Drillcharge",
     "level": 75
@@ -6533,7 +6767,46 @@
      "apex_on": true,
      "notes": []
     },
-    "early": null
+    "early": {
+     "label": "Early game",
+     "date": "2026-11-14",
+     "url": "https://infil.app/loadouts/kg-7-vulcan/",
+     "complete_level": 14,
+     "parts": [
+      {
+       "slot": "Optic",
+       "name": "Hanbit 3080 Fireline",
+       "level": 14,
+       "stand_in": null
+      },
+      {
+       "slot": "Muzzle",
+       "name": "DS RKT-90",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "TT Baem 12",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Comb",
+       "name": "TT Type 40 Comb",
+       "level": 6,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 7,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    }
    },
    "table": {
     "770 Underbite": [
@@ -6743,13 +7016,13 @@
    "name": "Signal 50",
    "type": "Sniper",
    "tier": "A",
-   "max_level": 74,
    "unlock": {
     "level": 50,
     "bp_tier": null,
     "note": null
    },
    "line": "Semi-auto .50 cal. Better on big maps.",
+   "max_level": 74,
    "apex": {
     "name": "Signal Inferno",
     "level": 74
@@ -7075,13 +7348,13 @@
    "name": "Astaroth .57",
    "type": "Sniper",
    "tier": "D",
-   "max_level": 54,
    "unlock": {
     "level": 25,
     "bp_tier": null,
     "note": null
    },
    "line": "Hardest hit, 3-round mag, slow.",
+   "max_level": 54,
    "apex": {
     "name": "Astaroth .57 Infiltrator",
     "level": 54
@@ -7323,13 +7596,13 @@
    "name": "SANG 9mm",
    "type": "Pistol",
    "tier": "C",
-   "max_level": 38,
    "unlock": {
     "level": 4,
     "bp_tier": null,
     "note": null
    },
    "line": "Default pistol. Good backup in close fights.",
+   "max_level": 38,
    "apex": {
     "name": "Sang Breach",
     "level": 38
@@ -7515,13 +7788,13 @@
    "name": "Krait P68",
    "type": "Pistol",
    "tier": "B",
-   "max_level": 38,
    "unlock": {
     "level": 7,
     "bp_tier": null,
     "note": null
    },
    "line": "Best-ranked pistol. Fast and accurate.",
+   "max_level": 38,
    "apex": {
     "name": "Krait P68 Commando",
     "level": 38
@@ -7695,13 +7968,13 @@
    "name": ".50 GS",
    "type": "Pistol",
    "tier": "D",
-   "max_level": 50,
    "unlock": {
     "level": 41,
     "bp_tier": null,
     "note": null
    },
    "line": "Hand cannon: big hits, slow, small mag.",
+   "max_level": 50,
    "apex": {
     "name": "GS Magna",
     "level": 50
@@ -7939,13 +8212,13 @@
    "name": "Mojave .357",
    "type": "Pistol",
    "tier": "D",
-   "max_level": 44,
    "unlock": {
     "level": 48,
     "bp_tier": null,
     "note": null
    },
    "line": "Revolver: hard-hitting, slow to reload.",
+   "max_level": 44,
    "apex": {
     "name": "Mojave .357 Lawless",
     "level": 44

@@ -214,6 +214,30 @@ export function kitFor(mode, gun, profile, data, statics) {
   return { items, why, whyItem };
 }
 
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+export function dateText(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso ?? "");
+  return m ? `${MONTHS[Number(m[2]) - 1]} ${Number(m[3])}, ${m[1]}` : "unknown";
+}
+
+// "Data last checked <date>": loud when the last run failed or the data is more than 3 days old.
+export function freshness(status, todayIso) {
+  const checked = status?.checked ?? null;
+  if (!checked) return { text: "Data has never been checked", bad: true };
+  const days = Math.round((Date.parse(todayIso) - Date.parse(checked)) / 86400000);
+  let text = `Data last checked ${dateText(checked)}`;
+  let bad = false;
+  if (status.failed?.length) {
+    text += `. The last refresh could not read: ${status.failed.join(", ")}`;
+    bad = true;
+  }
+  if (days > 3) {
+    text += `. That is ${days} days ago`;
+    bad = true;
+  }
+  return { text, bad };
+}
+
 export function rankGuns(mode, profile, data, statics) {
   const rows = data.guns.map((gun) => {
     const key = modeBuildKey(mode, gun);

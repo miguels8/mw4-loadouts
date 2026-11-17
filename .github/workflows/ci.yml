@@ -1,0 +1,33 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresher tests (parsing on saved pages, change log, no-big-scope, failures)
+        run: python3 -I -m unittest discover -s tests -v
+      - name: App logic tests (unlock, stand-in, prestige, ranking, empty level)
+        run: node --test tests/
+      - name: Phone check at 390 px (real Chromium)
+        run: |
+          python3 -I -m http.server 8765 --bind 127.0.0.1 --directory site &
+          sleep 2
+          CHROME=google-chrome node tests/tools/shot.mjs http://127.0.0.1:8765/ shots
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phone-shots
+          path: shots

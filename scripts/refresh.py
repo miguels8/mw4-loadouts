@@ -67,7 +67,7 @@ def _apply_scope_rule(reg, parts, table, optics, use):
     return out, notes
 
 
-def _stand_ins(parts, cand_all, old_alt, table):
+def _stand_ins(parts, cand_all, old_alt, table, trust_old=False):
     """Attach a stand-in to each locked-able part: lowest unlock level that opens GAP levels early, never an optic."""
     def table_level(slot, name):
         e = table.get(name)
@@ -83,7 +83,7 @@ def _stand_ins(parts, cand_all, old_alt, table):
                           if cs == slot and cl <= level - GAP and cn not in used_names)
             oa, oa_ok = old_alt.get(name.lower()), None
             if oa and oa["name"] not in used_names:
-                tl = table_level(oa["slot"], oa["name"])
+                tl = oa["level"] if trust_old else table_level(oa["slot"], oa["name"])
                 if tl is not None and tl <= level - GAP and oa["slot"] != "Optic":
                     oa_ok = (oa["slot"], oa["name"], tl)
             cross = sorted((cl, cs, cn) for (cs, cn), cl in cand_all.items()
@@ -105,18 +105,22 @@ def _stand_ins(parts, cand_all, old_alt, table):
     return out
 
 
-def _convert(reg, b, kind, url, cand_all, old_alt, table, optics, use):
+def _convert(reg, b, kind, url, cand_all, prev, table, optics, use, trust_old=False):
     parts, notes = _apply_scope_rule(reg, b["parts"], table, optics, use)
     if kind == "main" and reg.get("pick"):
         pk = reg["pick"]
         e = table.get(pk["name"])
         parts, n2 = apply_pick(parts, pk, e[1] if e and e[0] == pk["slot"] else None)
         notes += n2
-    for p in b["parts"]:
-        if p[2] is None:
-            notes.append(f"{p[1]} is an event reward (no unlock level published)")
+    if b.get("levels_missing"):
+        notes.append("The source page shows no unlock levels today: levels come from its attachment table or the "
+                     "last check; a part with no known level says so")
+    else:
+        for p in b["parts"]:
+            if p[2] is None:
+                notes.append(f"{p[1]} is an event reward (no unlock level published)")
     return {"label": b["name"], "date": b["date"], "url": url,
-            "parts": _stand_ins(parts, cand_all, old_alt, table),
+            "parts": _stand_ins(parts, cand_all, _old_stand_ins(prev, kind), table, trust_old),
             "apex_on": bool(b["apex"]) and len(b["parts"]) >= 5, "notes": notes}
 
 
@@ -127,12 +131,33 @@ def _early(reg, infil, table, optics, use, url):
             "parts": [part(*p) for p in parts], "apex_on": False, "notes": notes}
 
 
-def _old_stand_ins(old_gun):
-    out = {}
-    for b in (old_gun or {}).get("builds", {}).values():
+def _fill_levels(c, prev):
+    """Pages that stop showing "· Level N": take the level from the page's own attachment table, else from the
+    last check of the same part. Never a guess: no source for it means the level stays None (level not published)."""
+    c = copy.deepcopy(c)
+    old = {}
+    for b in ((prev or {}).get("builds") or {}).values():
         for p in (b or {}).get("parts", []):
+            if p.get("level") is not None:
+                old[(p["slot"], p["name"].lower())] = p["level"]
+    for b in c["builds"]:
+        if not b.get("levels_missing"):
+            continue
+        for p in b["parts"]:
+            if p[2] is None:
+                e = c["table"].get(p[1])
+                p[2] = e[1] if e and e[0] == p[0] else old.get((p[0], p[1].lower()))
+    return c
+
+
+def _old_stand_ins(old_gun, kind):
+    """Previous stand-ins by part name: this build's own first, other builds of the gun only as a fallback."""
+    builds = (old_gun or {}).get("builds", {})
+    out = {}
+    for key in [kind] + [k for k in builds if k != kind]:
+        for p in (builds.get(key) or {}).get("parts", []):
             if p.get("stand_in"):
-                out[p["name"].lower()] = p["stand_in"]
+                out.setdefault(p["name"].lower(), p["stand_in"])
     return out
 
 
@@ -163,17 +188,23 @@ def build_data(registry, pages, old, today):
                 guns.append(prev)
             continue
         listed = [b for b in c["builds"] if b["name"] != "Apex Attachment"] or c["builds"]
+        if len(listed[0]["parts"]) < 4:   # the page parsed to a build with no parts: layout changed, say so loudly
+            failed.append(slug)
+            if prev:
+                guns.append(prev)
+            continue
+        c = _fill_levels(c, prev)
+        listed = [b for b in c["builds"] if b["name"] != "Apex Attachment"] or c["builds"]
         main_b = listed[0]
         close_b = next((b for b in c["builds"] if b["name"] == "Close Range"), None)
         url = CODMUNITY.format(slug=slug)
-        table = c["table"] or {}
+        table = c["table"] or (prev or {}).get("table", {})
         cand_all = {}
         for b in c["builds"]:
             for sl, n, lv in b["parts"]:
                 if lv is not None and sl != "Optic":
                     cand_all[(sl, n)] = lv
-        old_alt = _old_stand_ins(prev)
-        args = (url, cand_all, old_alt, table, optics, use)
+        args = (url, cand_all, prev, table, optics, use, not c["table"])
         apex = next((b["apex"] for b in c["builds"] if b["apex"]), None)
         builds = {"main": _convert(reg, main_b, "main", *args),
                   "close": _convert(reg, close_b, "close", *args) if close_b else None, "early": None}
@@ -186,7 +217,8 @@ def build_data(registry, pages, old, today):
         if reg.get("note"):
             gun["note"] = reg["note"]
         apex_name = apex[0] if apex else (prev or {}).get("apex", {}).get("name")
-        apex_level = apex[1] if apex and apex[1] else reg.get("max_level")
+        apex_level = (apex[1] if apex and apex[1] else None) or ((prev or {}).get("apex") or {}).get("level") \
+            or reg.get("max_level")
         gun["max_level"] = apex_level
         gun["apex"] = {"name": apex_name, "level": apex_level} if apex_name else None
         gun["builds"] = builds

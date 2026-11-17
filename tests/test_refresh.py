@@ -45,6 +45,18 @@ def old_with_kg7_stand_in():
         {"slot": "Muzzle", "name": "Ivanov QR600", "level": 64, "stand_in": OLD_KG7_STAND_IN}]}}}]}
 
 
+class StandInCarryOver(unittest.TestCase):
+    def test_each_build_keeps_its_own_old_stand_in_for_the_same_part(self):
+        """Found in the first real run: main and close both carry Ivanov QR600 with different stand-ins."""
+        old = {"guns": [{"slug": "kg-7-vulcan", "builds": {
+            "main": {"parts": [{"slot": "Muzzle", "name": "Ivanov QR600", "level": 64, "stand_in": OLD_KG7_STAND_IN}]},
+            "close": {"parts": [{"slot": "Muzzle", "name": "Ivanov QR600", "level": 64,
+                                 "stand_in": {"slot": "Comb", "name": "TT Type 40 Comb", "level": 6}}]}}}]}
+        out = R.build_data(reg("kg-7-vulcan"), {"kg-7-vulcan": parsed("kg-7-vulcan")}, old, "2026-11-16")
+        b = out["data"]["guns"][0]["builds"]
+        self.assertEqual(b["main"]["parts"][0]["stand_in"], OLD_KG7_STAND_IN)
+
+
 class ParseCodmunity(unittest.TestCase):
     def test_m4_main_build_and_levels(self):
         c = P.parse_codmunity(lines("codmunity-m4.html"))
@@ -198,6 +210,40 @@ class ChangeLog(unittest.TestCase):
     def test_history_skips_empty_refresh(self):
         hist = R.add_history([{"date": "2026-11-15", "changes": [{"gun": "x"}]}], "2026-11-16", [])
         self.assertEqual(len(hist), 1)
+
+
+class NoLevelLayout(unittest.TestCase):
+    """CODMunity's MAR-9 page, read live on 2026-11-16, shows parts with no '· Level N' line and no attachment table."""
+
+    def page(self):
+        return {"codmunity": P.parse_codmunity(lines("codmunity-mar-9-nolevels.html")), "infil": None}
+
+    def test_parts_parse_with_unknown_levels(self):
+        b = self.page()["codmunity"]["builds"][0]
+        self.assertTrue(b["levels_missing"])
+        self.assertEqual([p[:2] for p in b["parts"]][-1], ["Magazine", "30 Round Mag"])
+        self.assertEqual(len(b["parts"]), 5)
+        self.assertTrue(all(p[2] is None for p in b["parts"]))
+
+    def test_levels_carried_from_last_check_never_invented(self):
+        old = {"checked": "2026-11-15", "optics": {}, "guns": [{"slug": "mar-9", "apex": {"name": "MAR-9 Auto", "level": 73},
+               "table": {}, "builds": {"main": {"parts": [
+                   {"slot": "Muzzle", "name": "Meiko 30CAL-SP", "level": 2, "stand_in": None},
+                   {"slot": "Laser", "name": "SZ Gen.6 PEQ", "level": 5, "stand_in": None}]}}}]}
+        out = R.build_data(reg("mar-9"), {"mar-9": self.page()}, old, "2026-11-16")
+        self.assertEqual(out["failed"], [])
+        parts = {p["name"]: p["level"] for p in out["data"]["guns"][0]["builds"]["main"]["parts"]}
+        self.assertEqual(parts["Meiko 30CAL-SP"], 2)
+        self.assertEqual(parts["SZ Gen.6 PEQ"], 5)
+        self.assertIsNone(parts["30 Round Mag"])
+        self.assertTrue(out["data"]["guns"][0]["builds"]["main"]["notes"])
+
+    def test_empty_build_is_a_failure(self):
+        empty = {"codmunity": {"title": "x", "table": {}, "optic_labels": {},
+                               "builds": [{"name": "Versatile", "date": "2026-11-16", "parts": [], "apex": None}]},
+                 "infil": None}
+        out = R.build_data(reg("m4"), {"m4": empty}, {"guns": []}, "2026-11-16")
+        self.assertEqual(out["failed"], ["m4"])
 
 
 class Failures(unittest.TestCase):

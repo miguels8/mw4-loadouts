@@ -1,0 +1,150 @@
+{
+ "slug": "kg-7-vulcan",
+ "name": "KG-7 Vulcan",
+ "type": "Sniper",
+ "tier": "S",
+ "unlock": {
+  "level": 4,
+  "bp_tier": null,
+  "note": null
+ },
+ "line": "Best sniper by far. One chest shot kills.",
+ "max_level": 75,
+ "apex": {
+  "name": "KG-7 Drillcharge",
+  "level": 75
+ },
+ "builds": {
+  "main": {
+   "label": "Sniper",
+   "date": "2026-11-11",
+   "url": "https://codmunity.gg/weapon/mw4/kg-7-vulcan",
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "Ivanov QR600",
+     "level": 64,
+     "stand_in": {
+      "slot": "Laser",
+      "name": "Schlager Visiv-5",
+      "level": 7
+     }
+    },
+    {
+     "slot": "Barrel",
+     "name": "TT Baem 12\"",
+     "level": 5,
+     "stand_in": null
+    },
+    {
+     "slot": "Optic",
+     "name": "Schlager 7x",
+     "level": 19,
+     "stand_in": null
+    },
+    {
+     "slot": "Stock",
+     "name": "Bruen KG-7 Mk. IV",
+     "level": 28,
+     "stand_in": null
+    },
+    {
+     "slot": "Comb",
+     "name": "TT Type 40 Comb",
+     "level": 6,
+     "stand_in": null
+    }
+   ],
+   "apex_on": true,
+   "notes": []
+  },
+  "close": {
+   "label": "Close Range",
+   "date": "2026-11-07",
+   "url": "https://codmunity.gg/weapon/mw4/kg-7-vulcan",
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "Ivanov QR600",
+     "level": 64,
+     "stand_in": {
+      "slot": "Comb",
+      "name": "TT Type 40 Comb",
+      "level": 6
+     }
+    },
+    {
+     "slot": "Barrel",
+     "name": "TT Baem 12\"",
+     "level": 5,
+     "stand_in": null
+    },
+    {
+     "slot": "Bolt",
+     "name": "KT76 Light Bolt",
+     "level": 63,
+     "stand_in": null
+    },
+    {
+     "slot": "Optic",
+     "name": "Schlager 7x",
+     "level": 19,
+     "stand_in": null
+    },
+    {
+     "slot": "Stock",
+     "name": "TT G76-RP Stock",
+     "level": 47,
+     "stand_in": {
+      "slot": "Stock",
+      "name": "Bruen KG-7 Mk. IV",
+      "level": 28
+     }
+    }
+   ],
+   "apex_on": true,
+   "notes": []
+  },
+  "early": {
+   "label": "Early game",
+   "date": "2026-11-14",
+   "url": "https://infil.app/loadouts/kg-7-vulcan/",
+   "complete_level": 14,
+   "parts": [
+    {
+     "slot": "Optic",
+     "name": "Hanbit 3080 Fireline",
+     "level": 14,
+     "stand_in": null
+    },
+    {
+     "slot": "Muzzle",
+     "name": "DS RKT-90",
+     "level": 4,
+     "stand_in": null
+    },
+    {
+     "slot": "Barrel",
+     "name": "TT Baem 12",
+     "level": 5,
+     "stand_in": null
+    },
+    {
+     "slot": "Comb",
+     "name": "TT Type 40 Comb",
+     "level": 6,
+     "stand_in": null
+    },
+    {
+     "slot": "Laser",
+     "name": "Schlager Visiv-5",
+     "level": 7,
+     "stand_in": null
+    }
+   ],
+   "apex_on": false,
+   "notes": []
+  }
+ },
+ "table": {}
+}

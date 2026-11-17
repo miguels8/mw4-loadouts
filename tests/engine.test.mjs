@@ -250,8 +250,9 @@ test("Miguel's one-time import fills only what he gave", () => {
   for (const [slug, g] of Object.entries(p.guns)) assert.ok(gunBy(slug), slug);
 });
 
-test("card acceptance: KG-7 Vulcan at Lv 54 in TDM", () => {
-  const kg = gunBy("kg-7-vulcan");
+test("card acceptance: KG-7 Vulcan at Lv 54 in TDM (pinned to the card's data of 2026-11-16)", () => {
+  const kg = read("./fixtures/kg7-card-gun.json");
+  const data = { guns: [kg], optics: {} };
   const tdm = statics.modes.find((m) => m.id === "TDM");
   const key = modeBuildKey(tdm, kg);
   assert.equal(key, "main");
@@ -292,7 +293,7 @@ test("shipped data: no big scope, no invented levels, sources dated", () => {
   const mosin = gunBy("mosin-nagant");
   for (const b of Object.values(mosin.builds)) if (b) assert.ok(!b.parts.some((p) => p.slot === "Optic"));
   assert.ok(data.checked);
-  assert.equal(data.guns.length, 30);
+  assert.equal(data.guns.length, read("../site/data/registry.json").guns.length);
 });
 
 test("every mode has a kit and head guns that exist", () => {
@@ -307,6 +308,21 @@ test("every mode has a kit and head guns that exist", () => {
   }
   assert.ok(statics.no_class.length >= 3);
   assert.equal(statics.modes.find((m) => m.id === "Hyeon") ?? null, null);
+});
+
+test("freshness: shows the check date, loud when stale or when the last run failed", async () => {
+  const { freshness, dateText } = await import("../site/engine.js");
+  assert.equal(dateText("2026-11-16"), "Nov 16, 2026");
+  const ok = freshness({ checked: "2026-11-16", failed: [] }, "2026-11-17");
+  assert.equal(ok.bad, false);
+  assert.match(ok.text, /Data last checked Nov 16, 2026/);
+  const stale = freshness({ checked: "2026-11-10", failed: [] }, "2026-11-17");
+  assert.equal(stale.bad, true);
+  assert.match(stale.text, /7 days ago/);
+  const failed = freshness({ checked: "2026-11-16", failed: ["mar-9"] }, "2026-11-16");
+  assert.equal(failed.bad, true);
+  assert.match(failed.text, /mar-9/);
+  assert.equal(freshness(null, "2026-11-16").bad, true);
 });
 
 test("Hyeon Burst keeps Miguel's IOTA-D pick", () => {

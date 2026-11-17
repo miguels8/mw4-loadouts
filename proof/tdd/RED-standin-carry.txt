@@ -1,0 +1,9 @@
+FAIL: test_each_build_keeps_its_own_old_stand_in_for_the_same_part (test_refresh.StandInCarryOver.test_each_build_keeps_its_own_old_stand_in_for_the_same_part)
+Ran 30 tests in 0.362s
+FAILED (failures=1)
+ad3e60aceddcd8f629a8a88227d556226635afce2a8f31b8099e6f2630b860f9  /home/santo/dev/mw4-loadouts/scripts/refresh.py
+57ee258a36c26249bb5bd2858337d637ac710579a62f6a2aca52a4b24abe3c1a  /home/santo/dev/mw4-loadouts/scripts/mw4_parse.py
+a99dab6bd54db76e48666b0f8416d8af58dfaa085e9bf4936d57f0979f12c0e5  /home/santo/dev/mw4-loadouts/tests/test_refresh.py
+Ran 30 tests in 0.226s
+
+OK

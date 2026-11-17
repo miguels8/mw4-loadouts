@@ -10,6 +10,7 @@ SLOTS = {"Optic", "Muzzle", "Barrel", "Underbarrel", "Magazine", "Rear Grip", "S
          "Bolt", "Comb", "Guard", "Trigger Action", "Cylinder", "Apex", "Handle", "Ammo", "Sight", "Receiver"}
 LEVEL = re.compile(r"^· (?:Level (\d+)|Event Reward)$")
 STAT = re.compile(r"^[+-]?\d|^—")
+STAT_VALUE = re.compile(r"^[+-]\d+(?:\.\d+)?%?$|^\d+(?:\.\d+)?%$|^—$")
 DOT_LABELS = {"Reflex", "Mini Reflex", "Holo"}
 INFIL_SLOTS = {"Ammo": "Ammunition"}
 
@@ -70,15 +71,27 @@ def _builds(L):
             j -= 1
         date = _iso(L[j + 1], "%d/%m/%Y") if L[j] == "Last Updated:" and j + 1 < len(L) else None
         rank = L[i + 2] if i + 2 < len(L) and L[i + 1] == "#" else None
+        nxt = next((x for x in range(i + 1, len(L)) if L[x] == "Loadout (MW4 Multiplayer)"), len(L))
         k = i
-        while k < len(L) and L[k] != "Weapon Level for this loadout":
+        while k < nxt and L[k] != "Weapon Level for this loadout":
             k += 1
+        if k >= nxt:   # no weapon-level marker (newer layout): the build ends at its "Build code" line
+            k = next((x for x in range(i, nxt) if L[x] == "Build code"), nxt)
         blk = L[i:k]
-        parts, apex, tags, m = [], None, [], 0
+        parts, apex, tags, m, missing = [], None, [], 0, False
         while m < len(blk):
             if blk[m] in ("Pro Favorite", "Buff", "Nerf", "Apex") and m < 8:
                 tags.append(blk[m])
             lv = LEVEL.match(blk[m + 1]) if m + 1 < len(blk) else None
+            if blk[m] in SLOTS and not lv and _loose_name(blk, m):
+                # layout without any "· Level N" line (CODMunity MAR-9 page, 2026-11-16): the part is known, its level is not
+                missing = True
+                if blk[m] == "Apex":
+                    apex = [blk[m + 1], None]
+                else:
+                    parts.append([blk[m], blk[m + 1], None])
+                m += 2
+                continue
             if blk[m] in SLOTS and lv and m + 2 < len(blk):
                 slot, level, name = blk[m], (int(lv.group(1)) if lv.group(1) else None), blk[m + 2]
                 if name == "·" and m + 5 < len(blk) and blk[m + 3] == "of":   # MAR-9 layout: "· / of / Mar-9 / Name"
@@ -93,8 +106,19 @@ def _builds(L):
             m += 1
         wl = int(L[k + 1]) if k + 1 < len(L) and L[k + 1].isdigit() else None
         builds.append({"name": L[i - 1], "rank": rank, "date": date, "parts": parts, "apex": apex,
-                       "weapon_level": wl, "tags": tags})
+                       "weapon_level": wl, "tags": tags, "levels_missing": missing})
     return builds
+
+
+def _loose_name(blk, m):
+    """True when blk[m] (a slot word) is followed by an attachment name, not a stat, tag or another slot."""
+    if m + 2 >= len(blk):
+        return False
+    name = blk[m + 1]
+    if name in SLOTS or name in ("Attachments", "·", "Apex Attachments", "Without Apex") or STAT_VALUE.match(name) \
+            or name.startswith("[img]") or name.startswith("Build code"):
+        return False
+    return STAT_VALUE.match(blk[m + 2]) is not None or blk[m + 2] in SLOTS or blk[m + 2] == "Build code"
 
 
 def _table(L):

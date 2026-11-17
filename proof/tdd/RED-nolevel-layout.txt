@@ -1,0 +1,8 @@
+08d00b0509dc8ef83649c3868b44dd94cac6b12edbe79d2b45f1e5161b89d74e  /tmp/mw4w/redcopy/scripts/mw4_parse.py
+137a3786714df50914e74bc0887e5eabf163ae5154f282edee52120a88f51147  /tmp/mw4w/redcopy/scripts/refresh.py
+7dbddc3b62eaaced17cdf6b3c9179b955b79d4fff3e96c7a40a3a31ac9b08721  /tmp/mw4w/redcopy/scripts/seed_from_builder.py
+ERROR: test_levels_carried_from_last_check_never_invented (test_refresh.NoLevelLayout.test_levels_carried_from_last_check_never_invented)
+ERROR: test_parts_parse_with_unknown_levels (test_refresh.NoLevelLayout.test_parts_parse_with_unknown_levels)
+FAIL: test_empty_build_is_a_failure (test_refresh.NoLevelLayout.test_empty_build_is_a_failure)
+Ran 29 tests in 0.251s
+FAILED (failures=1, errors=2)
