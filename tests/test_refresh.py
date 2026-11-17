@@ -281,6 +281,16 @@ class ReviewFindings(unittest.TestCase):
         self.assertEqual(out["failed"], [])
         self.assertIsNone(out["data"]["guns"][0]["builds"]["early"])
 
+    def test_r2f1_early_heading_with_unparseable_parts_is_a_failure(self):
+        """Round 2: the Early game heading is there but its parts no longer parse: not an intentional absence."""
+        with open(os.path.join(FIX, "infil-m4.html"), encoding="utf-8") as f:
+            damaged = f.read().replace("Weapon Lvl ", "Weapon Level ")
+        page = P.parse_infil(P.html_lines(damaged))
+        self.assertFalse(page["valid"])
+        out = self.run_with(page)
+        self.assertEqual(out["failed"], ["m4:infil"])
+        self.assertIsNotNone(out["data"]["guns"][0]["builds"]["early"])
+
     def test_f1_absent_page_is_not_a_failure(self):
         out = self.run_with(dict(INFIL_ABSENT))
         self.assertEqual(out["failed"], [])

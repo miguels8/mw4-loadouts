@@ -173,4 +173,6 @@ def parse_infil(L):
             complete = int(L[j][11:])
     if parts:
         out["early"] = {"complete_level": complete if complete is not None else max(p[2] for p in parts), "parts": parts}
+    else:
+        out["valid"] = False   # the heading is there but its build no longer parses: unreadable, not "no early build"
     return out
