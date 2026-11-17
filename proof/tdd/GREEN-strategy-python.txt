@@ -1,0 +1,4 @@
+d4a4a7cb21579f8afeb53ab90f04c0d927006654ccb4207e7ea47d31d17a0e28  pc/mw4_strategy.py
+98b7cf5ca6c39c6851ecb53d75b9e69f75a88e8253b5f3238c4844c01daa636b  tests/test_pc.py
+Ran 24 tests in 0.005s
+OK

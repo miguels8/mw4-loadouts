@@ -1,0 +1,5 @@
+c4acafbfd1a2c88c8bcccb2098174cd289b5a061b04d521dab5d4999f4288c61  pc/mw4_strategy.py
+98b7cf5ca6c39c6851ecb53d75b9e69f75a88e8253b5f3238c4844c01daa636b  tests/test_pc.py
+AttributeError: module 'mw4_strategy' has no attribute 'ask_command'
+Ran 24 tests in 0.007s
+FAILED (errors=1)
