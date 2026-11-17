@@ -1,0 +1,6 @@
+3cbadb2eb7018fa7c065d73dfa49a4135a4bbb96e1bbaf3d992e1cecfb5fa733  scripts/mw4_parse.py
+eca65b599d294c883077fa1e457ea73323b332a2f8edc7fdb7bf3b22f76c6dea  tests/test_parse_sources.py
+----------------------------------------------------------------------
+Ran 18 tests in 0.045s
+
+OK
