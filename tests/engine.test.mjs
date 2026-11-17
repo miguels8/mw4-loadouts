@@ -328,16 +328,17 @@ test("every mode has a kit and head guns that exist", () => {
 test("freshness: shows the check date, loud when stale or when the last run failed", async () => {
   const { freshness, dateText } = await import("../site/engine.js");
   assert.equal(dateText("2026-11-16"), "Nov 16, 2026");
-  const ok = freshness({ checked: "2026-11-16", failed: [] }, "2026-11-17");
+  // Q7 (Miguel 2026-11-17) replaced the old 3-day rule: red when the last check is more than 24 h old
+  const ok = freshness({ checked_at: "2026-11-16T20:00:00Z", failed: [] }, "2026-11-17T01:00:00Z");
   assert.equal(ok.bad, false);
-  assert.match(ok.text, /Data last checked Nov 16, 2026/);
-  const stale = freshness({ checked: "2026-11-10", failed: [] }, "2026-11-17");
+  assert.match(ok.text, /Data checked 5 h ago \(Nov 16, 2026\)/);
+  const stale = freshness({ checked: "2026-11-10", failed: [] }, "2026-11-17T01:00:00Z");
   assert.equal(stale.bad, true);
-  assert.match(stale.text, /7 days ago/);
-  const failed = freshness({ checked: "2026-11-16", failed: ["mar-9"] }, "2026-11-16");
+  assert.match(stale.text, /over 24 h/);
+  const failed = freshness({ checked_at: "2026-11-16T23:00:00Z", failed: ["mar-9"] }, "2026-11-17T00:00:00Z");
   assert.equal(failed.bad, true);
   assert.match(failed.text, /mar-9/);
-  assert.equal(freshness(null, "2026-11-16").bad, true);
+  assert.equal(freshness(null, "2026-11-16T00:00:00Z").bad, true);
 });
 
 test("Hyeon Burst keeps Miguel's IOTA-D pick", () => {

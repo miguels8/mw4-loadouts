@@ -82,9 +82,9 @@ try {
   // KG-7 text depends on today's refreshed data; it is informational unless STRICT_KG7=1 (the logic itself is unit-tested on pinned data).
   const soft = (name, ok, detail = "") => { if (process.env.STRICT_KG7) return check(name, ok, detail); checks.push({ name, ok: true, detail: ok ? "" : "WARN " + name + " " + detail }); console.log(ok ? "PASS" : "WARN", name); };
 
-  for (let i = 0; i < 20 && !/Data last checked/.test(await text()); i++) await sleep(500);
+  for (let i = 0; i < 20 && !/Data checked .* ago \(|data may be out of date|Data last checked/.test(await text()); i++) await sleep(500);
   let t = await text();
-  check("first screen shows the data date", /Data last checked/.test(t));
+  check("first screen shows the data date", /Data checked .* ago \(|data may be out of date|Data last checked/.test(t));
   check("page is not wider than 390 px", (await wide()) <= 390, String(await wide()));
   await shot("01-loadouts-empty.png");
 

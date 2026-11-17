@@ -1,0 +1,8 @@
+54d0c579547157dc1e6667869c9c7e4f7fdedf588813ba35a6210525ba6d97e5  scripts/refresh.py
+a0a6ceffae78a746765efc37b8dadd911261669fceed622c75f80d80368a71f1  tests/test_variants.py
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

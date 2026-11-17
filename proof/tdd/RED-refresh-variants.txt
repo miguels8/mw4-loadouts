@@ -1,0 +1,10 @@
+7f9251fc025a4f982f534b8e3d41043a6569b933273e854d9b354ee95c724075  scripts/refresh.py
+5baa431b86cc0c4f53390fd5ea302cca52f6a061c0e789e53657f7b40c0a691e  tests/test_refresh_variants.py
+    self.assertIn(("variant-added", "Close Range"), kinds)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('variant-added', 'Close Range') not found in []
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.021s
+
+FAILED (failures=1, errors=8)

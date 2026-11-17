@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "about": "Q10 (Miguel 2026-11-17): the 'Best for' modes of a build come from the build's own name/type on the source site, through this one fixed table. The refresh script applies it; Opus re-checks it after every balance patch and monthly. Match order: (a) MW4 Intel page mode is one of our modes -> that mode plus the type list of the build name; (b) the build name is a type key; (c) a keyword is inside the build name; (d) default Versatile (best_for_source 'default', listed in the review report). Mode names are our mode ids in static.json.",
+ "types": {
+  "Close Range": ["Hardpoint", "Hijack", "Kill Confirmed", "Drop Zone", "Free-for-All", "Grind", "Possession", "Infected"],
+  "Long Range": ["S&D", "Ground War", "Domination"],
+  "Sniper": ["S&D", "Ground War", "Domination"],
+  "Versatile": ["TDM", "Frontline", "Inflation", "Hardcore"],
+  "Apex Attachment": ["TDM", "Frontline", "Inflation", "Hardcore"],
+  "Pro (Ranked)": ["Hardpoint", "S&D"]
+ },
+ "keywords": {
+  "Long Range": ["long", "sniper", "overkill", "lane", "overwatch", "support", "anchor"],
+  "Close Range": ["close", "rush", "shredder", "entry", "breacher", "spike runner", "hill", "snap", "aggressive", "smg"],
+  "Versatile": ["versatile", "all-rounder", "meta", "endgame", "class", "flag"]
+ },
+ "keyword_order": ["Long Range", "Close Range", "Versatile"],
+ "mode_aliases": {
+  "search & destroy": "S&D",
+  "search and destroy": "S&D",
+  "snd": "S&D",
+  "combat outpost": "Ground War",
+  "ground war": "Ground War"
+ },
+ "type_notes": {"Apex Attachment": "needs max level (Apex)"},
+ "default_type": "Versatile"
+}

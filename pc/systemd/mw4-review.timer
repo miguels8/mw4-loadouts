@@ -1,0 +1,9 @@
+[Unit]
+Description=Daily check: a new balance patch or a month since the last MW4 Loadouts review
+
+[Timer]
+OnCalendar=*-*-* 10:05:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

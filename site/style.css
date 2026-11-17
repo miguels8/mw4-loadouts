@@ -114,3 +114,22 @@ html, body { overflow-anchor: none; }
 
 /* Game mode dropdown (replaces the row of mode chips) */
 select.modesel { display: block; width: 100%; max-width: none; height: 52px; padding: 0 12px; font-size: 18px; font-weight: 600; border-radius: 12px; }
+
+/* Build variants: one button per real published build, the setup for your level, next upgrade, ladder, how to use */
+.fresh.bad { background: #3b1218; border: 1px solid var(--bad); border-radius: 10px; padding: 8px 10px; }
+.vbtns { display: grid; gap: 8px; margin: 10px 0 4px; }
+.vbtn {
+  display: block; width: 100%; min-height: 56px; padding: 10px 12px; text-align: left; font: inherit; color: var(--ink);
+  background: var(--card2); border: 2px solid var(--line); border-radius: 12px; touch-action: manipulation;
+}
+.vbtn.on { border-color: var(--acc); background: #1c2a40; }
+.vbest { display: block; font-weight: 700; font-size: 17px; }
+.vsub { display: block; color: var(--mute); font-size: 14px; margin-top: 2px; }
+.tag { display: inline-block; padding: 0 7px; border-radius: 99px; background: var(--card2); color: var(--warn); font-size: 13px; margin-left: 4px; }
+.next { font-weight: 700; color: var(--acc); margin: 8px 0; }
+.next.mute { font-weight: 400; color: var(--mute); }
+.alt { color: var(--mute); font-size: 14px; margin: 2px 0; }
+details.sub { margin: 8px 0; background: var(--card2); border-radius: 12px; padding: 0 12px; }
+details.sub > summary { padding: 12px 0; cursor: pointer; font-weight: 600; min-height: 44px; }
+ol.ladder, ul.dropped { margin: 0 0 10px; padding-left: 1.2em; }
+ol.ladder li, ul.dropped li { padding: 3px 0; font-size: 16px; }

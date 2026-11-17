@@ -1,11 +1,5 @@
-26e69b8319c9254d318a5da1a89b852dc35a1dde3781d742e72971b80d492270  /home/santo/dev/mw4-loadouts/scripts/mw4_parse.py
-54d0c579547157dc1e6667869c9c7e4f7fdedf588813ba35a6210525ba6d97e5  /home/santo/dev/mw4-loadouts/scripts/refresh.py
-6f76db36d7397f1438c9fcf144b93828b7b851960671a3ea6233c2f42e162b30  /home/santo/dev/mw4-loadouts/scripts/seed_from_builder.py
-e7f2aed79a94689d25572547ba2836bc8a6b43b880eed991072906250954f295  /home/santo/dev/mw4-loadouts/site/engine.js
-750976ca0afdb2ced379b8e0e2160fcd23cd46fc7454a41c6f25090398f13aa5  /home/santo/dev/mw4-loadouts/tests/test_refresh.py
-a8aeedf9ca1bc86e4124d44d223c61f299bc248b5912138753c2f6c94c87dfb4  /home/santo/dev/mw4-loadouts/tests/engine.test.mjs
-Ran 37 tests in 0.591s
-
-OK
-ℹ pass 28
+1961c0f3563e328d27b789aceff81e18acacbab9054b74be8facd4b1ec9315a1  site/engine.js
+519315a089d1d98be59bd8db5427301d316bed754e6f21ceec1cab1a66523ac0  site/app.js
+ℹ tests 62
+ℹ pass 62
 ℹ fail 0

@@ -1,0 +1,10 @@
+[Unit]
+Description=Hourly MW4 Loadouts stale-data check
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+RandomizedDelaySec=120
+
+[Install]
+WantedBy=timers.target

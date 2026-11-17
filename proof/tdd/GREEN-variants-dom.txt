@@ -1,0 +1,15 @@
+4acde5e1c00592bd31c2b6c0690a104ac1fbdc84ea78bc6aa78430e4c3296221  site/app.js
+ebaf68715a0edeb1c76acbbb1d0863b41754874eeee53106ac2cde33f997fa1f  site/style.css
+510308fd368589e0f4f67cabe04f2261fd75ed1f2159a292648ded7b834fdd74  tests/variants-dom.test.mjs
+  ✔ KG-7 shows one 'Best for' button per variant, exactly one pressed, the mode's default first (6.871828ms)
+  ✔ every variant shows its date and a source link (366.139469ms)
+  ✔ pressing another variant redraws the card and the choice survives a reload (2096.677734ms)
+  ✔ changing the mode re-picks the default: KG-7 differs between Hardpoint and S&D (2343.970057ms)
+  ✔ Lv 63 shows the next upgrade, one + press moves it, and the full ladder lists the steps (1958.605744ms)
+  ✔ 'How to use it' shows a standard note with its credit when no summary exists yet (165.188318ms)
+  ✔ a gun with no re-checked build says so and lists the dropped builds (148.993245ms)
+  ✔ kit shows 'Site uses' when the variant's site picked a different perk (215.49872ms)
+  ✔ the data banner is calm when fresh and red when the last check is over 24 h old (41.929999ms)
+  ✔ no sideways scroll and no console errors (23.008601ms)
+✔ variant buttons, level setup, next upgrade, ladder, how to use (real Chromium, 390 px) (10404.763211ms)
+✔ the red banner shows on a stale record, a failed refresh and a missing record (real Chromium) (4519.994361ms)

@@ -3,7 +3,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
-  normalizeProfile, setGun, stepLevel, gunBadges, buildView, earlyView, rankGuns, partStatus, LEVEL_MAX,
+  normalizeProfile, setGun, stepLevel, gunBadges, buildView, earlyView, rankGuns, partStatus, setupAt, LEVEL_MAX,
 } from "../site/engine.js";
 
 const read = (p) => JSON.parse(readFileSync(new URL(p, import.meta.url), "utf8"));
@@ -103,5 +103,6 @@ test("an edit re-ranks: a gun's ready count feeds the mode ranking", () => {
   const max = Math.max(...g.builds.main.parts.map((p) => p.level ?? 0));
   const p = setGun(prof({ player: { level: 80 } }), slug, { level: max });
   const row = rankGuns(mode, p, real, statics).find((r) => r.gun.slug === slug);
-  assert.equal(row.ready, buildView(g, row.key, p, real).ready);
+  const expect = row.variant ? setupAt(g, row.variant, p.guns[slug].level, p, real, mode).ready : buildView(g, row.key, p, real).ready;
+  assert.equal(row.ready, expect);
 });

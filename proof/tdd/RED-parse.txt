@@ -1,0 +1,14 @@
+05446780662d1aafd48a83bf41125b78338f28c9c1e36254553e8ee5e723118f  scripts/mw4_parse.py
+eca65b599d294c883077fa1e457ea73323b332a2f8edc7fdb7bf3b22f76c6dea  tests/test_parse_sources.py
+FAIL: test_old_fixture_still_has_early_and_no_endgame_crash (test_parse_sources.InfilNew.test_old_fixture_still_has_early_and_no_endgame_crash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/miguel/.t3/worktrees/mw4-loadouts/mw4-build-variants-buil-caef1e11eb8c03e2/tests/test_parse_sources.py", line 65, in test_old_fixture_still_has_early_and_no_endgame_crash
+    self.assertIn("endgame", i)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+AssertionError: 'endgame' not found in {'checked': '2026-11-14', 'early': {'complete_level': 14, 'parts': [['Muzzle', 'FSS IS300', 4], ['Optic', 'Slimline Elite', 13], ['Stock', 'PF1 Fixed Stock', 14], ['Ammunition', '5.56 NATO Overpressured', 3], ['Laser', 'SZ Gen.6 PEQ', 2]]}, 'valid': True}
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.043s
+
+FAILED (failures=2, errors=14)
