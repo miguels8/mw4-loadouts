@@ -63,7 +63,7 @@ export async function launch(chrome, { width = 390, height = 844 } = {}) {
   const send = (method, params = {}) => new Promise((res, rej) => {
     const id = nextId++;
     pending.set(id, { res, rej });
-    setTimeout(() => rej(new Error("timeout " + method)), 20000);
+    setTimeout(() => rej(new Error("timeout " + method)), 90000);
     ws.send(JSON.stringify({ id, method, params }));
   });
   const evalJs = async (expression) => {

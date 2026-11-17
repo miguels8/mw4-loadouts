@@ -14,3 +14,5 @@
 [by:claude-sonnet-5-5/mw4-app-inline-levels]
 - 2026-11-16 23:5x mw4-app-inline-levels review round 2 (gpt-6.1-sol) on 7b5f49f: NO-GO, one finding (R2-F1: typed text committed in memory by a press was never saved or redrawn when the step itself could not move: at 200, at 1, or empty then minus). Fixed test-first (RED/GREEN in proof/tdd/*inline*r2*).
 [by:claude-sonnet-5-5/mw4-app-inline-levels]
+- 2026-11-17 00:0x mw4-app-inline-levels: review round 3 (gpt-6.1-sol) GO at 22f733d; PR #3 squash-merged (ca16169); Pages deployed (run 44026187652). Live 390 px proof in proof/live-inline (KG-7 63 -> 64 flips the muzzle to ready). Backup tag pre-inline-levels (d1684de), UNDO-inline-levels.sh, install receipt appended.
+[by:claude-sonnet-5-5/mw4-app-inline-levels]
