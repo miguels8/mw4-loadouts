@@ -85,6 +85,7 @@ export async function launch(chrome, { width = 390, height = 844 } = {}) {
     window.dispatchEvent(new PointerEvent("pointerup", { bubbles: true, button: 0, pointerId: 7, pointerType: "touch" }));
     e.dispatchEvent(new MouseEvent("click", { bubbles: true, detail: 1 })); })()`);
   const shot = async (file) => {
+    await send("Page.bringToFront");
     const r = await send("Page.captureScreenshot", { format: "png", fromSurface: true, captureBeyondViewport: false });
     writeFileSync(file, Buffer.from(r.data, "base64"));
   };
