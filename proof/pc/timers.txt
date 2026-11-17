@@ -1,0 +1,9 @@
+NEXT                         LEFT LAST                          PASSED UNIT                  ACTIVATES
+Tue 2026-11-17 03:47:00 CST 36min -                                  - mw4-strategy.timer    mw4-strategy.service
+Tue 2026-11-17 04:00:16 CST 49min Tue 2026-11-17 03:01:03 CST 9min ago mw4-stale-alarm.timer mw4-stale-alarm.service
+Tue 2026-11-17 10:05:00 CST    6h -                                  - mw4-review.timer      mw4-review.service
+
+3 timers listed.
+enabled
+enabled
+enabled

@@ -7,7 +7,7 @@
 # Backup tag of the state before this job: pre-build-variants.
 set -euo pipefail
 REPO=miguels8/mw4-loadouts
-FEATURE_MERGE_SHA="__FEATURE_MERGE_SHA__"
+FEATURE_MERGE_SHA="9fdead9"
 UNITS="$HOME/.config/systemd/user"
 STATE="$HOME/.local/state/mw4-loadouts"
 
