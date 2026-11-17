@@ -1,0 +1,7 @@
+bafd5611e1276cda3213a15535ee3f8c413738efa855c5fc13de360beaa7be2d  scripts/variants.py
+1f081bf8f8c383eabcb059c6ffe2fc731119c2ae01e9f5175c9fb296adedbfb3  tests/test_variants.py
+732890c33a97b8d8b0f9c30287363f59550c40b8b5cf8b9084d24ed6049311cd  site/data/bestfor.json
+----------------------------------------------------------------------
+Ran 21 tests in 0.022s
+
+OK
