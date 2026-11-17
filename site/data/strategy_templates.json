@@ -1,0 +1,13 @@
+{
+ "schema": 1,
+ "about": "Q8: shown under 'How to use it' when the source site has no text for a variant (or the cheap summary has not been written yet). One fixed note per build type. No model writes these.",
+ "types": {
+  "Close Range": "Built for short, fast fights. Move, flank and take corners; fire as soon as you come out of a sprint or a slide. Avoid long open lanes with this one.",
+  "Long Range": "Built to win the first shot from far away. Hold a lane or an angle, stay off the radar, control the recoil and move after every kill.",
+  "Sniper": "Built to win the first shot from far away. Hold a lane or an angle, stay off the radar, control the recoil and move after every kill.",
+  "Versatile": "A balanced build for most maps: good at middle range with manageable recoil. Use it when you do not know where the fights will be.",
+  "Apex Attachment": "Needs the gun at its max level for the Apex attachment, which changes how the gun handles. Practise it in a casual mode before you take it into S&D or ranked play.",
+  "Pro (Ranked)": "A build pro players run in tournaments, tuned for ranked play. It asks for good aim and rewards control more than comfort."
+ },
+ "fallback": "A published meta build. Try it in a few matches of the modes listed above and keep it if your kill pace improves."
+}

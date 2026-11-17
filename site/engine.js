@@ -334,7 +334,10 @@ export function defaultVariant(mode, gun, statics) {
   const names = [mode.id, mode.name];
   const listed = vars.filter((v) => (v.best_for ?? []).some((x) => names.includes(x)));
   const pool = listed.length ? listed : vars;
+  // a page the site wrote for exactly this mode comes first (MW4 Intel's "Hijack" class for Hijack)
+  const explicit = (v) => (v.best_for_source === "mode" && names.includes(v.best_for?.[0]) ? 0 : 1);
   return [...pool].sort((a, b) =>
+    explicit(a) - explicit(b) ||
     (rank[a.type] ?? 9) - (rank[b.type] ?? 9) ||
     (b.agree ?? 1) - (a.agree ?? 1) ||
     String(b.date ?? "").localeCompare(String(a.date ?? "")) ||

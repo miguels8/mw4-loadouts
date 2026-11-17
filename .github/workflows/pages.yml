@@ -1,12 +1,14 @@
 name: refresh-and-deploy
-# Daily: pull CODMunity + Infil, commit changed data to main, deploy the site to GitHub Pages.
+# Every 3 hours: read CODMunity, Infil, MW4 Intel and Dexerto (no AI, no secrets), commit changed data to main and
+# deploy the site to GitHub Pages ONLY when a source changed. Every run, changed or not, writes the heartbeat
+# (status.json) to the `status` branch, which the app and the MiguelPC alarm read; that branch has no Pages deploy.
 # A source that cannot be read keeps its old build, marks the app's data line red, and fails this run (loud).
 on:
   push:
     branches: [main]
     paths: ["site/**", ".github/workflows/pages.yml"]
   schedule:
-    - cron: "17 9 * * *"
+    - cron: "17 */3 * * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -31,13 +33,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Refresh data (daily and manual runs only)
+      - name: Refresh data (scheduled and manual runs only)
         id: refresh
         if: github.event_name != 'push'
         continue-on-error: true
-        run: python3 -I scripts/refresh.py
+        run: python3 -I scripts/refresh.py   # prints DATA_CHANGED=0|1 and sets the step output changed=true|false
       - name: Commit changed data
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && steps.refresh.outputs.changed == 'true'
         run: |
           git config user.name "mw4-loadouts-bot"
           git config user.email "mw4-loadouts-bot@users.noreply.github.com"
@@ -46,11 +48,39 @@ jobs:
             git commit -m "data: refresh $(date -u +%F)"
             git push origin HEAD:main
           fi
+      - name: Heartbeat to the status branch (no Pages deploy)
+        if: always() && github.event_name != 'push'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          dir="$RUNNER_TEMP/statusrepo"
+          rm -rf "$dir"
+          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          url="https://github.com/${GITHUB_REPOSITORY}.git"
+          if git -c "http.https://github.com/.extraheader=$auth" ls-remote --exit-code --heads "$url" status >/dev/null 2>&1; then
+            git -c "http.https://github.com/.extraheader=$auth" clone --depth 1 --branch status "$url" "$dir"
+          else
+            git init -q "$dir"
+            git -C "$dir" switch -q --orphan status
+            git -C "$dir" remote add origin "$url"
+          fi
+          cp site/data/status.json "$dir/status.json"
+          git -C "$dir" config user.name "mw4-loadouts-bot"
+          git -C "$dir" config user.email "mw4-loadouts-bot@users.noreply.github.com"
+          git -C "$dir" add status.json
+          if git -C "$dir" diff --cached --quiet; then echo "heartbeat unchanged"; else
+            git -C "$dir" commit -q -m "status: $(date -u +%FT%TZ)"
+            git -C "$dir" -c "http.https://github.com/.extraheader=$auth" push origin status
+          fi
       - uses: actions/configure-pages@v5
+        if: github.event_name != 'schedule' || steps.refresh.outputs.changed == 'true'
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'schedule' || steps.refresh.outputs.changed == 'true'
         with:
           path: site
       - id: deployment
+        if: github.event_name != 'schedule' || steps.refresh.outputs.changed == 'true'
         uses: actions/deploy-pages@v4
       - name: Fail loudly when a source could not be read
         if: steps.refresh.outcome == 'failure'

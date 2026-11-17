@@ -1,0 +1,20 @@
+  ✖ KG-7 shows one 'Best for' button per variant, exactly one pressed, the mode's default first (688.29316ms)
+  ✖ every variant shows its date and a source link (1016.118662ms)
+  ✖ pressing another variant redraws the card and the choice survives a reload (3114.841956ms)
+  ✖ changing the mode re-picks the default: KG-7 differs between Hardpoint and S&D (2019.667599ms)
+  ✖ Lv 63 shows the next upgrade, one + press moves it, and the full ladder lists the steps (5597.649592ms)
+  ✖ 'How to use it' shows a standard note with its credit when no summary exists yet (3537.176567ms)
+  ✖ a gun with no re-checked build says so and lists the dropped builds (13025.223873ms)
+  ✖ kit shows 'Site uses' when the variant's site picked a different perk (20151.471614ms)
+  ✖ the data banner is calm when fresh and red when the last check is over 24 h old (43947.268003ms)
+  ✔ no sideways scroll and no console errors (4272.785611ms)
+✖ variant buttons, level setup, next upgrade, ladder, how to use (real Chromium, 390 px) (101024.864047ms)
+✖ the red banner shows on a stale record, a failed refresh and a missing record (real Chromium) (1559.179967ms)
+✖ tests/variants-dom.test.mjs (169967.75541ms)
+ℹ tests 13
+ℹ pass 1
+ℹ fail 11
+✖ failing tests:
+✖ KG-7 shows one 'Best for' button per variant, exactly one pressed, the mode's default first (688.29316ms)
+✖ every variant shows its date and a source link (1016.118662ms)
+✖ pressing another variant redraws the card and the choice survives a reload (3114.841956ms)

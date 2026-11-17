@@ -1,6 +1,7 @@
 import {
   normalizeProfile, importProfile, gunOpen, buildView, earlyView, kitFor, rankGuns, modeBuildKey, fitFor,
   freshness, dateText, numOrNull, setGun, stepLevel, gunBadges, LEVEL_MAX,
+  variantsFor, defaultVariant, variantView,
 } from "./engine.js";
 
 const STORE = "mw4-loadouts-v1";
@@ -10,18 +11,21 @@ const TIER = { S: "Meta top 5", A: "Meta", B: "Solid", C: "Niche", D: "Off-meta"
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-let data, statics, changes, status;
+let data, statics, changes, status, strategy = {}, templates = {};
 let profile = normalizeProfile();
-let ui = { view: "loadouts", mode: "TDM", type: "All", open: {} };
+let ui = { view: "loadouts", mode: "TDM", type: "All", open: {}, variant: {}, sub: {} };
+const STATUS_RAW = "https://raw.githubusercontent.com/miguels8/mw4-loadouts/status/status.json";
 
 function load() {
   try {
     const s = JSON.parse(localStorage.getItem(STORE) ?? "null");
-    if (s) { profile = normalizeProfile(s.profile); ui = { ...ui, ...s.ui, open: {} }; }
+    if (s) { profile = normalizeProfile(s.profile); ui = { ...ui, ...s.ui, open: {}, sub: {}, variant: s.ui?.variant ?? {} }; }
   } catch { /* a bad save is ignored, the app starts empty */ }
 }
 function save() {
-  localStorage.setItem(STORE, JSON.stringify({ profile, ui: { view: ui.view, mode: ui.mode, type: ui.type } }));
+  try {
+    localStorage.setItem(STORE, JSON.stringify({ profile, ui: { view: ui.view, mode: ui.mode, type: ui.type, variant: ui.variant } }));
+  } catch { /* storage can be blocked (private window): the app keeps working for this visit */ }
 }
 
 async function getJson(p) {
@@ -52,6 +56,77 @@ function kitHtml(k) {
     `<p class="mute">${esc(k.why)}</p>`;
 }
 
+// ---------------------------------------------------------------- variant card (one button per real published build)
+const modeKey = (slug) => `${ui.mode}|${slug}`;
+function chosenVariant(gun, mode) {
+  const vars = variantsFor(gun);
+  return vars.find((v) => v.id === ui.variant[modeKey(gun.slug)]) ?? defaultVariant(mode, gun, statics);
+}
+
+function bestForText(v) {
+  const m = v.best_for ?? [];
+  return `Best for: ${m.slice(0, 3).join(", ")}${m.length > 3 ? ` +${m.length - 3}` : ""}`;
+}
+
+function variantButtons(gun, pressed) {
+  return `<div class="vbtns" role="group" aria-label="Builds for ${esc(gun.name)}">` + variantsFor(gun).map((v) =>
+    `<button type="button" class="vbtn${v.id === pressed.id ? " on" : ""}" data-variant="${esc(v.id)}" aria-pressed="${v.id === pressed.id}">` +
+    `<span class="vbest">${esc(bestForText(v))}</span>` +
+    `<span class="vsub">${esc(v.label)} · ${v.agree > 1 ? `${v.agree} sites agree` : esc(v.sources[0].site)} · ${esc(dateText(v.date))}</span></button>`).join("") + `</div>`;
+}
+
+function sourcesHtml(v) {
+  const list = v.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.site)}${s.name && s.name !== v.label ? " · " + esc(s.name) : ""}</a> (${esc(dateText(s.date))})`).join(", ");
+  const sites = [...new Set(v.sources.map((s) => s.site))];
+  const head = v.agree > 1 ? `<b>${v.agree} sites agree:</b> ${esc(sites.join(", "))}` : `Source: ${esc(sites[0])}`;
+  const alts = (v.alternatives ?? []).map((a) => `<p class="alt">Alternative: ${esc(a.name)} (${esc(a.slot.toLowerCase())}, ${esc(a.site)}${a.level != null ? ", Lv " + a.level : ""})</p>`).join("");
+  return `<p class="src">${head}<br>${list}</p>${alts}` + (v.label_note ? `<p class="note">${esc(v.label_note)}</p>` : "");
+}
+
+function pickLi(p) {
+  return `<li class="s-${p.state}"><span class="ico">${p.icon}</span><span><span class="pname">${esc(p.label)}</span>` +
+    `<span class="pnote">${esc(p.slot)}${p.note ? " · " + esc(p.note) : ""}${p.tag ? ` <span class="tag">${esc(p.tag)}</span>` : ""}</span></span></li>`;
+}
+
+function ladderHtml(vv, gun) {
+  const steps = vv.ladder.map((s, i) => {
+    if (i === 0) {
+      const have = s.setup.picks.filter((p) => p.state !== "locked" && p.state !== "plain" && p.state !== "unknown");
+      return have.length ? `<li><b>Start</b> ${have.map((p) => esc(p.name)).join(", ")}</li>` : "";
+    }
+    return `<li><b>Lv ${s.level}</b> ${s.changes.filter((c) => c.to).map((c) => c.from ? `swap ${esc(c.from)} → ${esc(c.to)}` : `add ${esc(c.to)}`).join("; ")}</li>`;
+  }).join("");
+  const open = ui.sub[`${gun.slug}|ladder`] ? " open" : "";
+  return `<details class="sub" data-sub="${esc(gun.slug)}|ladder"${open}><summary>Full ladder (every level step)</summary><ol class="ladder">${steps || "<li>No level steps.</li>"}</ol></details>`;
+}
+
+function howtoHtml(v, gun) {
+  const note = strategy[v.id]?.text;
+  const text = note ?? templates.types?.[v.type] ?? templates.fallback ?? "";
+  const credit = note ? "Summary of the source site's own text." : v.source_text ? "Standard note for this build type (a summary of the site's text is being written)." : "Standard note for this build type: the source site has no text for it.";
+  const open = ui.sub[`${gun.slug}|howto`] ? " open" : "";
+  return `<details class="sub" data-sub="${esc(gun.slug)}|howto"${open}><summary>How to use it</summary><p>${esc(text)}</p><p class="src">${esc(credit)}</p></details>`;
+}
+
+function variantBody(gun, mode, row, kit) {
+  const vars = variantsFor(gun);
+  if (!vars.length) {
+    const dropped = (gun.dropped ?? []).map((d) => `<li>${esc(d.site)} · ${esc(d.name)} · ${esc(dateText(d.date))} · <a href="${esc(d.url)}" target="_blank" rel="noopener">source</a> · ${esc(d.reason)}</li>`).join("");
+    return { html: `<p class="note">No build re-checked since the ${esc(dateText(gun.patch_date))} patch.</p>` +
+      (dropped ? `<details class="sub"><summary>Builds that were dropped</summary><ul class="dropped">${dropped}</ul></details>` : ""), ready: 0, total: 0 };
+  }
+  const v = chosenVariant(gun, mode);
+  const vv = variantView(gun, v, profile, data, mode);
+  const lvl = gunSt(gun.slug).level;
+  const apex = vv.apex.state === "off" ? "" :
+    `<li class="s-${vv.apex.state}"><span class="ico">${vv.apex.icon}</span><span><span class="pname">Apex: ${esc(vv.apex.label)}</span><span class="pnote">${esc(vv.apex.note)}</span></span></li>`;
+  const next = lvl == null ? `<p class="mute next">Type your level above to see what to use now and your next upgrade.</p>` : `<p class="next">${esc(vv.next)}</p>`;
+  const html = variantButtons(gun, v) + `<h3>${esc(v.label)} build</h3>` + sourcesHtml(v) +
+    `<ul class="parts">${vv.picks.map(pickLi).join("")}${apex}</ul>` +
+    (v.notes ?? []).map((n) => `<p class="note">${esc(n)}</p>`).join("") + next + ladderHtml(vv, gun) + howtoHtml(v, gun);
+  return { html, ready: vv.ready, total: vv.total };
+}
+
 const PRESTIGES = ["", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "master"];
 const prestigeLabel = (o) => (o === "" ? "None" : o === "master" ? "Master" : "Prestige " + o);
 const gunSt = (slug) => profile.guns[slug] ?? {};
@@ -72,13 +147,24 @@ function ctlHtml(gun) {
 function cardParts(row, index, mode) {
   const { gun, key, open } = row;
   const slug = gun.slug;
-  const view = buildView(gun, key, profile, data);
-  const early = earlyView(gun, profile, data);
+  const hasVariants = Array.isArray(gun.variants);
   const badges = [`<span class="badge">${esc(gun.type)}</span>`, `<span class="badge">${esc(TIER[gun.tier] ?? gun.tier)}</span>`];
   if (!open.open) badges.push(`<span class="badge bad">🔒 ${esc(open.reason)}</span>`);
-  const meta = `${FIT[row.fit]} · ${view.ready}/${view.total} ready`;
-  const kit = kitFor(mode, gun, profile, data, statics);
-  const same = key === "close" ? "Close-range build" : gun.builds.close ? "All-round build" : "Same build in every mode";
+  let ready, total, buildPart, same = "";
+  const kitVariant = hasVariants && variantsFor(gun).length ? chosenVariant(gun, mode) : null;
+  if (hasVariants) {
+    const vb = variantBody(gun, mode, row);
+    ready = vb.ready; total = vb.total; buildPart = vb.html;
+  } else {
+    const view = buildView(gun, key, profile, data);
+    const early = earlyView(gun, profile, data);
+    ready = view.ready; total = view.total;
+    same = key === "close" ? "Close-range build" : gun.builds.close ? "All-round build" : "Same build in every mode";
+    buildPart = buildHtml(view) +
+      (early ? `<h2>While you level up</h2><p class="mute">Your ${esc(gun.name)} is level ${profile.guns[slug].level}. Use this early build until it reaches level ${early.until}.</p>${buildHtml(early)}` : "");
+  }
+  const meta = `${FIT[row.fit]} · ${ready}/${total} ready`;
+  const kit = kitFor(mode, gun, profile, data, statics, kitVariant);
   const gb = gunBadges(profile, slug);
   const summary = `<span class="rank">${index + 1}</span><span class="gname">${esc(gun.name)}</span>` +
     `<span class="glv"><span class="lvb${profile.guns[slug]?.level == null ? " none" : ""}">${esc(gb.level)}</span>` +
@@ -87,10 +173,8 @@ function cardParts(row, index, mode) {
   const body = `<p>${badges.join(" ")}</p>` +
     (gun.line ? `<p class="mute">${esc(gun.line)}</p>` : "") +
     (gun.note ? `<p class="note">${esc(gun.note)}</p>` : "") +
-    `<p class="mute">${esc(same)}</p>` +
-    buildHtml(view) +
-    (early ? `<h2>While you level up</h2><p class="mute">Your ${esc(gun.name)} is level ${profile.guns[slug].level}. Use this early build until it reaches level ${early.until}.</p>${buildHtml(early)}` : "") +
-    kitHtml(kit);
+    (same ? `<p class="mute">${esc(same)}</p>` : "") +
+    buildPart + kitHtml(kit);
   return { summary, body, best: index === 0 && open.open };
 }
 
@@ -165,6 +249,9 @@ function renderChanged() {
   return `<h2>What changed</h2>` + hist.map((h) => `<h3>${esc(dateText(h.date))}</h3>` + h.changes.map((c) => {
     const what = c.kind === "added" ? `new ${esc(c.build)} build: ${esc(c.new ?? "")}` :
       c.kind === "removed" ? `${esc(c.build)} build removed` :
+      c.kind === "variant-added" ? `new build option: ${esc(c.new)}${c.sites ? " (" + esc(c.sites.join(", ")) + ")" : ""}` :
+      c.kind === "variant-removed" ? `build option gone: ${esc(c.old)}${c.sites ? " (" + esc(c.sites.join(", ")) + ")" : ""}` :
+      c.kind === "patch" ? `balance patch ${esc(dateText(c.new))}` :
       `${esc(c.build)} · ${esc(c.slot)}: <span class="old">${esc(c.old ?? "(empty)")}</span> → <span class="new">${esc(c.new ?? "(empty)")}</span>`;
     return `<div class="change"><b>${esc(c.gun)}</b> · ${what}<br><span class="mute">source date ${esc(dateText(c.source_date))}</span></div>`;
   }).join("")).join("");
@@ -276,12 +363,21 @@ function bind() {
   bindSteppers(app);
   app.addEventListener("click", (e) => {
     const t = e.target.closest("[data-type]"); if (t) { ui.type = t.dataset.type; save(); render(); return; }
+    const vb = e.target.closest("[data-variant]");
+    if (vb) {
+      const slug = vb.closest("details.gun").dataset.slug;
+      ui.variant[modeKey(slug)] = vb.dataset.variant;
+      save(); updateCards(slug);
+      return;
+    }
     if (e.target.id === "imp") {
       getJson("miguel-levels.json").then((f) => { profile = importProfile(f); save(); render(); });
     }
     if (e.target.id === "clr" && confirm("Clear every level you typed?")) { profile = normalizeProfile(); save(); render(); }
   });
   app.addEventListener("toggle", (e) => {
+    const sub = e.target.closest?.("details.sub[data-sub]");
+    if (sub) { ui.sub[sub.dataset.sub] = sub.open; return; }
     const d = e.target.closest?.("details.gun"); if (d) ui.open[d.dataset.slug] = d.open;
   }, true);
   app.addEventListener("change", (e) => {
@@ -308,23 +404,47 @@ function bind() {
   });
 }
 
+// The data banner. Red = failed refresh, unreadable record or last check over 24 h ago (Q7). The record on the status
+// branch is the live heartbeat (it moves every 3 h even when nothing changed); the copy shipped with the page is the fallback.
+function showFresh(st) {
+  const f = freshness(st, new Date().toISOString());
+  const el = $("#fresh");
+  el.textContent = f.text;
+  el.className = "fresh" + (f.bad ? " bad" : "");
+  el.setAttribute("role", f.bad ? "alert" : "status");
+}
+
+const isLive = () => /github\.io$/.test(location.hostname);   // local copies and tests only use the shipped record
+
+async function upgradeStatus() {
+  if (!isLive()) return;
+  try {
+    const ctl = new AbortController();
+    const t = setTimeout(() => ctl.abort(), 8000);
+    const r = await fetch(`${STATUS_RAW}?t=${Date.now()}`, { cache: "no-store", signal: ctl.signal });
+    clearTimeout(t);
+    if (r.ok) { status = await r.json(); showFresh(status); return; }
+  } catch { /* fall through to the record shipped with the page */ }
+  showFresh(status);
+}
+
 async function main() {
   load();
   try {
-    [data, statics, changes, status] = await Promise.all([
+    [data, statics, changes, status, strategy, templates] = await Promise.all([
       getJson("data/weapons.json"), getJson("data/static.json"),
       getJson("data/changes.json").catch(() => ({ history: [] })), getJson("data/status.json").catch(() => null),
+      getJson("data/strategy.json").catch(() => ({})), getJson("data/strategy_templates.json").catch(() => ({})),
     ]);
   } catch (e) {
     $("#fresh").textContent = `Could not load the data (${e.message}). Reload the page.`;
     $("#fresh").className = "fresh bad";
     return;
   }
-  const f = freshness(status ?? { checked: data.checked, failed: [] }, new Date().toISOString().slice(0, 10));
-  $("#fresh").textContent = f.text;
-  $("#fresh").className = "fresh" + (f.bad ? " bad" : "");
+  if (isLive()) $("#fresh").textContent = "Checking when the data was last refreshed…"; else showFresh(status);
   bind();
   render();
+  upgradeStatus();
 }
 
 main();

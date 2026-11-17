@@ -1,0 +1,1112 @@
+{
+ "slug": "m4",
+ "name": "M4",
+ "type": "AR",
+ "tier": "S",
+ "unlock": {
+  "level": 14,
+  "bp_tier": null,
+  "note": null
+ },
+ "line": "Easiest rifle. Good at every range.",
+ "max_level": 72,
+ "apex": {
+  "name": "M4 Hurricane",
+  "level": 72
+ },
+ "builds": {
+  "main": {
+   "label": "Versatile",
+   "date": "2026-11-13",
+   "url": "https://codmunity.gg/weapon/mw4/m4",
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "FSS IS300",
+     "level": 4,
+     "stand_in": null
+    },
+    {
+     "slot": "Barrel",
+     "name": "FT Cannonade 7\"",
+     "level": 7,
+     "stand_in": null
+    },
+    {
+     "slot": "Rear Grip",
+     "name": "Schlager STB Grip",
+     "level": 22,
+     "stand_in": null
+    },
+    {
+     "slot": "Ammunition",
+     "name": "5.56 NATO Overpressured",
+     "level": 3,
+     "stand_in": null
+    },
+    {
+     "slot": "Underbarrel",
+     "name": "FSS Tac90 Grip",
+     "level": 17,
+     "stand_in": null
+    }
+   ],
+   "apex_on": false,
+   "notes": []
+  },
+  "close": {
+   "label": "Close Range",
+   "date": "2026-11-07",
+   "url": "https://codmunity.gg/weapon/mw4/m4",
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "FSS IS40",
+     "level": 54,
+     "stand_in": {
+      "slot": "Muzzle",
+      "name": "FSS IS300",
+      "level": 4
+     }
+    },
+    {
+     "slot": "Optic",
+     "name": "ZLR Type C",
+     "level": 52,
+     "stand_in": null
+    },
+    {
+     "slot": "Stock",
+     "name": "No Stock",
+     "level": 64,
+     "stand_in": {
+      "slot": "Ammunition",
+      "name": "5.56 NATO Overpressured",
+      "level": 3
+     }
+    },
+    {
+     "slot": "Rear Grip",
+     "name": "Schlager STB Grip",
+     "level": 22,
+     "stand_in": {
+      "slot": "Barrel",
+      "name": "FT Cannonade 7\"",
+      "level": 7
+     }
+    },
+    {
+     "slot": "Underbarrel",
+     "name": "Hurricane Grip",
+     "level": 72,
+     "stand_in": {
+      "slot": "Underbarrel",
+      "name": "FSS Tac90 Grip",
+      "level": 17
+     }
+    }
+   ],
+   "apex_on": true,
+   "notes": []
+  },
+  "early": {
+   "label": "Early game",
+   "date": "2026-11-14",
+   "url": "https://infil.app/loadouts/m4/",
+   "complete_level": 14,
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "FSS IS300",
+     "level": 4,
+     "stand_in": null
+    },
+    {
+     "slot": "Optic",
+     "name": "Slimline Elite",
+     "level": 13,
+     "stand_in": null
+    },
+    {
+     "slot": "Stock",
+     "name": "PF1 Fixed Stock",
+     "level": 14,
+     "stand_in": null
+    },
+    {
+     "slot": "Ammunition",
+     "name": "5.56 NATO Overpressured",
+     "level": 3,
+     "stand_in": null
+    },
+    {
+     "slot": "Laser",
+     "name": "SZ Gen.6 PEQ",
+     "level": 2,
+     "stand_in": null
+    }
+   ],
+   "apex_on": false,
+   "notes": []
+  }
+ },
+ "table": {
+  "AA54 V.3 Bipod": [
+   "Underbarrel",
+   11
+  ],
+  "B16 Helical": [
+   "Muzzle",
+   67
+  ],
+  "Brace DX Grip": [
+   "Rear Grip",
+   10
+  ],
+  "Bruen 22-LPW": [
+   "Laser",
+   49
+  ],
+  "Bruen THRM-60 Optic": [
+   "Optic",
+   37
+  ],
+  "Corio 4DV-3": [
+   "Laser",
+   12
+  ],
+  "Corio Bisect": [
+   "Optic",
+   8
+  ],
+  "Corio ODSPR+": [
+   "Laser",
+   60
+  ],
+  "Corvus LVL-40": [
+   "Muzzle",
+   53
+  ],
+  "Cronen R808": [
+   "Optic",
+   70
+  ],
+  "Expedite Intra-5b": [
+   "Laser",
+   42
+  ],
+  "FJX 708 PRO": [
+   "Optic",
+   58
+  ],
+  "FSS Beargrip": [
+   "Underbarrel",
+   36
+  ],
+  "FSS Fireline Grip": [
+   "Underbarrel",
+   38
+  ],
+  "FSS IS40": [
+   "Muzzle",
+   54
+  ],
+  "FSS IS300": [
+   "Muzzle",
+   4
+  ],
+  "FSS Tac90 Grip": [
+   "Underbarrel",
+   17
+  ],
+  "FTAC Dominion": [
+   "Muzzle",
+   45
+  ],
+  "GL K230": [
+   "Optic",
+   25
+  ],
+  "GW Domi-9": [
+   "Underbarrel",
+   47
+  ],
+  "Hurricane Grip": [
+   "Underbarrel",
+   72
+  ],
+  "IOTA-D": [
+   "Optic",
+   66
+  ],
+  "KV Corsac Holo": [
+   "Optic",
+   69
+  ],
+  "Locus PX3 Canted": [
+   "Optic",
+   46
+  ],
+  "Mire-50 Tac Grip": [
+   "Underbarrel",
+   5
+  ],
+  "Miri 40mm": [
+   "Underbarrel",
+   30
+  ],
+  "RVX9 Thermo": [
+   "Optic",
+   31
+  ],
+  "SA Laz-500": [
+   "Laser",
+   24
+  ],
+  "Schlager 7x": [
+   "Optic",
+   23
+  ],
+  "Schlager Dogfight GI": [
+   "Optic",
+   71
+  ],
+  "Schlager Night View Pro": [
+   "Optic",
+   63
+  ],
+  "Schlager STB Grip": [
+   "Rear Grip",
+   22
+  ],
+  "Slimline Elite": [
+   "Optic",
+   13
+  ],
+  "STOVL IRX-6": [
+   "Laser",
+   16
+  ],
+  "SZ Echelon Holo": [
+   "Optic",
+   29
+  ],
+  "SZ Gen.6 PEQ": [
+   "Laser",
+   2
+  ],
+  "SZ Helios Holo": [
+   "Optic",
+   19
+  ],
+  "SZ Lonewolf Flip": [
+   "Optic",
+   50
+  ],
+  "SZ Lonewolf Holo": [
+   "Optic",
+   56
+  ],
+  "SZ Micro D-3": [
+   "Optic",
+   43
+  ],
+  "SZ Prima-4 Dot": [
+   "Optic",
+   33
+  ],
+  "SZ SRE-7": [
+   "Optic",
+   15
+  ],
+  "TV Judicator": [
+   "Underbarrel",
+   62
+  ],
+  "TZL-110 V1": [
+   "Muzzle",
+   41
+  ],
+  "VLK Rize-40": [
+   "Optic",
+   61
+  ],
+  "VLK Trimmer": [
+   "Optic",
+   21
+  ],
+  "XRK Mil-Tac Suppressor": [
+   "Muzzle",
+   65
+  ],
+  "ZLR Phase Grip": [
+   "Rear Grip",
+   55
+  ],
+  "ZLR Reverb90": [
+   "Muzzle",
+   34
+  ],
+  "ZLR Type C": [
+   "Optic",
+   52
+  ]
+ },
+ "patch_date": "2026-11-13",
+ "variants": [
+  {
+   "id": "m4-versatile-1439ac",
+   "type": "Versatile",
+   "label": "Versatile",
+   "best_for": [
+    "TDM",
+    "Frontline",
+    "Inflation",
+    "Hardcore"
+   ],
+   "best_for_source": "default",
+   "label_note": null,
+   "date": "2026-11-16",
+   "url": "https://mw4intel.app/loadouts/shipment-m4-suppressed-laser",
+   "agree": 1,
+   "sources": [
+    {
+     "site": "MW4 Intel",
+     "name": "#1 Suppressed M4",
+     "date": "2026-11-16",
+     "url": "https://mw4intel.app/loadouts/shipment-m4-suppressed-laser"
+    }
+   ],
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "XRK Mil-Tac Suppressor",
+     "level": 65
+    },
+    {
+     "slot": "Laser",
+     "name": "SZ Gen.6 PEQ",
+     "level": 2
+    },
+    {
+     "slot": "Rear Grip",
+     "name": "ZLR Phase Grip",
+     "level": 55
+    },
+    {
+     "slot": "Underbarrel",
+     "name": "FSS Fireline Grip",
+     "level": 38
+    },
+    {
+     "slot": "Ammunition",
+     "name": "5.56 NATO High Velocity",
+     "level": 57
+    }
+   ],
+   "alternatives": [],
+   "apex_on": false,
+   "site_kit": {
+    "perk1": "Quick Fix",
+    "perk2": "Fast Hands",
+    "perk3": "Scavenger"
+   },
+   "notes": [],
+   "source_text": "The best all-round pick for Shipment. The suppressor keeps you off the minimap in a map where everyone is checking it, and the laser and Fireline grip keep the M4 snappy when you round a container. Quick Fix heals you on every kill, so you can chain fights without backing off. Swap Scavenger for Battle Hardened if you're eating a lot of flashes and stuns. Build for recoil and range; it already handles well. Use it as your first class while you level everything else. On SMG-heavy maps, try the Hurricane Apex instead of switching guns."
+  },
+  {
+   "id": "m4-pro-ranked-40eea0",
+   "type": "Pro (Ranked)",
+   "label": "Pro (Ranked)",
+   "best_for": [
+    "Hardpoint",
+    "S&D"
+   ],
+   "best_for_source": "type",
+   "label_note": null,
+   "date": "2026-11-16",
+   "url": "https://mw4intel.app/loadouts/pro-dashy-m4",
+   "agree": 1,
+   "sources": [
+    {
+     "site": "MW4 Intel",
+     "name": "Dashy M4",
+     "date": "2026-11-16",
+     "url": "https://mw4intel.app/loadouts/pro-dashy-m4"
+    }
+   ],
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "TZL-110 V1",
+     "level": 41
+    },
+    {
+     "slot": "Underbarrel",
+     "name": "FSS Fireline Grip",
+     "level": 38
+    },
+    {
+     "slot": "Laser",
+     "name": "SZ Gen.6 PEQ",
+     "level": 2
+    },
+    {
+     "slot": "Ammunition",
+     "name": "5.56 NATO High Velocity",
+     "level": 57
+    },
+    {
+     "slot": "Stock",
+     "name": "No Stock",
+     "level": 64
+    }
+   ],
+   "alternatives": [],
+   "apex_on": false,
+   "site_kit": null,
+   "notes": [],
+   "source_text": "Build for recoil and range; it already handles well. Use it as your first class while you level everything else. On SMG-heavy maps, try the Hurricane Apex instead of switching guns."
+  },
+  {
+   "id": "m4-versatile-5cb987",
+   "type": "Versatile",
+   "label": "Versatile",
+   "best_for": [
+    "TDM",
+    "Frontline",
+    "Inflation",
+    "Hardcore",
+    "Hijack",
+    "Domination"
+   ],
+   "best_for_source": "mode",
+   "label_note": null,
+   "date": "2026-11-16",
+   "url": "https://mw4intel.app/loadouts/m4-all-rounder",
+   "agree": 1,
+   "sources": [
+    {
+     "site": "MW4 Intel",
+     "name": "M4 All-Rounder",
+     "date": "2026-11-16",
+     "url": "https://mw4intel.app/loadouts/m4-all-rounder"
+    },
+    {
+     "site": "MW4 Intel",
+     "name": "M4 Defuse Cover",
+     "date": "2026-11-16",
+     "url": "https://mw4intel.app/loadouts/hijack-m4-defuse-cover"
+    },
+    {
+     "site": "MW4 Intel",
+     "name": "M4 Flag Control",
+     "date": "2026-11-16",
+     "url": "https://mw4intel.app/loadouts/domination-m4-flag-control"
+    },
+    {
+     "site": "MW4 Intel",
+     "name": "M4 class",
+     "date": "2026-11-16",
+     "url": "https://mw4intel.app/loadouts/m4-class"
+    }
+   ],
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "TZL-110 V1",
+     "level": 41
+    },
+    {
+     "slot": "Laser",
+     "name": "SA Laz-500",
+     "level": 24
+    },
+    {
+     "slot": "Magazine",
+     "name": "45 Round Mag",
+     "level": 9
+    },
+    {
+     "slot": "Rear Grip",
+     "name": "ZLR Phase Grip",
+     "level": 55
+    },
+    {
+     "slot": "Underbarrel",
+     "name": "FSS Fireline Grip",
+     "level": 38
+    }
+   ],
+   "alternatives": [],
+   "apex_on": false,
+   "site_kit": {
+    "perk1": "Ghost",
+    "perk2": "Blood Rush",
+    "perk3": "Battle Hardened",
+    "tactical": "Flash Grenade",
+    "lethal": "Frag Grenade",
+    "field": "Trophy System"
+   },
+   "notes": [],
+   "source_text": "The easiest meta class to run well. Level the M4 first — the Hurricane Apex gives it a second life at max level. Build for recoil and range; it already handles well. Use it as your first class while you level everything else. On SMG-heavy maps, try the Hurricane Apex instead of switching guns."
+  },
+  {
+   "id": "m4-close-range-a332c8",
+   "type": "Close Range",
+   "label": "Close Range",
+   "best_for": [
+    "S&D",
+    "Hardpoint",
+    "Hijack",
+    "Kill Confirmed",
+    "Drop Zone",
+    "Free-for-All",
+    "Grind",
+    "Possession",
+    "Infected"
+   ],
+   "best_for_source": "mode",
+   "label_note": null,
+   "date": "2026-11-16",
+   "url": "https://mw4intel.app/loadouts/search-and-destroy-suppressed-m4-entry",
+   "agree": 1,
+   "sources": [
+    {
+     "site": "MW4 Intel",
+     "name": "Suppressed M4 Entry",
+     "date": "2026-11-16",
+     "url": "https://mw4intel.app/loadouts/search-and-destroy-suppressed-m4-entry"
+    }
+   ],
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "FSS IS300",
+     "level": 4
+    },
+    {
+     "slot": "Barrel",
+     "name": "FT Cannonade 7\"",
+     "level": 7
+    },
+    {
+     "slot": "Underbarrel",
+     "name": "FSS Tac90 Grip",
+     "level": 17
+    },
+    {
+     "slot": "Laser",
+     "name": "SZ Gen.6 PEQ",
+     "level": 2
+    },
+    {
+     "slot": "Optic",
+     "name": "Slimline Elite",
+     "level": 13
+    }
+   ],
+   "alternatives": [],
+   "apex_on": false,
+   "site_kit": {
+    "perk1": "Ghost",
+    "perk2": "Ninja",
+    "perk3": "Battle Hardened",
+    "tactical": "Concussion Grenade",
+    "lethal": "Frag Grenade",
+    "field": "Trophy System"
+   },
+   "notes": [],
+   "source_text": "Suppressor keeps you off the minimap in a one-life mode; Frag denies the plant, Concussion wins the opening trade. Build for recoil and range; it already handles well. Use it as your first class while you level everything else. On SMG-heavy maps, try the Hurricane Apex instead of switching guns."
+  },
+  {
+   "id": "m4-versatile-8737d7",
+   "type": "Versatile",
+   "label": "Versatile",
+   "best_for": [
+    "TDM",
+    "Frontline",
+    "Inflation",
+    "Hardcore"
+   ],
+   "best_for_source": "type",
+   "label_note": null,
+   "date": "2026-11-14",
+   "url": "https://infil.app/loadouts/m4/",
+   "agree": 2,
+   "sources": [
+    {
+     "site": "Infil",
+     "name": "Endgame",
+     "date": "2026-11-14",
+     "url": "https://infil.app/loadouts/m4/"
+    },
+    {
+     "site": "CODMunity",
+     "name": "Versatile",
+     "date": "2026-11-13",
+     "url": "https://codmunity.gg/weapon/mw4/m4"
+    }
+   ],
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "FSS IS300",
+     "level": 4
+    },
+    {
+     "slot": "Barrel",
+     "name": "FT Cannonade 7\"",
+     "level": 7
+    },
+    {
+     "slot": "Rear Grip",
+     "name": "Schlager STB Grip",
+     "level": 22
+    },
+    {
+     "slot": "Ammunition",
+     "name": "5.56 NATO Overpressured",
+     "level": 3
+    },
+    {
+     "slot": "Underbarrel",
+     "name": "FSS Tac90 Grip",
+     "level": 17
+    }
+   ],
+   "alternatives": [],
+   "apex_on": false,
+   "site_kit": null,
+   "notes": [],
+   "source_text": "Fires faster than the HAN 86 and suits aggressive play. Use it when you want to push like an SMG player but keep some range."
+  }
+ ],
+ "published": [
+  {
+   "site": "Infil",
+   "label": "Early game",
+   "complete_level": 14,
+   "date": "2026-11-14",
+   "url": "https://infil.app/loadouts/m4/",
+   "parts": [
+    {
+     "slot": "Muzzle",
+     "name": "FSS IS300",
+     "level": 4
+    },
+    {
+     "slot": "Optic",
+     "name": "Slimline Elite",
+     "level": 13
+    },
+    {
+     "slot": "Stock",
+     "name": "PF1 Fixed Stock",
+     "level": 14
+    },
+    {
+     "slot": "Ammunition",
+     "name": "5.56 NATO Overpressured",
+     "level": 3
+    },
+    {
+     "slot": "Laser",
+     "name": "SZ Gen.6 PEQ",
+     "level": 2
+    }
+   ]
+  }
+ ],
+ "cands": {
+  "Ammunition": [
+   {
+    "name": "5.56 NATO Overpressured",
+    "level": 3,
+    "used": 3,
+    "types": [
+     "Versatile",
+     "Early game"
+    ]
+   },
+   {
+    "name": "5.56 NATO Hollow Point",
+    "level": 20
+   },
+   {
+    "name": "5.56 NATO Armor Piercing",
+    "level": 27
+   },
+   {
+    "name": "5.56 NATO Frangible",
+    "level": 40
+   },
+   {
+    "name": "5.56 NATO High Velocity",
+    "level": 57,
+    "used": 2,
+    "types": [
+     "Pro (Ranked)",
+     "Versatile"
+    ]
+   }
+  ],
+  "Barrel": [
+   {
+    "name": "FT Cannonade 7\"",
+    "level": 7,
+    "used": 3,
+    "types": [
+     "Versatile",
+     "Close Range"
+    ]
+   },
+   {
+    "name": "16 Highmark Barrel",
+    "level": 18
+   },
+   {
+    "name": "18 LE Crosswind",
+    "level": 32
+   },
+   {
+    "name": "11.5 Shortline Barrel",
+    "level": 48
+   },
+   {
+    "name": "ZLR Drift 16.5\"",
+    "level": 68
+   }
+  ],
+  "Laser": [
+   {
+    "name": "SZ Gen.6 PEQ",
+    "level": 2,
+    "used": 4,
+    "types": [
+     "Close Range",
+     "Pro (Ranked)",
+     "Versatile",
+     "Early game"
+    ]
+   },
+   {
+    "name": "Corio 4DV-3",
+    "level": 12
+   },
+   {
+    "name": "STOVL IRX-6",
+    "level": 16
+   },
+   {
+    "name": "SA Laz-500",
+    "level": 24,
+    "used": 4,
+    "types": [
+     "Versatile"
+    ]
+   },
+   {
+    "name": "Expedite Intra-5b",
+    "level": 42
+   },
+   {
+    "name": "Bruen 22-LPW",
+    "level": 49
+   },
+   {
+    "name": "Corio ODSPR+",
+    "level": 60
+   }
+  ],
+  "Magazine": [
+   {
+    "name": "45 Round Mag",
+    "level": 9,
+    "used": 4,
+    "types": [
+     "Versatile"
+    ]
+   },
+   {
+    "name": "60 Round Drum",
+    "level": 39
+   }
+  ],
+  "Muzzle": [
+   {
+    "name": "FSS IS300",
+    "level": 4,
+    "used": 4,
+    "types": [
+     "Versatile",
+     "Close Range",
+     "Early game"
+    ]
+   },
+   {
+    "name": "ZLR Reverb90",
+    "level": 34
+   },
+   {
+    "name": "TZL-110 V1",
+    "level": 41,
+    "used": 5,
+    "types": [
+     "Versatile",
+     "Pro (Ranked)"
+    ]
+   },
+   {
+    "name": "FTAC Dominion",
+    "level": 45
+   },
+   {
+    "name": "Corvus LVL-40",
+    "level": 53
+   },
+   {
+    "name": "FSS IS40",
+    "level": 54
+   },
+   {
+    "name": "XRK Mil-Tac Suppressor",
+    "level": 65,
+    "used": 1,
+    "types": [
+     "Versatile"
+    ]
+   },
+   {
+    "name": "B16 Helical",
+    "level": 67
+   }
+  ],
+  "Optic": [
+   {
+    "name": "Corio Bisect",
+    "level": 8
+   },
+   {
+    "name": "Slimline Elite",
+    "level": 13,
+    "used": 2,
+    "types": [
+     "Close Range",
+     "Early game"
+    ]
+   },
+   {
+    "name": "SZ SRE-7",
+    "level": 15
+   },
+   {
+    "name": "SZ Helios Holo",
+    "level": 19
+   },
+   {
+    "name": "VLK Trimmer",
+    "level": 21
+   },
+   {
+    "name": "Schlager 7x",
+    "level": 23
+   },
+   {
+    "name": "GL K230",
+    "level": 25
+   },
+   {
+    "name": "SZ Echelon Holo",
+    "level": 29
+   },
+   {
+    "name": "RVX9 Thermo",
+    "level": 31
+   },
+   {
+    "name": "SZ Prima-4 Dot",
+    "level": 33
+   },
+   {
+    "name": "Bruen THRM-60 Optic",
+    "level": 37
+   },
+   {
+    "name": "SZ Micro D-3",
+    "level": 43
+   },
+   {
+    "name": "Locus PX3 Canted",
+    "level": 46
+   },
+   {
+    "name": "SZ Lonewolf Flip",
+    "level": 50
+   },
+   {
+    "name": "ZLR Type C",
+    "level": 52
+   },
+   {
+    "name": "SZ Lonewolf Holo",
+    "level": 56
+   },
+   {
+    "name": "FJX 708 PRO",
+    "level": 58
+   },
+   {
+    "name": "VLK Rize-40",
+    "level": 61
+   },
+   {
+    "name": "Schlager Night View Pro",
+    "level": 63
+   },
+   {
+    "name": "IOTA-D",
+    "level": 66
+   },
+   {
+    "name": "KV Corsac Holo",
+    "level": 69
+   },
+   {
+    "name": "Cronen R808",
+    "level": 70
+   },
+   {
+    "name": "Schlager Dogfight GI",
+    "level": 71
+   }
+  ],
+  "Rear Grip": [
+   {
+    "name": "Brace DX Grip",
+    "level": 10
+   },
+   {
+    "name": "Schlager STB Grip",
+    "level": 22,
+    "used": 2,
+    "types": [
+     "Versatile"
+    ]
+   },
+   {
+    "name": "ZLR Phase Grip",
+    "level": 55,
+    "used": 5,
+    "types": [
+     "Versatile"
+    ]
+   }
+  ],
+  "Stock": [
+   {
+    "name": "Demo HVR2 Stock",
+    "level": 6
+   },
+   {
+    "name": "PF1 Fixed Stock",
+    "level": 14,
+    "used": 1,
+    "types": [
+     "Early game"
+    ]
+   },
+   {
+    "name": "Demo Dozer Stock",
+    "level": 28
+   },
+   {
+    "name": "ZLR ASP50 Stock",
+    "level": 44
+   },
+   {
+    "name": "No Stock",
+    "level": 64,
+    "used": 1,
+    "types": [
+     "Pro (Ranked)"
+    ]
+   },
+   {
+    "name": "Hurricane Stock",
+    "level": 72
+   }
+  ],
+  "Underbarrel": [
+   {
+    "name": "Mire-50 Tac Grip",
+    "level": 5
+   },
+   {
+    "name": "AA54 V.3 Bipod",
+    "level": 11
+   },
+   {
+    "name": "FSS Tac90 Grip",
+    "level": 17,
+    "used": 3,
+    "types": [
+     "Versatile",
+     "Close Range"
+    ]
+   },
+   {
+    "name": "Miri 40mm",
+    "level": 30
+   },
+   {
+    "name": "FSS Beargrip",
+    "level": 36
+   },
+   {
+    "name": "FSS Fireline Grip",
+    "level": 38,
+    "used": 6,
+    "types": [
+     "Versatile",
+     "Pro (Ranked)"
+    ]
+   },
+   {
+    "name": "GW Domi-9",
+    "level": 47
+   },
+   {
+    "name": "TV Judicator",
+    "level": 62
+   },
+   {
+    "name": "Hurricane Grip",
+    "level": 72
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "site": "CODMunity",
+   "name": "Close Range",
+   "date": "2026-11-07",
+   "url": "https://codmunity.gg/weapon/mw4/m4",
+   "reason": "before the 2026-11-13 patch"
+  },
+  {
+   "site": "Dexerto",
+   "name": "Dexerto build",
+   "date": "2026-08-21",
+   "url": "https://www.dexerto.com/wikis/modern-warfare-4/weapons/assault-rifles/m4/",
+   "reason": "before the 2026-11-13 patch"
+  }
+ ],
+ "calc_gate": {
+  "pass": false,
+  "matched": 2,
+  "of": 5,
+  "profile": "range",
+  "reason": "2 of 5 slots match the CODMunity build"
+ }
+}

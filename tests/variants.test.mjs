@@ -47,6 +47,16 @@ test("default variant: ties prefer the type for the mode, then more sites, then 
   assert.equal(defaultVariant(mode("TDM"), gun("none", "AR", []), statics), null);
 });
 
+test("a page the site wrote for exactly this mode opens first", () => {
+  const g = gun("w", "AR", [
+    V("pro", "Pro (Ranked)", ["Hardpoint", "S&D"]),
+    V("snd", "Close Range", ["S&D", "Hardpoint"], { best_for_source: "mode" }),
+    V("long", "Long Range", ["S&D"]),
+  ]);
+  assert.equal(defaultVariant(mode("S&D"), g, statics).id, "snd");
+  assert.equal(defaultVariant(mode("Hardpoint"), g, statics).id, "snd");        // its list starts with S&D, so for Hardpoint the type rule decides
+});
+
 test("variantsFor reads gun.variants and is empty for a legacy gun", () => {
   assert.equal(variantsFor(m4()).length, 3);
   assert.deepEqual(variantsFor({ builds: {} }), []);
