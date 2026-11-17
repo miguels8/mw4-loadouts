@@ -7,3 +7,5 @@
 [by:claude-sonnet-5-5/mw4-refresh-fix-20261117]
 - Follow-up (found by mw4-refresh-fix 2026-11-17): `mw4-strategy.timer` commits notes in its clone and pushes straight to `main`, which branch protection rejects (GH006, runs at 03:47, 06:48, 09:47 CST failed; its `git pull --ff-only` then also fails on the diverged clone). The 66 notes made so far were published by hand in a data PR and the clone was realigned (unpublished commits kept on branch `backup-unpublished-strategy-20261117` in the clone). Fix still needed: pc/mw4_strategy.py should push a branch and open/merge a data PR instead of pushing main.
 [by:claude-sonnet-5-5/mw4-refresh-fix-20261117]
+- Watch (mw4-refresh-fix 2026-11-17): the `dom.test.mjs` card-controls test failed once in CI (run 44137830095 attempt 1, 17:31 UTC, a different default build rendered and 90 s timeouts) and passed on rerun, 3 of 3 locally on the same commit. A test failure skips that refresh run; `mw4-kick` retries within ~1 h. If it repeats, make that test wait for the render or pin its mode.
+[by:claude-sonnet-5-5/mw4-refresh-fix-20261117]
