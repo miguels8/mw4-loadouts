@@ -131,6 +131,12 @@ def _early(reg, infil, table, optics, use, url):
             "parts": [part(*p) for p in parts], "apex_on": False, "notes": notes}
 
 
+def _build_ok(b):
+    """A source build is usable when it has at least 4 parts and no slot twice (a page bleed shows as a repeat)."""
+    slots = [p[0] for p in b["parts"]]
+    return len(slots) >= 4 and len(set(slots)) == len(slots)
+
+
 def _fill_levels(c, prev):
     """Pages that stop showing "· Level N": take the level from the page's own attachment table, else from the
     last check of the same part. Never a guess: no source for it means the level stays None (level not published)."""
@@ -188,7 +194,8 @@ def build_data(registry, pages, old, today):
                 guns.append(prev)
             continue
         listed = [b for b in c["builds"] if b["name"] != "Apex Attachment"] or c["builds"]
-        if len(listed[0]["parts"]) < 4:   # the page parsed to a build with no parts: layout changed, say so loudly
+        close_raw = next((b for b in c["builds"] if b["name"] == "Close Range"), None)
+        if not all(_build_ok(b) for b in (listed[0], close_raw) if b):   # layout changed: say so loudly
             failed.append(slug)
             if prev:
                 guns.append(prev)
@@ -209,7 +216,10 @@ def build_data(registry, pages, old, today):
         builds = {"main": _convert(reg, main_b, "main", *args),
                   "close": _convert(reg, close_b, "close", *args) if close_b else None, "early": None}
         pi = pg.get("infil")
-        if pi is None:
+        if pi is None or not (pi.get("absent") or pi.get("valid")):
+            # Infil unreadable or not recognisable as an Infil page (error, challenge page): keep the old early build
+            # and report it, never present it as freshly checked
+            failed.append(f"{slug}:infil")
             builds["early"] = (prev or {}).get("builds", {}).get("early")
         elif pi.get("early"):
             builds["early"] = _early(reg, pi, table, optics, use, INFIL.format(slug=reg.get("infil_slug", slug)))
@@ -283,18 +293,28 @@ def exit_code(failed):
 
 
 # ------------------------------------------------------------------ fetching
-def fetch(url, tries=3, wait=3.0):
+def fetch_status(url, tries=3, wait=3.0):
+    """('ok', text) | ('absent', None) for HTTP 404/410 (the site has no page) | ('error', None)."""
     last = None
     for i in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en"})
             with urllib.request.urlopen(req, timeout=60) as r:
-                return r.read().decode("utf-8", errors="replace")
+                return "ok", r.read().decode("utf-8", errors="replace")
+        except urllib.error.HTTPError as e:
+            last = e
+            if e.code in (404, 410):
+                return "absent", None
+            time.sleep(wait * (i + 1))
         except (urllib.error.URLError, TimeoutError, OSError) as e:
             last = e
             time.sleep(wait * (i + 1))
     print(f"  fetch failed {url}: {last}", file=sys.stderr)
-    return None
+    return "error", None
+
+
+def fetch(url, tries=3, wait=3.0):
+    return fetch_status(url, tries, wait)[1]
 
 
 def load_pages(registry, offline=None, pause=1.5):
@@ -306,15 +326,21 @@ def load_pages(registry, offline=None, pause=1.5):
                 p = os.path.join(offline, name)
                 return open(p, encoding="utf-8").read() if os.path.exists(p) else None
             cm, inf = read(f"codmunity-{slug}.html"), read(f"infil-{slug}.html")
+            inf_status = "ok" if inf else "absent"
         else:
             cm = fetch(CODMUNITY.format(slug=slug))
             parsed = P.parse_codmunity(P.html_lines(cm)) if cm else None
             if not parsed or not parsed["builds"]:
                 cm = fetch(MIRROR.format(slug=slug))
-            inf = fetch(INFIL.format(slug=reg.get("infil_slug", slug)))
+            inf_status, inf = fetch_status(INFIL.format(slug=reg.get("infil_slug", slug)))
             time.sleep(pause)
-        pages[slug] = ({"codmunity": P.parse_codmunity(P.html_lines(cm)),
-                        "infil": P.parse_infil(P.html_lines(inf)) if inf else None} if cm else None)
+        if inf_status == "ok":
+            infil = P.parse_infil(P.html_lines(inf))
+        elif inf_status == "absent":
+            infil = {"absent": True, "valid": False, "checked": None, "early": None}
+        else:
+            infil = None   # unreadable: build_data reports it
+        pages[slug] = {"codmunity": P.parse_codmunity(P.html_lines(cm)), "infil": infil} if cm else None
     return pages
 
 

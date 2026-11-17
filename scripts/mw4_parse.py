@@ -148,7 +148,9 @@ def parse_codmunity(L):
 
 def parse_infil(L):
     """Infil 'Early game' build: [slot, part, weapon level] list plus the level where it is complete."""
-    out = {"checked": None, "early": None}
+    # valid = the page is recognisably an Infil loadout page (it lists its builds); a challenge page or an error
+    # page is not, so "no early build" can be told apart from "page unreadable"
+    out = {"checked": None, "early": None, "valid": "Endgame build" in L or "Early game build" in L}
     for i, ln in enumerate(L):
         if ln == "Checked" and i + 1 < len(L):
             out["checked"] = _iso(L[i + 1], "%b %d, %Y")

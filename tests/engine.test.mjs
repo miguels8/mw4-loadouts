@@ -83,6 +83,21 @@ test("shared attachments: a part open on another gun is open here", () => {
   assert.equal(sharedFrom(b, b.builds.main.parts[0], p2, d), null);
 });
 
+test("review F3: an unpublished donor level never opens a part, even for a donor typed at 0", () => {
+  const a = mini({ slug: "a", name: "A", table: { Part: ["Muzzle", null] } });
+  const b = mini({ slug: "b", name: "B", table: { Part: ["Muzzle", 30] } });
+  b.builds.main.parts[0] = P("Muzzle", "Part", 30);
+  const d = miniData([a, b]);
+  for (const lv of [0, 5, 90]) {
+    const p = prof({ guns: { a: { level: lv }, b: { level: 0 } } });
+    assert.equal(sharedFrom(b, b.builds.main.parts[0], p, d), null, `donor ${lv}`);
+    assert.equal(partStatus(b, b.builds.main.parts[0], p, d).state, "locked");
+  }
+  // a prestiged donor still counts as earned
+  const p2 = prof({ guns: { a: { level: 1, prestige: "1" }, b: { level: 0 } } });
+  assert.equal(sharedFrom(b, b.builds.main.parts[0], p2, d), "A");
+});
+
 test("sharing only covers shareable slots", () => {
   const a = mini({ slug: "a", name: "A", table: { S1: ["Stock", 1] } });
   const b = mini({ slug: "b", name: "B" });

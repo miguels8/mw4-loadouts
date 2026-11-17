@@ -23,9 +23,12 @@ def reg(*slugs):
     return [g for g in REGISTRY["guns"] if g["slug"] in slugs]
 
 
+INFIL_ABSENT = {"absent": True, "valid": False, "checked": None, "early": None}   # Infil has no page for the gun (404)
+
+
 def parsed(slug, page=None, infil=None):
     return {"codmunity": P.parse_codmunity(lines(page or f"codmunity-{slug}.html")),
-            "infil": P.parse_infil(lines(infil)) if infil else None}
+            "infil": P.parse_infil(lines(infil)) if infil else dict(INFIL_ABSENT)}
 
 
 def sample(extra=None):
@@ -216,7 +219,7 @@ class NoLevelLayout(unittest.TestCase):
     """CODMunity's MAR-9 page, read live on 2026-11-16, shows parts with no '· Level N' line and no attachment table."""
 
     def page(self):
-        return {"codmunity": P.parse_codmunity(lines("codmunity-mar-9-nolevels.html")), "infil": None}
+        return {"codmunity": P.parse_codmunity(lines("codmunity-mar-9-nolevels.html")), "infil": dict(INFIL_ABSENT)}
 
     def test_parts_parse_with_unknown_levels(self):
         b = self.page()["codmunity"]["builds"][0]
@@ -243,6 +246,61 @@ class NoLevelLayout(unittest.TestCase):
                                "builds": [{"name": "Versatile", "date": "2026-11-16", "parts": [], "apex": None}]},
                  "infil": None}
         out = R.build_data(reg("m4"), {"m4": empty}, {"guns": []}, "2026-11-16")
+        self.assertEqual(out["failed"], ["m4"])
+
+
+class ReviewFindings(unittest.TestCase):
+    """Independent review round 1 (gpt-6.1-sol): F1 Infil failures were silent, F2 only the main build was validated."""
+
+    def base(self):
+        return R.build_data(reg("m4"), {"m4": parsed("m4", infil="infil-m4.html")}, {"guns": []}, "2026-11-15")
+
+    def run_with(self, infil):
+        pg = parsed("m4")
+        pg["infil"] = infil
+        return R.build_data(reg("m4"), {"m4": pg}, self.base()["data"], "2026-11-16")
+
+    def test_f1_unreadable_infil_is_a_failure_and_keeps_old_early_build(self):
+        out = self.run_with(None)
+        self.assertEqual(out["failed"], ["m4:infil"])
+        self.assertEqual(out["data"]["checked"], "2026-11-15")
+        self.assertEqual(out["data"]["guns"][0]["builds"]["early"]["complete_level"], 14)
+        self.assertEqual(R.exit_code(out["failed"]), 1)
+
+    def test_f1_challenge_page_is_a_failure_not_a_removed_early_build(self):
+        out = self.run_with(P.parse_infil(P.html_lines("<h1>Just a moment</h1>")))
+        self.assertEqual(out["failed"], ["m4:infil"])
+        self.assertIsNotNone(out["data"]["guns"][0]["builds"]["early"])
+
+    def test_f1_valid_page_without_early_build_is_fine_and_clears_it(self):
+        page = P.parse_infil(P.html_lines("<div>Best M4</div><div>Builds</div><div>Endgame build</div>"
+                                          "<div>1</div><div>Muzzle</div><div>Weapon Lvl 4</div><div>X</div>"
+                                          "<div>Copy build</div>"))
+        self.assertTrue(page["valid"])
+        out = self.run_with(page)
+        self.assertEqual(out["failed"], [])
+        self.assertIsNone(out["data"]["guns"][0]["builds"]["early"])
+
+    def test_f1_absent_page_is_not_a_failure(self):
+        out = self.run_with(dict(INFIL_ABSENT))
+        self.assertEqual(out["failed"], [])
+
+    def test_f1_infil_slug_for_striga(self):
+        g = next(x for x in REGISTRY["guns"] if x["slug"] == "wz-55-striga")
+        self.assertEqual(g["infil_slug"], "wz55-striga")
+
+    def test_f2_empty_close_build_is_a_failure(self):
+        pg = parsed("m4", infil="infil-m4.html")
+        close = next(b for b in pg["codmunity"]["builds"] if b["name"] == "Close Range")
+        close["parts"] = []
+        out = R.build_data(reg("m4"), {"m4": pg}, self.base()["data"], "2026-11-16")
+        self.assertEqual(out["failed"], ["m4"])
+        self.assertTrue(out["data"]["guns"][0]["builds"]["close"]["parts"])
+
+    def test_f2_duplicate_slots_in_a_build_are_a_failure(self):
+        pg = parsed("m4", infil="infil-m4.html")
+        pg["codmunity"]["builds"][0]["parts"].append(["Muzzle", "Bleed", 9])
+        out = R.build_data(reg("m4"), {"m4": pg}, self.base()["data"], "2026-11-16")
         self.assertEqual(out["failed"], ["m4"])
 
 

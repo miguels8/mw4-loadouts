@@ -22,6 +22,7 @@ SLUG = {"Cronen Osprey": "cronen-osprey", "M4": "m4", "Han 86": "han-86", "Hyeon
         "APOC-338": "apoc-338", "Oris 8.6": "oris-8-6", "Mosin-Nagant": "mosin-nagant", "MAR-9": "mar-9",
         "KG-7 Vulcan": "kg-7-vulcan", "Signal 50": "signal-50", "Astaroth .57": "astaroth-57",
         "SANG 9mm": "sang-9mm", "Krait P68": "krait-p68", ".50 GS": "50-gs", "Mojave .357": "mojave-357"}
+INFIL_SLUG = {"wz-55-striga": "wz55-striga"}   # Infil spells this one without the dash
 SHARE_SLOTS = ["Muzzle", "Underbarrel", "Laser", "Optic", "Rear Grip"]
 DOT_LABELS = {"Reflex", "Mini Reflex", "Holo"}
 SRC = re.compile(r"CODMunity Multiplayer: (.+?) \((\d{4}-\d{2}-\d{2})\) (https://\S+?)(?:;|$)")
@@ -62,7 +63,7 @@ def main(builder, builds_json, optics_json, out):
     for w in m.WEAPONS:
         gun, slug = w["gun"], SLUG[w["gun"]]
         reg = {"slug": slug, "name": gun, "type": w["type"], "tier": w["tier"], "max_level": w["max"],
-               "unlock": unlock(m, gun), "infil_slug": slug, "line": w["line"]}
+               "unlock": unlock(m, gun), "infil_slug": INFIL_SLUG.get(slug, slug), "line": w["line"]}
         if gun == "Mosin-Nagant":
             reg["iron_sights"] = True   # owner's rule: the Mosin runs iron sights, no scope
         if gun in m.GUN_NOTES:

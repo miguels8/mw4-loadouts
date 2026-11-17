@@ -86,7 +86,8 @@ export function sharedFrom(gun, part, profile, data) {
     const e = other.table?.[part.name];
     if (!e || e[0] !== part.slot) continue;
     const st = gunState(profile, other.slug);
-    if ((st.level !== null && st.level >= e[1]) || prestiged(profile, other.slug)) return other.name;
+    // an unpublished donor level (null) never opens a part; a prestiged donor reached max level once, so it counts
+    if ((st.level !== null && Number.isInteger(e[1]) && st.level >= e[1]) || prestiged(profile, other.slug)) return other.name;
   }
   return null;
 }
