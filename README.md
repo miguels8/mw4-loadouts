@@ -33,7 +33,7 @@ Refresh by hand: `python3 -I scripts/refresh.py` (writes `site/data/`, exit code
 
 ## Schedule (which one is live)
 
-**GitHub Actions** (`.github/workflows/pages.yml`) runs daily at 09:17 UTC: tests, refresh, commit changed data to `main`, deploy Pages. See `WORKLOG.md` for the first run result and whether the sources answer from GitHub's runners. If they block it, the fallback is a user-level systemd timer on MiguelPC running the same script and pushing (no root); the live one is named in `WORKLOG.md`.
+**GitHub Actions** (`.github/workflows/pages.yml`) runs daily at 09:17 UTC: tests, refresh, commit changed data to `main`, deploy Pages. **This is the live schedule**: the first run read all 30 guns from GitHub's runners, so the sources are not blocked and no MiguelPC timer is installed. If GitHub is ever blocked, the fallback is a user-level systemd timer on MiguelPC running the same script and pushing (no root). Install receipt: `proof/INSTALL-RECEIPT.md`; undo: `UNDO.sh`.
 
 A gun whose page cannot be read keeps its previous build, appears in `status.json`, turns the app's "Data last checked" line red, and makes the run fail. Data older than 3 days also turns it red.
 

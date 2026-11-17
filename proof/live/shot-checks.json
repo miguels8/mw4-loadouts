@@ -1,0 +1,66 @@
+{
+ "base": "https://miguels8.github.io/mw4-loadouts/",
+ "width": 390,
+ "checks": [
+  {
+   "name": "first screen shows the data date",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "page is not wider than 390 px",
+   "ok": true,
+   "detail": "390"
+  },
+  {
+   "name": "levels page not wider than 390 px",
+   "ok": true,
+   "detail": "390"
+  },
+  {
+   "name": "import filled player level 47",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "KG-7 shows Schlager 7x",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "KG-7 shows TT Baem 12",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "KG-7 shows Bruen KG-7 Mk. IV",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "KG-7 shows TT Type 40 Comb",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "KG-7 muzzle: Visiv-5 for now, QR600 at Lv 64",
+   "ok": true,
+   "detail": "20 | KG-7 Vulcan | ★ Weak · 4/5 ready |  | Sniper Meta top 5 |  | Best sniper by far. One chest shot kills. |  | All-round build |  | Sniper build | 🔁 | Add Schlager Visiv-5 (laser) for now | Muzzle · Ivanov QR600 opens at Lv 64 | ✅ | TT Baem 12\" | Barrel | ✅ | Schlager 7x | Optic | ✅ | Bruen KG-7 Mk. IV | Stock | ✅ | TT Type 40 Comb | Comb | 🔒 | Apex: KG-7 Drillcharge | Opens at max level 75 (y"
+  },
+  {
+   "name": "page still not wider than 390 px",
+   "ok": true,
+   "detail": "390"
+  },
+  {
+   "name": "What changed page renders",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "no console errors",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}
