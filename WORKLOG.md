@@ -8,3 +8,5 @@
 [by:claude-sonnet-5-5/mw4-webapp-r3]
 - 2026-11-16 22:3x PR #1 squash-merged (4bc8a37) after review round 2 GO-WITH-CONDITIONS, condition folded. Pages enabled. First Actions run (workflow_dispatch): tests pass, refresh read 30/30 guns from GitHub runners, data commit aca5836, site deployed. Live: GitHub Actions cron 17 9 * * * UTC; no MiguelPC timer needed. Site 200, 390 px proof in proof/live.
 [by:claude-sonnet-5-5/mw4-webapp-r3]
+- 2026-11-16 23:1x mw4-app-inline-levels (Miguel 22:54: "a button to change each weapon level and prestige, so it gives me best loadout according to my level"): every gun card now has a level − / number / + row (tap to type, hold to repeat, empty = "Set level") and a Prestige dropdown; the collapsed header shows "Lv N" / "Lv ?" and a prestige badge. Edits go through one engine helper (`setGun`) shared with My levels, save instantly, and re-draw the cards and the ranked list in place. Test-first: engine tests (`tests/inline-levels.test.mjs`) and a real-Chromium DOM test (`tests/dom.test.mjs`); RED/GREEN in `proof/tdd/*inline*`; 390 px before/after shots in `proof/inline-local/`.
+[by:claude-sonnet-5-5/mw4-app-inline-levels]

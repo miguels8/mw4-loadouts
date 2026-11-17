@@ -1,0 +1,22 @@
+▶ card level and prestige controls (real Chromium, 390 px)
+  ✔ every card has the control row; targets are thumb sized; fits 390 px (4.546773ms)
+  ✔ empty is 'Set level' and 'Lv ?', never 0 (4.228745ms)
+  ✔ typing 63 saves, updates the header and shows 'add Visiv-5 for now' (24.241544ms)
+  ✔ tapping + (63 -> 64) flips the muzzle to ready and raises the ready count (13.091371ms)
+  ✔ the card and the engine agree on the ready count after the edit (1.800639ms)
+  ✔ My levels shows the same level, and edits flow both ways (1048.793382ms)
+  ✔ prestige dropdown saves, shows the badge, and the parts follow the engine (43.488368ms)
+  ✔ an edit re-ranks the whole list the same way the engine does (24.426783ms)
+  ✔ the early build appears at a low level and goes away at a high level (18.689657ms)
+  ✔ holding + repeats and stops on release (6082.077665ms)
+  ✔ clearing the box goes back to not entered (13.183641ms)
+  ✔ no sideways scroll and no console errors after all edits (0.543537ms)
+✔ card level and prestige controls (real Chromium, 390 px) (10013.80159ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30092.49269

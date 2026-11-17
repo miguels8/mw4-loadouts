@@ -1,6 +1,6 @@
 import {
   normalizeProfile, importProfile, gunOpen, buildView, earlyView, kitFor, rankGuns, modeBuildKey, fitFor,
-  freshness, dateText, numOrNull,
+  freshness, dateText, numOrNull, setGun, stepLevel, gunBadges, LEVEL_MAX,
 } from "./engine.js";
 
 const STORE = "mw4-loadouts-v1";
@@ -52,10 +52,26 @@ function kitHtml(k) {
     `<p class="mute">${esc(k.why)}</p>`;
 }
 
-function gunCard(row, index, mode) {
+const PRESTIGES = ["", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "master"];
+const prestigeLabel = (o) => (o === "" ? "None" : o === "master" ? "Master" : "Prestige " + o);
+const gunSt = (slug) => profile.guns[slug] ?? {};
+
+// The control row at the top of an open card: level - / number / +, and the prestige dropdown.
+function ctlHtml(gun) {
+  const st = gunSt(gun.slug);
+  const n = esc(gun.name);
+  return `<div class="ctl" data-ctl="${esc(gun.slug)}"><div class="lvl">` +
+    `<button type="button" class="step${st.level == null || st.level <= 1 ? " dim" : ""}" data-step="-1" aria-label="Lower ${n} level by 1">−</button>` +
+    `<input type="number" inputmode="numeric" min="0" max="${LEVEL_MAX}" data-cl="level" value="${st.level ?? ""}" placeholder="Set level" aria-label="${n} level">` +
+    `<button type="button" class="step${st.level >= LEVEL_MAX ? " dim" : ""}" data-step="1" aria-label="Raise ${n} level by 1">+</button></div>` +
+    `<label class="pr"><span class="cl">Prestige</span><select data-cl="prestige" aria-label="${n} prestige">${PRESTIGES.map((o) =>
+      `<option value="${o}"${(st.prestige ?? "") === o ? " selected" : ""}>${prestigeLabel(o)}</option>`).join("")}</select></label></div>`;
+}
+
+// One card as pieces, so a level edit can redraw the header and parts without touching the control row under a finger.
+function cardParts(row, index, mode) {
   const { gun, key, open } = row;
   const slug = gun.slug;
-  const isOpen = ui.open[slug] ?? (index === 0);
   const view = buildView(gun, key, profile, data);
   const early = earlyView(gun, profile, data);
   const badges = [`<span class="badge">${esc(gun.type)}</span>`, `<span class="badge">${esc(TIER[gun.tier] ?? gun.tier)}</span>`];
@@ -63,15 +79,27 @@ function gunCard(row, index, mode) {
   const meta = `${FIT[row.fit]} · ${view.ready}/${view.total} ready`;
   const kit = kitFor(mode, gun, profile, data, statics);
   const same = key === "close" ? "Close-range build" : gun.builds.close ? "All-round build" : "Same build in every mode";
-  return `<details class="gun${index === 0 && open.open ? " best" : ""}" data-slug="${esc(slug)}"${isOpen ? " open" : ""}>` +
-    `<summary><span class="rank">${index + 1}</span><span class="gname">${esc(gun.name)}</span><span class="gmeta">${esc(meta)}</span></summary>` +
-    `<div class="body"><p>${badges.join(" ")}</p>` +
+  const gb = gunBadges(profile, slug);
+  const summary = `<span class="rank">${index + 1}</span><span class="gname">${esc(gun.name)}</span>` +
+    `<span class="glv"><span class="lvb${profile.guns[slug]?.level == null ? " none" : ""}">${esc(gb.level)}</span>` +
+    (gb.prestige ? `<span class="pbadge" title="Weapon prestige">${esc(gb.prestige)}</span>` : "") + `</span>` +
+    `<span class="gmeta">${esc(meta)}</span>`;
+  const body = `<p>${badges.join(" ")}</p>` +
     (gun.line ? `<p class="mute">${esc(gun.line)}</p>` : "") +
     (gun.note ? `<p class="note">${esc(gun.note)}</p>` : "") +
     `<p class="mute">${esc(same)}</p>` +
     buildHtml(view) +
     (early ? `<h2>While you level up</h2><p class="mute">Your ${esc(gun.name)} is level ${profile.guns[slug].level}. Use this early build until it reaches level ${early.until}.</p>${buildHtml(early)}` : "") +
-    kitHtml(kit) + `</div></details>`;
+    kitHtml(kit);
+  return { summary, body, best: index === 0 && open.open };
+}
+
+function gunCard(row, index, mode) {
+  const slug = row.gun.slug;
+  const isOpen = ui.open[slug] ?? (index === 0);
+  const c = cardParts(row, index, mode);
+  return `<details class="gun${c.best ? " best" : ""}" data-slug="${esc(slug)}"${isOpen ? " open" : ""}>` +
+    `<summary>${c.summary}</summary><div class="body">${ctlHtml(row.gun)}<div class="cbody">${c.body}</div></div></details>`;
 }
 
 function renderLoadouts() {
@@ -93,7 +121,7 @@ function renderLoadouts() {
   html += `<div class="mode-head"><p><b>${esc(mode.name)}</b> · ${esc(mode.what)}</p>` +
     `<p>${esc(mode.why)}</p><p class="mute">Tip: ${esc(mode.tip)}</p></div>` +
     `<div class="chips">${TYPES.map((t) => `<button data-type="${t}" class="${t === ui.type ? "on" : ""}">${t}</button>`).join("")}</div>` +
-    (shown.length ? shown.map((r, i) => gunCard(r, i, mode)).join("") : `<p class="mute">No guns of that type.</p>`);
+    (shown.length ? `<div id="cards">${shown.map((r, i) => gunCard(r, i, mode)).join("")}</div>` : `<p class="mute">No guns of that type.</p>`);
   return html;
 }
 
@@ -145,12 +173,97 @@ function render() {
   $("#app").innerHTML = ui.view === "levels" ? renderLevels() : ui.view === "changed" ? renderChanged() : renderLoadouts();
 }
 
+// Redraw only what a level edit can change: each card's header and parts, the ranking order and the control values.
+// The control row elements stay in the page, so a finger held on + keeps working while the list re-ranks.
+const cardMemo = new WeakMap();
+function updateCards(editedSlug) {
+  const box = $("#cards");
+  if (!box) return;
+  const mode = statics.modes.find((m) => m.id === ui.mode) ?? statics.modes[0];
+  const rows = rankGuns(mode, profile, data, statics).filter((r) => ui.type === "All" || r.gun.type === ui.type);
+  const nodes = rows.map((r) => box.querySelector(`details.gun[data-slug="${CSS.escape(r.gun.slug)}"]`));
+  if (nodes.length !== box.children.length || nodes.some((n) => !n)) { render(); return; }
+  nodes.forEach((n) => { ui.open[n.dataset.slug] ??= n.open; });
+  const E = nodes[rows.findIndex((r) => r.gun.slug === editedSlug)] ?? null;
+  const top0 = E?.getBoundingClientRect().top;
+  rows.forEach((row, i) => {
+    const n = nodes[i];
+    const c = cardParts(row, i, mode);
+    const memo = cardMemo.get(n) ?? {};
+    if (memo.summary !== c.summary) n.querySelector("summary").innerHTML = c.summary;
+    if (memo.body !== c.body) n.querySelector(".cbody").innerHTML = c.body;
+    cardMemo.set(n, { summary: c.summary, body: c.body });
+    n.classList.toggle("best", c.best);
+    const st = gunSt(row.gun.slug);
+    const inp = n.querySelector("[data-cl=level]");
+    const want = String(st.level ?? "");
+    if (document.activeElement !== inp && inp.value !== want) inp.value = want;
+    const sel = n.querySelector("[data-cl=prestige]");
+    if (sel.value !== (st.prestige ?? "")) sel.value = st.prestige ?? "";
+    n.querySelector("[data-step='-1']").classList.toggle("dim", st.level == null || st.level <= 1);
+    n.querySelector("[data-step='1']").classList.toggle("dim", st.level >= LEVEL_MAX);
+  });
+  // Put the cards in rank order without ever moving the edited card (moving it would drop a held finger).
+  const at = E ? nodes.indexOf(E) : -1;
+  if (at < 0) nodes.forEach((n) => box.appendChild(n));
+  else {
+    nodes.slice(0, at).forEach((n) => box.insertBefore(n, E));
+    let prev = E;
+    nodes.slice(at + 1).forEach((n) => { if (prev.nextSibling !== n) box.insertBefore(n, prev.nextSibling); prev = n; });
+  }
+  if (E && top0 !== undefined) {
+    const d = E.getBoundingClientRect().top - top0;
+    if (Math.abs(d) > 1) window.scrollBy(0, d);
+  }
+}
+
+// + / - buttons: one step on press, then repeat while held (thumb or mouse).
+let hold = null;
+function stopHold() {
+  if (!hold) return;
+  clearTimeout(hold.t); clearInterval(hold.i);
+  hold = null;
+}
+function stepCard(slug, delta) {
+  const cur = gunSt(slug).level ?? null;
+  const next = stepLevel(cur, delta);
+  if (next === cur) return false;
+  profile = setGun(profile, slug, { level: next });
+  save();
+  updateCards(slug);
+  return true;
+}
+function bindSteppers(app) {
+  app.addEventListener("pointerdown", (e) => {
+    const b = e.target.closest?.("[data-step]");
+    if (!b || e.button > 0) return;
+    e.preventDefault();
+    stopHold();
+    const slug = b.closest("[data-ctl]").dataset.ctl;
+    const delta = Number(b.dataset.step);
+    try { b.setPointerCapture(e.pointerId); } catch { /* capture is a nicety */ }
+    stepCard(slug, delta);
+    const h = { t: null, i: null };
+    h.t = setTimeout(() => { h.i = setInterval(() => { if (!stepCard(slug, delta)) stopHold(); }, 110); }, 450);
+    hold = h;
+  });
+  for (const ev of ["pointerup", "pointercancel", "lostpointercapture"]) window.addEventListener(ev, stopHold, true);
+  window.addEventListener("blur", stopHold);
+  app.addEventListener("contextmenu", (e) => { if (e.target.closest?.("[data-step]")) e.preventDefault(); });
+  // keyboard (Enter / Space) arrives as a click with no pointer; a pointer press was already handled
+  app.addEventListener("click", (e) => {
+    const b = e.target.closest?.("[data-step]");
+    if (b && e.detail === 0) stepCard(b.closest("[data-ctl]").dataset.ctl, Number(b.dataset.step));
+  });
+}
+
 function bind() {
   document.querySelector(".tabs").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
     ui.view = b.dataset.view; save(); render(); window.scrollTo(0, 0);
   });
   const app = $("#app");
+  bindSteppers(app);
   app.addEventListener("click", (e) => {
     const m = e.target.closest("[data-mode]"); if (m) { ui.mode = m.dataset.mode; ui.open = {}; save(); render(); return; }
     const t = e.target.closest("[data-type]"); if (t) { ui.type = t.dataset.type; save(); render(); return; }
@@ -170,10 +283,13 @@ function bind() {
     } else if (el.dataset.t) {
       if (el.checked) profile.tokens[el.dataset.t] = true; else delete profile.tokens[el.dataset.t];
     } else if (el.dataset.f) {
-      const slug = el.closest("[data-gun]").dataset.gun;
-      const g = profile.guns[slug] ??= { level: null, prestige: "", owned: false, token: false, max: null };
       const f = el.dataset.f;
-      g[f] = el.type === "checkbox" ? el.checked : f === "prestige" ? el.value : numOrNull(el.value);
+      profile = setGun(profile, el.closest("[data-gun]").dataset.gun, { [f]: el.type === "checkbox" ? el.checked : el.value });
+    } else if (el.dataset.cl) {
+      profile = setGun(profile, el.closest("[data-ctl]").dataset.ctl, { [el.dataset.cl]: el.value });
+      save();
+      updateCards(el.closest("[data-ctl]").dataset.ctl);
+      return;
     } else return;
     profile = normalizeProfile(profile);
     save();

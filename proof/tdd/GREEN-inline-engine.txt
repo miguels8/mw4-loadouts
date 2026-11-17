@@ -1,0 +1,16 @@
+✔ setGun stores the level, never mutates the old profile, and keeps empty as not entered (1.045571ms)
+✔ setGun keeps the other fields and accepts prestige values from the dropdown (0.727494ms)
+✔ stepLevel: empty + goes to 1, empty - stays empty, bounded at 1 and the max (0.138809ms)
+✔ gunBadges: header text is Lv N or Lv ?, plus the prestige badge (0.207398ms)
+✔ KG-7 Vulcan 63 -> 64 flips the muzzle from 'add Visiv-5 for now' to ready Ivanov QR600 (0.754213ms)
+✔ the early build appears below the threshold and disappears above it (3.900736ms)
+✔ weapon prestige relocks parts that were open only through another gun (2.348ms)
+✔ an edit re-ranks: a gun's ready count feeds the mode ranking (16.791516ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 86.737504

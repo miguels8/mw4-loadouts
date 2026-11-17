@@ -85,3 +85,29 @@ select { max-width: 11em; }
 .old { color: var(--bad); }
 .new { color: var(--ok); }
 @media (min-width: 700px) { body { max-width: 760px; margin: 0 auto; } }
+
+/* Level and prestige controls on each gun card (thumb sized, dark, fits 390 px) */
+html, body { overflow-anchor: none; }
+.gun > summary { flex-wrap: wrap; row-gap: 2px; }
+.gname { flex: 1 1 auto; min-width: 0; }
+.glv { display: inline-flex; gap: 6px; align-items: baseline; flex: none; }
+.lvb { font-weight: 700; color: var(--ink); }
+.lvb.none { color: var(--mute); font-weight: 600; }
+.pbadge { padding: 1px 8px; border-radius: 99px; background: var(--warn); color: #1a1300; font-size: 14px; font-weight: 700; }
+.gmeta { flex: 1 0 100%; margin-left: 0; text-align: left; padding-left: calc(1.6em + 10px); }
+.ctl { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 4px 0 8px; padding: 10px; background: var(--card2); border-radius: 12px; }
+.ctl .lvl { display: flex; gap: 8px; align-items: center; flex: 1 1 210px; }
+.ctl .step {
+  flex: none; width: 52px; height: 52px; padding: 0; font: inherit; font-size: 28px; font-weight: 700; line-height: 1;
+  color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  touch-action: manipulation; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+}
+.ctl .step:active { background: var(--acc); color: #06101f; }
+.ctl .step.dim { opacity: .45; }
+.ctl input[data-cl=level] { flex: 1 1 auto; width: auto; min-width: 0; height: 52px; padding: 4px; text-align: center; font-size: 22px; font-weight: 700; }
+.ctl input[data-cl=level]::placeholder { font-size: 16px; font-weight: 500; color: var(--mute); }
+.ctl .pr { display: flex; align-items: center; gap: 8px; flex: 1 1 150px; }
+.ctl .cl { color: var(--mute); font-size: 15px; }
+.ctl select[data-cl=prestige] { flex: 1 1 auto; max-width: none; height: 52px; font-size: 17px; }
+.ctl input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+.ctl input[type=number]::-webkit-outer-spin-button, .ctl input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }

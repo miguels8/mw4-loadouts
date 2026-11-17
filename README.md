@@ -5,7 +5,7 @@ Phone web app: pick a game mode, see the best gun and exactly which parts to put
 - **Site:** https://miguels8.github.io/mw4-loadouts/ (GitHub Pages)
 - **Repo:** https://github.com/miguels8/mw4-loadouts
 - **Data:** CODMunity Season 1 Multiplayer builds (main + "Close Range") and Infil "Early game" builds, refreshed daily. No AI is involved.
-- **Your levels** are typed once on the "My levels" page and saved in your browser only (localStorage). An empty box means "not entered", never level 0. "Load Miguel's levels" is an opt-in one-time import (`site/miguel-levels.json`).
+- **Your levels** are set right on each gun card (Loadouts tab: − / + around the level, tap the number to type, hold − or + to repeat, plus a Prestige dropdown None / 1..10 / Master) or on the "My levels" page; both write the same profile, saved in your browser only (localStorage). A card edit instantly re-draws that card and the mode's ranked list (parts flip ✅ / 🔁 / 🔒, the x/5 ready count, the early build, the rank). The collapsed card header shows "Lv N" (or "Lv ?") and a prestige badge. An empty box means "not entered", never level 0. "Load Miguel's levels" is an opt-in one-time import (`site/miguel-levels.json`).
 
 ## What each part shows
 
@@ -25,7 +25,7 @@ Phone web app: pick a game mode, see the best gun and exactly which parts to put
 | `site/data/changes.json` | "What changed" history. `status.json`: last check date and any guns that could not be read |
 | `scripts/refresh.py` | The no-AI refresher (stdlib Python). `mw4_parse.py` reads saved/live pages as text |
 | `scripts/seed_from_builder.py` | One-time seed from the old Sheet builder's data (read-only on the builder) |
-| `tests/` | Python (`unittest`) and Node (`node --test`) tests, saved page fixtures, a 390 px Chromium check |
+| `tests/` | Python (`unittest`) and Node (`node --test`) tests, saved page fixtures, a real-Chromium DOM test of the card controls (`dom.test.mjs`, skipped loudly if no Chromium/Chrome), a 390 px Chromium check |
 | `proof/` | Test receipts and phone screenshots of the live site |
 
 Run everything locally: `python3 -I -m unittest discover -s tests -v && node --test tests/*.test.mjs`.
