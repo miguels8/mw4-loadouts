@@ -1,0 +1,42 @@
+{
+ "schema": 1,
+ "about": "ONE global weight table (Q4). score = sum over a part's CODMunity stat deltas of dir x weight[profile] x value. 'close' favours ADS speed, sprint-to-fire and movement (Q3); 'range' favours range and recoil. No per-gun weights. Tuned once on 2026-11-17 (see reports/build-variants-report.md for before/after pass counts); never tuned to make a specific gun pass.",
+ "evidence": {
+  "ADS Speed / ADS Out Speed / Sprint To Fire are times, lower is better": "CODMunity attachment table, 2026-11-17: 'No Stock' shows ADS Speed -17, Sprint To Fire -7 together with Movement +4, ADS Movement +15 and Recoil +30 (the fast, wobbly choice); '60 Round Drum' shows ADS Speed +8 with Movement -2 and Sprint -3 (the heavy, slow choice); '11.5 Shortline Barrel' shows ADS Speed -9 with Movement +4 and Recoil +8.",
+  "Movement / Sprint / Strafe Speed / ADS Movement are speeds, higher is better": "same rows: heavier parts show negative values (45 Round Mag Movement -1, 60 Round Drum -2), light parts positive.",
+  "Recoil / Gun Kick / Idle Sway / Gun Bob / Flinch are lower is better": "FSS Fireline Grip: Recoil -8 and Gun Kick -8 (the stabilising grip); PF1 Fixed Stock Recoil -8.",
+  "Range / Bullet Velocity / Magazine Size / Reserves / Bullet Penetration higher is better": "18 LE Crosswind Range +15; 5.56 NATO High Velocity Bullet Velocity +20.",
+  "Reload Speed is a time, lower is better (small weight: the sign is the least certain)": "60 Round Drum Reload Speed +26 and 45 Round Mag +15 on larger magazines."
+ },
+ "stats": {
+  "ADS Speed": {"dir": -1, "close": 3.0, "range": 0.8},
+  "ADS Out Speed": {"dir": -1, "close": 0.5, "range": 0.1},
+  "Sprint To Fire": {"dir": -1, "close": 2.5, "range": 0.4},
+  "Movement": {"dir": 1, "close": 1.5, "range": 0.3},
+  "Strafe Speed": {"dir": 1, "close": 1.0, "range": 0.2},
+  "Sprint": {"dir": 1, "close": 1.0, "range": 0.2},
+  "Tactical Sprint Speed": {"dir": 1, "close": 0.5, "range": 0.1},
+  "ADS Movement": {"dir": 1, "close": 1.0, "range": 0.3},
+  "Firing Move Speed": {"dir": 1, "close": 1.0, "range": 0.2},
+  "Crouch Movement": {"dir": 1, "close": 0.3, "range": 0.1},
+  "Horizontal Recoil": {"dir": -1, "close": 0.8, "range": 2.0},
+  "Vertical Recoil": {"dir": -1, "close": 0.8, "range": 2.0},
+  "Horizontal Gun Kick": {"dir": -1, "close": 0.4, "range": 1.0},
+  "Vertical Gun Kick": {"dir": -1, "close": 0.4, "range": 1.0},
+  "Range": {"dir": 1, "close": 1.0, "range": 3.0},
+  "Bullet Velocity": {"dir": 1, "close": 0.4, "range": 1.5},
+  "Bullet Penetration": {"dir": 1, "close": 0.2, "range": 0.3},
+  "Magazine Size": {"dir": 1, "close": 0.5, "range": 0.5},
+  "Reserves": {"dir": 1, "close": 0.2, "range": 0.2},
+  "Reload Speed": {"dir": -1, "close": 0.3, "range": 0.2},
+  "Fire Rate": {"dir": 1, "close": 0.3, "range": 0.3},
+  "Flinch Received": {"dir": -1, "close": 0.4, "range": 0.8},
+  "ADS Idle Sway": {"dir": -1, "close": 0.1, "range": 0.5},
+  "ADS Gun Bob": {"dir": -1, "close": 0.1, "range": 0.3},
+  "Hip Idle Sway": {"dir": -1, "close": 0.3, "range": 0.0},
+  "Hip Gun Bob": {"dir": -1, "close": 0.3, "range": 0.0},
+  "ADS Rechambering Accuracy": {"dir": 1, "close": 0.0, "range": 0.3},
+  "Hip Rechambering Accuracy": {"dir": 1, "close": 0.2, "range": 0.0},
+  "Rechambering Speed": {"dir": -1, "close": 0.5, "range": 0.5}
+ }
+}

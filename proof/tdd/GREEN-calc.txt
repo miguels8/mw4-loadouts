@@ -1,0 +1,7 @@
+69a7c822a401f6b4186015a46343009079f707b82cf4e5b767db1110f30ca132  scripts/calc.py
+f64fed1729302d68802dba2e6079db394c7a4cd747c132023ba741502f8744e8  tests/test_calc_gate.py
+84ea82524a78ceff0e7ece202167fc3210b9ac6ae977c7dc5bbfcf7a52ad6c74  site/data/stat_weights.json
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK
