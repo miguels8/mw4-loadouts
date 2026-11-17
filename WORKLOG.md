@@ -16,3 +16,5 @@
 [by:claude-sonnet-5-5/mw4-app-inline-levels]
 - 2026-11-17 00:0x mw4-app-inline-levels: review round 3 (gpt-6.1-sol) GO at 22f733d; PR #3 squash-merged (ca16169); Pages deployed (run 44026187652). Live 390 px proof in proof/live-inline (KG-7 63 -> 64 flips the muzzle to ready). Backup tag pre-inline-levels (d1684de), UNDO-inline-levels.sh, install receipt appended.
 [by:claude-sonnet-5-5/mw4-app-inline-levels]
+- 2026-11-17 00:2x mw4-app-inline-levels Amendment A (Miguel 2026-11-16 23:07: "turn game modes into a dropdown too"): the row of mode chips is now one full-width native dropdown (every mode in the same order, no-class modes included); the choice is saved in the same localStorage entry and survives reload; the gun-type filter is unchanged. Test-first: tests/mode-dropdown.test.mjs (real Chromium: options and order, 52 px full width dark, switching re-ranks, no-class mode, reload, type filter kept); RED/GREEN in proof/tdd/*mode-dropdown*; before/after shots in proof/mode-local. Test helpers: screenshot calls bring the page to front and wait up to 90 s (loaded machine).
+[by:claude-sonnet-5-5/mw4-app-inline-levels]

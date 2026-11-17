@@ -31,7 +31,7 @@ async function connect() {
 const send = (method, params = {}) => new Promise((res, rej) => {
   const id = nextId++;
   pending.set(id, { res, rej });
-  setTimeout(() => rej(new Error("timeout " + method)), 20000);
+  setTimeout(() => rej(new Error("timeout " + method)), 90000);
   ws.send(JSON.stringify({ id, method, params }));
 });
 const evalJs = async (expression) => {
@@ -98,7 +98,7 @@ try {
 
   await evalJs("document.querySelector('[data-view=loadouts]').click()");
   await sleep(300);
-  await evalJs("document.querySelector('[data-mode=TDM]').click()");
+  await evalJs("(() => { const s = document.querySelector('#modeSel'); s.value = 'TDM'; s.dispatchEvent(new Event('change', { bubbles: true })); })()");
   await sleep(300);
   await evalJs("document.querySelector('details[data-slug=kg-7-vulcan]').open = true");
   t = await evalJs("document.querySelector('details[data-slug=kg-7-vulcan]').innerText");

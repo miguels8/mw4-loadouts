@@ -1,0 +1,56 @@
+{
+ "base": "http://127.0.0.1:8781/",
+ "width": 390,
+ "checks": [
+  {
+   "name": "one mode dropdown, no mode chips",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Hardpoint re-ranks the list",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "TDM order comes back",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Lv 63: muzzle says add Visiv-5 for now",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Lv 64: muzzle is ready Ivanov QR600",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Lv 64: Visiv-5 stand-in gone",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "ready count went up by one",
+   "ok": true,
+   "detail": "4 -> 5"
+  },
+  {
+   "name": "collapsed header shows Lv 64 and P3",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "page is not wider than 390 px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "no console errors",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

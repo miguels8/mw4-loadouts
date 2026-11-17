@@ -5,7 +5,7 @@ Phone web app: pick a game mode, see the best gun and exactly which parts to put
 - **Site:** https://miguels8.github.io/mw4-loadouts/ (GitHub Pages)
 - **Repo:** https://github.com/miguels8/mw4-loadouts
 - **Data:** CODMunity Season 1 Multiplayer builds (main + "Close Range") and Infil "Early game" builds, refreshed daily. No AI is involved.
-- **Your levels** are set right on each gun card (Loadouts tab: − / + around the level, tap the number to type, hold − or + to repeat, plus a Prestige dropdown None / 1..10 / Master) or on the "My levels" page; both write the same profile, saved in your browser only (localStorage). A card edit instantly re-draws that card and the mode's ranked list (parts flip ✅ / 🔁 / 🔒, the x/5 ready count, the early build, the rank). The collapsed card header shows "Lv N" (or "Lv ?") and a prestige badge. An empty box means "not entered", never level 0. "Load Miguel's levels" is an opt-in one-time import (`site/miguel-levels.json`).
+- **Game mode** is one dropdown at the top of the Loadouts tab (every mode, no-class modes included); the choice is remembered. **Your levels** are set right on each gun card (Loadouts tab: − / + around the level, tap the number to type, hold − or + to repeat, plus a Prestige dropdown None / 1..10 / Master) or on the "My levels" page; both write the same profile, saved in your browser only (localStorage). A card edit instantly re-draws that card and the mode's ranked list (parts flip ✅ / 🔁 / 🔒, the x/5 ready count, the early build, the rank). The collapsed card header shows "Lv N" (or "Lv ?") and a prestige badge. An empty box means "not entered", never level 0. "Load Miguel's levels" is an opt-in one-time import (`site/miguel-levels.json`).
 
 ## What each part shows
 

@@ -18,6 +18,21 @@ try {
   await J(`localStorage.clear()`);
   await b.goto(base);
   for (let i = 0; i < 40 && !(await J(`!!document.querySelector('${KG}')`)); i++) await sleep(250);
+  // Amendment A: the game-mode dropdown, before and after switching mode (the list re-ranks)
+  const pickMode = (v) => J(`(() => { const s = document.querySelector('#modeSel'); s.value = ${JSON.stringify(v)}; s.dispatchEvent(new Event("change", { bubbles: true })); window.scrollTo(0, 0); })()`);
+  const slugs = () => J(`[...document.querySelectorAll("details.gun")].map((d) => d.dataset.slug).join(",")`);
+  await J(`window.scrollTo(0, 0)`);
+  check("one mode dropdown, no mode chips", (await J(`document.querySelectorAll("select#modeSel").length`)) === 1 && (await J(`document.querySelectorAll("[data-mode]").length`)) === 0);
+  const tdmOrder = await slugs();
+  await sleep(300);
+  await b.shot(join(out, "mode-1-dropdown-tdm.png"));
+  await pickMode("Hardpoint");
+  await sleep(400);
+  check("Hardpoint re-ranks the list", (await slugs()) !== tdmOrder);
+  await b.shot(join(out, "mode-2-dropdown-hardpoint.png"));
+  await pickMode("TDM");
+  await sleep(300);
+  check("TDM order comes back", (await slugs()) === tdmOrder);
   await J(`document.querySelector('${KG}').open = true`);
   await J(`(() => { const i = document.querySelector('${KG} input[data-cl=level]'); i.value = "63"; i.dispatchEvent(new Event("change", { bubbles: true })); })()`);
   await J(`document.querySelector('${KG}').scrollIntoView()`);

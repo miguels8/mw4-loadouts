@@ -107,10 +107,12 @@ function renderLoadouts() {
   const noClass = statics.no_class;
   const isNo = noClass.some((n) => n.name === ui.mode);
   const mode = modes.find((m) => m.id === ui.mode) ?? modes[0];
-  let html = `<h2>Pick a game mode</h2><div class="grid">` +
-    modes.map((m) => `<button data-mode="${esc(m.id)}" class="${m.id === ui.mode ? "on" : ""}">${esc(m.id)}</button>`).join("") +
-    noClass.map((m) => `<button data-mode="${esc(m.name)}" class="${m.name === ui.mode ? "on" : ""}">${esc(m.name)}</button>`).join("") +
-    `</div>`;
+  const current = isNo ? ui.mode : mode.id; // an unknown saved mode falls back to the first one
+  const pick = (v) => (v === current ? " selected" : "");
+  let html = `<h2>Pick a game mode</h2><select id="modeSel" class="modesel" aria-label="Game mode">` +
+    modes.map((m) => `<option value="${esc(m.id)}"${pick(m.id)}>${esc(m.id)}</option>`).join("") +
+    noClass.map((m) => `<option value="${esc(m.name)}"${pick(m.name)}>${esc(m.name)}</option>`).join("") +
+    `</select>`;
   if (isNo) {
     const n = noClass.find((x) => x.name === ui.mode);
     html += `<div class="mode-head"><p><b>${esc(n.name)}</b></p><p>${esc(n.what)}</p><p class="mute">${esc(n.tip)}</p></div>`;
@@ -273,7 +275,6 @@ function bind() {
   const app = $("#app");
   bindSteppers(app);
   app.addEventListener("click", (e) => {
-    const m = e.target.closest("[data-mode]"); if (m) { ui.mode = m.dataset.mode; ui.open = {}; save(); render(); return; }
     const t = e.target.closest("[data-type]"); if (t) { ui.type = t.dataset.type; save(); render(); return; }
     if (e.target.id === "imp") {
       getJson("miguel-levels.json").then((f) => { profile = importProfile(f); save(); render(); });
@@ -285,6 +286,7 @@ function bind() {
   }, true);
   app.addEventListener("change", (e) => {
     const el = e.target;
+    if (el.id === "modeSel") { ui.mode = el.value; ui.open = {}; save(); render(); return; }
     if (el.dataset.p) {
       const k = el.dataset.p;
       profile.player[k] = k === "prestigeType" ? el.value : k === "prestige" ? (numOrNull(el.value) ?? 0) : numOrNull(el.value);
