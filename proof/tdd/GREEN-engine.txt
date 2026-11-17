@@ -1,0 +1,5 @@
+682cf0596bd6c48eabb574366ad946a345ed0e00a03fec9f7c71f6c0dd21f4d8  /home/santo/dev/mw4-loadouts/tests/engine.test.mjs
+5099d5295aae201676687e250929ecd2701773b22ae9b39605b15d3ded5ec614  /home/santo/dev/mw4-loadouts/site/engine.js
+ℹ tests 26
+ℹ pass 26
+ℹ fail 0

@@ -1,0 +1,432 @@
+{
+ "schema": 1,
+ "guns": [
+  {
+   "slug": "cronen-osprey",
+   "name": "Cronen Osprey",
+   "type": "AR",
+   "tier": "S",
+   "max_level": 70,
+   "unlock": {
+    "level": null,
+    "bp_tier": 16,
+    "note": "Battle Pass Tier 16 (free base weapon)"
+   },
+   "infil_slug": "cronen-osprey",
+   "line": "New #1 rifle. Free on the Battle Pass (tier 16)."
+  },
+  {
+   "slug": "m4",
+   "name": "M4",
+   "type": "AR",
+   "tier": "S",
+   "max_level": 72,
+   "unlock": {
+    "level": 14,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "m4",
+   "line": "Easiest rifle. Good at every range."
+  },
+  {
+   "slug": "han-86",
+   "name": "Han 86",
+   "type": "AR",
+   "tier": "B",
+   "max_level": 72,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "han-86",
+   "line": "Very easy recoil. Weaker since the Oct 28 nerf."
+  },
+  {
+   "slug": "hyeon-burst",
+   "name": "Hyeon Burst",
+   "type": "AR",
+   "tier": "S",
+   "max_level": 68,
+   "unlock": {
+    "level": 21,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "hyeon-burst",
+   "line": "Season 1 build; the IOTA-D dot sight replaces the Overpressured ammo (you asked for an optic).",
+   "pick": {
+    "slot": "Optic",
+    "name": "IOTA-D",
+    "replaces": "Ammunition"
+   }
+  },
+  {
+   "slug": "patriot-xmr",
+   "name": "Patriot XMR",
+   "type": "AR",
+   "tier": "A",
+   "max_level": 72,
+   "unlock": {
+    "level": 27,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "patriot-xmr",
+   "line": "Hits hard at mid-long range. Heavy recoil."
+  },
+  {
+   "slug": "kastov-762",
+   "name": "Kastov 762",
+   "type": "AR",
+   "tier": "A",
+   "max_level": 71,
+   "unlock": {
+    "level": 34,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "kastov-762",
+   "line": "Big damage per bullet. Harsh recoil."
+  },
+  {
+   "slug": "axion",
+   "name": "Axion",
+   "type": "AR",
+   "tier": "A",
+   "max_level": 69,
+   "unlock": {
+    "level": 52,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "axion",
+   "line": "Handles like the M4, hits harder."
+  },
+  {
+   "slug": "oden",
+   "name": "Oden",
+   "type": "AR",
+   "tier": "A",
+   "max_level": 65,
+   "unlock": {
+    "level": 39,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "oden",
+   "line": "Hardest-hitting rifle, but slow and kicks."
+  },
+  {
+   "slug": "cronen-squall",
+   "name": "Cronen Squall",
+   "type": "AR",
+   "tier": "A",
+   "max_level": 67,
+   "unlock": {
+    "level": 55,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "cronen-squall",
+   "line": "Accurate at range. Small mag, slow fire."
+  },
+  {
+   "slug": "vel-46",
+   "name": "VEL 46",
+   "type": "SMG",
+   "tier": "S",
+   "max_level": 60,
+   "unlock": {
+    "level": 5,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "vel-46",
+   "line": "Best SMG. Holds up even at mid range."
+  },
+  {
+   "slug": "iso-nightshade",
+   "name": "ISO Nightshade",
+   "type": "SMG",
+   "tier": "A",
+   "max_level": 64,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "iso-nightshade",
+   "line": "Most consistent gun in the game."
+  },
+  {
+   "slug": "ppsh-41",
+   "name": "PPSh-41",
+   "type": "SMG",
+   "tier": "A",
+   "max_level": 62,
+   "unlock": {
+    "level": 30,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "ppsh-41",
+   "line": "Huge drum, very fast fire, easy to use."
+  },
+  {
+   "slug": "wz-55-striga",
+   "name": "Wz.55 Striga",
+   "type": "SMG",
+   "tier": "A",
+   "max_level": 60,
+   "unlock": {
+    "level": 18,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "wz-55-striga",
+   "line": "High damage, slow fire rate."
+  },
+  {
+   "slug": "x-58-nyx",
+   "name": "X-58 Nyx",
+   "type": "SMG",
+   "tier": "C",
+   "max_level": 53,
+   "unlock": {
+    "level": 46,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "x-58-nyx",
+   "line": "Built-in silencer. Stealth pick."
+  },
+  {
+   "slug": "csg-35",
+   "name": "CSG-35",
+   "type": "SMG",
+   "tier": "C",
+   "max_level": 42,
+   "unlock": {
+    "level": null,
+    "bp_tier": 36,
+    "note": "Battle Pass Tier 36 (free base weapon)"
+   },
+   "infil_slug": "csg-35",
+   "line": "Fastest SMG. Battle Pass tier 36."
+  },
+  {
+   "slug": "rezi-12",
+   "name": "Rezi 12",
+   "type": "Shotgun",
+   "tier": "C",
+   "max_level": 60,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "rezi-12",
+   "line": "Best shotgun. Only for tight rooms."
+  },
+  {
+   "slug": "warlord",
+   "name": "Warlord",
+   "type": "Shotgun",
+   "tier": "C",
+   "max_level": 59,
+   "unlock": {
+    "level": 32,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "warlord",
+   "line": "Hits hard, slow pump."
+  },
+  {
+   "slug": "finn-lmg",
+   "name": "FiNN LMG",
+   "type": "LMG",
+   "tier": "C",
+   "max_level": 59,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "finn-lmg",
+   "line": "Most mobile LMG. LMGs trail rifles right now."
+  },
+  {
+   "slug": "type-73",
+   "name": "Type 73",
+   "type": "LMG",
+   "tier": "D",
+   "max_level": 64,
+   "unlock": {
+    "level": 9,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "type-73",
+   "line": "Easy recoil, slow to handle."
+  },
+  {
+   "slug": "apoc-338",
+   "name": "APOC-338",
+   "type": "LMG",
+   "tier": "D",
+   "max_level": 56,
+   "unlock": {
+    "level": 44,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "apoc-338",
+   "line": "Huge damage, very slow."
+  },
+  {
+   "slug": "oris-8-6",
+   "name": "Oris 8.6",
+   "type": "Marksman",
+   "tier": "B",
+   "max_level": 70,
+   "unlock": {
+    "level": 11,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "oris-8-6",
+   "line": "Quickscope build, no big scope."
+  },
+  {
+   "slug": "mosin-nagant",
+   "name": "Mosin-Nagant",
+   "type": "Marksman",
+   "tier": "A",
+   "max_level": 69,
+   "unlock": {
+    "level": 36,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "mosin-nagant",
+   "line": "Bolt-action, 5-round mag. Nov 13 patch: full damage only to 15 m (was 40 m); CODMunity's Nov 14 builds are tagged Nerf (after it).",
+   "iron_sights": true,
+   "note": "⚠ Nov 13 patch: full damage only to 15 m · iron sights, no scope"
+  },
+  {
+   "slug": "mar-9",
+   "name": "MAR-9",
+   "type": "Marksman",
+   "tier": "B",
+   "max_level": 73,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "mar-9",
+   "line": "Semi-auto, two-shot kills. Outclassed."
+  },
+  {
+   "slug": "kg-7-vulcan",
+   "name": "KG-7 Vulcan",
+   "type": "Sniper",
+   "tier": "S",
+   "max_level": 75,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "kg-7-vulcan",
+   "line": "Best sniper by far. One chest shot kills."
+  },
+  {
+   "slug": "signal-50",
+   "name": "Signal 50",
+   "type": "Sniper",
+   "tier": "A",
+   "max_level": 74,
+   "unlock": {
+    "level": 50,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "signal-50",
+   "line": "Semi-auto .50 cal. Better on big maps."
+  },
+  {
+   "slug": "astaroth-57",
+   "name": "Astaroth .57",
+   "type": "Sniper",
+   "tier": "D",
+   "max_level": 54,
+   "unlock": {
+    "level": 25,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "astaroth-57",
+   "line": "Hardest hit, 3-round mag, slow."
+  },
+  {
+   "slug": "sang-9mm",
+   "name": "SANG 9mm",
+   "type": "Pistol",
+   "tier": "C",
+   "max_level": 38,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "sang-9mm",
+   "line": "Default pistol. Good backup in close fights."
+  },
+  {
+   "slug": "krait-p68",
+   "name": "Krait P68",
+   "type": "Pistol",
+   "tier": "B",
+   "max_level": 38,
+   "unlock": {
+    "level": 7,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "krait-p68",
+   "line": "Best-ranked pistol. Fast and accurate."
+  },
+  {
+   "slug": "50-gs",
+   "name": ".50 GS",
+   "type": "Pistol",
+   "tier": "D",
+   "max_level": 50,
+   "unlock": {
+    "level": 41,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "50-gs",
+   "line": "Hand cannon: big hits, slow, small mag."
+  },
+  {
+   "slug": "mojave-357",
+   "name": "Mojave .357",
+   "type": "Pistol",
+   "tier": "D",
+   "max_level": 44,
+   "unlock": {
+    "level": 48,
+    "bp_tier": null,
+    "note": null
+   },
+   "infil_slug": "mojave-357",
+   "line": "Revolver: hard-hitting, slow to reload."
+  }
+ ]
+}

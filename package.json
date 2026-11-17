@@ -1,0 +1,8 @@
+{
+  "name": "mw4-loadouts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "python3 -I -m unittest discover -s tests -v && node --test tests/"
+  }
+}

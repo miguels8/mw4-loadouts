@@ -1,0 +1,21 @@
+{
+  "_about": "Miguel's own levels as he reported them (Telegram 2026-11-15/16). The app offers this as a one-time import; nothing loads it automatically. 'max' is the in-game max level he reads on his own gun.",
+  "player": { "level": 47, "prestige": 1, "prestigeType": "Classic", "bpTier": null },
+  "tokens": { "Ninja": true },
+  "guns": {
+    "m4": { "level": 78, "prestige": "master", "max": 72 },
+    "hyeon-burst": { "level": 65, "prestige": "1", "max": 67 },
+    "cronen-osprey": { "level": 0, "prestige": "1", "owned": true },
+    "han-86": { "level": 55 },
+    "kastov-762": { "level": 39 },
+    "oden": { "level": 35 },
+    "patriot-xmr": { "level": 49 },
+    "vel-46": { "level": 21, "prestige": "1", "max": 59 },
+    "iso-nightshade": { "level": 2, "prestige": "1", "max": 63 },
+    "ppsh-41": { "level": 37 },
+    "x-58-nyx": { "level": 0 },
+    "oris-8-6": { "level": 68, "max": 69 },
+    "mosin-nagant": { "level": 58, "max": 68 },
+    "kg-7-vulcan": { "level": 54 }
+  }
+}

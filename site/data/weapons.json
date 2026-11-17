@@ -1,0 +1,8170 @@
+{
+ "schema": 1,
+ "checked": "2026-11-16",
+ "season": "Season 1",
+ "sources": [
+  "https://codmunity.gg/weapon/mw4/<gun>",
+  "https://infil.app/loadouts/<gun>/"
+ ],
+ "optics": {
+  "Bruen Clash-40": "dot",
+  "Bruen Field-Op": "scope",
+  "Bruen THRM-60 Optic": "dot",
+  "Cronen R808": "scope",
+  "Cronen Zero-K": "dot",
+  "FJX 708 PRO": "dot",
+  "GL K230": "scope",
+  "KV Corsac Holo": "dot",
+  "Schlager Night View Pro": "scope",
+  "SZ Echelon Holo": "dot",
+  "SZ Helios Holo": "dot",
+  "SZ Lonewolf Holo": "dot",
+  "SZ Micro D-3": "dot",
+  "SZ SRE-7": "dot",
+  "VLK Trimmer": "dot",
+  "Z-Dot 9": "dot",
+  "Corio Bisect": "scope",
+  "IOTA-D": "dot",
+  "Locus PX3 Canted": "scope",
+  "RVX9 Thermo": "scope",
+  "Schlager 7x": "scope",
+  "Schlager Dogfight GI": "scope",
+  "Slimline Elite": "dot",
+  "SZ Lonewolf Flip": "scope",
+  "SZ Prima-4 Dot": "dot",
+  "VLK Rize-40": "scope",
+  "ZLR Type C": "dot",
+  "Bruen Maestro": "scope",
+  "Corio D51 Scope": "scope",
+  "Corvus Avis-0": "scope",
+  "Expedite 308 DR2": "scope",
+  "GW Löwe-55": "scope",
+  "Hanbit 3080 Fireline": "scope",
+  "KG-7 Vulcan 11.2x Scope": "scope",
+  "Luca Stormwatch": "scope",
+  "Schlager Bigsky": "scope",
+  "Schlager Indigo-RF": "scope",
+  "Signal 50 11.2x Scope": "scope",
+  "SZ Castaway": "scope",
+  "Astaroth .57 11.2x Scope": "scope",
+  "Custom Ironsights": "iron",
+  "SZ MN-Scout 9x": "scope",
+  "VLK 1940-R 9x": "scope",
+  "SZ CNT-R6 Optic": "scope",
+  "ZLR Swordfish": "scope"
+ },
+ "guns": [
+  {
+   "slug": "cronen-osprey",
+   "name": "Cronen Osprey",
+   "type": "AR",
+   "tier": "S",
+   "max_level": 70,
+   "unlock": {
+    "level": null,
+    "bp_tier": 16,
+    "note": "Battle Pass Tier 16 (free base weapon)"
+   },
+   "line": "New #1 rifle. Free on the Battle Pass (tier 16).",
+   "apex": {
+    "name": "Cronen Helix Mk.II",
+    "level": 70
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/cronen-osprey",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "XRK Mil-Tac Suppressor",
+       "level": 34,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "SZ Gen.6 PEQ",
+        "level": 22
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Cronen 56",
+       "level": 67,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "5.56 NATO Overpressured",
+       "level": 63,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "60 Round Mag",
+       "level": 42,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 6,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/cronen-osprey",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "XRK Mil-Tac Suppressor",
+       "level": 34,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "SZ Gen.6 PEQ",
+       "level": 22,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Cronen 56",
+       "level": 67,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "60 Round Mag",
+       "level": 42,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 6,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "A56 Stout": [
+     "Rear Grip",
+     46
+    ],
+    "AA54 V.3 Bipod": [
+     "Underbarrel",
+     2
+    ],
+    "B16 Helical": [
+     "Muzzle",
+     38
+    ],
+    "Bruen 22-LPW": [
+     "Laser",
+     65
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     11
+    ],
+    "Corio 4DV-3": [
+     "Laser",
+     36
+    ],
+    "Corio ODSPR+": [
+     "Laser",
+     45
+    ],
+    "Corvus LVL-40": [
+     "Muzzle",
+     43
+    ],
+    "Cronen 56": [
+     "Rear Grip",
+     67
+    ],
+    "Cronen R808": [
+     "Optic",
+     23
+    ],
+    "Cronen Shear-56": [
+     "Rear Grip",
+     37
+    ],
+    "Expedite Intra-5b": [
+     "Laser",
+     56
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     35
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     30
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     16
+    ],
+    "FSS IS40": [
+     "Muzzle",
+     49
+    ],
+    "FSS IS300": [
+     "Muzzle",
+     21
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     6
+    ],
+    "FTAC Dominion": [
+     "Muzzle",
+     26
+    ],
+    "GL K230": [
+     "Optic",
+     29
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     25
+    ],
+    "IOTA-D": [
+     "Optic",
+     7
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     8
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     32
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     12
+    ],
+    "Miri 40mm": [
+     "Underbarrel",
+     53
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     27
+    ],
+    "SA Laz-500": [
+     "Laser",
+     52
+    ],
+    "Schlager 7x": [
+     "Optic",
+     5
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     66
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     4
+    ],
+    "Slimline Elite": [
+     "Optic",
+     13
+    ],
+    "STOVL IRX-6": [
+     "Laser",
+     47
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     15
+    ],
+    "SZ Gen.6 PEQ": [
+     "Laser",
+     22
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     24
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     33
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     28
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     31
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     3
+    ],
+    "TV Judicator": [
+     "Underbarrel",
+     60
+    ],
+    "TZL-110 V1": [
+     "Muzzle",
+     18
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     10
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     17
+    ],
+    "XRK Mil-Tac Suppressor": [
+     "Muzzle",
+     34
+    ],
+    "ZLR Reverb90": [
+     "Muzzle",
+     14
+    ],
+    "ZLR Type C": [
+     "Optic",
+     20
+    ]
+   }
+  },
+  {
+   "slug": "m4",
+   "name": "M4",
+   "type": "AR",
+   "tier": "S",
+   "max_level": 72,
+   "unlock": {
+    "level": 14,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Easiest rifle. Good at every range.",
+   "apex": {
+    "name": "M4 Hurricane",
+    "level": 72
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-13",
+     "url": "https://codmunity.gg/weapon/mw4/m4",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS IS300",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "FT Cannonade 7\"",
+       "level": 7,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Schlager STB Grip",
+       "level": 22,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "5.56 NATO Overpressured",
+       "level": 3,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 17,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/m4",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS IS40",
+       "level": 54,
+       "stand_in": {
+        "slot": "Muzzle",
+        "name": "FSS IS300",
+        "level": 4
+       }
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 52,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "No Stock",
+       "level": 64,
+       "stand_in": {
+        "slot": "Ammunition",
+        "name": "5.56 NATO Overpressured",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Schlager STB Grip",
+       "level": 22,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "FT Cannonade 7\"",
+        "level": 7
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "Hurricane Grip",
+       "level": 72,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "FSS Tac90 Grip",
+        "level": 17
+       }
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "AA54 V.3 Bipod": [
+     "Underbarrel",
+     11
+    ],
+    "B16 Helical": [
+     "Muzzle",
+     67
+    ],
+    "Brace DX Grip": [
+     "Rear Grip",
+     10
+    ],
+    "Bruen 22-LPW": [
+     "Laser",
+     49
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     37
+    ],
+    "Corio 4DV-3": [
+     "Laser",
+     12
+    ],
+    "Corio Bisect": [
+     "Optic",
+     8
+    ],
+    "Corio ODSPR+": [
+     "Laser",
+     60
+    ],
+    "Corvus LVL-40": [
+     "Muzzle",
+     53
+    ],
+    "Cronen R808": [
+     "Optic",
+     70
+    ],
+    "Expedite Intra-5b": [
+     "Laser",
+     42
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     58
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     36
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     38
+    ],
+    "FSS IS40": [
+     "Muzzle",
+     54
+    ],
+    "FSS IS300": [
+     "Muzzle",
+     4
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     17
+    ],
+    "FTAC Dominion": [
+     "Muzzle",
+     45
+    ],
+    "GL K230": [
+     "Optic",
+     25
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     47
+    ],
+    "Hurricane Grip": [
+     "Underbarrel",
+     72
+    ],
+    "IOTA-D": [
+     "Optic",
+     66
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     69
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     46
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     5
+    ],
+    "Miri 40mm": [
+     "Underbarrel",
+     30
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     31
+    ],
+    "SA Laz-500": [
+     "Laser",
+     24
+    ],
+    "Schlager 7x": [
+     "Optic",
+     23
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     71
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     63
+    ],
+    "Schlager STB Grip": [
+     "Rear Grip",
+     22
+    ],
+    "Slimline Elite": [
+     "Optic",
+     13
+    ],
+    "STOVL IRX-6": [
+     "Laser",
+     16
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     29
+    ],
+    "SZ Gen.6 PEQ": [
+     "Laser",
+     2
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     19
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     50
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     56
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     43
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     33
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     15
+    ],
+    "TV Judicator": [
+     "Underbarrel",
+     62
+    ],
+    "TZL-110 V1": [
+     "Muzzle",
+     41
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     61
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     21
+    ],
+    "XRK Mil-Tac Suppressor": [
+     "Muzzle",
+     65
+    ],
+    "ZLR Phase Grip": [
+     "Rear Grip",
+     55
+    ],
+    "ZLR Reverb90": [
+     "Muzzle",
+     34
+    ],
+    "ZLR Type C": [
+     "Optic",
+     52
+    ]
+   }
+  },
+  {
+   "slug": "han-86",
+   "name": "Han 86",
+   "type": "AR",
+   "tier": "B",
+   "max_level": 72,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Very easy recoil. Weaker since the Oct 28 nerf.",
+   "apex": {
+    "name": "Han X20 Skybreaker",
+    "level": 72
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/han-86",
+     "parts": [
+      {
+       "slot": "Barrel",
+       "name": "HAN 86 Silenced 413mm",
+       "level": 55,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "XRK Clutch-LS",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 27,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "FTAC Griplord 80",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "5.56 NATO Overpressured",
+       "level": 59,
+       "stand_in": {
+        "slot": "Muzzle",
+        "name": "XRK Mil-Tac Suppressor",
+        "level": 44
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 54,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/han-86",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "XRK Mil-Tac Suppressor",
+       "level": 44,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 46,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "XRK Clutch-LS",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 27,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "FTAC Griplord 80",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "45 Round Mag",
+       "level": 51,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "AA54 V.3 Bipod": [
+     "Underbarrel",
+     17
+    ],
+    "B16 Helical": [
+     "Muzzle",
+     64
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     67
+    ],
+    "Corio Bisect": [
+     "Optic",
+     26
+    ],
+    "Corvus LVL-40": [
+     "Muzzle",
+     69
+    ],
+    "Cronen R808": [
+     "Optic",
+     19
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     29
+    ],
+    "Expedite Squad-304": [
+     "Laser",
+     58
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     66
+    ],
+    "FJX EVR7": [
+     "Laser",
+     11
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     35
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     16
+    ],
+    "FSS IS40": [
+     "Muzzle",
+     48
+    ],
+    "FSS IS300": [
+     "Muzzle",
+     6
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     54
+    ],
+    "FTAC Dominion": [
+     "Muzzle",
+     24
+    ],
+    "FTAC Griplord 80": [
+     "Rear Grip",
+     2
+    ],
+    "GL K230": [
+     "Optic",
+     60
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     22
+    ],
+    "Hanbit H86 Grip": [
+     "Rear Grip",
+     34
+    ],
+    "IOTA-D": [
+     "Optic",
+     43
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     47
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     20
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     62
+    ],
+    "Miri 40mm": [
+     "Underbarrel",
+     28
+    ],
+    "Pulse-MW Laser": [
+     "Laser",
+     37
+    ],
+    "QFL-S4.5": [
+     "Laser",
+     15
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     40
+    ],
+    "Schlager 7x": [
+     "Optic",
+     23
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     52
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     71
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     46
+    ],
+    "Slimline Elite": [
+     "Optic",
+     53
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     13
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     36
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     42
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     63
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     5
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     38
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     50
+    ],
+    "TV Judicator": [
+     "Underbarrel",
+     9
+    ],
+    "TZL-110 V1": [
+     "Muzzle",
+     32
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     12
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     33
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     3
+    ],
+    "XRK Justice II Grip": [
+     "Rear Grip",
+     14
+    ],
+    "XRK Mil-Tac Suppressor": [
+     "Muzzle",
+     44
+    ],
+    "ZLR Reverb90": [
+     "Muzzle",
+     41
+    ],
+    "ZLR Type C": [
+     "Optic",
+     27
+    ]
+   }
+  },
+  {
+   "slug": "hyeon-burst",
+   "name": "Hyeon Burst",
+   "type": "AR",
+   "tier": "S",
+   "max_level": 68,
+   "unlock": {
+    "level": 21,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Season 1 build; the IOTA-D dot sight replaces the Overpressured ammo (you asked for an optic).",
+   "apex": {
+    "name": "Hyeon Hyperburst",
+    "level": 68
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/hyeon-burst",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS IS40",
+       "level": 20,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "SZ Gen.6 PEQ",
+        "level": 4
+       }
+      },
+      {
+       "slot": "Barrel",
+       "name": "Mugi Hwando-Z3 521mm",
+       "level": 3,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "HYN-Meipeul",
+       "level": 8,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 41,
+       "stand_in": {
+        "slot": "Magazine",
+        "name": "40 Round Mag",
+        "level": 10
+       }
+      },
+      {
+       "slot": "Optic",
+       "name": "IOTA-D",
+       "level": 35,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": [
+      "IOTA-D in place of its 6.8x43mm Overpressured ammo is Miguel's pick (IOTA-D unlock Lv 35 from CODMunity's attachment table)"
+     ]
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/hyeon-burst",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS IS40",
+       "level": 20,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "Mugi Nullifier 482mm",
+       "level": 14,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "Mugi Hwando-Z3 521mm",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "SZ Gen.6 PEQ",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "HYN-Meipeul",
+       "level": 8,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "40 Round Mag",
+       "level": 10,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "B16 Helical": [
+     "Muzzle",
+     38
+    ],
+    "Bruen 22-LPW": [
+     "Laser",
+     16
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     37
+    ],
+    "Corio 4DV-3": [
+     "Laser",
+     42
+    ],
+    "Corio Bisect": [
+     "Optic",
+     45
+    ],
+    "Corio ODSPR+": [
+     "Laser",
+     65
+    ],
+    "Corvus LVL-40": [
+     "Muzzle",
+     55
+    ],
+    "Cronen R808": [
+     "Optic",
+     12
+    ],
+    "Expedite Intra-5b": [
+     "Laser",
+     13
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     60
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     7
+    ],
+    "FSS IS40": [
+     "Muzzle",
+     20
+    ],
+    "FSS IS300": [
+     "Muzzle",
+     67
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     41
+    ],
+    "FTAC Dominion": [
+     "Muzzle",
+     2
+    ],
+    "GL K230": [
+     "Optic",
+     63
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     28
+    ],
+    "HYN-Meipeul": [
+     "Rear Grip",
+     8
+    ],
+    "IOTA-D": [
+     "Optic",
+     35
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     21
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     11
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     49
+    ],
+    "Miri 40mm": [
+     "Underbarrel",
+     53
+    ],
+    "Mugi UN-R5 Grip": [
+     "Rear Grip",
+     43
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     34
+    ],
+    "SA Laz-500": [
+     "Laser",
+     51
+    ],
+    "Schlager 7x": [
+     "Optic",
+     15
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     50
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     56
+    ],
+    "Slimline Elite": [
+     "Optic",
+     17
+    ],
+    "STOVL IRX-6": [
+     "Laser",
+     59
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     6
+    ],
+    "SZ Gen.6 PEQ": [
+     "Laser",
+     4
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     48
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     33
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     26
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     39
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     30
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     24
+    ],
+    "TV Judicator": [
+     "Underbarrel",
+     44
+    ],
+    "TZL-110 V1": [
+     "Muzzle",
+     47
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     23
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     29
+    ],
+    "X-Vector 799 Grip": [
+     "Rear Grip",
+     27
+    ],
+    "XRK Mil-Tac Suppressor": [
+     "Muzzle",
+     64
+    ],
+    "ZLR Reverb90": [
+     "Muzzle",
+     19
+    ],
+    "ZLR Type C": [
+     "Optic",
+     58
+    ]
+   }
+  },
+  {
+   "slug": "patriot-xmr",
+   "name": "Patriot XMR",
+   "type": "AR",
+   "tier": "A",
+   "max_level": 72,
+   "unlock": {
+    "level": 27,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Hits hard at mid-long range. Heavy recoil.",
+   "apex": {
+    "name": "Patriot XMR Volt",
+    "level": 72
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/patriot-xmr",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "EXP Undertow Gen. 2",
+       "level": 25,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "EXP TR-Wrap",
+       "level": 3,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "7.62 NATO Overpressured",
+       "level": 7,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "35 Round Mag",
+       "level": 44,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "SZ Gen.6 PEQ",
+        "level": 23
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 8,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/patriot-xmr",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Meiko 30CAL-SP",
+       "level": 62,
+       "stand_in": {
+        "slot": "Muzzle",
+        "name": "EXP Undertow Gen. 2",
+        "level": 25
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "SZ Gen.6 PEQ",
+       "level": 23,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "FSS Tac90 Grip",
+        "level": 8
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "EXP TR-Wrap",
+       "level": 3,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "7.62 NATO Overpressured",
+       "level": 7,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "35 Round Mag",
+       "level": 44,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "AA54 V.3 Bipod": [
+     "Underbarrel",
+     45
+    ],
+    "Bruen 22-LPW": [
+     "Laser",
+     16
+    ],
+    "Bruen R12 Gen. 4": [
+     "Muzzle",
+     29
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     63
+    ],
+    "Corio 4DV-3": [
+     "Laser",
+     40
+    ],
+    "Corio Bisect": [
+     "Optic",
+     28
+    ],
+    "Corio ODSPR+": [
+     "Laser",
+     49
+    ],
+    "Cronen R808": [
+     "Optic",
+     13
+    ],
+    "EXP TR-Wrap": [
+     "Rear Grip",
+     3
+    ],
+    "EXP Undertow Gen. 2": [
+     "Muzzle",
+     25
+    ],
+    "Expedite Intra-5b": [
+     "Laser",
+     4
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     19
+    ],
+    "FJX Fury IV Grip": [
+     "Rear Grip",
+     54
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     20
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     33
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     8
+    ],
+    "GL K230": [
+     "Optic",
+     32
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     56
+    ],
+    "HET-S6 Comp": [
+     "Muzzle",
+     14
+    ],
+    "IOTA-D": [
+     "Optic",
+     43
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     48
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     68
+    ],
+    "Matuzek Blackveil": [
+     "Muzzle",
+     39
+    ],
+    "Meiko 30CAL-SP": [
+     "Muzzle",
+     62
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     27
+    ],
+    "Octa-63 Comp": [
+     "Muzzle",
+     66
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     55
+    ],
+    "SA Laz-500": [
+     "Laser",
+     12
+    ],
+    "Schlager 7x": [
+     "Optic",
+     18
+    ],
+    "Schlager Attack-7 Grip": [
+     "Rear Grip",
+     30
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     11
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     69
+    ],
+    "Slimline Elite": [
+     "Optic",
+     61
+    ],
+    "STOVL IRX-6": [
+     "Laser",
+     51
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     24
+    ],
+    "SZ Gen.6 PEQ": [
+     "Laser",
+     23
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     21
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     58
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     36
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     52
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     6
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     35
+    ],
+    "TV Bitelock": [
+     "Muzzle",
+     53
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     46
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     65
+    ],
+    "ZLR Cold Echo": [
+     "Muzzle",
+     2
+    ],
+    "ZLR Type C": [
+     "Optic",
+     38
+    ]
+   }
+  },
+  {
+   "slug": "kastov-762",
+   "name": "Kastov 762",
+   "type": "AR",
+   "tier": "A",
+   "max_level": 71,
+   "unlock": {
+    "level": 34,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Big damage per bullet. Harsh recoil.",
+   "apex": {
+    "name": "Kastov Arc",
+    "level": 71
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-13",
+     "url": "https://codmunity.gg/weapon/mw4/kastov-762",
+     "parts": [
+      {
+       "slot": "Barrel",
+       "name": "FJX Ghostfire 16.3\"",
+       "level": 61,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 30
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Hanbit TechGrip",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "7.62 Soviet Overpressured",
+       "level": 48,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "Kastov Dogfighter 27",
+        "level": 42
+       }
+      },
+      {
+       "slot": "Magazine",
+       "name": "45 Round Mag 7.62",
+       "level": 10,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 47,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-13",
+     "url": "https://codmunity.gg/weapon/mw4/kastov-762",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Ivanov QR600",
+       "level": 65,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "FSS Tac90 Grip",
+        "level": 47
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 30,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "Kastov Dogfighter 27",
+       "level": 42,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Hanbit TechGrip",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "45 Round Mag 7.62",
+       "level": 10,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "770 Underbite": [
+     "Muzzle",
+     41
+    ],
+    "AA54 V.3 Bipod": [
+     "Underbarrel",
+     68
+    ],
+    "Bruen Clash-40": [
+     "Optic",
+     21
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     11
+    ],
+    "Corio Bisect": [
+     "Optic",
+     40
+    ],
+    "Cronen R808": [
+     "Optic",
+     26
+    ],
+    "Cronen Zero-K": [
+     "Optic",
+     35
+    ],
+    "DS RKT-90": [
+     "Muzzle",
+     49
+    ],
+    "EXP R3000-V": [
+     "Muzzle",
+     8
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     70
+    ],
+    "Expedite Squad-304": [
+     "Laser",
+     66
+    ],
+    "Field Tac 1.4 Comp": [
+     "Muzzle",
+     23
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     69
+    ],
+    "FJX EVR7": [
+     "Laser",
+     15
+    ],
+    "FJX Kastov Grip": [
+     "Rear Grip",
+     17
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     32
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     3
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     47
+    ],
+    "FT Hyperport 408": [
+     "Muzzle",
+     16
+    ],
+    "Gauge-12 Mono": [
+     "Muzzle",
+     34
+    ],
+    "GL K230": [
+     "Optic",
+     22
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     59
+    ],
+    "Hanbit TechGrip": [
+     "Rear Grip",
+     4
+    ],
+    "Ivanov QR600": [
+     "Muzzle",
+     65
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     63
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     20
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     38
+    ],
+    "Miri 40mm": [
+     "Underbarrel",
+     58
+    ],
+    "Mugi 00-YK1 Grip": [
+     "Rear Grip",
+     45
+    ],
+    "Pulse-MW Laser": [
+     "Laser",
+     43
+    ],
+    "QFL-S4.5": [
+     "Laser",
+     6
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     46
+    ],
+    "Schlager 7x": [
+     "Optic",
+     60
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     28
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     56
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     30
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     36
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     52
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     13
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     18
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     7
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     62
+    ],
+    "TV Judicator": [
+     "Underbarrel",
+     44
+    ],
+    "Usenko 308-1L": [
+     "Muzzle",
+     25
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     55
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     50
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     53
+    ],
+    "Z-Dot 9": [
+     "Optic",
+     12
+    ]
+   }
+  },
+  {
+   "slug": "axion",
+   "name": "Axion",
+   "type": "AR",
+   "tier": "A",
+   "max_level": 69,
+   "unlock": {
+    "level": 52,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Handles like the M4, hits harder.",
+   "apex": {
+    "name": "Axion Reaver",
+    "level": 69
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/axion",
+     "parts": [
+      {
+       "slot": "Barrel",
+       "name": "Matuzek S5-Brace",
+       "level": 29,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 9
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Matuzek Lockgrip",
+       "level": 23,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": ".300 BLK Overpressured",
+       "level": 19,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "40 Round Mag",
+       "level": 65,
+       "stand_in": {
+        "slot": "Muzzle",
+        "name": "FSS IS40",
+        "level": 56
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 31,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/axion",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS IS40",
+       "level": 56,
+       "stand_in": {
+        "slot": "Ammunition",
+        "name": ".300 BLK Overpressured",
+        "level": 19
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 9,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Matuzek Lockgrip",
+       "level": 23,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "40 Round Mag",
+       "level": 65,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "Matuzek S5-Brace",
+        "level": 29
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 31,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "AA54 V.3 Bipod": [
+     "Underbarrel",
+     17
+    ],
+    "B16 Helical": [
+     "Muzzle",
+     42
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     43
+    ],
+    "C838 Grip": [
+     "Rear Grip",
+     4
+    ],
+    "Corio Bisect": [
+     "Optic",
+     58
+    ],
+    "Corvus LVL-40": [
+     "Muzzle",
+     63
+    ],
+    "Cronen R808": [
+     "Optic",
+     13
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     53
+    ],
+    "Expedite Squad-304": [
+     "Laser",
+     67
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     57
+    ],
+    "FJX EVR7": [
+     "Laser",
+     33
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     40
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     7
+    ],
+    "FSS IS40": [
+     "Muzzle",
+     56
+    ],
+    "FSS IS300": [
+     "Muzzle",
+     28
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     31
+    ],
+    "FTAC Dominion": [
+     "Muzzle",
+     36
+    ],
+    "GL K230": [
+     "Optic",
+     46
+    ],
+    "GS50 Grip": [
+     "Rear Grip",
+     55
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     47
+    ],
+    "IOTA-D": [
+     "Optic",
+     66
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     12
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     21
+    ],
+    "Matuzek Lockgrip": [
+     "Rear Grip",
+     23
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     64
+    ],
+    "Miri 40mm": [
+     "Underbarrel",
+     16
+    ],
+    "Pulse-MW Laser": [
+     "Laser",
+     22
+    ],
+    "QFL-S4.5": [
+     "Laser",
+     60
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     11
+    ],
+    "Schlager 7x": [
+     "Optic",
+     30
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     39
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     27
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     9
+    ],
+    "Slimline Elite": [
+     "Optic",
+     20
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     54
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     24
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     25
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     68
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     37
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     35
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     49
+    ],
+    "TV Judicator": [
+     "Underbarrel",
+     50
+    ],
+    "TZL-110 V1": [
+     "Muzzle",
+     18
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     61
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     3
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     44
+    ],
+    "XRK Mil-Tac Suppressor": [
+     "Muzzle",
+     14
+    ],
+    "ZLR Reverb90": [
+     "Muzzle",
+     5
+    ],
+    "ZLR Type C": [
+     "Optic",
+     51
+    ]
+   }
+  },
+  {
+   "slug": "oden",
+   "name": "Oden",
+   "type": "AR",
+   "tier": "A",
+   "max_level": 65,
+   "unlock": {
+    "level": 39,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Hardest-hitting rifle, but slow and kicks.",
+   "apex": {
+    "name": "Oden Sentinel",
+    "level": 65
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/oden",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "TV Multical-77",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Comb",
+       "name": "NXK-9F Comb",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "12.7x55mm Overpressured",
+       "level": 49,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "Haebang Stal-W5",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Magazine",
+       "name": "30 Round Mag",
+       "level": 10,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 38,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 6
+       }
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/oden",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "VLK SH-S12",
+       "level": 17,
+       "stand_in": {
+        "slot": "Muzzle",
+        "name": "TV Multical-77",
+        "level": 4
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 6,
+       "stand_in": null
+      },
+      {
+       "slot": "Comb",
+       "name": "NXK-9F Comb",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "30 Round Mag",
+       "level": 10,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "Haebang Stal-W5",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 38,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "AA54 V.3 Bipod": [
+     "Underbarrel",
+     30
+    ],
+    "BRCH-9 v.2": [
+     "Muzzle",
+     42
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     54
+    ],
+    "Bryson Bullhide 90": [
+     "Muzzle",
+     37
+    ],
+    "Corio Bisect": [
+     "Optic",
+     31
+    ],
+    "Cronen R808": [
+     "Optic",
+     21
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     11
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     35
+    ],
+    "FJX EVR7": [
+     "Laser",
+     25
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     62
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     22
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     38
+    ],
+    "GL K230": [
+     "Optic",
+     48
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     57
+    ],
+    "IOTA-D": [
+     "Optic",
+     29
+    ],
+    "K41A2 Comp": [
+     "Muzzle",
+     50
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     63
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     16
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     8
+    ],
+    "Miri 40mm": [
+     "Underbarrel",
+     20
+    ],
+    "Oden Thunder-S": [
+     "Muzzle",
+     14
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     46
+    ],
+    "Schlager 7x": [
+     "Optic",
+     18
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     60
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     19
+    ],
+    "Schlager Operator-S70": [
+     "Muzzle",
+     27
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     6
+    ],
+    "Slimline Elite": [
+     "Optic",
+     13
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     23
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     43
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     9
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     15
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     26
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     56
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     51
+    ],
+    "TV Judicator": [
+     "Underbarrel",
+     45
+    ],
+    "TV Multical-77": [
+     "Muzzle",
+     4
+    ],
+    "VGD-11 Flash": [
+     "Muzzle",
+     53
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     40
+    ],
+    "VLK SH-S12": [
+     "Muzzle",
+     17
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     59
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     47
+    ],
+    "ZLR Type C": [
+     "Optic",
+     34
+    ]
+   }
+  },
+  {
+   "slug": "cronen-squall",
+   "name": "Cronen Squall",
+   "type": "AR",
+   "tier": "A",
+   "max_level": 67,
+   "unlock": {
+    "level": 55,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Accurate at range. Small mag, slow fire.",
+   "apex": {
+    "name": "Cronen Maelstrom",
+    "level": 67
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/cronen-squall",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "ZLR Cold Echo",
+       "level": 32,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "SZ Gen.6 PEQ",
+        "level": 6
+       }
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 62,
+       "stand_in": null
+      },
+      {
+       "slot": "Comb",
+       "name": "Bryson N40 Comb",
+       "level": 7,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "30 Round Mag",
+       "level": 10,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 53,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/cronen-squall",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "ZLR Cold Echo",
+       "level": 32,
+       "stand_in": {
+        "slot": "Comb",
+        "name": "Bryson N40 Comb",
+        "level": 7
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "SZ Gen.6 PEQ",
+       "level": 6,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 62,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "FSS SQ-XT2",
+       "level": 59,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "FSS Tac90 Grip",
+        "level": 53
+       }
+      },
+      {
+       "slot": "Magazine",
+       "name": "60 Round Drum",
+       "level": 39,
+       "stand_in": {
+        "slot": "Magazine",
+        "name": "30 Round Mag",
+        "level": 10
+       }
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "Bruen 22-LPW": [
+     "Laser",
+     50
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     5
+    ],
+    "Corio 4DV-3": [
+     "Laser",
+     38
+    ],
+    "Corio Bisect": [
+     "Optic",
+     29
+    ],
+    "Corio ODSPR+": [
+     "Laser",
+     13
+    ],
+    "Cronen R808": [
+     "Optic",
+     15
+    ],
+    "Cronen SQL Grip": [
+     "Rear Grip",
+     4
+    ],
+    "Cronen Viel-68 Suppressor": [
+     "Muzzle",
+     49
+    ],
+    "EXP Undertow Gen. 2": [
+     "Muzzle",
+     22
+    ],
+    "Expedite Intra-5b": [
+     "Laser",
+     33
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     58
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     41
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     24
+    ],
+    "FSS Grip 50": [
+     "Rear Grip",
+     23
+    ],
+    "FSS SQ-XT2": [
+     "Rear Grip",
+     59
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     53
+    ],
+    "GL K230": [
+     "Optic",
+     56
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     9
+    ],
+    "HET-S6 Comp": [
+     "Muzzle",
+     2
+    ],
+    "IOTA-D": [
+     "Optic",
+     44
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     64
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     55
+    ],
+    "Matuzek Blackveil": [
+     "Muzzle",
+     61
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     36
+    ],
+    "Miri 40mm": [
+     "Underbarrel",
+     28
+    ],
+    "Octa-63 Comp": [
+     "Muzzle",
+     12
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     20
+    ],
+    "SA Laz-500": [
+     "Laser",
+     18
+    ],
+    "Schlager 7x": [
+     "Optic",
+     34
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     47
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     51
+    ],
+    "Slimline Elite": [
+     "Optic",
+     26
+    ],
+    "SQ-ST-68 Bipod": [
+     "Underbarrel",
+     52
+    ],
+    "SQ68 Large Brake": [
+     "Muzzle",
+     14
+    ],
+    "STOVL IRX-6": [
+     "Laser",
+     59
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     42
+    ],
+    "SZ Gen.6 PEQ": [
+     "Laser",
+     6
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     54
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     17
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     25
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     21
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     16
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     37
+    ],
+    "TV Bitelock": [
+     "Muzzle",
+     48
+    ],
+    "TV Judicator": [
+     "Underbarrel",
+     45
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     66
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     11
+    ],
+    "ZLR Cold Echo": [
+     "Muzzle",
+     32
+    ],
+    "ZLR Type C": [
+     "Optic",
+     62
+    ]
+   }
+  },
+  {
+   "slug": "vel-46",
+   "name": "VEL 46",
+   "type": "SMG",
+   "tier": "S",
+   "max_level": 60,
+   "unlock": {
+    "level": 5,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Best SMG. Holds up even at mid range.",
+   "apex": {
+    "name": "VEL 46 Snap",
+    "level": 60
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/vel-46",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS Crackdown",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "VB-46 Series 11",
+       "level": 3,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Sakin Rubber Grip",
+       "level": 52,
+       "stand_in": {
+        "slot": "Magazine",
+        "name": "60 Round Drum",
+        "level": 33
+       }
+      },
+      {
+       "slot": "Ammunition",
+       "name": "4.6x30mm Overpressured",
+       "level": 43,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 46,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/vel-46",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS Crackdown",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Sakin Rubber Grip",
+       "level": 52,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "VB-46 Series 11",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Ammunition",
+       "name": "4.6x30mm Overpressured",
+       "level": 43,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "60 Round Drum",
+       "level": 33,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 46,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "212 LC40 Comp": [
+     "Muzzle",
+     27
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     58
+    ],
+    "Corio Bisect": [
+     "Optic",
+     59
+    ],
+    "Cronen R808": [
+     "Optic",
+     18
+    ],
+    "DEMO Ironshade": [
+     "Muzzle",
+     55
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     49
+    ],
+    "Expedite Squad-304": [
+     "Laser",
+     31
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     41
+    ],
+    "FJX EVR7": [
+     "Laser",
+     14
+    ],
+    "FSS Crackdown": [
+     "Muzzle",
+     4
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     10
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     46
+    ],
+    "GL K230": [
+     "Optic",
+     32
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     19
+    ],
+    "Haebang ORC70": [
+     "Muzzle",
+     16
+    ],
+    "Hanbit Chevron": [
+     "Muzzle",
+     13
+    ],
+    "IOTA-D": [
+     "Optic",
+     26
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     44
+    ],
+    "LM Combat Grip": [
+     "Rear Grip",
+     40
+    ],
+    "Pulse-MW Laser": [
+     "Laser",
+     56
+    ],
+    "QFL-S4.5": [
+     "Laser",
+     5
+    ],
+    "Sakin Rubber Grip": [
+     "Rear Grip",
+     52
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     53
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     23
+    ],
+    "Slimline Elite": [
+     "Optic",
+     7
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     24
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     34
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     38
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     11
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     17
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     48
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     29
+    ],
+    "TA Lightning R3M": [
+     "Muzzle",
+     35
+    ],
+    "TA TacPro-56": [
+     "Muzzle",
+     42
+    ],
+    "V46 R-Skel Grip": [
+     "Rear Grip",
+     9
+    ],
+    "V46 Vert-Tac": [
+     "Underbarrel",
+     50
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     21
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     39
+    ],
+    "XRK Herder 40": [
+     "Muzzle",
+     51
+    ],
+    "ZLR Type C": [
+     "Optic",
+     36
+    ]
+   }
+  },
+  {
+   "slug": "iso-nightshade",
+   "name": "ISO Nightshade",
+   "type": "SMG",
+   "tier": "A",
+   "max_level": 64,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Most consistent gun in the game.",
+   "apex": {
+    "name": "ISO Trace",
+    "level": 64
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-13",
+     "url": "https://codmunity.gg/weapon/mw4/iso-nightshade",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "XRK Herder 40",
+       "level": 17,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "Demo Kilo90 Stock",
+       "level": 47,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "No Stock",
+        "level": 28
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "ZLR Veloci Gen.2",
+       "level": 60,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "40 Round Mag",
+       "level": 10,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 55,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "FSS Fireline Grip",
+        "level": 23
+       }
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/iso-nightshade",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "XRK Herder 40",
+       "level": 17,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "No Stock",
+       "level": 28,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "ZLR Veloci Gen.2",
+       "level": 60,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "50 Round Drum Mag",
+       "level": 53,
+       "stand_in": {
+        "slot": "Magazine",
+        "name": "40 Round Mag",
+        "level": 10
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 55,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "FSS Fireline Grip",
+        "level": 23
+       }
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "212 LC40 Comp": [
+     "Muzzle",
+     15
+    ],
+    "Bruen MOD3": [
+     "Rear Grip",
+     35
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     56
+    ],
+    "Corio Bisect": [
+     "Optic",
+     63
+    ],
+    "Cronen R808": [
+     "Optic",
+     29
+    ],
+    "DEMO Ironshade": [
+     "Muzzle",
+     40
+    ],
+    "Demo STP-1": [
+     "Rear Grip",
+     6
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     51
+    ],
+    "Expedite Squad-304": [
+     "Laser",
+     21
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     54
+    ],
+    "FJX EVR7": [
+     "Laser",
+     14
+    ],
+    "FSS Crackdown": [
+     "Muzzle",
+     4
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     23
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     55
+    ],
+    "GL K230": [
+     "Optic",
+     20
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     62
+    ],
+    "Haebang ORC70": [
+     "Muzzle",
+     37
+    ],
+    "Hanbit Chevron": [
+     "Muzzle",
+     46
+    ],
+    "IOTA-D": [
+     "Optic",
+     26
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     42
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     7
+    ],
+    "Pulse-MW Laser": [
+     "Laser",
+     9
+    ],
+    "QFL-S4.5": [
+     "Laser",
+     59
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     48
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     43
+    ],
+    "Slimline Elite": [
+     "Optic",
+     18
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     24
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     32
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     34
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     13
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     3
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     52
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     36
+    ],
+    "TA Lightning R3M": [
+     "Muzzle",
+     11
+    ],
+    "TA TacPro-56": [
+     "Muzzle",
+     58
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     27
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     33
+    ],
+    "XRK Herder 40": [
+     "Muzzle",
+     17
+    ],
+    "ZLR Type C": [
+     "Optic",
+     45
+    ],
+    "ZLR Veloci Gen.2": [
+     "Rear Grip",
+     60
+    ]
+   }
+  },
+  {
+   "slug": "ppsh-41",
+   "name": "PPSh-41",
+   "type": "SMG",
+   "tier": "A",
+   "max_level": 62,
+   "unlock": {
+    "level": 30,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Huge drum, very fast fire, easy to use.",
+   "apex": {
+    "name": "PPSh-41 Ember",
+    "level": 62
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/ppsh-41",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Haebang BAM70",
+       "level": 37,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 4
+       }
+      },
+      {
+       "slot": "Barrel",
+       "name": "Hanbit RDR-Tiger 50",
+       "level": 33,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "Hanbit Chimmuk-INTR",
+        "level": 5
+       }
+      },
+      {
+       "slot": "Stock",
+       "name": "Hanbit Janggun-H9",
+       "level": 25,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "7.62 Tokarev Overpressured",
+       "level": 9,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 2,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/ppsh-41",
+     "parts": [
+      {
+       "slot": "Barrel",
+       "name": "Hanbit Chimmuk-INTR",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "Hanbit Janggun-H9",
+       "level": 25,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "7.62 Tokarev Overpressured",
+       "level": 9,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 2,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "1/2x28 Dual Port": [
+     "Muzzle",
+     29
+    ],
+    "330TC2 Gridlock": [
+     "Muzzle",
+     58
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     39
+    ],
+    "Corio Bisect": [
+     "Optic",
+     16
+    ],
+    "Cronen R808": [
+     "Optic",
+     34
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     35
+    ],
+    "Expedite Squad-304": [
+     "Laser",
+     50
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     27
+    ],
+    "FJX EVR7": [
+     "Laser",
+     13
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     61
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     2
+    ],
+    "FTAC Silent Recon": [
+     "Muzzle",
+     12
+    ],
+    "Full Port Comp": [
+     "Muzzle",
+     48
+    ],
+    "GL K230": [
+     "Optic",
+     18
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     26
+    ],
+    "Haebang BAM70": [
+     "Muzzle",
+     37
+    ],
+    "IOTA-D": [
+     "Optic",
+     53
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     24
+    ],
+    "L980-S Comp": [
+     "Muzzle",
+     6
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     52
+    ],
+    "Pulse-MW Laser": [
+     "Laser",
+     30
+    ],
+    "QFL-S4.5": [
+     "Laser",
+     42
+    ],
+    "RX-5 Overstrike": [
+     "Muzzle",
+     45
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     32
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     4
+    ],
+    "Slimline Elite": [
+     "Optic",
+     22
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     60
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     10
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     54
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     47
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     56
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     40
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     14
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     43
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     21
+    ],
+    "XRK Rampage": [
+     "Muzzle",
+     19
+    ],
+    "ZLR Type C": [
+     "Optic",
+     7
+    ]
+   }
+  },
+  {
+   "slug": "wz-55-striga",
+   "name": "Wz.55 Striga",
+   "type": "SMG",
+   "tier": "A",
+   "max_level": 60,
+   "unlock": {
+    "level": 18,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "High damage, slow fire rate.",
+   "apex": {
+    "name": "Wz.55 Striga Rampage",
+    "level": 60
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-13",
+     "url": "https://codmunity.gg/weapon/mw4/wz-55-striga",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FTAC Silent Recon",
+       "level": 13,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 48,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Striga Wood Grip",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "9mm Makarov Overpressured",
+       "level": 9,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "35 Round Mag",
+       "level": 10,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/wz-55-striga",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FTAC Silent Recon",
+       "level": 13,
+       "stand_in": {
+        "slot": "Rear Grip",
+        "name": "Striga Wood Grip",
+        "level": 4
+       }
+      },
+      {
+       "slot": "Barrel",
+       "name": "DS 9x18 Pro",
+       "level": 44,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "GW Sender 500",
+        "level": 5
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "QFL-S4.5",
+       "level": 45,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "9mm Makarov Overpressured",
+       "level": 9,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "50 Round Drum Mag",
+       "level": 49,
+       "stand_in": {
+        "slot": "Magazine",
+        "name": "35 Round Mag",
+        "level": 10
+       }
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "1/2x28 Dual Port": [
+     "Muzzle",
+     17
+    ],
+    "330TC2 Gridlock": [
+     "Muzzle",
+     28
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     50
+    ],
+    "Cronen R808": [
+     "Optic",
+     19
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     42
+    ],
+    "Expedite Squad-304": [
+     "Laser",
+     56
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     53
+    ],
+    "FJX EVR7": [
+     "Laser",
+     35
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     38
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     7
+    ],
+    "FTAC Guard5": [
+     "Rear Grip",
+     34
+    ],
+    "FTAC Silent Recon": [
+     "Muzzle",
+     13
+    ],
+    "Full Port Comp": [
+     "Muzzle",
+     3
+    ],
+    "GL K230": [
+     "Optic",
+     33
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     51
+    ],
+    "Haebang BAM70": [
+     "Muzzle",
+     58
+    ],
+    "IOTA-D": [
+     "Optic",
+     30
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     55
+    ],
+    "L980-S Comp": [
+     "Muzzle",
+     46
+    ],
+    "Matuzek 532-L Grip": [
+     "Rear Grip",
+     15
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     25
+    ],
+    "Pulse-MW Laser": [
+     "Laser",
+     24
+    ],
+    "QFL-S4.5": [
+     "Laser",
+     45
+    ],
+    "RX-5 Overstrike": [
+     "Muzzle",
+     40
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     22
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     32
+    ],
+    "Slimline Elite": [
+     "Optic",
+     11
+    ],
+    "Striga Wood Grip": [
+     "Rear Grip",
+     4
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     27
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     43
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     16
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     6
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     59
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     37
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     21
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     8
+    ],
+    "XRK Rampage": [
+     "Muzzle",
+     14
+    ],
+    "ZLR Type C": [
+     "Optic",
+     48
+    ]
+   }
+  },
+  {
+   "slug": "x-58-nyx",
+   "name": "X-58 Nyx",
+   "type": "SMG",
+   "tier": "C",
+   "max_level": 53,
+   "unlock": {
+    "level": 46,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Built-in silencer. Stealth pick.",
+   "apex": {
+    "name": "X-58 Void",
+    "level": 53
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/x-58-nyx",
+     "parts": [
+      {
+       "slot": "Barrel",
+       "name": "Mugi HYU-90 228mm",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "No Stock",
+       "level": 17,
+       "stand_in": {
+        "slot": "Magazine",
+        "name": "60 Round Mag",
+        "level": 9
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Mugi-X Wrap",
+       "level": 40,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 12
+       }
+      },
+      {
+       "slot": "Ammunition",
+       "name": "5.8x21mm Overpressured",
+       "level": 8,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 39,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/x-58-nyx",
+     "parts": [
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 12,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "Mugi HYU-90 228mm",
+        "level": 5
+       }
+      },
+      {
+       "slot": "Stock",
+       "name": "No Stock",
+       "level": 17,
+       "stand_in": {
+        "slot": "Ammunition",
+        "name": "5.8x21mm Overpressured",
+        "level": 8
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Mugi-X Wrap",
+       "level": 40,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "60 Round Mag",
+       "level": 9,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 39,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "BOK-980": [
+     "Rear Grip",
+     20
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     41
+    ],
+    "Corio Bisect": [
+     "Optic",
+     11
+    ],
+    "Cronen R808": [
+     "Optic",
+     21
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     52
+    ],
+    "Expedite Squad-304": [
+     "Laser",
+     22
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     48
+    ],
+    "FJX EVR7": [
+     "Laser",
+     30
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     19
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     39
+    ],
+    "GL K230": [
+     "Optic",
+     24
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     50
+    ],
+    "IOTA-D": [
+     "Optic",
+     16
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     43
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     7
+    ],
+    "Mugi 050-T Grip": [
+     "Rear Grip",
+     6
+    ],
+    "Mugi-X Wrap": [
+     "Rear Grip",
+     40
+    ],
+    "Pulse-MW Laser": [
+     "Laser",
+     46
+    ],
+    "QFL-S4.5": [
+     "Laser",
+     4
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     14
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     12
+    ],
+    "Slimline Elite": [
+     "Optic",
+     45
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     18
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     33
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     28
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     2
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     34
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     31
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     36
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     26
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     38
+    ],
+    "ZLR Type C": [
+     "Optic",
+     10
+    ]
+   }
+  },
+  {
+   "slug": "csg-35",
+   "name": "CSG-35",
+   "type": "SMG",
+   "tier": "C",
+   "max_level": 42,
+   "unlock": {
+    "level": null,
+    "bp_tier": 36,
+    "note": "Battle Pass Tier 36 (free base weapon)"
+   },
+   "line": "Fastest SMG. Battle Pass tier 36.",
+   "apex": {
+    "name": "CSG Crossfire",
+    "level": 42
+   },
+   "builds": {
+    "main": {
+     "label": "Close Range",
+     "date": "2026-11-08",
+     "url": "https://codmunity.gg/weapon/mw4/csg-35",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "EXP Forage-Hvy",
+       "level": 35,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "CQC Stop",
+        "level": 28
+       }
+      },
+      {
+       "slot": "Stock",
+       "name": "XRK Slight Stock",
+       "level": 26,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "RASH-90 Heavy Stock",
+        "level": 14
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Matuzek Fire-Pro",
+       "level": 39,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "9mm Parabellum Overpressured",
+       "level": 6,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "40 Round Mag",
+       "level": 17,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-08",
+     "url": "https://codmunity.gg/weapon/mw4/csg-35",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "EXP Forage-Hvy",
+       "level": 35,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "CQC Stop",
+        "level": 28
+       }
+      },
+      {
+       "slot": "Stock",
+       "name": "XRK Slight Stock",
+       "level": 26,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "RASH-90 Heavy Stock",
+        "level": 14
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Matuzek Fire-Pro",
+       "level": 39,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "9mm Parabellum Overpressured",
+       "level": 6,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "40 Round Mag",
+       "level": 17,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "Bruen 22-LPW": [
+     "Laser",
+     33
+    ],
+    "Bruen Clash-40": [
+     "Optic",
+     10
+    ],
+    "Corio 4DV-3": [
+     "Laser",
+     23
+    ],
+    "Corio ODSPR+": [
+     "Laser",
+     25
+    ],
+    "CQC Stop": [
+     "Underbarrel",
+     28
+    ],
+    "Cronen Zero-K": [
+     "Optic",
+     27
+    ],
+    "EXP Forage-Hvy": [
+     "Muzzle",
+     35
+    ],
+    "EXP Forage-LGT": [
+     "Muzzle",
+     29
+    ],
+    "EXP Forage-Tac": [
+     "Muzzle",
+     41
+    ],
+    "Expedite Intra-5b": [
+     "Laser",
+     36
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     8
+    ],
+    "Grip Strap": [
+     "Underbarrel",
+     37
+    ],
+    "IV-M Hand Stop": [
+     "Underbarrel",
+     15
+    ],
+    "Matuzek Fire-Pro": [
+     "Rear Grip",
+     39
+    ],
+    "Matuzek Recourse 7": [
+     "Muzzle",
+     32
+    ],
+    "NIL-RISE 90 Comp": [
+     "Muzzle",
+     16
+    ],
+    "OCR-9F": [
+     "Muzzle",
+     22
+    ],
+    "RTR-8 Pro": [
+     "Muzzle",
+     24
+    ],
+    "SA Laz-500": [
+     "Laser",
+     40
+    ],
+    "Sakin Contour-7": [
+     "Rear Grip",
+     20
+    ],
+    "STOVL IRX-6": [
+     "Laser",
+     18
+    ],
+    "SZ Gen.6 PEQ": [
+     "Laser",
+     7
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     13
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     12
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     5
+    ],
+    "XRK TAC Grip": [
+     "Rear Grip",
+     30
+    ],
+    "Z-Dot 9": [
+     "Optic",
+     3
+    ],
+    "ZLR TKO-35": [
+     "Muzzle",
+     38
+    ]
+   }
+  },
+  {
+   "slug": "rezi-12",
+   "name": "Rezi 12",
+   "type": "Shotgun",
+   "tier": "C",
+   "max_level": 60,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Best shotgun. Only for tight rooms.",
+   "apex": {
+    "name": "Rezi 12 Enforcer",
+    "level": 60
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/rezi-12",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FTAC LTS-707",
+       "level": 45,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 5
+       }
+      },
+      {
+       "slot": "Bolt",
+       "name": "XRK Quad-80",
+       "level": 49,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "Haebang 635R-7",
+        "level": 26
+       }
+      },
+      {
+       "slot": "Stock",
+       "name": "ZLR Tac12 Pro",
+       "level": 34,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "No Stock",
+        "level": 18
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "XRK Bygone-39",
+       "level": 51,
+       "stand_in": null
+      },
+      {
+       "slot": "Guard",
+       "name": "Demo Service-12G",
+       "level": 60,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/rezi-12",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FTAC LTS-707",
+       "level": 45,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "Haebang 635R-7",
+       "level": 26,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "No Stock",
+       "level": 18,
+       "stand_in": null
+      },
+      {
+       "slot": "Guard",
+       "name": "Demo Service-12G",
+       "level": 60,
+       "stand_in": {
+        "slot": "Bolt",
+        "name": "XRK Quad-80",
+        "level": 49
+       }
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "Bruen R12-SH": [
+     "Rear Grip",
+     38
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     32
+    ],
+    "Corio Bisect": [
+     "Optic",
+     31
+    ],
+    "Cronen R808": [
+     "Optic",
+     19
+    ],
+    "EXP Firelite 12": [
+     "Muzzle",
+     24
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     27
+    ],
+    "Expedite Squad-304": [
+     "Laser",
+     52
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     59
+    ],
+    "FJX EVR7": [
+     "Laser",
+     41
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     7
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     44
+    ],
+    "FTAC LTS-707": [
+     "Muzzle",
+     45
+    ],
+    "GL K230": [
+     "Optic",
+     46
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     23
+    ],
+    "GW Slashtop V1": [
+     "Muzzle",
+     40
+    ],
+    "Haebang Bulsae-10": [
+     "Muzzle",
+     28
+    ],
+    "IOTA-D": [
+     "Optic",
+     43
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     50
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     57
+    ],
+    "Mugi-X VIR0": [
+     "Muzzle",
+     20
+    ],
+    "POM12-F Grip": [
+     "Rear Grip",
+     22
+    ],
+    "Pulse-MW Laser": [
+     "Laser",
+     48
+    ],
+    "QFL-S4.5": [
+     "Laser",
+     16
+    ],
+    "SA B40 Grip": [
+     "Rear Grip",
+     11
+    ],
+    "SA One Tap": [
+     "Muzzle",
+     36
+    ],
+    "Sakin Omega 13": [
+     "Muzzle",
+     13
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     55
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     5
+    ],
+    "Slimline Elite": [
+     "Optic",
+     29
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     25
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     39
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     17
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     33
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     12
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     53
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     35
+    ],
+    "TA Ribcage Gen.1": [
+     "Muzzle",
+     4
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     21
+    ],
+    "XRK Bygone-39": [
+     "Rear Grip",
+     51
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     37
+    ],
+    "XRK Spine Ripper": [
+     "Muzzle",
+     56
+    ],
+    "ZLR Swordfish": [
+     "Optic",
+     3
+    ],
+    "ZLR Type C": [
+     "Optic",
+     14
+    ]
+   }
+  },
+  {
+   "slug": "warlord",
+   "name": "Warlord",
+   "type": "Shotgun",
+   "tier": "C",
+   "max_level": 59,
+   "unlock": {
+    "level": 32,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Hits hard, slow pump.",
+   "apex": {
+    "name": "Warlord Lumen",
+    "level": 59
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-10-25",
+     "url": "https://codmunity.gg/weapon/mw4/warlord",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Mugi Kalnal-T 12G",
+       "level": 46,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "NK Gangta-12G",
+       "level": 40,
+       "stand_in": null
+      },
+      {
+       "slot": "Bolt",
+       "name": "L-Strike Bolt",
+       "level": 31,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "Mugi Tac-717 Stock",
+       "level": 31,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "DV3-Sinsok Grip",
+       "level": 8,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-10",
+     "url": "https://codmunity.gg/weapon/mw4/warlord",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Mugi Kalnal-T 12G",
+       "level": 46,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "NK Gangta-12G",
+       "level": 40,
+       "stand_in": null
+      },
+      {
+       "slot": "Bolt",
+       "name": "L-Strike Bolt",
+       "level": 31,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "Mugi Tac-717 Stock",
+       "level": 31,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "DV3-Sinsok Grip",
+       "level": 8,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "Bruen 22-LPW": [
+     "Laser",
+     23
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     21
+    ],
+    "Corio 4DV-3": [
+     "Laser",
+     9
+    ],
+    "Corio Bisect": [
+     "Optic",
+     27
+    ],
+    "Corio ODSPR+": [
+     "Laser",
+     41
+    ],
+    "Cronen R808": [
+     "Optic",
+     49
+    ],
+    "DV3-Sinsok Grip": [
+     "Rear Grip",
+     8
+    ],
+    "Expedite Intra-5b": [
+     "Laser",
+     17
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     51
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     28
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     7
+    ],
+    "GL K230": [
+     "Optic",
+     19
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     45
+    ],
+    "GW Slashtop-LB V6": [
+     "Muzzle",
+     26
+    ],
+    "IOTA-D": [
+     "Optic",
+     57
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     13
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     55
+    ],
+    "Mugi Kalnal-H 12G": [
+     "Muzzle",
+     34
+    ],
+    "Mugi Kalnal-L 12G": [
+     "Muzzle",
+     56
+    ],
+    "Mugi Kalnal-T 12G": [
+     "Muzzle",
+     46
+    ],
+    "Mugi-X VIR0-XL": [
+     "Muzzle",
+     15
+    ],
+    "SA Laz-500": [
+     "Laser",
+     14
+    ],
+    "SA One Tap v.3": [
+     "Muzzle",
+     2
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     32
+    ],
+    "Simpan-7 grip": [
+     "Rear Grip",
+     38
+    ],
+    "Slimline Elite": [
+     "Optic",
+     12
+    ],
+    "STOVL IRX-6": [
+     "Laser",
+     58
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     39
+    ],
+    "SZ Gen.6 PEQ": [
+     "Laser",
+     37
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     25
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     43
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     53
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     3
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     47
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     35
+    ],
+    "TA Ribcage-L Gen.4": [
+     "Muzzle",
+     11
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     33
+    ],
+    "WX-600 Choke": [
+     "Muzzle",
+     44
+    ],
+    "XRK Spine Ripper XL": [
+     "Muzzle",
+     20
+    ],
+    "ZLR Swordfish": [
+     "Optic",
+     16
+    ],
+    "ZLR Type C": [
+     "Optic",
+     30
+    ]
+   }
+  },
+  {
+   "slug": "finn-lmg",
+   "name": "FiNN LMG",
+   "type": "LMG",
+   "tier": "C",
+   "max_level": 59,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Most mobile LMG. LMGs trail rifles right now.",
+   "apex": {
+    "name": "FiNN Adverse",
+    "level": 59
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/finn-lmg",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "EXP V-TAC Suppressor",
+       "level": 0,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "SZ Gen.6 PEQ",
+       "level": 50,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "FTAC MOD3-LK 15\"",
+        "level": 2
+       }
+      },
+      {
+       "slot": "Stock",
+       "name": "EXP Bulldog-9",
+       "level": 55,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "FTAC R7 Wrap",
+       "level": 44,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "Bruen Renegade Grip",
+       "level": 51,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-11",
+     "url": "https://codmunity.gg/weapon/mw4/finn-lmg",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "EXP V-TAC Suppressor",
+       "level": 0,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "FTAC MOD3-LK 15\"",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "SZ Gen.6 PEQ",
+       "level": 50,
+       "stand_in": {
+        "slot": "Rear Grip",
+        "name": "FTAC R7 Wrap",
+        "level": 44
+       }
+      },
+      {
+       "slot": "Stock",
+       "name": "Chainsaw Grip",
+       "level": null,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": "5.56 NATO Overpressured",
+       "level": 56,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "Bruen Renegade Grip",
+        "level": 51
+       }
+      }
+     ],
+     "apex_on": false,
+     "notes": [
+      "Chainsaw Grip is an event reward (no unlock level published)"
+     ]
+    },
+    "early": null
+   },
+   "table": {
+    "AA54 V.3 Bipod": [
+     "Underbarrel",
+     13
+    ],
+    "B16 Helical": [
+     "Muzzle",
+     46
+    ],
+    "Bruen 22-LPW": [
+     "Laser",
+     27
+    ],
+    "Bruen Renegade Grip": [
+     "Underbarrel",
+     51
+    ],
+    "Corio 4DV-3": [
+     "Laser",
+     12
+    ],
+    "Corio Bisect": [
+     "Optic",
+     11
+    ],
+    "Corio ODSPR+": [
+     "Laser",
+     37
+    ],
+    "Corvus LVL-40": [
+     "Muzzle",
+     24
+    ],
+    "Cronen R808": [
+     "Optic",
+     58
+    ],
+    "EXP V-TAC Suppressor": [
+     "Muzzle",
+     0
+    ],
+    "Expedite Intra-5b": [
+     "Laser",
+     4
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     16
+    ],
+    "FSS IS300": [
+     "Muzzle",
+     35
+    ],
+    "FTAC Combat Grip": [
+     "Underbarrel",
+     3
+    ],
+    "FTAC Dominion": [
+     "Muzzle",
+     9
+    ],
+    "FTAC R7 Wrap": [
+     "Rear Grip",
+     44
+    ],
+    "GL K230": [
+     "Optic",
+     48
+    ],
+    "IOTA-D": [
+     "Optic",
+     45
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     39
+    ],
+    "SA Laz-500": [
+     "Laser",
+     34
+    ],
+    "Schlager KM60-G": [
+     "Rear Grip",
+     25
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     21
+    ],
+    "Slimline Elite": [
+     "Optic",
+     7
+    ],
+    "STOVL IRX-6": [
+     "Laser",
+     22
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     18
+    ],
+    "SZ Gen.6 PEQ": [
+     "Laser",
+     50
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     43
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     31
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     53
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     57
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     54
+    ],
+    "TA Lodestar 556": [
+     "Muzzle",
+     0
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     26
+    ],
+    "XRK Mil-Tac Suppressor": [
+     "Muzzle",
+     40
+    ],
+    "XRK Singularity-13": [
+     "Rear Grip",
+     8
+    ],
+    "ZLR Reverb90": [
+     "Muzzle",
+     19
+    ],
+    "ZLR Type C": [
+     "Optic",
+     29
+    ]
+   }
+  },
+  {
+   "slug": "type-73",
+   "name": "Type 73",
+   "type": "LMG",
+   "tier": "D",
+   "max_level": 64,
+   "unlock": {
+    "level": 9,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Easy recoil, slow to handle.",
+   "apex": {
+    "name": "Type 73 Assault",
+    "level": 64
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/type-73",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Ivanov QR600",
+       "level": 12,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "No Stock",
+        "level": 2
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 27,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 49,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Assault-L9 Wood Grip",
+       "level": 51,
+       "stand_in": {
+        "slot": "Rear Grip",
+        "name": "Assault-L5 Grip",
+        "level": 44
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "Bruen Renegade Grip",
+       "level": 50,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/type-73",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Ivanov QR600",
+       "level": 12,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 49,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "No Stock",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Assault-L9 Wood Grip",
+       "level": 51,
+       "stand_in": {
+        "slot": "Rear Grip",
+        "name": "Assault-L5 Grip",
+        "level": 44
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "Bruen Renegade Grip",
+       "level": 50,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 27
+       }
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "770 Underbite": [
+     "Muzzle",
+     20
+    ],
+    "Assault-L5 Grip": [
+     "Rear Grip",
+     44
+    ],
+    "Assault-L9 Wood Grip": [
+     "Rear Grip",
+     51
+    ],
+    "Bruen Renegade Grip": [
+     "Underbarrel",
+     50
+    ],
+    "Corio Bisect": [
+     "Optic",
+     32
+    ],
+    "Cronen R808": [
+     "Optic",
+     55
+    ],
+    "DS RKT-90": [
+     "Muzzle",
+     31
+    ],
+    "EXP R3000-V": [
+     "Muzzle",
+     53
+    ],
+    "EXP ZBR-904": [
+     "Rear Grip",
+     9
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     41
+    ],
+    "Expedite Squad-304": [
+     "Laser",
+     24
+    ],
+    "Field Tac 1.4 Comp": [
+     "Muzzle",
+     39
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     8
+    ],
+    "FJX EVR7": [
+     "Laser",
+     35
+    ],
+    "FT Hyperport 408": [
+     "Muzzle",
+     58
+    ],
+    "Gauge-12 Mono": [
+     "Muzzle",
+     43
+    ],
+    "GL K230": [
+     "Optic",
+     28
+    ],
+    "IOTA-D": [
+     "Optic",
+     38
+    ],
+    "Ivanov QR600": [
+     "Muzzle",
+     12
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     59
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     17
+    ],
+    "Pulse-MW Laser": [
+     "Laser",
+     16
+    ],
+    "QFL-S4.5": [
+     "Laser",
+     6
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     48
+    ],
+    "Schlager 7x": [
+     "Optic",
+     34
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     21
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     42
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     27
+    ],
+    "Slimline Elite": [
+     "Optic",
+     13
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     26
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     45
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     14
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     11
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     56
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     62
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     23
+    ],
+    "Usenko 308-1L": [
+     "Muzzle",
+     3
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     52
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     36
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     61
+    ],
+    "XRK Co-Ride 56": [
+     "Underbarrel",
+     7
+    ],
+    "ZLR Type C": [
+     "Optic",
+     49
+    ]
+   }
+  },
+  {
+   "slug": "apoc-338",
+   "name": "APOC-338",
+   "type": "LMG",
+   "tier": "D",
+   "max_level": 56,
+   "unlock": {
+    "level": 44,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Huge damage, very slow.",
+   "apex": {
+    "name": "APOC 338 Praetor",
+    "level": 56
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-11",
+     "url": "https://codmunity.gg/weapon/mw4/apoc-338",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "TV Multical-77",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "SA Trident 24.5\"",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 20,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "EXP Dyna-3 Grip",
+       "level": 26,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "SZ Gen.6 PEQ",
+        "level": 10
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "Bruen Renegade Grip",
+       "level": 8,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/apoc-338",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "TV Multical-77",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "SZ Gen.6 PEQ",
+       "level": 10,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "SA Trident 24.5\"",
+        "level": 4
+       }
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 20,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "EXP Dyna-3 Grip",
+       "level": 26,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "Bruen Renegade Grip",
+       "level": 8,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "APOC Bipod": [
+     "Underbarrel",
+     44
+    ],
+    "BRCH-9 v.2": [
+     "Muzzle",
+     48
+    ],
+    "Bruen Renegade Grip": [
+     "Underbarrel",
+     8
+    ],
+    "Bryson Bullhide 90": [
+     "Muzzle",
+     31
+    ],
+    "Corio 4DV-3": [
+     "Laser",
+     17
+    ],
+    "Corio Bisect": [
+     "Optic",
+     37
+    ],
+    "Corio ODSPR+": [
+     "Laser",
+     52
+    ],
+    "Cronen R808": [
+     "Optic",
+     16
+    ],
+    "EXP 450 RTL": [
+     "Muzzle",
+     19
+    ],
+    "EXP Dyna-3 Grip": [
+     "Rear Grip",
+     26
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     39
+    ],
+    "FSS TCB-1 Grip": [
+     "Rear Grip",
+     7
+    ],
+    "FTAC Combat Grip": [
+     "Underbarrel",
+     27
+    ],
+    "GL K230": [
+     "Optic",
+     32
+    ],
+    "IOTA-D": [
+     "Optic",
+     34
+    ],
+    "K41A2 Comp": [
+     "Muzzle",
+     14
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     54
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     21
+    ],
+    "Matuzek Ironcall 31": [
+     "Muzzle",
+     24
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     29
+    ],
+    "SA Laz-500": [
+     "Laser",
+     25
+    ],
+    "SA Winder-5 Grip": [
+     "Rear Grip",
+     51
+    ],
+    "Schlager 7x": [
+     "Optic",
+     38
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     55
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     45
+    ],
+    "Schlager Operator-S70": [
+     "Muzzle",
+     43
+    ],
+    "Slimline Elite": [
+     "Optic",
+     41
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     28
+    ],
+    "SZ Gen.6 PEQ": [
+     "Laser",
+     10
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     6
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     13
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     42
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     11
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     46
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     49
+    ],
+    "TV Multical-77": [
+     "Muzzle",
+     2
+    ],
+    "VGD-11 Flash": [
+     "Muzzle",
+     35
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     50
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     23
+    ],
+    "ZLR Type C": [
+     "Optic",
+     20
+    ]
+   }
+  },
+  {
+   "slug": "oris-8-6",
+   "name": "Oris 8.6",
+   "type": "Marksman",
+   "tier": "B",
+   "max_level": 70,
+   "unlock": {
+    "level": 11,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Quickscope build, no big scope.",
+   "apex": {
+    "name": "Oris 8.6 Razor",
+    "level": 70
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/oris-8-6",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "EXP Undertow Gen. 2",
+       "level": 56,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 8
+       }
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 40,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "SA Dynamo-90 Stock",
+       "level": 66,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "No Stock",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Bruen R7-TC Grip",
+       "level": 30,
+       "stand_in": {
+        "slot": "Rear Grip",
+        "name": "OPS-45 XP Grip",
+        "level": 7
+       }
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 41,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": [
+      "Cronen R808 (a scope above 1x) swapped for ZLR Type C (1x dot, Lv 40, the dot CODMunity builds use most) under Miguel's no-big-scope rule"
+     ]
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/oris-8-6",
+     "parts": [
+      {
+       "slot": "Barrel",
+       "name": "EXP Shadow-70 14\"",
+       "level": 55,
+       "stand_in": {
+        "slot": "Rear Grip",
+        "name": "Bruen R7-TC Grip",
+        "level": 30
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 8,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "ZLR Type C",
+       "level": 40,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "No Stock",
+       "level": 3,
+       "stand_in": null
+      },
+      {
+       "slot": "Underbarrel",
+       "name": "FSS Tac90 Grip",
+       "level": 41,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": [
+      "Cronen R808 (a scope above 1x) swapped for ZLR Type C (1x dot, Lv 40, the dot CODMunity builds use most) under Miguel's no-big-scope rule"
+     ]
+    },
+    "early": null
+   },
+   "table": {
+    "AA54 V.3 Bipod": [
+     "Underbarrel",
+     43
+    ],
+    "Bruen C-Wrap 60": [
+     "Rear Grip",
+     49
+    ],
+    "Bruen R7-TC Grip": [
+     "Rear Grip",
+     30
+    ],
+    "Bruen R12 Gen. 4": [
+     "Muzzle",
+     35
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     62
+    ],
+    "Corio Bisect": [
+     "Optic",
+     64
+    ],
+    "Corio D51 Scope": [
+     "Optic",
+     63
+    ],
+    "Corvus Avis-0": [
+     "Optic",
+     58
+    ],
+    "Cronen R808": [
+     "Optic",
+     12
+    ],
+    "EXP Undertow Gen. 2": [
+     "Muzzle",
+     56
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     48
+    ],
+    "Expedite 308 DR2": [
+     "Optic",
+     54
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     51
+    ],
+    "FJX EVR7": [
+     "Laser",
+     13
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     29
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     25
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     41
+    ],
+    "GL K230": [
+     "Optic",
+     28
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     21
+    ],
+    "GW Löwe-55": [
+     "Optic",
+     69
+    ],
+    "HET-S6 Comp": [
+     "Muzzle",
+     19
+    ],
+    "IOTA-D": [
+     "Optic",
+     22
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     68
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     17
+    ],
+    "Luca Stormwatch": [
+     "Optic",
+     59
+    ],
+    "Matuzek Blackveil": [
+     "Muzzle",
+     14
+    ],
+    "Meiko 30CAL-SP": [
+     "Muzzle",
+     39
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     4
+    ],
+    "Octa-63 Comp": [
+     "Muzzle",
+     32
+    ],
+    "OPS-45 XP Grip": [
+     "Rear Grip",
+     7
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     34
+    ],
+    "Schlager 7x": [
+     "Optic",
+     65
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     50
+    ],
+    "Schlager Indigo-RF": [
+     "Optic",
+     67
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     47
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     8
+    ],
+    "Slimline Elite": [
+     "Optic",
+     6
+    ],
+    "SZ CNT-R6 Optic": [
+     "Optic",
+     27
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     24
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     46
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     36
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     16
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     31
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     60
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     38
+    ],
+    "TV Bitelock": [
+     "Muzzle",
+     2
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     53
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     26
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     57
+    ],
+    "ZLR Cold Echo": [
+     "Muzzle",
+     44
+    ],
+    "ZLR Type C": [
+     "Optic",
+     40
+    ]
+   }
+  },
+  {
+   "slug": "mosin-nagant",
+   "name": "Mosin-Nagant",
+   "type": "Marksman",
+   "tier": "A",
+   "max_level": 69,
+   "unlock": {
+    "level": 36,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Bolt-action, 5-round mag. Nov 13 patch: full damage only to 15 m (was 40 m); CODMunity's Nov 14 builds are tagged Nerf (after it).",
+   "note": "⚠ Nov 13 patch: full damage only to 15 m · iron sights, no scope",
+   "apex": {
+    "name": "Mosin Harpoon",
+    "level": 69
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-14",
+     "url": "https://codmunity.gg/weapon/mw4/mosin-nagant",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "330TC2 Gridlock",
+       "level": 37,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 5
+       }
+      },
+      {
+       "slot": "Barrel",
+       "name": "Mosin S762 Barrel",
+       "level": 60,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "762 Dozor Barrel",
+        "level": 41
+       }
+      },
+      {
+       "slot": "Bolt",
+       "name": "TV-Light 7-Bolt",
+       "level": 57,
+       "stand_in": {
+        "slot": "Magazine",
+        "name": "10 Round Mag",
+        "level": 10
+       }
+      },
+      {
+       "slot": "Stock",
+       "name": "Lockwood Eagle Stock",
+       "level": 27,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": [
+      "Cronen R808 dropped: iron sights only (Miguel's rule, no scope on the Mosin-Nagant)"
+     ]
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-14",
+     "url": "https://codmunity.gg/weapon/mw4/mosin-nagant",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "330TC2 Gridlock",
+       "level": 37,
+       "stand_in": {
+        "slot": "Magazine",
+        "name": "10 Round Mag",
+        "level": 10
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Bolt",
+       "name": "TV-Light 7-Bolt",
+       "level": 57,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "No Stock",
+       "level": 49,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "Lockwood Eagle Stock",
+        "level": 27
+       }
+      }
+     ],
+     "apex_on": false,
+     "notes": [
+      "Cronen R808 dropped: iron sights only (Miguel's rule, no scope on the Mosin-Nagant)"
+     ]
+    },
+    "early": null
+   },
+   "table": {
+    "330TC2 Gridlock": [
+     "Muzzle",
+     37
+    ],
+    "770 Underbite": [
+     "Muzzle",
+     26
+    ],
+    "AA54 V.3 Bipod": [
+     "Underbarrel",
+     35
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     32
+    ],
+    "Corio D51 Scope": [
+     "Optic",
+     36
+    ],
+    "Cronen R808": [
+     "Optic",
+     9
+    ],
+    "DS RKT-90": [
+     "Muzzle",
+     22
+    ],
+    "EXP R3000-V": [
+     "Muzzle",
+     2
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     58
+    ],
+    "Expedite 308 DR2": [
+     "Optic",
+     59
+    ],
+    "Field Tac 1.4 Comp": [
+     "Muzzle",
+     11
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     64
+    ],
+    "FJX EVR7": [
+     "Laser",
+     45
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     7
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     13
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     25
+    ],
+    "FTAC Silent Recon": [
+     "Muzzle",
+     34
+    ],
+    "GL K230": [
+     "Optic",
+     24
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     62
+    ],
+    "GW Löwe-55": [
+     "Optic",
+     55
+    ],
+    "IOTA-D": [
+     "Optic",
+     68
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     23
+    ],
+    "Luca Stormwatch": [
+     "Optic",
+     52
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     39
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     47
+    ],
+    "Schlager 7x": [
+     "Optic",
+     33
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     21
+    ],
+    "Schlager Indigo-RF": [
+     "Optic",
+     42
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     38
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     5
+    ],
+    "Slimline Elite": [
+     "Optic",
+     56
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     53
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     12
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     48
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     67
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     29
+    ],
+    "SZ MN-Scout 9x": [
+     "Optic",
+     44
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     31
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     50
+    ],
+    "Usenko 308-1L": [
+     "Muzzle",
+     66
+    ],
+    "Usenko KD-L2": [
+     "Muzzle",
+     65
+    ],
+    "VLK 1940-R 9x": [
+     "Optic",
+     19
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     15
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     16
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     20
+    ],
+    "ZLR Type C": [
+     "Optic",
+     43
+    ]
+   }
+  },
+  {
+   "slug": "mar-9",
+   "name": "MAR-9",
+   "type": "Marksman",
+   "tier": "B",
+   "max_level": 73,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Semi-auto, two-shot kills. Outclassed.",
+   "apex": {
+    "name": "MAR-9 Auto",
+    "level": 73
+   },
+   "builds": {
+    "main": {
+     "label": "Close Range",
+     "date": "2026-11-13",
+     "url": "https://codmunity.gg/weapon/mw4/mar-9",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Meiko 30CAL-SP",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "Bruen Ironhide 76",
+       "level": 50,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "Bruen Reaper-X",
+        "level": 22
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "SZ Gen.6 PEQ",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Schlager PLM-S9",
+       "level": 9,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "FSS Tac90 Grip",
+        "level": 4
+       }
+      },
+      {
+       "slot": "Magazine",
+       "name": "30 Round Mag",
+       "level": 43,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-13",
+     "url": "https://codmunity.gg/weapon/mw4/mar-9",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Meiko 30CAL-SP",
+       "level": 2,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "Bruen Ironhide 76",
+       "level": 50,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "Bruen Reaper-X",
+        "level": 22
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "SZ Gen.6 PEQ",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "Schlager PLM-S9",
+       "level": 9,
+       "stand_in": {
+        "slot": "Underbarrel",
+        "name": "FSS Tac90 Grip",
+        "level": 4
+       }
+      },
+      {
+       "slot": "Magazine",
+       "name": "30 Round Mag",
+       "level": 43,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {}
+  },
+  {
+   "slug": "kg-7-vulcan",
+   "name": "KG-7 Vulcan",
+   "type": "Sniper",
+   "tier": "S",
+   "max_level": 75,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Best sniper by far. One chest shot kills.",
+   "apex": {
+    "name": "KG-7 Drillcharge",
+    "level": 75
+   },
+   "builds": {
+    "main": {
+     "label": "Sniper",
+     "date": "2026-11-11",
+     "url": "https://codmunity.gg/weapon/mw4/kg-7-vulcan",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Ivanov QR600",
+       "level": 64,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 7
+       }
+      },
+      {
+       "slot": "Barrel",
+       "name": "TT Baem 12\"",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "Schlager 7x",
+       "level": 19,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "Bruen KG-7 Mk. IV",
+       "level": 28,
+       "stand_in": null
+      },
+      {
+       "slot": "Comb",
+       "name": "TT Type 40 Comb",
+       "level": 6,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/kg-7-vulcan",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Ivanov QR600",
+       "level": 64,
+       "stand_in": {
+        "slot": "Comb",
+        "name": "TT Type 40 Comb",
+        "level": 6
+       }
+      },
+      {
+       "slot": "Barrel",
+       "name": "TT Baem 12\"",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Bolt",
+       "name": "KT76 Light Bolt",
+       "level": 63,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "Schlager 7x",
+       "level": 19,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "TT G76-RP Stock",
+       "level": 47,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "Bruen KG-7 Mk. IV",
+        "level": 28
+       }
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "770 Underbite": [
+     "Muzzle",
+     18
+    ],
+    "Astaroth .57 11.2x Scope": [
+     "Optic",
+     21
+    ],
+    "Bruen Maestro": [
+     "Optic",
+     73
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     67
+    ],
+    "Corio Bisect": [
+     "Optic",
+     15
+    ],
+    "Corio D51 Scope": [
+     "Optic",
+     25
+    ],
+    "Corvus Avis-0": [
+     "Optic",
+     61
+    ],
+    "Cronen R808": [
+     "Optic",
+     3
+    ],
+    "Custom Ironsights": [
+     "Optic",
+     17
+    ],
+    "DS RKT-90": [
+     "Muzzle",
+     4
+    ],
+    "EXP R3000-V": [
+     "Muzzle",
+     48
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     55
+    ],
+    "Expedite 308 DR2": [
+     "Optic",
+     36
+    ],
+    "Field Tac 1.4 Comp": [
+     "Muzzle",
+     20
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     70
+    ],
+    "FJX EVR7": [
+     "Laser",
+     65
+    ],
+    "FT Hyperport 408": [
+     "Muzzle",
+     30
+    ],
+    "Gauge-12 Mono": [
+     "Muzzle",
+     32
+    ],
+    "GL K230": [
+     "Optic",
+     33
+    ],
+    "GW Löwe-55": [
+     "Optic",
+     12
+    ],
+    "Hanbit 3080 Fireline": [
+     "Optic",
+     14
+    ],
+    "IOTA-D": [
+     "Optic",
+     42
+    ],
+    "Ivanov QR600": [
+     "Muzzle",
+     64
+    ],
+    "KG-7 Bipod": [
+     "Underbarrel",
+     8
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     56
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     49
+    ],
+    "Luca Stormwatch": [
+     "Optic",
+     46
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     35
+    ],
+    "Schlager 7x": [
+     "Optic",
+     19
+    ],
+    "Schlager Bigsky": [
+     "Optic",
+     57
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     62
+    ],
+    "Schlager Indigo-RF": [
+     "Optic",
+     74
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     60
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     7
+    ],
+    "Signal 50 11.2x Scope": [
+     "Optic",
+     24
+    ],
+    "Slimline Elite": [
+     "Optic",
+     31
+    ],
+    "SZ Castaway": [
+     "Optic",
+     45
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     29
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     41
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     44
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     16
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     26
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     66
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     50
+    ],
+    "TT Solgae F7": [
+     "Muzzle",
+     38
+    ],
+    "Usenko 308-1L": [
+     "Muzzle",
+     72
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     40
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     39
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     59
+    ],
+    "ZLR Type C": [
+     "Optic",
+     52
+    ]
+   }
+  },
+  {
+   "slug": "signal-50",
+   "name": "Signal 50",
+   "type": "Sniper",
+   "tier": "A",
+   "max_level": 74,
+   "unlock": {
+    "level": 50,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Semi-auto .50 cal. Better on big maps.",
+   "apex": {
+    "name": "Signal Inferno",
+    "level": 74
+   },
+   "builds": {
+    "main": {
+     "label": "Sniper",
+     "date": "2026-11-11",
+     "url": "https://codmunity.gg/weapon/mw4/signal-50",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS DES-Tac70",
+       "level": 13,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "S50-SB Gen.2 22\"",
+       "level": 38,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "Schlager 7x",
+       "level": 28,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "EXP T50-S Heavy",
+       "level": 9,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "GL Zero Drop 6",
+       "level": 63,
+       "stand_in": {
+        "slot": "Rear Grip",
+        "name": "EXP Trim-54F",
+        "level": 5
+       }
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/signal-50",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS DES-Tac70",
+       "level": 13,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "XRK Clutch-LS",
+       "level": 40,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "Schlager 7x",
+       "level": 28,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "Cronen SN-Pad50",
+       "level": 27,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "EXP T50-S Heavy",
+        "level": 9
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "EXP Trim-54F",
+       "level": 5,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "Astaroth .57 11.2x Scope": [
+     "Optic",
+     24
+    ],
+    "Bipod": [
+     "Underbarrel",
+     7
+    ],
+    "BL-A5 Comp": [
+     "Muzzle",
+     23
+    ],
+    "Bruen Maestro": [
+     "Optic",
+     20
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     37
+    ],
+    "Corio Bisect": [
+     "Optic",
+     3
+    ],
+    "Corio D51 Scope": [
+     "Optic",
+     25
+    ],
+    "Corvus Avis-0": [
+     "Optic",
+     62
+    ],
+    "Corvus OP-One v.4": [
+     "Rear Grip",
+     22
+    ],
+    "Cronen JAB-60": [
+     "Muzzle",
+     17
+    ],
+    "Cronen R808": [
+     "Optic",
+     18
+    ],
+    "DS Op-67M Flash": [
+     "Muzzle",
+     65
+    ],
+    "EXP Trim-54F": [
+     "Rear Grip",
+     5
+    ],
+    "Expedite 21 CFR": [
+     "Laser",
+     8
+    ],
+    "Expedite 308 DR2": [
+     "Optic",
+     36
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     69
+    ],
+    "FJX EVR7": [
+     "Laser",
+     35
+    ],
+    "FSS Beargrip": [
+     "Underbarrel",
+     72
+    ],
+    "FSS DES-Tac70": [
+     "Muzzle",
+     13
+    ],
+    "FSS Fireline Grip": [
+     "Underbarrel",
+     12
+    ],
+    "FSS HOC-30": [
+     "Muzzle",
+     60
+    ],
+    "FSS Moodkiller": [
+     "Muzzle",
+     32
+    ],
+    "FSS Tac90 Grip": [
+     "Underbarrel",
+     50
+    ],
+    "GL K230": [
+     "Optic",
+     66
+    ],
+    "GL Zero Drop 6": [
+     "Rear Grip",
+     63
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     61
+    ],
+    "GW Löwe-55": [
+     "Optic",
+     15
+    ],
+    "Hanbit 3080 Fireline": [
+     "Optic",
+     16
+    ],
+    "IOTA-D": [
+     "Optic",
+     43
+    ],
+    "KG-7 Vulcan 11.2x Scope": [
+     "Optic",
+     44
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     59
+    ],
+    "LM Deadstop-99": [
+     "Muzzle",
+     48
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     68
+    ],
+    "Luca Stormwatch": [
+     "Optic",
+     49
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     29
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     54
+    ],
+    "Schlager 7x": [
+     "Optic",
+     28
+    ],
+    "Schlager Bigsky": [
+     "Optic",
+     11
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     73
+    ],
+    "Schlager Indigo-RF": [
+     "Optic",
+     71
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     39
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     58
+    ],
+    "Slimline Elite": [
+     "Optic",
+     26
+    ],
+    "SZ Castaway": [
+     "Optic",
+     19
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     33
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     47
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     53
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     21
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     31
+    ],
+    "SZ Prima-4 Dot": [
+     "Optic",
+     64
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     56
+    ],
+    "TA Honeypot 670": [
+     "Muzzle",
+     2
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     41
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     45
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     40
+    ],
+    "ZLR Type C": [
+     "Optic",
+     55
+    ]
+   }
+  },
+  {
+   "slug": "astaroth-57",
+   "name": "Astaroth .57",
+   "type": "Sniper",
+   "tier": "D",
+   "max_level": 54,
+   "unlock": {
+    "level": 25,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Hardest hit, 3-round mag, slow.",
+   "apex": {
+    "name": "Astaroth .57 Infiltrator",
+    "level": 54
+   },
+   "builds": {
+    "main": {
+     "label": "Sniper",
+     "date": "2026-11-11",
+     "url": "https://codmunity.gg/weapon/mw4/astaroth-57",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS Moodkiller",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "FTAC Crosswind 30\"",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "Schlager 7x",
+       "level": 9,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "Cronen Strand-BG Stock",
+       "level": 28,
+       "stand_in": {
+        "slot": "Stock",
+        "name": "Usenko V8-LKR",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "FJX S-TAC Grip",
+       "level": 44,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "Schlager Visiv-5",
+        "level": 6
+       }
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/astaroth-57",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FSS Moodkiller",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "FTAC Crosswind 30\"",
+       "level": 4,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "Schlager Visiv-5",
+       "level": 6,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "Schlager 7x",
+       "level": 9,
+       "stand_in": null
+      },
+      {
+       "slot": "Stock",
+       "name": "Usenko V8-LKR",
+       "level": 3,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "BL-A5 Comp": [
+     "Muzzle",
+     32
+    ],
+    "Bruen Maestro": [
+     "Optic",
+     13
+    ],
+    "Corio Bisect": [
+     "Optic",
+     40
+    ],
+    "Corio D51 Scope": [
+     "Optic",
+     24
+    ],
+    "Corvus Avis-0": [
+     "Optic",
+     52
+    ],
+    "Cronen JAB-60": [
+     "Muzzle",
+     30
+    ],
+    "Cronen R808": [
+     "Optic",
+     2
+    ],
+    "DS Op-67M Flash": [
+     "Muzzle",
+     12
+    ],
+    "Expedite 308 DR2": [
+     "Optic",
+     37
+    ],
+    "FJX EVR7": [
+     "Laser",
+     18
+    ],
+    "FJX S-TAC Grip": [
+     "Rear Grip",
+     44
+    ],
+    "FSS Centre Grip": [
+     "Rear Grip",
+     7
+    ],
+    "FSS DES-Tac70": [
+     "Muzzle",
+     26
+    ],
+    "FSS Moodkiller": [
+     "Muzzle",
+     5
+    ],
+    "GL K230": [
+     "Optic",
+     29
+    ],
+    "GW Löwe-55": [
+     "Optic",
+     10
+    ],
+    "Hanbit 3080 Fireline": [
+     "Optic",
+     35
+    ],
+    "KG-7 Vulcan 11.2x Scope": [
+     "Optic",
+     38
+    ],
+    "LM Deadstop-99": [
+     "Muzzle",
+     42
+    ],
+    "Locus PX3 Canted": [
+     "Optic",
+     45
+    ],
+    "Luca Stormwatch": [
+     "Optic",
+     46
+    ],
+    "RVX9 Thermo": [
+     "Optic",
+     34
+    ],
+    "Schlager 7x": [
+     "Optic",
+     9
+    ],
+    "Schlager Bigsky": [
+     "Optic",
+     48
+    ],
+    "Schlager Dogfight GI": [
+     "Optic",
+     49
+    ],
+    "Schlager Indigo-RF": [
+     "Optic",
+     17
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     21
+    ],
+    "Schlager Visiv-5": [
+     "Laser",
+     6
+    ],
+    "Signal 50 11.2x Scope": [
+     "Optic",
+     20
+    ],
+    "SZ Castaway": [
+     "Optic",
+     43
+    ],
+    "SZ Lonewolf Flip": [
+     "Optic",
+     51
+    ],
+    "TA Honeypot 670": [
+     "Muzzle",
+     15
+    ],
+    "Usenko 900 BL-X": [
+     "Muzzle",
+     33
+    ],
+    "VLK Rize-40": [
+     "Optic",
+     23
+    ],
+    "XRK Clutch-LS": [
+     "Laser",
+     27
+    ]
+   }
+  },
+  {
+   "slug": "sang-9mm",
+   "name": "SANG 9mm",
+   "type": "Pistol",
+   "tier": "C",
+   "max_level": 38,
+   "unlock": {
+    "level": 4,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Default pistol. Good backup in close fights.",
+   "apex": {
+    "name": "Sang Breach",
+    "level": 38
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-06",
+     "url": "https://codmunity.gg/weapon/mw4/sang-9mm",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Expedite Drill L4",
+       "level": 23,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "Z-Dot 9",
+       "level": 8,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "SANG Wood Grip",
+       "level": 3,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "17 Round Mag",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Trigger Action",
+       "name": "SANG Insta-F Trigger",
+       "level": 27,
+       "stand_in": {
+        "slot": "Trigger Action",
+        "name": "SANG Highmatch",
+        "level": 9
+       }
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-10-27",
+     "url": "https://codmunity.gg/weapon/mw4/sang-9mm",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Expedite Drill L4",
+       "level": 23,
+       "stand_in": {
+        "slot": "Magazine",
+        "name": "17 Round Mag",
+        "level": 5
+       }
+      },
+      {
+       "slot": "Barrel",
+       "name": "Hanbit SK Elite 9",
+       "level": 28,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "Z-Dot 9",
+       "level": 8,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "XRK M-Line Grip",
+       "level": 11,
+       "stand_in": {
+        "slot": "Rear Grip",
+        "name": "SANG Wood Grip",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Trigger Action",
+       "name": "SANG Highmatch",
+       "level": 9,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "Akimbo": [
+     "Rear Grip",
+     20
+    ],
+    "BAL-XC Gen. 0": [
+     "Muzzle",
+     16
+    ],
+    "Bruen Clash-40": [
+     "Optic",
+     22
+    ],
+    "Chevron 90 Comp": [
+     "Muzzle",
+     10
+    ],
+    "Cronen Zero-K": [
+     "Optic",
+     26
+    ],
+    "DCR-78 Laser": [
+     "Laser",
+     4
+    ],
+    "DCR-80 Laser": [
+     "Laser",
+     13
+    ],
+    "Expedite Drill L4": [
+     "Muzzle",
+     23
+    ],
+    "FTAC Lonestar": [
+     "Muzzle",
+     2
+    ],
+    "Hanbit 2BA-00": [
+     "Laser",
+     17
+    ],
+    "NIL-P 40 Comp": [
+     "Muzzle",
+     31
+    ],
+    "P45 Flash-M": [
+     "Muzzle",
+     14
+    ],
+    "Sakin B7 Assault": [
+     "Rear Grip",
+     21
+    ],
+    "SANG Wood Grip": [
+     "Rear Grip",
+     3
+    ],
+    "SFO Proto-33": [
+     "Muzzle",
+     36
+    ],
+    "SZ DP1 Laser": [
+     "Laser",
+     29
+    ],
+    "SZ DP5 Laser": [
+     "Laser",
+     35
+    ],
+    "XRK M-Line Grip": [
+     "Rear Grip",
+     11
+    ],
+    "XRK Savage 40": [
+     "Muzzle",
+     19
+    ],
+    "Z-Dot 9": [
+     "Optic",
+     8
+    ]
+   }
+  },
+  {
+   "slug": "krait-p68",
+   "name": "Krait P68",
+   "type": "Pistol",
+   "tier": "B",
+   "max_level": 38,
+   "unlock": {
+    "level": 7,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Best-ranked pistol. Fast and accurate.",
+   "apex": {
+    "name": "Krait P68 Commando",
+    "level": 38
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-11",
+     "url": "https://codmunity.gg/weapon/mw4/krait-p68",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Expedite Drill L4",
+       "level": 36,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "SA Omni 5.5\"",
+       "level": 14,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "MAGTAC .45",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": ".45 Auto Frangible",
+       "level": 27,
+       "stand_in": null
+      },
+      {
+       "slot": "Trigger Action",
+       "name": "P68 Tapper 9",
+       "level": 33,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/krait-p68",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "Expedite Drill L4",
+       "level": 36,
+       "stand_in": null
+      },
+      {
+       "slot": "Barrel",
+       "name": "SA Omni 5.5\"",
+       "level": 14,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "MAGTAC .45",
+       "level": 5,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": ".45 Auto Frangible",
+       "level": 27,
+       "stand_in": null
+      },
+      {
+       "slot": "Trigger Action",
+       "name": "P68 Tapper 9",
+       "level": 33,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    "Bruen Clash-40": [
+     "Optic",
+     34
+    ],
+    "Corvus Aves-3": [
+     "Laser",
+     22
+    ],
+    "Cronen Zero-K": [
+     "Optic",
+     7
+    ],
+    "Demo Mallet 68": [
+     "Muzzle",
+     21
+    ],
+    "Expedite Drill L4": [
+     "Muzzle",
+     36
+    ],
+    "FSS Phosphor 40": [
+     "Laser",
+     31
+    ],
+    "FTAC Gridlock 45": [
+     "Rear Grip",
+     15
+    ],
+    "FTAC Lonestar": [
+     "Muzzle",
+     11
+    ],
+    "GW 700-V": [
+     "Laser",
+     20
+    ],
+    "GW MDL-2": [
+     "Laser",
+     3
+    ],
+    "I-Comp .45 Auto": [
+     "Muzzle",
+     19
+    ],
+    "KP68 Flash": [
+     "Muzzle",
+     12
+    ],
+    "MAGTAC .45": [
+     "Rear Grip",
+     5
+    ],
+    "SFO Proto-33": [
+     "Muzzle",
+     29
+    ],
+    "Shonay R-Wrap": [
+     "Rear Grip",
+     35
+    ],
+    "XRK Intra-K": [
+     "Muzzle",
+     10
+    ],
+    "XRK Response Grip": [
+     "Rear Grip",
+     26
+    ],
+    "XRK Severance 68": [
+     "Muzzle",
+     2
+    ],
+    "XT-100": [
+     "Laser",
+     25
+    ],
+    "Z-Dot 9": [
+     "Optic",
+     16
+    ]
+   }
+  },
+  {
+   "slug": "50-gs",
+   "name": ".50 GS",
+   "type": "Pistol",
+   "tier": "D",
+   "max_level": 50,
+   "unlock": {
+    "level": 41,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Hand cannon: big hits, slow, small mag.",
+   "apex": {
+    "name": "GS Magna",
+    "level": 50
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-11",
+     "url": "https://codmunity.gg/weapon/mw4/50-gs",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FTAC HVY-S50",
+       "level": 33,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "XT-100",
+       "level": 12,
+       "stand_in": null
+      },
+      {
+       "slot": "Optic",
+       "name": "FJX 708 PRO",
+       "level": 30,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "TT Iron Guard Kit",
+       "level": null,
+       "stand_in": null
+      },
+      {
+       "slot": "Trigger Action",
+       "name": "Corio Lightning N6",
+       "level": 41,
+       "stand_in": {
+        "slot": "Ammunition",
+        "name": ".50 Pistol Overpressured",
+        "level": 31
+       }
+      }
+     ],
+     "apex_on": false,
+     "notes": [
+      "TT Iron Guard Kit is an event reward (no unlock level published)"
+     ]
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-11",
+     "url": "https://codmunity.gg/weapon/mw4/50-gs",
+     "parts": [
+      {
+       "slot": "Muzzle",
+       "name": "FTAC HVY-S50",
+       "level": 33,
+       "stand_in": null
+      },
+      {
+       "slot": "Laser",
+       "name": "XT-100",
+       "level": 12,
+       "stand_in": null
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "TT Iron Guard Kit",
+       "level": null,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": ".50 Pistol Overpressured",
+       "level": 31,
+       "stand_in": null
+      },
+      {
+       "slot": "Magazine",
+       "name": "25 Round Drum Mag",
+       "level": 37,
+       "stand_in": null
+      }
+     ],
+     "apex_on": true,
+     "notes": [
+      "TT Iron Guard Kit is an event reward (no unlock level published)"
+     ]
+    },
+    "early": null
+   },
+   "table": {
+    "Bruen Clash-40": [
+     "Optic",
+     10
+    ],
+    "Bruen Field-Op": [
+     "Optic",
+     18
+    ],
+    "Bruen Operator .50 Grip": [
+     "Rear Grip",
+     4
+    ],
+    "Bruen Retort .50": [
+     "Muzzle",
+     17
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     42
+    ],
+    "Corvus Aves-3": [
+     "Laser",
+     22
+    ],
+    "Cronen R808": [
+     "Optic",
+     24
+    ],
+    "Cronen Zero-K": [
+     "Optic",
+     5
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     30
+    ],
+    "FSS Phosphor 40": [
+     "Laser",
+     20
+    ],
+    "FTAC HVY-S50": [
+     "Muzzle",
+     33
+    ],
+    "GL K230": [
+     "Optic",
+     32
+    ],
+    "GW 700-V": [
+     "Laser",
+     36
+    ],
+    "GW Domi-9": [
+     "Underbarrel",
+     7
+    ],
+    "GW MDL-2": [
+     "Laser",
+     9
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     38
+    ],
+    "LM Tenderizer": [
+     "Muzzle",
+     11
+    ],
+    "Mire-50 Tac Grip": [
+     "Underbarrel",
+     16
+    ],
+    "Mugi G30-Tac": [
+     "Muzzle",
+     13
+    ],
+    "PCR90 Flash Hider": [
+     "Muzzle",
+     45
+    ],
+    "Schlager Night View Pro": [
+     "Optic",
+     48
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     46
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     26
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     34
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     28
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     44
+    ],
+    "TA SVG-50K": [
+     "Muzzle",
+     2
+    ],
+    "TT Bulkkot Grip": [
+     "Rear Grip",
+     39
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     40
+    ],
+    "XRK Portmaster v2": [
+     "Muzzle",
+     23
+    ],
+    "XT-100": [
+     "Laser",
+     12
+    ],
+    "Z-Dot 9": [
+     "Optic",
+     14
+    ],
+    "ZLR Igni P5": [
+     "Muzzle",
+     27
+    ],
+    "ZLR Tact-99 Grip": [
+     "Rear Grip",
+     25
+    ]
+   }
+  },
+  {
+   "slug": "mojave-357",
+   "name": "Mojave .357",
+   "type": "Pistol",
+   "tier": "D",
+   "max_level": 44,
+   "unlock": {
+    "level": 48,
+    "bp_tier": null,
+    "note": null
+   },
+   "line": "Revolver: hard-hitting, slow to reload.",
+   "apex": {
+    "name": "Mojave .357 Lawless",
+    "level": 44
+   },
+   "builds": {
+    "main": {
+     "label": "Versatile",
+     "date": "2026-11-11",
+     "url": "https://codmunity.gg/weapon/mw4/mojave-357",
+     "parts": [
+      {
+       "slot": "Barrel",
+       "name": "Bryson Snub 2\"",
+       "level": 15,
+       "stand_in": {
+        "slot": "Barrel",
+        "name": "XRK Greywolf 7.5\"",
+        "level": 7
+       }
+      },
+      {
+       "slot": "Cylinder",
+       "name": "Mojave Speed Cylinder",
+       "level": 9,
+       "stand_in": {
+        "slot": "Muzzle",
+        "name": "Matuzek H357-M Comp",
+        "level": 2
+       }
+      },
+      {
+       "slot": "Rear Grip",
+       "name": "SA Tyrant Grip",
+       "level": 3,
+       "stand_in": null
+      },
+      {
+       "slot": "Ammunition",
+       "name": ".357 Magnum Overpressured",
+       "level": 19,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "GW MDL-2",
+        "level": 5
+       }
+      },
+      {
+       "slot": "Trigger Action",
+       "name": "M357 Light",
+       "level": 23,
+       "stand_in": {
+        "slot": "Trigger Action",
+        "name": "M357 Heavy",
+        "level": 8
+       }
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "close": {
+     "label": "Close Range",
+     "date": "2026-11-07",
+     "url": "https://codmunity.gg/weapon/mw4/mojave-357",
+     "parts": [
+      {
+       "slot": "Barrel",
+       "name": "XRK Greywolf 7.5\"",
+       "level": 7,
+       "stand_in": {
+        "slot": "Muzzle",
+        "name": "Matuzek H357-M Comp",
+        "level": 2
+       }
+      },
+      {
+       "slot": "Laser",
+       "name": "Corvus Aves-3",
+       "level": 41,
+       "stand_in": {
+        "slot": "Laser",
+        "name": "GW MDL-2",
+        "level": 5
+       }
+      },
+      {
+       "slot": "Cylinder",
+       "name": "Mojave Speed Cylinder",
+       "level": 9,
+       "stand_in": {
+        "slot": "Rear Grip",
+        "name": "SA Tyrant Grip",
+        "level": 3
+       }
+      },
+      {
+       "slot": "Ammunition",
+       "name": ".357 Magnum Snake Shot",
+       "level": 42,
+       "stand_in": {
+        "slot": "Ammunition",
+        "name": ".357 Magnum Overpressured",
+        "level": 19
+       }
+      },
+      {
+       "slot": "Trigger Action",
+       "name": "M357 Heavy",
+       "level": 8,
+       "stand_in": null
+      }
+     ],
+     "apex_on": false,
+     "notes": []
+    },
+    "early": null
+   },
+   "table": {
+    ".357 Blackeye": [
+     "Muzzle",
+     32
+    ],
+    "Bruen Clash-40": [
+     "Optic",
+     33
+    ],
+    "Bruen Field-Op": [
+     "Optic",
+     10
+    ],
+    "Bruen THRM-60 Optic": [
+     "Optic",
+     20
+    ],
+    "Corvus Aves-3": [
+     "Laser",
+     41
+    ],
+    "CP37 Grip": [
+     "Rear Grip",
+     35
+    ],
+    "Cronen Zero-K": [
+     "Optic",
+     18
+    ],
+    "FJX 708 PRO": [
+     "Optic",
+     38
+    ],
+    "FSS Phosphor 40": [
+     "Laser",
+     22
+    ],
+    "GW 700-V": [
+     "Laser",
+     24
+    ],
+    "GW MDL-2": [
+     "Laser",
+     5
+    ],
+    "KV Corsac Holo": [
+     "Optic",
+     36
+    ],
+    "Matuzek H357-M Comp": [
+     "Muzzle",
+     2
+    ],
+    "Mojave Flash": [
+     "Muzzle",
+     17
+    ],
+    "SA Tyrant Grip": [
+     "Rear Grip",
+     3
+    ],
+    "SZ Echelon Holo": [
+     "Optic",
+     43
+    ],
+    "SZ Helios Holo": [
+     "Optic",
+     31
+    ],
+    "SZ Lonewolf Holo": [
+     "Optic",
+     12
+    ],
+    "SZ Micro D-3": [
+     "Optic",
+     6
+    ],
+    "SZ SRE-7": [
+     "Optic",
+     26
+    ],
+    "TA Dom-35": [
+     "Muzzle",
+     25
+    ],
+    "VLK Trimmer": [
+     "Optic",
+     16
+    ],
+    "XRK .357 Comp": [
+     "Muzzle",
+     11
+    ],
+    "XT-100": [
+     "Laser",
+     14
+    ],
+    "Z-Dot 9": [
+     "Optic",
+     28
+    ]
+   }
+  }
+ ]
+}

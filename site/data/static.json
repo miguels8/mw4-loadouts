@@ -1,0 +1,735 @@
+{
+ "schema": 1,
+ "modes": [
+  {
+   "id": "TDM",
+   "name": "Team Deathmatch",
+   "what": "First team to 100 kills · 6v6",
+   "profile": "mixed",
+   "build": "mixed",
+   "why": "Kills at every range: the M4's all-round build and a kit that keeps you off their radar.",
+   "tip": "Stay near teammates. Don't run off alone.",
+   "head": [
+    "m4",
+    "hyeon-burst"
+   ]
+  },
+  {
+   "id": "Domination",
+   "name": "Domination",
+   "what": "Hold flags A, B, C for points · 6v6",
+   "profile": "mixed",
+   "build": "mixed",
+   "why": "Fights around 3 flags at every range: the all-round build and a kit that heals you on caps.",
+   "tip": "Hold 2 flags, not 3. Taking the 3rd flips their spawn.",
+   "head": [
+    "m4",
+    "hyeon-burst"
+   ]
+  },
+  {
+   "id": "Hardpoint",
+   "name": "Hardpoint",
+   "what": "Hold one zone that moves · 6v6",
+   "profile": "close",
+   "build": "close",
+   "why": "Small hill, close fights: each gun's close-range build and a hill-holding kit.",
+   "tip": "Sit on the hill. Leave 15 s before it moves.",
+   "head": [
+    "vel-46",
+    "m4"
+   ]
+  },
+  {
+   "id": "Kill Confirmed",
+   "name": "Kill Confirmed",
+   "what": "A kill counts when you grab the tag · 6v6",
+   "profile": "close",
+   "build": "mixed",
+   "why": "Fast fights and tag runs: an SMG first, and Tracker to find the tags.",
+   "tip": "Always grab the tag. Deny theirs too.",
+   "head": [
+    "vel-46",
+    "m4"
+   ]
+  },
+  {
+   "id": "Free-for-All",
+   "name": "Free-for-All",
+   "what": "Every player for themselves · 8 players",
+   "profile": "close",
+   "build": "mixed",
+   "why": "Solo and fast: an SMG first, and a kit that finds enemies without teammates.",
+   "tip": "Keep moving. Stay out of the middle.",
+   "head": [
+    "vel-46",
+    "m4"
+   ]
+  },
+  {
+   "id": "S&D",
+   "name": "Search and Destroy",
+   "what": "Plant or defuse the bomb · 6v6",
+   "profile": "one_life",
+   "build": "mixed",
+   "why": "No respawns, long sightlines: steady rifles (or your Mosin-Nagant) and a stay-hidden kit.",
+   "tip": "One life: move slow, check corners, don't rush.",
+   "head": [
+    "m4",
+    "hyeon-burst",
+    "mosin-nagant"
+   ]
+  },
+  {
+   "id": "Hijack",
+   "name": "Hijack",
+   "what": "Carry the Data Spike to their base · 6v6",
+   "profile": "close",
+   "build": "close",
+   "why": "Close fights around the Spike: the close-range build and a kit that keeps the carrier alive.",
+   "tip": "Keep the Spike moving. Clear the path in front of the carrier.",
+   "head": [
+    "vel-46",
+    "m4"
+   ]
+  },
+  {
+   "id": "Frontline",
+   "name": "Frontline",
+   "what": "Team kills, you always spawn at base · 6v6",
+   "profile": "mixed",
+   "build": "range",
+   "why": "Long lanes from your base: the Hyeon Burst hits hardest at range; sprint kit to get back in.",
+   "tip": "Kills away from your base count for more.",
+   "head": [
+    "hyeon-burst",
+    "m4",
+    "mosin-nagant"
+   ]
+  },
+  {
+   "id": "Inflation",
+   "name": "Inflation",
+   "what": "Kills drop cash, richest team wins · 6v6",
+   "profile": "mixed",
+   "build": "mixed",
+   "why": "Every range with cash on your back: the all-round build and a stay-hidden kit.",
+   "tip": "Carrying a lot of cash makes you a big target. Play safe.",
+   "head": [
+    "m4",
+    "hyeon-burst"
+   ]
+  },
+  {
+   "id": "Grind",
+   "name": "Grind",
+   "what": "Bank dog tags at a drop point",
+   "profile": "close",
+   "build": "close",
+   "why": "Close fights and runs to the bank: the close-range build and Tracker for the tags.",
+   "tip": "Carry tags to the bank fast. Don't die holding a lot.",
+   "head": [
+    "vel-46",
+    "m4"
+   ]
+  },
+  {
+   "id": "Drop Zone",
+   "name": "Drop Zone",
+   "what": "Hold the zone for care packages",
+   "profile": "close",
+   "build": "close",
+   "why": "Hold a small zone: the close-range build and the zone-holding kit.",
+   "tip": "Stand in the drop zone. Move when it moves.",
+   "head": [
+    "vel-46",
+    "m4"
+   ]
+  },
+  {
+   "id": "Ground War",
+   "name": "Ground War / Combat Outpost",
+   "what": "32 v 32, big map, outposts, vehicles",
+   "profile": "big",
+   "build": "range",
+   "why": "Huge map, long range: the Hyeon Burst, then your Mosin-Nagant, and a kit that hides you from streaks.",
+   "tip": "Big lanes. Fight from range and use the outposts.",
+   "head": [
+    "hyeon-burst",
+    "mosin-nagant"
+   ]
+  },
+  {
+   "id": "Infected",
+   "name": "Infected",
+   "what": "Survive the infected players",
+   "profile": "survive",
+   "build": "close",
+   "why": "Hold a corner up close: each gun's close-range build and an ammo kit.",
+   "tip": "As a survivor, hold a corner with your team. If the game hands survivors a set loadout, this card does not apply.",
+   "head": [
+    "vel-46",
+    "m4"
+   ]
+  },
+  {
+   "id": "Possession",
+   "name": "Possession",
+   "what": "Kill to take over their body and gun",
+   "profile": "close",
+   "build": "close",
+   "why": "Non-stop close fights: the close-range build and an aggressive kit.",
+   "tip": "You start with your class, then steal theirs.",
+   "head": [
+    "vel-46",
+    "m4"
+   ]
+  },
+  {
+   "id": "Hardcore",
+   "name": "Hardcore (any mode)",
+   "what": "Low health, no health regen, friendly fire, small HUD",
+   "profile": "mixed",
+   "build": "mixed",
+   "why": "Low health, a short burst kills: the accurate all-round build and a kit made for no regen.",
+   "tip": "Watch your fire: you can hit teammates.",
+   "head": [
+    "m4",
+    "hyeon-burst"
+   ]
+  }
+ ],
+ "kits": {
+  "TDM": {
+   "perk1": "Ghost",
+   "perk2": "Ninja",
+   "perk3": "Battle Hardened",
+   "lethal": "Frag Grenade",
+   "tactical": "Flash Grenade",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "Kills are all that count: stay off their UAV and quiet; your radar pings show the whole team where they are.",
+   "whyItem": "Ghost"
+  },
+  "Domination": {
+   "perk1": "Quick Fix",
+   "perk2": "Bomb Squad",
+   "perk3": "Battle Hardened",
+   "lethal": "Drill Charge",
+   "tactical": "Smoke Grenade",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "Capping a flag restarts your health; smoke covers a cap; a Drill Charge clears a flag held behind cover.",
+   "whyItem": "Quick Fix"
+  },
+  "Hardpoint": {
+   "perk1": "Quick Fix",
+   "perk2": "Bomb Squad",
+   "perk3": "Battle Hardened",
+   "lethal": "Molotov Cocktail",
+   "tactical": "Concussion Grenade",
+   "field": "Trophy System",
+   "pistol": "Krait P68",
+   "why": "Holding the hill restarts your health; Trophy shoots down grenades thrown in; a Molotov burns them off the hill.",
+   "whyItem": "Quick Fix"
+  },
+  "Kill Confirmed": {
+   "perk1": "Quick Fix",
+   "perk2": "Ninja",
+   "perk3": "Tracker",
+   "lethal": "Frag Grenade",
+   "tactical": "Flash Grenade",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "Tracker shows where enemies died (that's where the tags are) and hides your own kill markers.",
+   "whyItem": "Tracker"
+  },
+  "Free-for-All": {
+   "perk1": "Ghost",
+   "perk2": "Ninja",
+   "perk3": "Tracker",
+   "lethal": "Frag Grenade",
+   "tactical": "Snapshot Grenade",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "No teammates to call enemies out: footprints (Tracker), a Snapshot and your own radar find fights first.",
+   "whyItem": "Tracker"
+  },
+  "S&D": {
+   "perk1": "Ghost",
+   "perk2": "Ninja",
+   "perk3": "Cold-Blooded",
+   "lethal": "Claymore",
+   "tactical": "Smoke Grenade",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "Stay hidden from UAVs, thermals and Snapshots and stay quiet; smoke covers a plant or defuse; a Claymore guards your back.",
+   "whyItem": "Ghost"
+  },
+  "Hijack": {
+   "perk1": "Quick Fix",
+   "perk2": "Blood Rush",
+   "perk3": "Battle Hardened",
+   "lethal": "Frag Grenade",
+   "tactical": "Stim",
+   "field": "Smoke Wall",
+   "pistol": "Krait P68",
+   "why": "The Spike carrier can't throw a lethal (that button throws the Spike): Stim heals the carrier, Smoke Wall screens the push, Blood Rush sprints it in.",
+   "whyItem": "Stim"
+  },
+  "Frontline": {
+   "perk1": "Quick Fix",
+   "perk2": "Blood Rush",
+   "perk3": "Battle Hardened",
+   "lethal": "Frag Grenade",
+   "tactical": "Stim",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "You always spawn at your base: Blood Rush gets you back to the fight; kills restart your health.",
+   "whyItem": "Blood Rush"
+  },
+  "Inflation": {
+   "perk1": "Ghost",
+   "perk2": "Ninja",
+   "perk3": "Cold-Blooded",
+   "lethal": "Frag Grenade",
+   "tactical": "Flash Grenade",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "Hidden from UAVs and thermals and quiet, so you keep the cash you carry.",
+   "whyItem": "Ghost"
+  },
+  "Grind": {
+   "perk1": "Quick Fix",
+   "perk2": "Ninja",
+   "perk3": "Tracker",
+   "lethal": "Frag Grenade",
+   "tactical": "Stim",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "Tracker shows where the tags dropped; Stim keeps you alive on the run to the bank.",
+   "whyItem": "Tracker"
+  },
+  "Drop Zone": {
+   "perk1": "Quick Fix",
+   "perk2": "Bomb Squad",
+   "perk3": "Battle Hardened",
+   "lethal": "Molotov Cocktail",
+   "tactical": "Concussion Grenade",
+   "field": "Trophy System",
+   "pistol": "Krait P68",
+   "why": "Holding the zone restarts your health; Trophy shoots down grenades thrown into it.",
+   "whyItem": "Quick Fix"
+  },
+  "Ground War": {
+   "perk1": "Ghost",
+   "perk2": "Blood Rush",
+   "perk3": "Cold-Blooded",
+   "lethal": "Frag Grenade",
+   "tactical": "Stim",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "Big map full of streaks and vehicles: Cold-Blooded hides you from AI targeting and thermals, Blood Rush crosses the lanes.",
+   "whyItem": "Cold-Blooded"
+  },
+  "Infected": {
+   "perk1": "Quick Fix",
+   "perk2": "Fast Hands",
+   "perk3": "Scavenger",
+   "lethal": "Proximity Mine",
+   "tactical": "Stim",
+   "field": "Munitions Box",
+   "pistol": "Krait P68",
+   "why": "Survivors run out of ammo: Scavenger and a Munitions Box refill it; Fast Hands reloads faster; a mine guards your corner.",
+   "whyItem": "Scavenger"
+  },
+  "Possession": {
+   "perk1": "Quick Fix",
+   "perk2": "Blood Rush",
+   "perk3": "Battle Hardened",
+   "lethal": "Frag Grenade",
+   "tactical": "Flash Grenade",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "Non-stop close fights: kills restart your health and refill your sprint.",
+   "whyItem": "Blood Rush"
+  },
+  "Hardcore": {
+   "perk1": "Ghost",
+   "perk2": "Bomb Squad",
+   "perk3": "Battle Hardened",
+   "lethal": "Claymore",
+   "tactical": "Flash Grenade",
+   "field": "Portable Radar",
+   "pistol": "Krait P68",
+   "why": "No health regen, so Quick Fix does nothing: Ghost instead; low health means one grenade kills, so Bomb Squad.",
+   "whyItem": "Bomb Squad"
+  }
+ },
+ "kit_unlock": {
+  "Quick Fix": {
+   "slot": "Perk 1",
+   "level": 4
+  },
+  "Ghost": {
+   "slot": "Perk 1",
+   "level": 24
+  },
+  "High Alert": {
+   "slot": "Perk 1",
+   "level": 8
+  },
+  "Resupply": {
+   "slot": "Perk 1",
+   "level": 31
+  },
+  "Overkill": {
+   "slot": "Perk 1",
+   "level": 4
+  },
+  "Kill Chain": {
+   "slot": "Perk 1",
+   "level": 48
+  },
+  "Ninja": {
+   "slot": "Perk 2",
+   "level": 30
+  },
+  "Fast Hands": {
+   "slot": "Perk 2",
+   "level": 20
+  },
+  "Blood Rush": {
+   "slot": "Perk 2",
+   "level": 4
+  },
+  "Hardline": {
+   "slot": "Perk 2",
+   "level": 4
+  },
+  "Bomb Squad": {
+   "slot": "Perk 2",
+   "level": 16
+  },
+  "Birdseye": {
+   "slot": "Perk 2",
+   "level": 40
+  },
+  "Battle Hardened": {
+   "slot": "Perk 3",
+   "level": 12
+  },
+  "Scavenger": {
+   "slot": "Perk 3",
+   "level": 28
+  },
+  "Cold-Blooded": {
+   "slot": "Perk 3",
+   "level": 36
+  },
+  "Tracker": {
+   "slot": "Perk 3",
+   "level": 32
+  },
+  "Combat Grid": {
+   "slot": "Perk 3",
+   "level": 4
+  },
+  "Lethal Reach": {
+   "slot": "Perk 3",
+   "level": 4
+  },
+  "Frag Grenade": {
+   "slot": "Lethal",
+   "level": 4
+  },
+  "Sticky Grenade": {
+   "slot": "Lethal",
+   "level": 4
+  },
+  "Proximity Mine": {
+   "slot": "Lethal",
+   "level": 13
+  },
+  "Drill Charge": {
+   "slot": "Lethal",
+   "level": 7
+  },
+  "Concussion Grenade": {
+   "slot": "Tactical",
+   "level": 15
+  },
+  "Stim": {
+   "slot": "Tactical",
+   "level": 47
+  },
+  "Flash Grenade": {
+   "slot": "Tactical",
+   "level": 4
+  },
+  "Smoke Grenade": {
+   "slot": "Tactical",
+   "level": 4
+  },
+  "Snapshot Grenade": {
+   "slot": "Tactical",
+   "level": 10
+  },
+  "Trophy System": {
+   "slot": "Field upgrade",
+   "level": 14
+  },
+  "Portable Radar": {
+   "slot": "Field upgrade",
+   "level": 4
+  },
+  "DDOS": {
+   "slot": "Field upgrade",
+   "level": 4
+  },
+  "Riot Shield": {
+   "slot": "Field upgrade",
+   "level": 11
+  },
+  "SAM Airburst Turret": {
+   "slot": "Field upgrade",
+   "level": 8
+  },
+  "Zip Gun": {
+   "slot": "Lethal",
+   "level": 17
+  },
+  "Trip Wire": {
+   "slot": "Lethal",
+   "level": 22
+  },
+  "Thermite": {
+   "slot": "Lethal",
+   "level": 26
+  },
+  "Molotov Cocktail": {
+   "slot": "Lethal",
+   "level": 28
+  },
+  "Claymore": {
+   "slot": "Lethal",
+   "level": 37
+  },
+  "C4": {
+   "slot": "Lethal",
+   "level": 43
+  },
+  "Throwing Knife": {
+   "slot": "Lethal",
+   "level": 49
+  },
+  "Heartbeat Sensor": {
+   "slot": "Tactical",
+   "level": 23
+  },
+  "Shock Stick": {
+   "slot": "Tactical",
+   "level": 29
+  },
+  "Decoy Grenade": {
+   "slot": "Tactical",
+   "level": 42
+  },
+  "Screamer Mine": {
+   "slot": "Tactical",
+   "level": 53
+  },
+  "Munitions Box": {
+   "slot": "Field upgrade",
+   "level": 6
+  },
+  "Seeker Drone": {
+   "slot": "Field upgrade",
+   "level": 19
+  },
+  "Inflatable Decoy": {
+   "slot": "Field upgrade",
+   "level": 25
+  },
+  "Smoke Wall": {
+   "slot": "Field upgrade",
+   "level": 29
+  },
+  "Recon Drone": {
+   "slot": "Field upgrade",
+   "level": 33
+  },
+  "Razor Wire Trap": {
+   "slot": "Field upgrade",
+   "level": 41
+  },
+  "Tactical Insertion": {
+   "slot": "Field upgrade",
+   "level": 45
+  }
+ },
+ "slot_pref": {
+  "Perk 1": [
+   "Quick Fix",
+   "Ghost",
+   "High Alert",
+   "Resupply",
+   "Overkill"
+  ],
+  "Perk 2": [
+   "Ninja",
+   "Bomb Squad",
+   "Fast Hands",
+   "Blood Rush",
+   "Hardline"
+  ],
+  "Perk 3": [
+   "Battle Hardened",
+   "Tracker",
+   "Cold-Blooded",
+   "Scavenger",
+   "Combat Grid"
+  ],
+  "Lethal": [
+   "Frag Grenade",
+   "Sticky Grenade",
+   "Proximity Mine",
+   "Drill Charge",
+   "Claymore"
+  ],
+  "Tactical": [
+   "Concussion Grenade",
+   "Flash Grenade",
+   "Stim",
+   "Smoke Grenade",
+   "Snapshot Grenade"
+  ],
+  "Field upgrade": [
+   "Trophy System",
+   "Portable Radar",
+   "Smoke Wall",
+   "Munitions Box",
+   "Riot Shield"
+  ],
+  "Pistol": [
+   "Krait P68",
+   "SANG 9mm",
+   ".50 GS",
+   "Mojave .357"
+  ]
+ },
+ "role_notes": {
+  "rush": "SMG/shotgun: Ninja instead of Blood Rush (quiet flanks).",
+  "long": "Sniper: Ghost, Ninja, Cold-Blooded (hold a lane unseen).",
+  "marksman": "Marksman kit: Ghost, Fast Hands, Cold-Blooded, Frag, Snapshot, Trophy (stay unseen, cycle fast, spot them first)."
+ },
+ "marksman_kit": [
+  "Ghost",
+  "Fast Hands",
+  "Cold-Blooded",
+  "Frag Grenade",
+  "Snapshot Grenade",
+  "Trophy System"
+ ],
+ "profiles": {
+  "close": {
+   "SMG": 3,
+   "Shotgun": 2,
+   "AR": 2,
+   "LMG": 1,
+   "Marksman": 1,
+   "Sniper": 1,
+   "Pistol": 1
+  },
+  "mixed": {
+   "AR": 3,
+   "SMG": 2,
+   "LMG": 2,
+   "Marksman": 2,
+   "Sniper": 1,
+   "Shotgun": 1,
+   "Pistol": 1
+  },
+  "one_life": {
+   "AR": 3,
+   "Marksman": 3,
+   "Sniper": 2,
+   "SMG": 2,
+   "LMG": 1,
+   "Shotgun": 1,
+   "Pistol": 1
+  },
+  "big": {
+   "AR": 3,
+   "LMG": 3,
+   "Sniper": 3,
+   "Marksman": 3,
+   "SMG": 1,
+   "Shotgun": 1,
+   "Pistol": 1
+  },
+  "survive": {
+   "SMG": 3,
+   "Shotgun": 3,
+   "AR": 2,
+   "LMG": 2,
+   "Marksman": 1,
+   "Sniper": 1,
+   "Pistol": 1
+  }
+ },
+ "profile_words": {
+  "close": "close and fast",
+  "mixed": "every range",
+  "one_life": "one life, slow and careful",
+  "big": "long range",
+  "survive": "hold a corner"
+ },
+ "mode_never": {
+  "Hardcore": [
+   "Quick Fix"
+  ]
+ },
+ "no_class": [
+  {
+   "name": "Gunfight",
+   "what": "2v2 / 3v3 rounds, everyone gets the same random guns",
+   "tip": "No custom class. Learn the gun you're handed."
+  },
+  {
+   "name": "Gun Game",
+   "what": "Every kill gives you the next gun",
+   "tip": "No custom class. The game hands out guns."
+  },
+  {
+   "name": "Collateral",
+   "what": "Search and Destroy where you buy gear each round",
+   "tip": "No custom class. You buy guns each round."
+  }
+ ],
+ "share_slots": [
+  "Muzzle",
+  "Underbarrel",
+  "Laser",
+  "Optic",
+  "Rear Grip"
+ ],
+ "type_order": [
+  "AR",
+  "SMG",
+  "Shotgun",
+  "LMG",
+  "Marksman",
+  "Sniper",
+  "Pistol"
+ ],
+ "tier_words": {
+  "S": "Meta top 5",
+  "A": "Meta",
+  "B": "Solid",
+  "C": "Niche",
+  "D": "Off-meta"
+ },
+ "tier_source": "Tiers: warzoneloadout.games MW4 Multiplayer ranking (CODMunity data), updated Nov 14, 2026. Meta top 5 = its S tier, Meta = A, Solid = B, Niche = C, Off-meta = outside its top 25. Its 30 guns = these 26 primaries + 4 pistols (SANG 9mm, Krait P68, .50 GS, Mojave .357).",
+ "share_source": "Oct 21 patch notes as quoted by timesaver.gg (Oct 22, 2026) + mypandaplay MW4 attachments guide (Oct 23, 2026): an attachment unlocked once is open on every gun that takes it; Weapon Prestige relocks that gun's own parts."
+}
