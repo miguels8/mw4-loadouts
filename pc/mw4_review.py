@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Opus review trigger (Q9): after every balance patch the refresh script spots, and once a month, file a review card and
-start it with job-dispatch. No model is named here: job-dispatch gives a `kind: report` card the planner role by default
-and the fix job the build role. Opus writes a findings report, Sonnet applies fixes in a PR, Eva verifies before it goes live.
+start it with job-dispatch. Automatic reviews explicitly use the registry worker-private Go role. Opus writes a findings report, Sonnet applies fixes in a PR, Eva verifies before it goes live.
 
   mw4_review.py [--status-file PATH] [--state PATH] [--card-dir DIR] [--dry-run]
 
@@ -74,7 +73,7 @@ def main(argv=None, now=None, fetch=None, run=None):
     card = os.path.join(a.card_dir, f"CARD-{slug}.md")
     with open(card, "w", encoding="utf-8") as f:
         f.write(card_text(now[:10], why))
-    cmd = [JOB_DISPATCH, slug, "--card", card] + (["--dry-run"] if a.dry_run else [])
+    cmd = [JOB_DISPATCH, slug, "--card", card, "--role", "worker-private"] + (["--dry-run"] if a.dry_run else [])
     code = run(cmd)
     print(f"{' '.join(cmd)} -> exit {code} ({why})")
     if code == 0 and not a.dry_run:

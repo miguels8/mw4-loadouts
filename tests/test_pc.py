@@ -208,7 +208,7 @@ class Review(unittest.TestCase):
         self.assertEqual(cmd[1], "mw4-review-20261117")
         self.assertEqual(cmd[2], "--card")
         self.assertNotIn("--model", cmd)
-        self.assertNotIn("--role", cmd)
+        self.assertEqual(cmd[-2:], ["--role", "worker-private"])
         self.assertEqual(st["last_patch"], "2026-11-16")
         self.assertEqual(st["last_review"], NOW)
 
