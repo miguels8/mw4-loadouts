@@ -59,6 +59,36 @@ const gunState = (profile, slug) => profile.guns[slug] ?? { level: null, prestig
 const prestiged = (profile, slug) => gunState(profile, slug).prestige !== "";
 const lvTxt = (n) => `Lv ${n}`;
 
+export const LEVEL_MAX = 200;
+const EMPTY_GUN = { level: null, prestige: "", owned: false, token: false, max: null };
+
+// One edit to one gun, shared by the My levels page and the card controls. Returns a new profile.
+// patch fields: level (empty = not entered), prestige ("" / "1".."10" / "master"), owned, token, max.
+export function setGun(profile, slug, patch) {
+  const cur = profile.guns[slug] ?? EMPTY_GUN;
+  if ("level" in patch) {
+    const n = numOrNull(patch.level);
+    patch = { ...patch, level: n === null ? null : Math.max(0, Math.min(LEVEL_MAX, Math.round(n))) };
+  }
+  return normalizeProfile({ ...profile, guns: { ...profile.guns, [slug]: { ...cur, ...patch } } });
+}
+
+// The + / - buttons. Not entered: + starts at 1, - stays not entered. Stepping stays between 1 and LEVEL_MAX.
+export function stepLevel(level, delta) {
+  if (level === null || level === undefined) return delta > 0 ? Math.min(delta, LEVEL_MAX) : null;
+  return Math.max(1, Math.min(LEVEL_MAX, level + delta));
+}
+
+// Text for the collapsed card header: "Lv 54" or "Lv ?", plus "P3" / "Master" when the gun is prestiged.
+export function gunBadges(profile, slug) {
+  const g = profile.guns[slug] ?? EMPTY_GUN;
+  const pr = g.prestige;
+  return {
+    level: g.level === null ? "Lv ?" : `Lv ${g.level}`,
+    prestige: pr === "" ? "" : pr === "master" ? "Master" : `P${pr}`,
+  };
+}
+
 // No player-level gate when the level is not entered, or after a Regular prestige (it keeps every unlock).
 function noGate(profile) {
   const pl = profile.player;

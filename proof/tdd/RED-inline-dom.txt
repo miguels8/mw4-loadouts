@@ -1,0 +1,151 @@
+▶ card level and prestige controls (real Chromium, 390 px)
+  ✖ every card has the control row; targets are thumb sized; fits 390 px (54.739391ms)
+  ✖ empty is 'Set level' and 'Lv ?', never 0 (31.340722ms)
+  ✖ typing 63 saves, updates the header and shows 'add Visiv-5 for now' (35.197819ms)
+  ✖ tapping + (63 -> 64) flips the muzzle to ready and raises the ready count (79.688468ms)
+  ✖ the card and the engine agree on the ready count after the edit (52.030244ms)
+  ✖ My levels shows the same level, and edits flow both ways (444.564603ms)
+  ✖ prestige dropdown saves, shows the badge, and the parts follow the engine (145.490134ms)
+  ✖ an edit re-ranks the whole list the same way the engine does (432.924793ms)
+  ✖ the early build appears at a low level and goes away at a high level (270.149318ms)
+  ✖ holding + repeats and stops on release (372.360782ms)
+  ✖ clearing the box goes back to not entered (485.480623ms)
+  ✔ no sideways scroll and no console errors after all edits (729.972021ms)
+✖ card level and prestige controls (real Chromium, 390 px) (5918.577415ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 1
+ℹ fail 12
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25270.823542
+
+✖ failing tests:
+
+test at tests/dom.test.mjs:44:13
+✖ every card has the control row; targets are thumb sized; fits 390 px (54.739391ms)
+  AssertionError [ERR_ASSERTION]: every gun card has -, +, level input and prestige select
+      at TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:47:14)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:44:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/dom.test.mjs:55:13
+✖ empty is 'Set level' and 'Lv ?', never 0 (31.340722ms)
+  Error: Uncaught "TypeError: Cannot read properties of null (reading 'value')\n    at <anonymous>:1:82"
+      at Object.evalJs (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/tools/cdp.mjs:70:35)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:56:20)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:55:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/dom.test.mjs:64:13
+✖ typing 63 saves, updates the header and shows 'add Visiv-5 for now' (35.197819ms)
+  Error: Uncaught "TypeError: Cannot set properties of null (setting 'value')\n    at <anonymous>:1:111\n    at <anonymous>:1:178"
+      at Object.evalJs (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/tools/cdp.mjs:70:35)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:65:7)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:64:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/dom.test.mjs:71:13
+✖ tapping + (63 -> 64) flips the muzzle to ready and raises the ready count (79.688468ms)
+  Error: Uncaught "TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at <anonymous>:1:98\n    at <anonymous>:1:174"
+      at evalJs (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/tools/cdp.mjs:70:35)
+      at async press (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/tools/cdp.mjs:78:49)
+      at async Object.tap (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/tools/cdp.mjs:80:47)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:73:7)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:71:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/dom.test.mjs:82:13
+✖ the card and the engine agree on the ready count after the edit (52.030244ms)
+  TypeError: Cannot read properties of null (reading 'profile')
+      at stored (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:27:111)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:83:39)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:82:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/dom.test.mjs:87:13
+✖ My levels shows the same level, and edits flow both ways (444.564603ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  '' !== '64'
+
+      at TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:89:14)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:87:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: '64',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/dom.test.mjs:102:13
+✖ prestige dropdown saves, shows the badge, and the parts follow the engine (145.490134ms)
+  Error: Uncaught "TypeError: Cannot set properties of null (setting 'value')\n    at <anonymous>:1:115\n    at <anonymous>:1:186"
+      at Object.evalJs (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/tools/cdp.mjs:70:35)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:103:7)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:102:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/dom.test.mjs:115:13
+✖ an edit re-ranks the whole list the same way the engine does (432.924793ms)
+  Error: Uncaught "TypeError: Cannot set properties of null (setting 'open')\n    at <anonymous>:1:63"
+      at Object.evalJs (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/tools/cdp.mjs:70:35)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:117:7)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:115:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/dom.test.mjs:125:13
+✖ the early build appears at a low level and goes away at a high level (270.149318ms)
+  Error: Uncaught "TypeError: Cannot set properties of null (setting 'open')\n    at <anonymous>:1:56"
+      at Object.evalJs (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/tools/cdp.mjs:70:35)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:127:7)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:125:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/dom.test.mjs:135:13
+✖ holding + repeats and stops on release (372.360782ms)
+  Error: Uncaught "TypeError: Cannot set properties of null (setting 'value')\n    at <anonymous>:1:111\n    at <anonymous>:1:178"
+      at Object.evalJs (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/tools/cdp.mjs:70:35)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:136:7)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:135:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/dom.test.mjs:146:13
+✖ clearing the box goes back to not entered (485.480623ms)
+  Error: Uncaught "TypeError: Cannot set properties of null (setting 'value')\n    at <anonymous>:1:111\n    at <anonymous>:1:176"
+      at Object.evalJs (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/tools/cdp.mjs:70:35)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:147:7)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:146:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)

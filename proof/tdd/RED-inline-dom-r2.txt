@@ -1,0 +1,48 @@
+▶ card level and prestige controls (real Chromium, 390 px)
+  ✔ every card has the control row; targets are thumb sized; fits 390 px (72.620756ms)
+  ✔ empty is 'Set level' and 'Lv ?', never 0 (125.208031ms)
+  ✔ typing 63 saves, updates the header and shows 'add Visiv-5 for now' (133.067002ms)
+  ✔ tapping + (63 -> 64) flips the muzzle to ready and raises the ready count (356.379088ms)
+  ✔ the card and the engine agree on the ready count after the edit (119.096868ms)
+  ✔ My levels shows the same level, and edits flow both ways (7532.883451ms)
+  ✔ prestige dropdown saves, shows the badge, and the parts follow the engine (11264.153333ms)
+  ✔ an edit re-ranks the whole list the same way the engine does (227.254285ms)
+  ✔ the early build appears at a low level and goes away at a high level (48.444286ms)
+  ✔ holding + repeats and stops on release (6846.224601ms)
+  ✔ typing in the focused box then pressing + uses the typed number (review r1 F1 A) (150.149804ms)
+  ✔ the number box always shows the saved level, even while focused (review r1 F1 B) (47.619722ms)
+  ✔ out-of-range typing is normalised in the box, the profile and the header (review r1 F1 C) (3732.751037ms)
+  ✖ typed text is saved even when the step itself cannot move (review r2 F1) (3111.275858ms)
+  ✔ clearing the box goes back to not entered (815.986705ms)
+  ✔ no sideways scroll and no console errors after all edits (154.563249ms)
+✖ card level and prestige controls (real Chromium, 390 px) (37628.24384ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 15
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 57661.804216
+
+✖ failing tests:
+
+test at tests/dom.test.mjs:178:13
+✖ typed text is saved even when the step itself cannot move (review r2 F1) (3111.275858ms)
+  AssertionError [ERR_ASSERTION]: saved level
+
+  10 !== 200
+
+      at agree (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:181:16)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:188:7)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:178:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 10,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
