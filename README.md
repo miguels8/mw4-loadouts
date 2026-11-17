@@ -28,7 +28,7 @@ Phone web app: pick a game mode, see the best gun and exactly which parts to put
 | `tests/` | Python (`unittest`) and Node (`node --test`) tests, saved page fixtures, a 390 px Chromium check |
 | `proof/` | Test receipts and phone screenshots of the live site |
 
-Run everything locally: `python3 -I -m unittest discover -s tests -v && node --test tests/`.
+Run everything locally: `python3 -I -m unittest discover -s tests -v && node --test tests/*.test.mjs`.
 Refresh by hand: `python3 -I scripts/refresh.py` (writes `site/data/`, exit code 1 if any gun could not be read).
 
 ## Schedule (which one is live)
