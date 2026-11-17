@@ -193,9 +193,12 @@ class Review(unittest.TestCase):
             sp = os.path.join(d, "review.json")
             if state is not None:
                 json.dump(state, open(sp, "w"))
+            routing = os.path.join(d, "routing.json")
+            with open(routing, "w") as f:
+                json.dump({"role_models": {"worker-private": {"provider": "opencode-go", "model": "fixture-model"}}}, f)
             calls = []
             card_dir = os.path.join(d, "cards")
-            rc = RV.main(["--status-file", sf, "--state", sp, "--card-dir", card_dir, *argv], now=NOW,
+            rc = RV.main(["--status-file", sf, "--state", sp, "--card-dir", card_dir, "--routing", routing, *argv], now=NOW,
                          run=lambda cmd: calls.append(cmd) or code)
             return rc, calls, (json.load(open(sp)) if os.path.exists(sp) else None), card_dir
 
@@ -207,8 +210,7 @@ class Review(unittest.TestCase):
         cmd = calls[0]
         self.assertEqual(cmd[1], "mw4-review-20261117")
         self.assertEqual(cmd[2], "--card")
-        self.assertNotIn("--model", cmd)
-        self.assertEqual(cmd[-2:], ["--role", "worker-private"])
+        self.assertEqual(cmd[-2:], ["--model", "opencode/opencode-go/fixture-model"])
         self.assertEqual(st["last_patch"], "2026-11-16")
         self.assertEqual(st["last_review"], NOW)
 

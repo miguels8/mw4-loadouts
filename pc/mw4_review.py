@@ -39,6 +39,14 @@ def card_text(date, reason):
         return f.read().replace("{date}", date.replace("-", "")).replace("{reason}", reason)
 
 
+def go_role_args(registry):
+    """Resolve the automatic worker role to the Go namespace T3 actually accepts."""
+    spec = (C.read_json(registry, {}).get("role_models") or {}).get("worker-private") or {}
+    if spec.get("provider") != "opencode-go" or not isinstance(spec.get("model"), str) or not spec["model"].strip():
+        raise ValueError("worker-private must resolve to the direct Go provider; no job launched")
+    return ["--model", "opencode/opencode-go/" + spec["model"].removeprefix("opencode-go/")]
+
+
 def _run(cmd):
     return subprocess.run(cmd, check=False, timeout=300).returncode
 
@@ -49,6 +57,7 @@ def main(argv=None, now=None, fetch=None, run=None):
     ap.add_argument("--state", default=os.path.join(C.STATE_DIR, "review.json"))
     ap.add_argument("--card-dir", default=CARD_DIR)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--routing", default="/home/santo/.hermes/model-routing.json")
     a = ap.parse_args(argv)
     now = now or C.utc_now()
     run = run or _run
@@ -73,7 +82,7 @@ def main(argv=None, now=None, fetch=None, run=None):
     card = os.path.join(a.card_dir, f"CARD-{slug}.md")
     with open(card, "w", encoding="utf-8") as f:
         f.write(card_text(now[:10], why))
-    cmd = [JOB_DISPATCH, slug, "--card", card, "--role", "worker-private"] + (["--dry-run"] if a.dry_run else [])
+    cmd = [JOB_DISPATCH, slug, "--card", card, *go_role_args(a.routing)] + (["--dry-run"] if a.dry_run else [])
     code = run(cmd)
     print(f"{' '.join(cmd)} -> exit {code} ({why})")
     if code == 0 and not a.dry_run:
