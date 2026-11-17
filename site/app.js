@@ -227,10 +227,15 @@ function stopHold() {
 function stepCard(slug, delta) {
   // text typed in the box but not yet committed (the press keeps focus, so no change event yet) counts first
   const box = document.querySelector(`[data-ctl="${CSS.escape(slug)}"] input[data-cl=level]`);
-  if (box && box.value !== String(gunSt(slug).level ?? "")) profile = setGun(profile, slug, { level: box.value });
+  const committed = !!box && box.value !== String(gunSt(slug).level ?? "");
+  if (committed) profile = setGun(profile, slug, { level: box.value });
   const cur = gunSt(slug).level ?? null;
   const next = stepLevel(cur, delta);
-  if (next === cur) return false;
+  if (next === cur) {
+    // the step cannot move (at 1, at the top, or empty and minus), but the typed text still counts: save and redraw it
+    if (committed) { save(); updateCards(slug); }
+    return false;
+  }
   profile = setGun(profile, slug, { level: next });
   save();
   updateCards(slug);

@@ -175,6 +175,29 @@ test("card level and prestige controls (real Chromium, 390 px)", { skip: chrome 
       await reopen(KG);
     });
 
+    await t.test("typed text is saved even when the step itself cannot move (review r2 F1)", async () => {
+      const typeNoChange = (v) => J(`(() => { const i = document.querySelector('${card(KG)} input[data-cl="level"]'); i.focus(); i.value = "${v}"; i.dispatchEvent(new Event("input", { bubbles: true })); })()`);
+      const agree = async (saved, shown, header) => {
+        assert.equal((await stored()).guns[KG].level, saved, "saved level");
+        assert.equal(await J(`document.querySelector('${card(KG)} input[data-cl="level"]').value`), shown, "box");
+        assert.match(await head(KG), header, "header");
+      };
+      await typeLevel(KG, 10);
+      await typeNoChange("200");
+      await b.tapFast(`${card(KG)} [data-step="1"]`); // already at the top: the step is a no-op
+      await agree(200, "200", /Lv 200/);
+      await typeNoChange("999");
+      await b.tapFast(`${card(KG)} [data-step="1"]`);
+      await agree(200, "200", /Lv 200/);
+      await typeNoChange("1");
+      await b.tapFast(`${card(KG)} [data-step="-1"]`); // already at the bottom
+      await agree(1, "1", /Lv 1\b/);
+      await typeNoChange("");
+      await b.tapFast(`${card(KG)} [data-step="-1"]`); // empty and minus stays empty
+      await agree(null, "", /Lv \?/);
+      await J(`document.querySelector('${card(KG)} input[data-cl="level"]').blur()`);
+    });
+
     await t.test("clearing the box goes back to not entered", async () => {
       await typeLevel(KG, "");
       assert.equal((await stored()).guns[KG].level, null);

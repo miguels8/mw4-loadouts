@@ -84,9 +84,9 @@ test at tests/dom.test.mjs:82:13
 test at tests/dom.test.mjs:87:13
 ✖ My levels shows the same level, and edits flow both ways (444.564603ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   '' !== '64'
-  
+
       at TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:89:14)
       at async Test.run (node:internal/test_runner/test:1409:7)
       at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:87:5)

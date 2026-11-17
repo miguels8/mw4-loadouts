@@ -12,3 +12,5 @@
 [by:claude-sonnet-5-5/mw4-app-inline-levels]
 - 2026-11-16 23:4x mw4-app-inline-levels review round 1 (gpt-6.1-sol, Codex) on 679f9aa: NO-GO, one finding (F1: with the level box focused, typing 63 then pressing + saved 1; a focused box could show a different number than the saved level; typed 999 stayed in the box while 200 was saved). Reproduced and fixed test-first (RED/GREEN in proof/tdd/*inline-dom-r1*): a press now commits pending typed text first, the box always shows the saved level, My levels shows the clamped value too. The Chromium helper also deletes its temp profile (the leftover profiles had filled /tmp).
 [by:claude-sonnet-5-5/mw4-app-inline-levels]
+- 2026-11-16 23:5x mw4-app-inline-levels review round 2 (gpt-6.1-sol) on 7b5f49f: NO-GO, one finding (R2-F1: typed text committed in memory by a press was never saved or redrawn when the step itself could not move: at 200, at 1, or empty then minus). Fixed test-first (RED/GREEN in proof/tdd/*inline*r2*).
+[by:claude-sonnet-5-5/mw4-app-inline-levels]

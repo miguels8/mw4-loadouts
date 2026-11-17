@@ -29,9 +29,9 @@
 test at tests/dom.test.mjs:146:13
 ✖ typing in the focused box then pressing + uses the typed number (review r1 F1 A) (133.233023ms)
   AssertionError [ERR_ASSERTION]: typed 63 then + saves 64, not 1
-  
+
   1 !== 64
-  
+
       at TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:150:14)
       at async Test.run (node:internal/test_runner/test:1409:7)
       at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:146:5)
@@ -48,9 +48,9 @@ test at tests/dom.test.mjs:146:13
 test at tests/dom.test.mjs:155:13
 ✖ the number box always shows the saved level, even while focused (review r1 F1 B) (108.469233ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   '63' !== '65'
-  
+
       at TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:160:14)
       at async Test.run (node:internal/test_runner/test:1409:7)
       at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:155:5)
@@ -67,9 +67,9 @@ test at tests/dom.test.mjs:155:13
 test at tests/dom.test.mjs:164:13
 ✖ out-of-range typing is normalised in the box, the profile and the header (review r1 F1 C) (28.590022ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   '999' !== '200'
-  
+
       at TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:167:14)
       at async Test.run (node:internal/test_runner/test:1409:7)
       at async TestContext.<anonymous> (file:///home/miguel/.t3/worktrees/mw4-loadouts/mw4-app-inline-levels/tests/dom.test.mjs:164:5)
