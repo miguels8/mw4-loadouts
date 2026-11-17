@@ -27,7 +27,12 @@ work="$(mktemp -d)"
 git clone --quiet "https://github.com/$REPO.git" "$work/repo"
 cd "$work/repo"
 git switch -c undo-build-variants
-git revert --no-edit -m 1 "$FEATURE_MERGE_SHA"
+# PR 7 was squash-merged (one parent): `git revert -m 1` only works on a merge commit, so check the parent count
+if [ "$(git rev-list --parents -n1 "$FEATURE_MERGE_SHA" | wc -w)" -gt 2 ]; then
+  git revert --no-edit -m 1 "$FEATURE_MERGE_SHA"
+else
+  git revert --no-edit "$FEATURE_MERGE_SHA"
+fi
 git push origin undo-build-variants
 gh pr create -R "$REPO" --base main --head undo-build-variants \
   --title "Undo: build variants, level ladder, 3-hourly refresh" \
