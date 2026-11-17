@@ -37,3 +37,18 @@ Target: GitHub only (repo + Pages site); no `~/.hermes` or other local live targ
 | Deploy | `refresh-and-deploy` run 44031409690 (push to main): tests pass, Pages deployed |
 | Live check | `app.js` on https://miguels8.github.io/mw4-loadouts/ contains the dropdown; `tests/tools/card-shot.mjs` against the live site at 390 px: all checks PASS (one dropdown and no chips, Hardpoint re-ranks the list, TDM order returns, KG-7 63 -> 64 still flips the muzzle). Evidence: `proof/live-mode/` |
 | UNDO | `UNDO-mode-dropdown.sh` (opens a revert PR of da488d8; previous state = tag `pre-mode-dropdown`); not run |
+
+## Install: build variants, level ladder, 3-hourly refresh, MiguelPC timers (job mw4-build-variants, 2026-11-17 CT)
+
+Targets: GitHub (repo, Pages site, `status` branch) and MiguelPC user-level systemd timers. No root, no sudo, no new credential.
+
+| Step | Result |
+| --- | --- |
+| Backup before change | git tag `pre-build-variants` = da488d8 pushed to origin; timer install backed up earlier units (none existed) to `~/.local/state/mw4-loadouts/backup-20261117T085954Z`, path in `~/.local/state/mw4-loadouts/last-backup` |
+| Reviewed PRs | https://github.com/miguels8/mw4-loadouts/pull/7 squash-merged as 9fdead9 (gpt-6.1-sol: r1 NO-GO, r2 GO-WITH-CONDITIONS at 8879ece); https://github.com/miguels8/mw4-loadouts/pull/9 (r3 GO-WITH-CONDITIONS at c932b37) |
+| Deploy | `refresh-and-deploy` run 44049699790 (push to main) success; run 44050334428 (workflow_dispatch) success, created the `status` branch; raw URL https://raw.githubusercontent.com/miguels8/mw4-loadouts/status/status.json serves the heartbeat |
+| Schedule | cron `17 */3 * * *`; scheduled runs deploy only when a source changed |
+| PC timers | `bash pc/install.sh` (clone `~/.local/share/mw4-loadouts/repo`, units in `~/.config/systemd/user`, `systemctl --user enable --now`): `proof/pc/install-output.txt`, `proof/pc/timers.txt` (mw4-stale-alarm hourly, mw4-strategy every 3 h at :47, mw4-review daily 10:05, all enabled) |
+| Live checks | `tests/tools/variant-shot.mjs` against https://miguels8.github.io/mw4-loadouts/ at 390 px: all PASS (`proof/live-variants/variant-checks.json`, 4 screenshots); forced alarm test `proof/pc/alarm-test.txt`; strategy run (20 Go calls, 20 ledger lines); see `reports/build-variants-report.md` |
+| UNDO | `UNDO-build-variants.sh` (removes the timers and restores earlier units, opens a revert PR of 9fdead9, deletes the `status` branch); previous state = tag `pre-build-variants`; not run |
+

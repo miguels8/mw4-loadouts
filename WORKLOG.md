@@ -22,3 +22,6 @@
 [by:claude-sonnet-5-5/mw4-build-variants]
 - 2026-11-17 00:4x mw4-app-inline-levels Amendment A: review round 1 (gpt-6.1-sol) GO at 1e5d4f0; PR #5 squash-merged (da488d8); Pages deployed (run 44031409690); live 390 px proof in proof/live-mode; backup tag pre-mode-dropdown (43ec44d), UNDO-mode-dropdown.sh, receipt appended.
 [by:claude-sonnet-5-5/mw4-app-inline-levels]
+- 2026-11-17 03:1x mw4-build-variants landed: PR #7 squash-merged (9fdead9) after review r1 (gpt-6.1-sol, NO-GO: unknown own-part level hid open substitutes; unreadable live heartbeat showed a healthy banner; both folded test-first) and r2 GO-WITH-CONDITIONS at 8879ece; Pages deployed (run 44049699790); `status` branch created by a workflow_dispatch run; PC timers installed (`pc/install.sh`); forced alarm test reached #alerts; first strategy run failed 20 calls (helper needs the Hermes python), fixed in PR #9 (r3 GO-WITH-CONDITIONS) and rerun: 20 notes, 20 Go ledger lines. Live 390 px proof in proof/live-variants; report in reports/build-variants-report.md; backup tag pre-build-variants; UNDO-build-variants.sh.
+[by:claude-sonnet-5-5/mw4-build-variants]
+

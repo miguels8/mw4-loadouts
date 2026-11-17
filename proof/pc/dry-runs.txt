@@ -1,0 +1,9 @@
+== alarm --dry-run
+no post (bad=False, reason=None)
+exit 0
+== strategy --dry-run
+dry run: 66 variant(s) would be summarized: cronen-osprey-apex-attachment-2277ca, m4-versatile-1439ac, m4-pro-ranked-40eea0, m4-versatile-5cb987, m4-close-range-a332c8, m4-versatile-8737d7, han-86-versatile-d18051, han-86-pro-ranked-119958, han-86-pro-ranked-0520b2, han-86-pro-ranked-177c01, han-86-pro-ranked-35f8e2, han-86-pro-ranked-83361b, han-86-versatile-0e89c7, hyeon-burst-versatile-afada2, hyeon-burst-versatile-9ba8b8, patriot-xmr-versatile-f6a516, patriot-xmr-versatile-e14b68, patriot-xmr-versatile-52265b, kastov-762-long-range-8aeca7, kastov-762-versatile-43b265
+exit 0
+== review --dry-run (state: baseline)
+baseline recorded (patch 2026-11-13)
+exit 0

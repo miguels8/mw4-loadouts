@@ -1,0 +1,2 @@
+TEST: MW4 Loadouts: data is 45 h old (over 24 h) (last check 2026-11-15T12:00:00Z). Site shows a red banner.
+tg_route exit: 0
