@@ -13,3 +13,15 @@ Target: GitHub only (no ~/.hermes or other local live target). Approved by Migue
 | Schedule that is live | GitHub Actions cron `17 9 * * *` UTC (04:17 CT). No MiguelPC timer was needed or installed |
 | Test of the install | the Actions run above plus `proof/live/shot-checks.json`; rollback if the test had failed: `UNDO.sh` |
 | UNDO | `UNDO.sh` in the repo root (disable workflow, remove Pages, archive repo); not run |
+
+## Install: level + prestige controls on every gun card (job mw4-app-inline-levels, 2026-11-16 CT)
+
+Target: GitHub only (repo + Pages site); no `~/.hermes` or other local live target.
+
+| Step | Result |
+| --- | --- |
+| Backup before change | git tag `pre-inline-levels` = d1684de (the live site before this change), pushed to origin |
+| Reviewed PR | https://github.com/miguels8/mw4-loadouts/pull/3 squash-merged as ca16169 after 3 Codex review rounds (gpt-6.1-sol): r1 NO-GO (focused box vs +), r2 NO-GO (typed text lost at a step limit), r3 GO at 22f733d. Both findings fixed test-first |
+| Deploy | `refresh-and-deploy` run 44026187652 (push to main): tests pass, Pages deployed |
+| Live check | https://miguels8.github.io/mw4-loadouts/app.js serves the new code; `tests/tools/card-shot.mjs` against the live site at 390 px: all checks PASS (KG-7 Vulcan 63 -> 64 flips the muzzle from "Add Schlager Visiv-5 for now" to ready Ivanov QR600, ready count 4 -> 5, header Lv 64 + P3, no sideways scroll, no console errors). Evidence: `proof/live-inline/` |
+| UNDO | `UNDO-inline-levels.sh` (opens a revert PR of ca16169; previous state = tag `pre-inline-levels`); not run |
