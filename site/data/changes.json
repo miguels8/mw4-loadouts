@@ -1,0 +1,72 @@
+{
+ "history": [
+  {
+   "date": "2026-11-16",
+   "changes": [
+    {
+     "gun": "M4",
+     "build": "early",
+     "source_date": "2026-11-14",
+     "slot": null,
+     "old": null,
+     "new": "Early game",
+     "kind": "added"
+    },
+    {
+     "gun": "Han 86",
+     "build": "early",
+     "source_date": "2026-11-14",
+     "slot": null,
+     "old": null,
+     "new": "Early game",
+     "kind": "added"
+    },
+    {
+     "gun": "ISO Nightshade",
+     "build": "early",
+     "source_date": "2026-11-14",
+     "slot": null,
+     "old": null,
+     "new": "Early game",
+     "kind": "added"
+    },
+    {
+     "gun": "Rezi 12",
+     "build": "early",
+     "source_date": "2026-11-14",
+     "slot": null,
+     "old": null,
+     "new": "Early game",
+     "kind": "added"
+    },
+    {
+     "gun": "Type 73",
+     "build": "early",
+     "source_date": "2026-11-14",
+     "slot": null,
+     "old": null,
+     "new": "Early game",
+     "kind": "added"
+    },
+    {
+     "gun": "Oris 8.6",
+     "build": "early",
+     "source_date": "2026-11-14",
+     "slot": null,
+     "old": null,
+     "new": "Early game",
+     "kind": "added"
+    },
+    {
+     "gun": "KG-7 Vulcan",
+     "build": "early",
+     "source_date": "2026-11-14",
+     "slot": null,
+     "old": null,
+     "new": "Early game",
+     "kind": "added"
+    }
+   ]
+  }
+ ]
+}

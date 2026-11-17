@@ -1,0 +1,7 @@
+46538bc79155e7d0f575c49c3b3acf6367e46dfead8276efc43185413f59b886  /home/santo/dev/mw4-loadouts/tests/test_refresh.py
+08d00b0509dc8ef83649c3868b44dd94cac6b12edbe79d2b45f1e5161b89d74e  /home/santo/dev/mw4-loadouts/scripts/mw4_parse.py
+137a3786714df50914e74bc0887e5eabf163ae5154f282edee52120a88f51147  /home/santo/dev/mw4-loadouts/scripts/refresh.py
+----------------------------------------------------------------------
+Ran 26 tests in 0.231s
+
+OK

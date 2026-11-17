@@ -1,0 +1,59 @@
+name: refresh-and-deploy
+# Daily: pull CODMunity + Infil, commit changed data to main, deploy the site to GitHub Pages.
+# A source that cannot be read keeps its old build, marks the app's data line red, and fails this run (loud).
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", ".github/workflows/pages.yml"]
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  test:
+    uses: ./.github/workflows/ci.yml
+    permissions:
+      contents: read
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh data (daily and manual runs only)
+        id: refresh
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: python3 -I scripts/refresh.py
+      - name: Commit changed data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "mw4-loadouts-bot"
+          git config user.email "mw4-loadouts-bot@users.noreply.github.com"
+          git add site/data
+          if git diff --cached --quiet; then echo "no data change"; else
+            git commit -m "data: refresh $(date -u +%F)"
+            git push origin HEAD:main
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Fail loudly when a source could not be read
+        if: steps.refresh.outcome == 'failure'
+        run: |
+          echo "::error::refresh failed: see site/data/status.json (failed list). The site shows the data as stale."
+          exit 1
