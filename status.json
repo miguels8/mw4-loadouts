@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-11-20T20:13:48Z",
- "checked": "2026-11-20",
- "last_attempt": "2026-11-20T20:13:48Z",
+ "checked_at": "2026-11-21T00:04:10Z",
+ "checked": "2026-11-21",
+ "last_attempt": "2026-11-21T00:04:10Z",
  "failed": [],
  "guns": 30,
  "changes": 11,
- "data_hash": "26812139f884e2402e991bbfe7eaed14c2e8d7beb8feedfcefffc268f43a0ac9",
+ "data_hash": "e59916ef9363c06d34af69550991fef681daed27591d6a670fa18777df1e8c85",
  "patch": {
   "date": "2026-11-13",
   "name": "Nov 13 tuning update",
