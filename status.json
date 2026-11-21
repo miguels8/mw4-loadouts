@@ -1,17 +1,17 @@
 {
- "checked_at": "2026-11-21T06:04:32Z",
+ "checked_at": "2026-11-21T10:04:28Z",
  "checked": "2026-11-21",
- "last_attempt": "2026-11-21T06:04:32Z",
+ "last_attempt": "2026-11-21T10:04:28Z",
  "failed": [],
  "guns": 30,
- "changes": 11,
- "data_hash": "26812139f884e2402e991bbfe7eaed14c2e8d7beb8feedfcefffc268f43a0ac9",
+ "changes": 58,
+ "data_hash": "f3a8dd5eb7d9f87abf674a9c342867544afb01bc552082af78e5bef3cdd5a9d5",
  "patch": {
-  "date": "2026-11-13",
-  "name": "Nov 13 tuning update",
+  "date": "2026-11-19",
+  "name": "Nov 19 tuning update",
   "source": "https://infil.app/patches/",
-  "seen_at": "2026-11-17T08:16:35Z"
+  "seen_at": "2026-11-21T10:04:28Z"
  },
- "variants": 78,
- "dropped": 71
+ "variants": 43,
+ "dropped": 122
 }
