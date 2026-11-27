@@ -1,7 +1,7 @@
 {
- "checked_at": "2026-11-27T09:34:35Z",
+ "checked_at": "2026-11-27T12:13:38Z",
  "checked": "2026-11-27",
- "last_attempt": "2026-11-27T09:34:35Z",
+ "last_attempt": "2026-11-27T12:13:38Z",
  "failed": [],
  "guns": 30,
  "changes": 34,
@@ -10,7 +10,7 @@
   "date": "2026-11-19",
   "name": "Nov 19 tuning update",
   "source": "https://infil.app/patches/",
-  "seen_at": "2026-11-27T09:34:35Z"
+  "seen_at": "2026-11-27T12:13:38Z"
  },
  "variants": 77,
  "dropped": 71
